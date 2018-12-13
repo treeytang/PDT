@@ -39,6 +39,15 @@ class Ticket_Manage_Query(Page):
     # 查询 自定义 天定位
     custom_loc = (By.XPATH, '//*[@id="custom"]/a')
 
+
+    #自定义查询起始输入框定位
+    start_date_loc = (By.ID, "startDate")
+    #自定义查询结束输入框定位
+    end_date_loc = (By.ID, "endDate")
+
+
+
+
     #定义一页显示多少条定位
     page_any_loc = (By.ID,"page_any")
     #以一条为基准，获取条数定位
@@ -216,3 +225,24 @@ class Ticket_Manage_Query(Page):
             return "ok"
         else:
             return "xxx"
+
+
+
+    def custom_time_query(self):
+        self.find_element(*self.ticket_come_loc).click()
+        # 进入到右侧表单
+        self.switch_frame(self.ticket_iframe_id)
+        js = "var q=document.documentElement.scrollTop=10000"
+        self.script(js)
+        # 出现弹窗，返回上一层表单
+        self.switch_to_default()
+        if self.find_element(*self.hint_cancel):
+            # 关闭提示窗口
+            self.find_element(*self.hint_cancel).click()
+            self.switch_frame(self.ticket_iframe_id)
+            js = "var q=document.documentElement.scrollTop=10000"
+            self.script(js)
+        ActionChains(self.driver).move_to_element(self.find_element(*self.start_time_loc)).perform()
+        self.find_element(*self.custom_loc).click()
+        self.find_element(*self.start_date_loc)
+
