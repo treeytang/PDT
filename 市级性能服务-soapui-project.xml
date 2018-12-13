@@ -1,0 +1,499 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="afc7a5de-3607-40a3-bb3b-054d76214b98" activeEnvironment="Default" name="市级性能服务" resourceRoot="" soapui-version="5.1.2" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings/>
+  <con:interface xsi:type="con:WsdlInterface" id="49eeca09-5abe-4cc9-b000-9bf4e6e43346" wsaVersion="NONE" name="CityPefServiceSoapBinding" type="wsdl" bindingName="{http://nm.pdt.org.cn}CityPefServiceSoapBinding" soapVersion="1_1" anonymous="optional" definition="http://192.168.1.192:8080/nmp/cxf/soap/CityPefService?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:settings/>
+    <con:definitionCache type="TEXT" rootPart="http://192.168.1.192:8080/nmp/cxf/soap/CityPefService?wsdl">
+      <con:part>
+        <con:url>http://192.168.1.192:8080/nmp/cxf/soap/CityPefService?wsdl</con:url>
+        <con:content><![CDATA[<wsdl:definitions name="CityPefService" targetNamespace="http://nm.pdt.org.cn" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://nm.pdt.org.cn" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http">
+  <wsdl:types>
+    <xs:schema attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://nm.pdt.org.cn" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="isAlive" type="tns:isAlive"/>
+      <xs:element name="isAliveResponse" type="tns:isAliveResponse"/>
+      <xs:element name="pefStatQuery" type="tns:pefStatQuery"/>
+      <xs:element name="pefStatQueryResponse" type="tns:pefStatQueryResponse"/>
+      <xs:complexType name="pefStatQuery">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="input" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="pefStatQueryResponse">
+        <xs:sequence>
+          <xs:element form="qualified" minOccurs="0" name="return" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="faultInfo">
+        <xs:sequence>
+          <xs:element name="faultInfo" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="isAlive">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="input" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="isAliveResponse">
+        <xs:sequence>
+          <xs:element form="qualified" minOccurs="0" name="return" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="faultInfo" nillable="true" type="tns:faultInfo"/>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="pefStatQueryResponse">
+    <wsdl:part element="tns:pefStatQueryResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="isAlive">
+    <wsdl:part element="tns:isAlive" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="isAliveResponse">
+    <wsdl:part element="tns:isAliveResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="pefStatQuery">
+    <wsdl:part element="tns:pefStatQuery" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="FaultInfoException">
+    <wsdl:part element="tns:faultInfo" name="FaultInfoException"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="CityPefInterface">
+    <wsdl:operation name="pefStatQuery">
+      <wsdl:input message="tns:pefStatQuery" name="pefStatQuery"></wsdl:input>
+      <wsdl:output message="tns:pefStatQueryResponse" name="pefStatQueryResponse"></wsdl:output>
+      <wsdl:fault message="tns:FaultInfoException" name="FaultInfoException"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="isAlive">
+      <wsdl:input message="tns:isAlive" name="isAlive"></wsdl:input>
+      <wsdl:output message="tns:isAliveResponse" name="isAliveResponse"></wsdl:output>
+      <wsdl:fault message="tns:FaultInfoException" name="FaultInfoException"></wsdl:fault>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CityPefServiceSoapBinding" type="tns:CityPefInterface">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="pefStatQuery">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="pefStatQuery">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="pefStatQueryResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="FaultInfoException">
+        <soap:fault name="FaultInfoException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="isAlive">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="isAlive">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="isAliveResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="FaultInfoException">
+        <soap:fault name="FaultInfoException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CityPefService">
+    <wsdl:port binding="tns:CityPefServiceSoapBinding" name="CityPefInterfacePort">
+      <soap:address location="http://192.168.1.192:8080/nmp/cxf/soap/CityPefService"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content>
+        <con:type>http://schemas.xmlsoap.org/wsdl/</con:type>
+      </con:part>
+    </con:definitionCache>
+    <con:endpoints>
+      <con:endpoint>http://192.168.1.192:8080/nmp/cxf/soap/CityPefService</con:endpoint>
+    </con:endpoints>
+    <con:operation id="2cca7a97-912c-41b7-b0ed-ae8056259a0f" isOneWay="false" action="" name="isAlive" bindingOperationName="isAlive" type="Request-Response" outputName="isAliveResponse" inputName="isAlive" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
+      <con:settings/>
+      <con:call id="477c4ff4-0eee-40e9-a9f3-c757b2654529" name="Request 1">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>http://192.168.1.192:8080/nmp/cxf/soap/CityPefService</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:nm="http://nm.pdt.org.cn">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <nm:isAlive>
+         <!--Optional:-->
+         
+      <input>""</input></nm:isAlive>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:credentials>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://nm.pdt.org.cn/CityPefInterface/isAlive"/>
+        <con:wsrmConfig version="1.2"/>
+      </con:call>
+    </con:operation>
+    <con:operation id="2c65a1a8-74da-44f0-99ed-ec7593f8b1ab" isOneWay="false" action="" name="pefStatQuery" bindingOperationName="pefStatQuery" type="Request-Response" outputName="pefStatQueryResponse" inputName="pefStatQuery" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
+      <con:settings/>
+      <con:call id="5c533848-42d1-4454-9410-dd5ec6997997" name="Request 1">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>http://192.168.1.192:8080/nmp/cxf/soap/CityPefService</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:nm="http://nm.pdt.org.cn">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <nm:pefStatQuery>
+         <!--Optional:-->
+         
+      <input>{"startTime":2017-12-01,"endTime":2018-12-11}</input></nm:pefStatQuery>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:credentials>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://nm.pdt.org.cn/CityPefInterface/pefStatQuery"/>
+        <con:wsrmConfig version="1.2"/>
+      </con:call>
+    </con:operation>
+  </con:interface>
+  <con:testSuite id="ff6fd956-8abb-4a00-841f-06f06adcd320" name="TestSuite 1">
+    <con:settings/>
+    <con:runType>SEQUENTIAL</con:runType>
+    <con:testCase id="fc212c74-5b67-4ac3-97f2-a298539c0667" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="test_interface_usability" searchProperties="true">
+      <con:settings/>
+      <con:testStep type="request" id="a44b39b1-2e95-4e6b-a344-cb857f8e6b8b" name="pefStatQuery - Request 1">
+        <con:settings/>
+        <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:interface>CityPefServiceSoapBinding</con:interface>
+          <con:operation>pefStatQuery</con:operation>
+          <con:request name="pefStatQuery - Request 1" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="fec581db-335e-41b8-bf5d-4af84328df3d">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:encoding>UTF-8</con:encoding>
+            <con:endpoint>http://192.168.1.192:8080/nmp/cxf/soap/CityPefService</con:endpoint>
+            <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:nm="http://nm.pdt.org.cn">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <nm:pefStatQuery>
+         <!--Optional:-->
+         
+      <input>{"startTime":2018-11-12,"endTime":2018-12-11}</input></nm:pefStatQuery>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+            <con:assertion type="SOAP Response" id="b97b649b-7852-44e5-96fd-1331e246c98a" name="SOAP Response"/>
+            <con:assertion type="Simple Contains" id="ea2ecd5f-e818-4205-8a7d-6edd44206a07" name="Contains">
+              <con:configuration>
+                <token>kpiList</token>
+                <ignoreCase>false</ignoreCase>
+                <useRegEx>false</useRegEx>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://nm.pdt.org.cn/CityPefInterface/pefStatQuery"/>
+            <con:wsrmConfig version="1.2"/>
+          </con:request>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="request" id="ca616c83-c959-420e-be09-6bd32314e00e" name="isAlive - Request 1">
+        <con:settings/>
+        <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:interface>CityPefServiceSoapBinding</con:interface>
+          <con:operation>isAlive</con:operation>
+          <con:request name="isAlive - Request 1" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="f703a281-1947-4d8a-90d1-ebcffb1975f5">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:encoding>UTF-8</con:encoding>
+            <con:endpoint>http://192.168.1.192:8080/nmp/cxf/soap/CityPefService</con:endpoint>
+            <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:nm="http://nm.pdt.org.cn">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <nm:isAlive>
+         <!--Optional:-->
+         
+      <input>""</input></nm:isAlive>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+            <con:assertion type="SOAP Response" id="ee1d7783-80a3-4f78-9013-ad4c21fe9d7a" name="SOAP Response"/>
+            <con:assertion type="Simple Contains" id="8bd234bf-7d0e-4cc9-887d-d0d622ddd933" name="Contains">
+              <con:configuration>
+                <token>resultIsAlive</token>
+                <ignoreCase>false</ignoreCase>
+                <useRegEx>false</useRegEx>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://nm.pdt.org.cn/CityPefInterface/isAlive"/>
+            <con:wsrmConfig version="1.2"/>
+          </con:request>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+    </con:testCase>
+    <con:testCase id="db157bad-e995-4f0c-8296-ca06a08d90a2" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="isAlive" searchProperties="true">
+      <con:settings/>
+      <con:testStep type="request" id="16caeed6-b09f-4511-aeab-c55c49d7b8cb" name="isAlive - Request 1">
+        <con:settings/>
+        <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:interface>CityPefServiceSoapBinding</con:interface>
+          <con:operation>isAlive</con:operation>
+          <con:request name="isAlive - Request 1" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="9205cc81-c726-4400-8e9f-7f457bc999ae">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:encoding>UTF-8</con:encoding>
+            <con:endpoint>http://192.168.1.192:8080/nmp/cxf/soap/CityPefService</con:endpoint>
+            <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:nm="http://nm.pdt.org.cn">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <nm:isAlive>
+         <!--Optional:-->
+         
+      <input>""</input></nm:isAlive>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+            <con:assertion type="SOAP Response" id="c6054d7e-89f6-4ab6-b1eb-196a90eb5a8e" name="SOAP Response"/>
+            <con:assertion type="Simple Contains" id="2c6d978b-9b25-4c90-bda9-e62c0b375299" name="Contains">
+              <con:configuration>
+                <token>resultIsAlive</token>
+                <ignoreCase>false</ignoreCase>
+                <useRegEx>false</useRegEx>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://nm.pdt.org.cn/CityPefInterface/isAlive"/>
+            <con:wsrmConfig version="1.2"/>
+          </con:request>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+    </con:testCase>
+    <con:testCase id="41735464-71c3-4ddf-9c8f-162b0e1250c0" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="pefStatQuery" searchProperties="true">
+      <con:settings/>
+      <con:testStep type="request" id="1d4b9abb-adfb-4b0e-8a55-5d59877fb2dd" name="pefStatQuery - 完整的开始结束时�?>
+        <con:settings/>
+        <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:interface>CityPefServiceSoapBinding</con:interface>
+          <con:operation>pefStatQuery</con:operation>
+          <con:request name="pefStatQuery - 完整的开始结束时�? outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="ccbdb70e-ebe2-4fdb-93fb-a7099e161d78">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:encoding>UTF-8</con:encoding>
+            <con:endpoint>http://192.168.1.192:8080/nmp/cxf/soap/CityPefService</con:endpoint>
+            <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:nm="http://nm.pdt.org.cn">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <nm:pefStatQuery>
+         <!--Optional:-->
+         
+      <input>{"startTime":2017-12-01,"endTime":2018-12-11}</input></nm:pefStatQuery>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+            <con:assertion type="SOAP Response" id="7f8cee49-8bab-4d5f-a3d1-70d703343ee7" name="SOAP Response"/>
+            <con:assertion type="Simple Contains" id="4391386a-0584-483f-a543-fe001006106c" name="Contains">
+              <con:configuration>
+                <token>kpiList</token>
+                <ignoreCase>false</ignoreCase>
+                <useRegEx>false</useRegEx>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://nm.pdt.org.cn/CityPefInterface/pefStatQuery"/>
+            <con:wsrmConfig version="1.2"/>
+          </con:request>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="request" id="c2f2e4d6-3cb0-4186-93d0-55e2864941bb" name="pefStatQuery - 无开始时间，完整的开始时�?>
+        <con:settings/>
+        <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:interface>CityPefServiceSoapBinding</con:interface>
+          <con:operation>pefStatQuery</con:operation>
+          <con:request name="pefStatQuery - 无开始时间，完整的开始时�? outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="e5950e23-66d7-426f-96ea-ef032840fb78">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:encoding>UTF-8</con:encoding>
+            <con:endpoint>http://192.168.1.192:8080/nmp/cxf/soap/CityPefService</con:endpoint>
+            <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:nm="http://nm.pdt.org.cn">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <nm:pefStatQuery>
+         <!--Optional:-->
+         
+      <input>{"startTime":"","endTime":"2018-12-11"}</input></nm:pefStatQuery>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+            <con:assertion type="SOAP Response" id="9d23a1fb-77ba-43b6-bc35-24cd846c08e1" name="SOAP Response"/>
+            <con:assertion type="Simple Contains" id="eedfa99a-4d3f-4043-855b-eba40a754b4d" name="Contains">
+              <con:configuration>
+                <token>Fault</token>
+                <ignoreCase>false</ignoreCase>
+                <useRegEx>false</useRegEx>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://nm.pdt.org.cn/CityPefInterface/pefStatQuery"/>
+            <con:wsrmConfig version="1.2"/>
+          </con:request>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="request" id="4a7f7f83-5863-4bc2-999f-ef04fc1772a9" name="pefStatQuery - 完整的开始时间，无结束时�?>
+        <con:settings/>
+        <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:interface>CityPefServiceSoapBinding</con:interface>
+          <con:operation>pefStatQuery</con:operation>
+          <con:request name="pefStatQuery - 完整的开始时间，无结束时�? outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="02bb14c5-5776-449a-8c02-b78897e4d8e1">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:encoding>UTF-8</con:encoding>
+            <con:endpoint>http://192.168.1.192:8080/nmp/cxf/soap/CityPefService</con:endpoint>
+            <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:nm="http://nm.pdt.org.cn">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <nm:pefStatQuery>
+         <!--Optional:-->
+         
+      <input>{"startTime":2017-12-01,"endTime":""}</input></nm:pefStatQuery>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+            <con:assertion type="SOAP Response" id="1193a15b-96a8-46ad-9d41-43396d4aa6e4" name="SOAP Response"/>
+            <con:assertion type="Simple Contains" id="519036de-cfe2-4fdc-9098-686bf0652f03" name="Contains">
+              <con:configuration>
+                <token>Fault</token>
+                <ignoreCase>false</ignoreCase>
+                <useRegEx>false</useRegEx>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://nm.pdt.org.cn/CityPefInterface/pefStatQuery"/>
+            <con:wsrmConfig version="1.2"/>
+          </con:request>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="request" id="be371f52-763f-4329-98ff-84a31c55ebd3" name="pefStatQuery - �?��时间大于结束时间">
+        <con:settings/>
+        <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:interface>CityPefServiceSoapBinding</con:interface>
+          <con:operation>pefStatQuery</con:operation>
+          <con:request name="pefStatQuery - �?��时间大于结束时间" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="5ed2b41d-c96a-4cec-8c14-f616566e8e51">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:encoding>UTF-8</con:encoding>
+            <con:endpoint>http://192.168.1.192:8080/nmp/cxf/soap/CityPefService</con:endpoint>
+            <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:nm="http://nm.pdt.org.cn">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <nm:pefStatQuery>
+         <!--Optional:-->
+         
+      <input>{"startTime":"@##$a","endTime":2018-12-1}</input></nm:pefStatQuery>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+            <con:assertion type="SOAP Response" id="1d009528-782c-4db8-9a38-b987858e80fd" name="SOAP Response"/>
+            <con:assertion type="Simple Contains" id="7d86e8e6-4cc4-4e66-91a8-dacd4ad10cc2" name="Contains">
+              <con:configuration>
+                <token>Fault</token>
+                <ignoreCase>false</ignoreCase>
+                <useRegEx>false</useRegEx>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://nm.pdt.org.cn/CityPefInterface/pefStatQuery"/>
+            <con:wsrmConfig version="1.2"/>
+          </con:request>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="request" id="3758927f-5351-440b-acbd-3ecfdbc806a4" name="pefStatQuery - 正确的开始时间，结束时间大于当前时间">
+        <con:settings/>
+        <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:interface>CityPefServiceSoapBinding</con:interface>
+          <con:operation>pefStatQuery</con:operation>
+          <con:request name="pefStatQuery - 正确的开始时间，结束时间大于当前时间" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="804cd584-02e7-432d-a4f8-c7795cc17b59">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:encoding>UTF-8</con:encoding>
+            <con:endpoint>http://192.168.1.192:8080/nmp/cxf/soap/CityPefService</con:endpoint>
+            <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:nm="http://nm.pdt.org.cn">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <nm:pefStatQuery>
+         <!--Optional:-->
+         
+      <input>{"startTime":2017-12-01,"endTime":2019-1-1}</input></nm:pefStatQuery>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+            <con:assertion type="SOAP Response" id="4c0b954e-62c9-4122-a061-9c54ac800526" name="SOAP Response"/>
+            <con:assertion type="Simple Contains" id="ed5c6fbb-54c8-4c8b-a595-c66fa8257acc" name="Contains">
+              <con:configuration>
+                <token>Fault</token>
+                <ignoreCase>false</ignoreCase>
+                <useRegEx>false</useRegEx>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://nm.pdt.org.cn/CityPefInterface/pefStatQuery"/>
+            <con:wsrmConfig version="1.2"/>
+          </con:request>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+    </con:testCase>
+    <con:properties/>
+    <con:reportParameters/>
+  </con:testSuite>
+  <con:requirements/>
+  <con:properties/>
+  <con:wssContainer/>
+  <con:databaseConnectionContainer/>
+  <con:oAuth2ProfileContainer/>
+  <con:reporting>
+    <con:reportTemplates/>
+    <con:xmlTemplates/>
+    <con:parameters/>
+  </con:reporting>
+  <con:sensitiveInformation/>
+</con:soapui-project>

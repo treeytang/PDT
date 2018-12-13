@@ -1,0 +1,2609 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="a706ffbd-2904-4507-9f59-73d4f6486a19" activeEnvironment="Default" name="PDT" resourceRoot="" soapui-version="5.1.2" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings/>
+  <con:interface xsi:type="con:WsdlInterface" id="b8b08c8c-a328-4080-b208-37a543abe484" wsaVersion="NONE" name="UserReportServiceSoapBinding" type="wsdl" bindingName="{http://nm.pdt.org.cn}UserReportServiceSoapBinding" soapVersion="1_1" anonymous="optional" definition="http://192.168.1.192:8080/nmp/cxf/soap/UserReportService?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:settings/>
+    <con:definitionCache type="TEXT" rootPart="http://192.168.1.192:8080/nmp/cxf/soap/UserReportService?wsdl">
+      <con:part>
+        <con:url>http://192.168.1.192:8080/nmp/cxf/soap/UserReportService?wsdl</con:url>
+        <con:content><![CDATA[<wsdl:definitions name="UserReportService" targetNamespace="http://nm.pdt.org.cn" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://nm.pdt.org.cn" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http">
+  <wsdl:types>
+    <xs:schema attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://nm.pdt.org.cn" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="accountInfoReport" type="tns:accountInfoReport"/>
+      <xs:element name="accountInfoReportResponse" type="tns:accountInfoReportResponse"/>
+      <xs:element name="groupInfoReport" type="tns:groupInfoReport"/>
+      <xs:element name="groupInfoReportResponse" type="tns:groupInfoReportResponse"/>
+      <xs:element name="isAlive" type="tns:isAlive"/>
+      <xs:element name="isAliveResponse" type="tns:isAliveResponse"/>
+      <xs:element name="orgInfoReport" type="tns:orgInfoReport"/>
+      <xs:element name="orgInfoReportResponse" type="tns:orgInfoReportResponse"/>
+      <xs:element name="termDevInfoComplement" type="tns:termDevInfoComplement"/>
+      <xs:element name="termDevInfoComplementResponse" type="tns:termDevInfoComplementResponse"/>
+      <xs:element name="termDevInfoReport" type="tns:termDevInfoReport"/>
+      <xs:element name="termDevInfoReportResponse" type="tns:termDevInfoReportResponse"/>
+      <xs:element name="termUseInfoComplement" type="tns:termUseInfoComplement"/>
+      <xs:element name="termUseInfoComplementResponse" type="tns:termUseInfoComplementResponse"/>
+      <xs:element name="termUseInfoReport" type="tns:termUseInfoReport"/>
+      <xs:element name="termUseInfoReportResponse" type="tns:termUseInfoReportResponse"/>
+      <xs:element name="userInfoReport" type="tns:userInfoReport"/>
+      <xs:element name="userInfoReportResponse" type="tns:userInfoReportResponse"/>
+      <xs:complexType name="accountInfoReport">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="input" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="accountInfoReportResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="faultInfo">
+        <xs:sequence>
+          <xs:element name="faultInfo" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="termDevInfoReport">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="input" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="termDevInfoReportResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="termUseInfoReport">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="input" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="termUseInfoReportResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="orgInfoReport">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="input" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="orgInfoReportResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="termUseInfoComplement">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="input" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="termUseInfoComplementResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="isAlive">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="input" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="isAliveResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="userInfoReport">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="input" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="userInfoReportResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="termDevInfoComplement">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="input" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="termDevInfoComplementResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="groupInfoReport">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="input" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="groupInfoReportResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="faultInfo" nillable="true" type="tns:faultInfo"/>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="accountInfoReport">
+    <wsdl:part element="tns:accountInfoReport" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="groupInfoReportResponse">
+    <wsdl:part element="tns:groupInfoReportResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="termUseInfoReport">
+    <wsdl:part element="tns:termUseInfoReport" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="termUseInfoComplementResponse">
+    <wsdl:part element="tns:termUseInfoComplementResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="isAlive">
+    <wsdl:part element="tns:isAlive" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="userInfoReport">
+    <wsdl:part element="tns:userInfoReport" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="termDevInfoComplementResponse">
+    <wsdl:part element="tns:termDevInfoComplementResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="FaultInfoException">
+    <wsdl:part element="tns:faultInfo" name="FaultInfoException"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="accountInfoReportResponse">
+    <wsdl:part element="tns:accountInfoReportResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="termDevInfoReport">
+    <wsdl:part element="tns:termDevInfoReport" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="termDevInfoReportResponse">
+    <wsdl:part element="tns:termDevInfoReportResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="termUseInfoReportResponse">
+    <wsdl:part element="tns:termUseInfoReportResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="orgInfoReport">
+    <wsdl:part element="tns:orgInfoReport" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="termUseInfoComplement">
+    <wsdl:part element="tns:termUseInfoComplement" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="userInfoReportResponse">
+    <wsdl:part element="tns:userInfoReportResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="termDevInfoComplement">
+    <wsdl:part element="tns:termDevInfoComplement" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="groupInfoReport">
+    <wsdl:part element="tns:groupInfoReport" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="isAliveResponse">
+    <wsdl:part element="tns:isAliveResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="orgInfoReportResponse">
+    <wsdl:part element="tns:orgInfoReportResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="UserReportInterface">
+    <wsdl:operation name="accountInfoReport">
+      <wsdl:input message="tns:accountInfoReport" name="accountInfoReport"></wsdl:input>
+      <wsdl:output message="tns:accountInfoReportResponse" name="accountInfoReportResponse"></wsdl:output>
+      <wsdl:fault message="tns:FaultInfoException" name="FaultInfoException"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="termDevInfoReport">
+      <wsdl:input message="tns:termDevInfoReport" name="termDevInfoReport"></wsdl:input>
+      <wsdl:output message="tns:termDevInfoReportResponse" name="termDevInfoReportResponse"></wsdl:output>
+      <wsdl:fault message="tns:FaultInfoException" name="FaultInfoException"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="termUseInfoReport">
+      <wsdl:input message="tns:termUseInfoReport" name="termUseInfoReport"></wsdl:input>
+      <wsdl:output message="tns:termUseInfoReportResponse" name="termUseInfoReportResponse"></wsdl:output>
+      <wsdl:fault message="tns:FaultInfoException" name="FaultInfoException"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="orgInfoReport">
+      <wsdl:input message="tns:orgInfoReport" name="orgInfoReport"></wsdl:input>
+      <wsdl:output message="tns:orgInfoReportResponse" name="orgInfoReportResponse"></wsdl:output>
+      <wsdl:fault message="tns:FaultInfoException" name="FaultInfoException"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="termUseInfoComplement">
+      <wsdl:input message="tns:termUseInfoComplement" name="termUseInfoComplement"></wsdl:input>
+      <wsdl:output message="tns:termUseInfoComplementResponse" name="termUseInfoComplementResponse"></wsdl:output>
+      <wsdl:fault message="tns:FaultInfoException" name="FaultInfoException"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="isAlive">
+      <wsdl:input message="tns:isAlive" name="isAlive"></wsdl:input>
+      <wsdl:output message="tns:isAliveResponse" name="isAliveResponse"></wsdl:output>
+      <wsdl:fault message="tns:FaultInfoException" name="FaultInfoException"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="userInfoReport">
+      <wsdl:input message="tns:userInfoReport" name="userInfoReport"></wsdl:input>
+      <wsdl:output message="tns:userInfoReportResponse" name="userInfoReportResponse"></wsdl:output>
+      <wsdl:fault message="tns:FaultInfoException" name="FaultInfoException"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="termDevInfoComplement">
+      <wsdl:input message="tns:termDevInfoComplement" name="termDevInfoComplement"></wsdl:input>
+      <wsdl:output message="tns:termDevInfoComplementResponse" name="termDevInfoComplementResponse"></wsdl:output>
+      <wsdl:fault message="tns:FaultInfoException" name="FaultInfoException"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="groupInfoReport">
+      <wsdl:input message="tns:groupInfoReport" name="groupInfoReport"></wsdl:input>
+      <wsdl:output message="tns:groupInfoReportResponse" name="groupInfoReportResponse"></wsdl:output>
+      <wsdl:fault message="tns:FaultInfoException" name="FaultInfoException"></wsdl:fault>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="UserReportServiceSoapBinding" type="tns:UserReportInterface">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="accountInfoReport">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="accountInfoReport">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="accountInfoReportResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="FaultInfoException">
+        <soap:fault name="FaultInfoException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="termDevInfoReport">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="termDevInfoReport">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="termDevInfoReportResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="FaultInfoException">
+        <soap:fault name="FaultInfoException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="termUseInfoReport">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="termUseInfoReport">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="termUseInfoReportResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="FaultInfoException">
+        <soap:fault name="FaultInfoException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="orgInfoReport">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="orgInfoReport">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="orgInfoReportResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="FaultInfoException">
+        <soap:fault name="FaultInfoException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="termUseInfoComplement">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="termUseInfoComplement">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="termUseInfoComplementResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="FaultInfoException">
+        <soap:fault name="FaultInfoException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="isAlive">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="isAlive">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="isAliveResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="FaultInfoException">
+        <soap:fault name="FaultInfoException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="userInfoReport">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="userInfoReport">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="userInfoReportResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="FaultInfoException">
+        <soap:fault name="FaultInfoException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="termDevInfoComplement">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="termDevInfoComplement">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="termDevInfoComplementResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="FaultInfoException">
+        <soap:fault name="FaultInfoException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="groupInfoReport">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="groupInfoReport">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="groupInfoReportResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="FaultInfoException">
+        <soap:fault name="FaultInfoException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="UserReportService">
+    <wsdl:port binding="tns:UserReportServiceSoapBinding" name="UserReportServicePort">
+      <soap:address location="http://192.168.1.192:8080/nmp/cxf/soap/UserReportService"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content>
+        <con:type>http://schemas.xmlsoap.org/wsdl/</con:type>
+      </con:part>
+    </con:definitionCache>
+    <con:endpoints>
+      <con:endpoint>http://192.168.1.192:8080/nmp/cxf/soap/UserReportService</con:endpoint>
+    </con:endpoints>
+    <con:operation id="49127948-8aed-4fc7-ae11-b210bf9cbf63" isOneWay="false" action="" name="accountInfoReport" bindingOperationName="accountInfoReport" type="Request-Response" outputName="accountInfoReportResponse" inputName="accountInfoReport" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
+      <con:settings/>
+      <con:call id="0d5b355a-10c9-4d2f-b850-29bce62e46b2" name="Request 1">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>http://192.168.1.192:8080/nmp/cxf/soap/UserReportService</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:nm="http://nm.pdt.org.cn">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <nm:accountInfoReport>
+         <!--Optional:-->
+         <input>?</input>
+      </nm:accountInfoReport>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:credentials>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://nm.pdt.org.cn/UserReportInterface/accountInfoReport"/>
+        <con:wsrmConfig version="1.2"/>
+      </con:call>
+    </con:operation>
+    <con:operation id="2f15d160-2cfd-40d5-86f9-a4f1eb2e7935" isOneWay="false" action="" name="groupInfoReport" bindingOperationName="groupInfoReport" type="Request-Response" outputName="groupInfoReportResponse" inputName="groupInfoReport" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
+      <con:settings/>
+      <con:call id="7c3b55ca-e849-44bd-8f60-af66024c546d" name="Request 1">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>http://192.168.1.192:8080/nmp/cxf/soap/UserReportService</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:nm="http://nm.pdt.org.cn">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <nm:groupInfoReport>
+         <!--Optional:-->
+         <input>?</input>
+      </nm:groupInfoReport>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:credentials>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://nm.pdt.org.cn/UserReportInterface/groupInfoReport"/>
+        <con:wsrmConfig version="1.2"/>
+      </con:call>
+    </con:operation>
+    <con:operation id="e8d70d0c-f8db-4ff8-9bad-4b0e610e1abf" isOneWay="false" action="" name="isAlive" bindingOperationName="isAlive" type="Request-Response" outputName="isAliveResponse" inputName="isAlive" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
+      <con:settings/>
+      <con:call id="040c765e-d3d0-490a-9d41-81d49067f19f" name="Request 1">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>http://192.168.1.192:8080/nmp/cxf/soap/UserReportService</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:nm="http://nm.pdt.org.cn">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <nm:isAlive>
+         <!--Optional:-->
+         <input>?</input>
+      </nm:isAlive>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:credentials>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://nm.pdt.org.cn/UserReportInterface/isAlive"/>
+        <con:wsrmConfig version="1.2"/>
+      </con:call>
+    </con:operation>
+    <con:operation id="aef052df-46f5-4739-9a9d-900e42eb911e" isOneWay="false" action="" name="orgInfoReport" bindingOperationName="orgInfoReport" type="Request-Response" outputName="orgInfoReportResponse" inputName="orgInfoReport" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
+      <con:settings/>
+      <con:call id="a01eee32-32be-4f6b-843c-141cdcf89494" name="Request 1">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>http://192.168.1.192:8080/nmp/cxf/soap/UserReportService</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:nm="http://nm.pdt.org.cn">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <nm:orgInfoReport>
+         <!--Optional:-->
+         <input>?</input>
+      </nm:orgInfoReport>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:credentials>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://nm.pdt.org.cn/UserReportInterface/orgInfoReport"/>
+        <con:wsrmConfig version="1.2"/>
+      </con:call>
+    </con:operation>
+    <con:operation id="f10b8d0f-1ddb-46d6-974e-b082f900ccd3" isOneWay="false" action="" name="termDevInfoComplement" bindingOperationName="termDevInfoComplement" type="Request-Response" outputName="termDevInfoComplementResponse" inputName="termDevInfoComplement" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
+      <con:settings/>
+      <con:call id="4a1a75e9-0737-4827-951b-2ebc1c624449" name="Request 1">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>http://192.168.1.192:8080/nmp/cxf/soap/UserReportService</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:nm="http://nm.pdt.org.cn">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <nm:termDevInfoComplement>
+         <!--Optional:-->
+         <input>?</input>
+      </nm:termDevInfoComplement>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:credentials>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://nm.pdt.org.cn/UserReportInterface/termDevInfoComplement"/>
+        <con:wsrmConfig version="1.2"/>
+      </con:call>
+    </con:operation>
+    <con:operation id="2763fde0-ae22-496c-8a09-dd9ac1b5ccd2" isOneWay="false" action="" name="termDevInfoReport" bindingOperationName="termDevInfoReport" type="Request-Response" outputName="termDevInfoReportResponse" inputName="termDevInfoReport" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
+      <con:settings/>
+      <con:call id="5304039c-0072-4b4e-8e81-e81e90fe3a6e" name="Request 1">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>http://192.168.1.192:8080/nmp/cxf/soap/UserReportService</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:nm="http://nm.pdt.org.cn">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <nm:termDevInfoReport>
+         <!--Optional:-->
+         <input>?</input>
+      </nm:termDevInfoReport>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:credentials>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://nm.pdt.org.cn/UserReportInterface/termDevInfoReport"/>
+        <con:wsrmConfig version="1.2"/>
+      </con:call>
+    </con:operation>
+    <con:operation id="c2065a16-448a-4691-a046-3eed8c3cc148" isOneWay="false" action="" name="termUseInfoComplement" bindingOperationName="termUseInfoComplement" type="Request-Response" outputName="termUseInfoComplementResponse" inputName="termUseInfoComplement" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
+      <con:settings/>
+      <con:call id="3493c2ac-fe8b-4f5a-8f5d-cb4120330147" name="Request 1">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>http://192.168.1.192:8080/nmp/cxf/soap/UserReportService</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:nm="http://nm.pdt.org.cn">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <nm:termUseInfoComplement>
+         <!--Optional:-->
+         <input>?</input>
+      </nm:termUseInfoComplement>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:credentials>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://nm.pdt.org.cn/UserReportInterface/termUseInfoComplement"/>
+        <con:wsrmConfig version="1.2"/>
+      </con:call>
+    </con:operation>
+    <con:operation id="e845f09e-2924-496d-ac76-6954068df7b4" isOneWay="false" action="" name="termUseInfoReport" bindingOperationName="termUseInfoReport" type="Request-Response" outputName="termUseInfoReportResponse" inputName="termUseInfoReport" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
+      <con:settings/>
+      <con:call id="4e24329d-f543-4a99-96ec-3a3e4a7b6a74" name="Request 1">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>http://192.168.1.192:8080/nmp/cxf/soap/UserReportService</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:nm="http://nm.pdt.org.cn">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <nm:termUseInfoReport>
+         <!--Optional:-->
+         <input>?</input>
+      </nm:termUseInfoReport>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:credentials>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://nm.pdt.org.cn/UserReportInterface/termUseInfoReport"/>
+        <con:wsrmConfig version="1.2"/>
+      </con:call>
+    </con:operation>
+    <con:operation id="060e27a4-d73d-4591-b2c7-e408e6f9e3a1" isOneWay="false" action="" name="userInfoReport" bindingOperationName="userInfoReport" type="Request-Response" outputName="userInfoReportResponse" inputName="userInfoReport" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
+      <con:settings/>
+      <con:call id="a9458602-c6b1-4e63-bb22-08a4e97df435" name="Request 1">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>http://192.168.1.192:8080/nmp/cxf/soap/UserReportService</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:nm="http://nm.pdt.org.cn">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <nm:userInfoReport>
+         <!--Optional:-->
+         
+      <input>{"taskId":"8aeea5e5642527a3016425a5c3eb0009","userList":[{"cityId":"577","ESN":"12-21-3210","mobilePoliceTerminal":"2","msBrand":"001","msType":2,"msi":"32820202","name":"2","opDate":"2018-06-12","opType":3,"operator":"市网管操作员","otherContact":"2","phoneNum":"2","plateNum":"2","policeNum":"2","policeType":"2","post":"2","systemId":"m459.hl.pdt.cn","systemName":"MSO_8192","unitCode":"0.0.0.0.0.0","unitName":"组织架构","useDesc":"2"}]}</input></nm:userInfoReport>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:credentials>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://nm.pdt.org.cn/UserReportInterface/userInfoReport"/>
+        <con:wsrmConfig version="1.2"/>
+      </con:call>
+    </con:operation>
+  </con:interface>
+  <con:interface xsi:type="con:WsdlInterface" id="7c3d2fa2-6d5e-4f33-8718-85a2edf994b0" wsaVersion="NONE" name="ProvinceTopServiceSoapBinding" type="wsdl" bindingName="{http://nm.pdt.org.cn}ProvinceTopServiceSoapBinding" soapVersion="1_1" anonymous="optional" definition="http://192.168.1.192:8080/nmp/cxf/soap/ProvinceTopService?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:settings/>
+    <con:definitionCache type="TEXT" rootPart="http://192.168.1.192:8080/nmp/cxf/soap/ProvinceTopService?wsdl">
+      <con:part>
+        <con:url>http://192.168.1.192:8080/nmp/cxf/soap/ProvinceTopService?wsdl</con:url>
+        <con:content><![CDATA[<wsdl:definitions name="ProvinceTopService" targetNamespace="http://nm.pdt.org.cn" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://nm.pdt.org.cn" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http">
+  <wsdl:types>
+    <xs:schema attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://nm.pdt.org.cn" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="devInfoQuery" type="tns:devInfoQuery"/>
+      <xs:element name="devInfoQueryResponse" type="tns:devInfoQueryResponse"/>
+      <xs:element name="interconnectionStatusQuery" type="tns:interconnectionStatusQuery"/>
+      <xs:element name="interconnectionStatusQueryResponse" type="tns:interconnectionStatusQueryResponse"/>
+      <xs:element name="isAlive" type="tns:isAlive"/>
+      <xs:element name="isAliveResponse" type="tns:isAliveResponse"/>
+      <xs:element name="topQuery" type="tns:topQuery"/>
+      <xs:element name="topQueryResponse" type="tns:topQueryResponse"/>
+      <xs:complexType name="interconnectionStatusQuery">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="input" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="interconnectionStatusQueryResponse">
+        <xs:sequence>
+          <xs:element form="qualified" minOccurs="0" name="return" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="faultInfo">
+        <xs:sequence>
+          <xs:element name="faultInfo" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="topQuery">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="input" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="topQueryResponse">
+        <xs:sequence>
+          <xs:element form="qualified" minOccurs="0" name="return" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="devInfoQuery">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="input" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="devInfoQueryResponse">
+        <xs:sequence>
+          <xs:element form="qualified" minOccurs="0" name="return" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="isAlive">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="input" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="isAliveResponse">
+        <xs:sequence>
+          <xs:element form="qualified" minOccurs="0" name="return" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="faultInfo" nillable="true" type="tns:faultInfo"/>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="interconnectionStatusQuery">
+    <wsdl:part element="tns:interconnectionStatusQuery" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="devInfoQueryResponse">
+    <wsdl:part element="tns:devInfoQueryResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="topQueryResponse">
+    <wsdl:part element="tns:topQueryResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="topQuery">
+    <wsdl:part element="tns:topQuery" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="interconnectionStatusQueryResponse">
+    <wsdl:part element="tns:interconnectionStatusQueryResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="isAlive">
+    <wsdl:part element="tns:isAlive" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="isAliveResponse">
+    <wsdl:part element="tns:isAliveResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="devInfoQuery">
+    <wsdl:part element="tns:devInfoQuery" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="FaultInfoException">
+    <wsdl:part element="tns:faultInfo" name="FaultInfoException"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="ProvinceTopInterface">
+    <wsdl:operation name="interconnectionStatusQuery">
+      <wsdl:input message="tns:interconnectionStatusQuery" name="interconnectionStatusQuery"></wsdl:input>
+      <wsdl:output message="tns:interconnectionStatusQueryResponse" name="interconnectionStatusQueryResponse"></wsdl:output>
+      <wsdl:fault message="tns:FaultInfoException" name="FaultInfoException"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="topQuery">
+      <wsdl:input message="tns:topQuery" name="topQuery"></wsdl:input>
+      <wsdl:output message="tns:topQueryResponse" name="topQueryResponse"></wsdl:output>
+      <wsdl:fault message="tns:FaultInfoException" name="FaultInfoException"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="devInfoQuery">
+      <wsdl:input message="tns:devInfoQuery" name="devInfoQuery"></wsdl:input>
+      <wsdl:output message="tns:devInfoQueryResponse" name="devInfoQueryResponse"></wsdl:output>
+      <wsdl:fault message="tns:FaultInfoException" name="FaultInfoException"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="isAlive">
+      <wsdl:input message="tns:isAlive" name="isAlive"></wsdl:input>
+      <wsdl:output message="tns:isAliveResponse" name="isAliveResponse"></wsdl:output>
+      <wsdl:fault message="tns:FaultInfoException" name="FaultInfoException"></wsdl:fault>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ProvinceTopServiceSoapBinding" type="tns:ProvinceTopInterface">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="interconnectionStatusQuery">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="interconnectionStatusQuery">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="interconnectionStatusQueryResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="FaultInfoException">
+        <soap:fault name="FaultInfoException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="topQuery">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="topQuery">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="topQueryResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="FaultInfoException">
+        <soap:fault name="FaultInfoException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="devInfoQuery">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="devInfoQuery">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="devInfoQueryResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="FaultInfoException">
+        <soap:fault name="FaultInfoException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="isAlive">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="isAlive">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="isAliveResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="FaultInfoException">
+        <soap:fault name="FaultInfoException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ProvinceTopService">
+    <wsdl:port binding="tns:ProvinceTopServiceSoapBinding" name="ProvinceTopInterfacePort">
+      <soap:address location="http://192.168.1.192:8080/nmp/cxf/soap/ProvinceTopService"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content>
+        <con:type>http://schemas.xmlsoap.org/wsdl/</con:type>
+      </con:part>
+    </con:definitionCache>
+    <con:endpoints>
+      <con:endpoint>http://192.168.1.192:8080/nmp/cxf/soap/ProvinceTopService</con:endpoint>
+    </con:endpoints>
+    <con:operation id="9ffca46a-6514-4ff9-8649-c348e5854545" isOneWay="false" action="" name="devInfoQuery" bindingOperationName="devInfoQuery" type="Request-Response" outputName="devInfoQueryResponse" inputName="devInfoQuery" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
+      <con:settings/>
+      <con:call id="9473ca1e-176a-446c-9cbe-8a021ed8d166" name="Request 1">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>http://192.168.1.192:8080/nmp/cxf/soap/ProvinceTopService</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:nm="http://nm.pdt.org.cn">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <nm:devInfoQuery>
+         <!--Optional:-->
+         
+      </nm:devInfoQuery>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:credentials>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://nm.pdt.org.cn/ProvinceTopInterface/devInfoQuery"/>
+        <con:wsrmConfig version="1.2"/>
+      </con:call>
+    </con:operation>
+    <con:operation id="dbedc314-aca4-41d2-b556-63d694fec500" isOneWay="false" action="" name="interconnectionStatusQuery" bindingOperationName="interconnectionStatusQuery" type="Request-Response" outputName="interconnectionStatusQueryResponse" inputName="interconnectionStatusQuery" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
+      <con:settings/>
+      <con:call id="1ee4cf18-6017-45fa-9072-89614142d8b6" name="Request 1">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>http://192.168.1.192:8080/nmp/cxf/soap/ProvinceTopService</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:nm="http://nm.pdt.org.cn">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <nm:interconnectionStatusQuery>
+         <!--Optional:-->
+         
+      <input>""</input></nm:interconnectionStatusQuery>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:credentials>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://nm.pdt.org.cn/ProvinceTopInterface/interconnectionStatusQuery"/>
+        <con:wsrmConfig version="1.2"/>
+      </con:call>
+    </con:operation>
+    <con:operation id="e1841913-5381-42f5-9b5d-87eedc893595" isOneWay="false" action="" name="isAlive" bindingOperationName="isAlive" type="Request-Response" outputName="isAliveResponse" inputName="isAlive" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
+      <con:settings/>
+      <con:call id="66a39991-e23e-4dd0-b6d4-696b42b3575b" name="Request 1">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>http://192.168.1.192:8080/nmp/cxf/soap/ProvinceTopService</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:nm="http://nm.pdt.org.cn">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <nm:isAlive>
+         <!--Optional:-->
+         <input>?</input>
+      </nm:isAlive>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:credentials>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://nm.pdt.org.cn/ProvinceTopInterface/isAlive"/>
+        <con:wsrmConfig version="1.2"/>
+      </con:call>
+    </con:operation>
+    <con:operation id="87706856-f0e5-40ab-b458-e382f32de744" isOneWay="false" action="" name="topQuery" bindingOperationName="topQuery" type="Request-Response" outputName="topQueryResponse" inputName="topQuery" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
+      <con:settings/>
+      <con:call id="a1bd6720-d3b5-43e4-b59e-06d5dfc3fbb2" name="Request 1">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>http://192.168.1.192:8080/nmp/cxf/soap/ProvinceTopService</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:nm="http://nm.pdt.org.cn">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <nm:topQuery>
+         <!--Optional:-->
+         <input>?</input>
+      </nm:topQuery>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:credentials>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://nm.pdt.org.cn/ProvinceTopInterface/topQuery"/>
+        <con:wsrmConfig version="1.2"/>
+      </con:call>
+    </con:operation>
+  </con:interface>
+  <con:interface xsi:type="con:WsdlInterface" id="e303f1d7-7fef-4bd6-96fc-0fb38756bc24" wsaVersion="NONE" name="TopReportServiceSoapBinding" type="wsdl" bindingName="{http://nm.pdt.org.cn}TopReportServiceSoapBinding" soapVersion="1_1" anonymous="optional" definition="http://192.168.1.192:8080/nmp/cxf/soap/TopReportService?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:settings/>
+    <con:definitionCache type="TEXT" rootPart="http://192.168.1.192:8080/nmp/cxf/soap/TopReportService?wsdl">
+      <con:part>
+        <con:url>http://192.168.1.192:8080/nmp/cxf/soap/TopReportService?wsdl</con:url>
+        <con:content><![CDATA[<wsdl:definitions name="TopReportService" targetNamespace="http://nm.pdt.org.cn" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://nm.pdt.org.cn" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http">
+  <wsdl:types>
+    <xs:schema attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://nm.pdt.org.cn" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="devInfoReport" type="tns:devInfoReport"/>
+      <xs:element name="devInfoReportResponse" type="tns:devInfoReportResponse"/>
+      <xs:element name="devIpReport" type="tns:devIpReport"/>
+      <xs:element name="devIpReportResponse" type="tns:devIpReportResponse"/>
+      <xs:element name="isAlive" type="tns:isAlive"/>
+      <xs:element name="isAliveResponse" type="tns:isAliveResponse"/>
+      <xs:element name="sysOnlineReport" type="tns:sysOnlineReport"/>
+      <xs:element name="sysOnlineReportResponse" type="tns:sysOnlineReportResponse"/>
+      <xs:element name="topComplement" type="tns:topComplement"/>
+      <xs:element name="topComplementResponse" type="tns:topComplementResponse"/>
+      <xs:element name="topReport" type="tns:topReport"/>
+      <xs:element name="topReportResponse" type="tns:topReportResponse"/>
+      <xs:complexType name="topReport">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="input" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="topReportResponse">
+        <xs:sequence>
+          <xs:element form="qualified" minOccurs="0" name="return" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="faultInfo">
+        <xs:sequence>
+          <xs:element name="faultInfo" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="devInfoReport">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="input" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="devInfoReportResponse">
+        <xs:sequence>
+          <xs:element form="qualified" minOccurs="0" name="return" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="isAlive">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="input" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="isAliveResponse">
+        <xs:sequence>
+          <xs:element form="qualified" minOccurs="0" name="return" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="devIpReport">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="input" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="devIpReportResponse">
+        <xs:sequence>
+          <xs:element form="qualified" minOccurs="0" name="return" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="topComplement">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="input" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="topComplementResponse">
+        <xs:sequence>
+          <xs:element form="qualified" minOccurs="0" name="return" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="sysOnlineReport">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="input" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="sysOnlineReportResponse">
+        <xs:sequence>
+          <xs:element form="qualified" minOccurs="0" name="return" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="faultInfo" nillable="true" type="tns:faultInfo"/>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="topReportResponse">
+    <wsdl:part element="tns:topReportResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="devIpReportResponse">
+    <wsdl:part element="tns:devIpReportResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="devInfoReport">
+    <wsdl:part element="tns:devInfoReport" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="isAlive">
+    <wsdl:part element="tns:isAlive" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="topComplement">
+    <wsdl:part element="tns:topComplement" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="FaultInfoException">
+    <wsdl:part element="tns:faultInfo" name="FaultInfoException"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="devInfoReportResponse">
+    <wsdl:part element="tns:devInfoReportResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="sysOnlineReport">
+    <wsdl:part element="tns:sysOnlineReport" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="topReport">
+    <wsdl:part element="tns:topReport" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="topComplementResponse">
+    <wsdl:part element="tns:topComplementResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="sysOnlineReportResponse">
+    <wsdl:part element="tns:sysOnlineReportResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="isAliveResponse">
+    <wsdl:part element="tns:isAliveResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="devIpReport">
+    <wsdl:part element="tns:devIpReport" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="TopReportInterface">
+    <wsdl:operation name="topReport">
+      <wsdl:input message="tns:topReport" name="topReport"></wsdl:input>
+      <wsdl:output message="tns:topReportResponse" name="topReportResponse"></wsdl:output>
+      <wsdl:fault message="tns:FaultInfoException" name="FaultInfoException"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="devInfoReport">
+      <wsdl:input message="tns:devInfoReport" name="devInfoReport"></wsdl:input>
+      <wsdl:output message="tns:devInfoReportResponse" name="devInfoReportResponse"></wsdl:output>
+      <wsdl:fault message="tns:FaultInfoException" name="FaultInfoException"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="isAlive">
+      <wsdl:input message="tns:isAlive" name="isAlive"></wsdl:input>
+      <wsdl:output message="tns:isAliveResponse" name="isAliveResponse"></wsdl:output>
+      <wsdl:fault message="tns:FaultInfoException" name="FaultInfoException"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="devIpReport">
+      <wsdl:input message="tns:devIpReport" name="devIpReport"></wsdl:input>
+      <wsdl:output message="tns:devIpReportResponse" name="devIpReportResponse"></wsdl:output>
+      <wsdl:fault message="tns:FaultInfoException" name="FaultInfoException"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="topComplement">
+      <wsdl:input message="tns:topComplement" name="topComplement"></wsdl:input>
+      <wsdl:output message="tns:topComplementResponse" name="topComplementResponse"></wsdl:output>
+      <wsdl:fault message="tns:FaultInfoException" name="FaultInfoException"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="sysOnlineReport">
+      <wsdl:input message="tns:sysOnlineReport" name="sysOnlineReport"></wsdl:input>
+      <wsdl:output message="tns:sysOnlineReportResponse" name="sysOnlineReportResponse"></wsdl:output>
+      <wsdl:fault message="tns:FaultInfoException" name="FaultInfoException"></wsdl:fault>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="TopReportServiceSoapBinding" type="tns:TopReportInterface">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="topReport">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="topReport">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="topReportResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="FaultInfoException">
+        <soap:fault name="FaultInfoException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="devInfoReport">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="devInfoReport">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="devInfoReportResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="FaultInfoException">
+        <soap:fault name="FaultInfoException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="isAlive">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="isAlive">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="isAliveResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="FaultInfoException">
+        <soap:fault name="FaultInfoException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="devIpReport">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="devIpReport">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="devIpReportResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="FaultInfoException">
+        <soap:fault name="FaultInfoException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="topComplement">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="topComplement">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="topComplementResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="FaultInfoException">
+        <soap:fault name="FaultInfoException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="sysOnlineReport">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="sysOnlineReport">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="sysOnlineReportResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="FaultInfoException">
+        <soap:fault name="FaultInfoException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="TopReportService">
+    <wsdl:port binding="tns:TopReportServiceSoapBinding" name="TopReportInterfacePort">
+      <soap:address location="http://192.168.1.192:8080/nmp/cxf/soap/TopReportService"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content>
+        <con:type>http://schemas.xmlsoap.org/wsdl/</con:type>
+      </con:part>
+    </con:definitionCache>
+    <con:endpoints>
+      <con:endpoint>http://192.168.1.192:8080/nmp/cxf/soap/TopReportService</con:endpoint>
+    </con:endpoints>
+    <con:operation id="709ff4e5-d0ea-4485-b74a-e456455da89f" isOneWay="false" action="" name="devInfoReport" bindingOperationName="devInfoReport" type="Request-Response" outputName="devInfoReportResponse" inputName="devInfoReport" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
+      <con:settings/>
+      <con:call id="8d898a04-fd06-482c-81e5-9ccecf4964fd" name="Request 1">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>http://192.168.1.192:8080/nmp/cxf/soap/TopReportService</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:nm="http://nm.pdt.org.cn">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <nm:devInfoReport>
+         <!--Optional:-->
+         <input>?</input>
+      </nm:devInfoReport>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:credentials>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://nm.pdt.org.cn/TopReportInterface/devInfoReport"/>
+        <con:wsrmConfig version="1.2"/>
+      </con:call>
+    </con:operation>
+    <con:operation id="f3103225-3b2c-4c2b-ae4d-0c4d51270c3e" isOneWay="false" action="" name="devIpReport" bindingOperationName="devIpReport" type="Request-Response" outputName="devIpReportResponse" inputName="devIpReport" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
+      <con:settings/>
+      <con:call id="186dee4c-e26f-4876-93fe-607270b0996e" name="Request 1">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>http://192.168.1.192:8080/nmp/cxf/soap/TopReportService</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:nm="http://nm.pdt.org.cn">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <nm:devIpReport>
+         <!--Optional:-->
+         
+      <input>{"taskId":"lksjfljsdfuisydfusd","devIpList":[{"provinceId":"fj","cityId":"591","systemId":"m5911.fj.pdt.cn","devIP":"192.168.69.237","subList":[{"segMin":"32020200","segMax":"32020899"}]}]}</input></nm:devIpReport>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:credentials>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://nm.pdt.org.cn/TopReportInterface/devIpReport"/>
+        <con:wsrmConfig version="1.2"/>
+      </con:call>
+    </con:operation>
+    <con:operation id="28959692-cc3f-4832-91c7-537e28e0f015" isOneWay="false" action="" name="isAlive" bindingOperationName="isAlive" type="Request-Response" outputName="isAliveResponse" inputName="isAlive" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
+      <con:settings/>
+      <con:call id="ddaaef77-76ff-480c-9855-48b4b90e729e" name="Request 1">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>http://192.168.1.192:8080/nmp/cxf/soap/TopReportService</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:nm="http://nm.pdt.org.cn">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <nm:isAlive>
+         <!--Optional:-->
+         <input>?</input>
+      </nm:isAlive>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:credentials>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://nm.pdt.org.cn/TopReportInterface/isAlive"/>
+        <con:wsrmConfig version="1.2"/>
+      </con:call>
+    </con:operation>
+    <con:operation id="5fe40de8-36a6-46f8-ad97-8c53530872fb" isOneWay="false" action="" name="sysOnlineReport" bindingOperationName="sysOnlineReport" type="Request-Response" outputName="sysOnlineReportResponse" inputName="sysOnlineReport" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
+      <con:settings/>
+      <con:call id="aacf0deb-bc2d-4a53-8d25-e109551c4883" name="Request 1">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>http://192.168.1.192:8080/nmp/cxf/soap/TopReportService</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:nm="http://nm.pdt.org.cn">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <nm:sysOnlineReport>
+         <!--Optional:-->
+         <input>?</input>
+      </nm:sysOnlineReport>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:credentials>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://nm.pdt.org.cn/TopReportInterface/sysOnlineReport"/>
+        <con:wsrmConfig version="1.2"/>
+      </con:call>
+    </con:operation>
+    <con:operation id="6ad8f0f0-ae07-4bc6-87ec-9582fe71fe07" isOneWay="false" action="" name="topComplement" bindingOperationName="topComplement" type="Request-Response" outputName="topComplementResponse" inputName="topComplement" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
+      <con:settings/>
+      <con:call id="dacece09-5182-45d8-98dd-b3d96b9b4176" name="Request 1">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>http://192.168.1.192:8080/nmp/cxf/soap/TopReportService</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:nm="http://nm.pdt.org.cn">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <nm:topComplement>
+         <!--Optional:-->
+         
+      </nm:topComplement>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:credentials>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://nm.pdt.org.cn/TopReportInterface/topComplement"/>
+        <con:wsrmConfig version="1.2"/>
+      </con:call>
+    </con:operation>
+    <con:operation id="2470aff2-64a0-4b15-923d-e94c7cb5644d" isOneWay="false" action="" name="topReport" bindingOperationName="topReport" type="Request-Response" outputName="topReportResponse" inputName="topReport" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
+      <con:settings/>
+      <con:call id="89a0f53b-fc77-4be5-b4fa-657fe8f396e3" name="Request 1">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>http://192.168.1.192:8080/nmp/cxf/soap/TopReportService</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:nm="http://nm.pdt.org.cn">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <nm:topReport>
+         <!--Optional:-->
+         <input>?</input>
+      </nm:topReport>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:credentials>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://nm.pdt.org.cn/TopReportInterface/topReport"/>
+        <con:wsrmConfig version="1.2"/>
+      </con:call>
+    </con:operation>
+  </con:interface>
+  <con:interface xsi:type="con:WsdlInterface" id="185717aa-0464-4f6b-a28f-11f8ce46c51e" wsaVersion="NONE" name="CityUserServiceSoapBinding" type="wsdl" bindingName="{http://nm.pdt.org.cn}CityUserServiceSoapBinding" soapVersion="1_1" anonymous="optional" definition="http://192.168.1.192:8080/nmp/cxf/soap/CityUserService?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:settings/>
+    <con:definitionCache type="TEXT" rootPart="http://192.168.1.192:8080/nmp/cxf/soap/CityUserService?wsdl">
+      <con:part>
+        <con:url>http://192.168.1.192:8080/nmp/cxf/soap/CityUserService?wsdl</con:url>
+        <con:content><![CDATA[<wsdl:definitions name="CityUserService" targetNamespace="http://nm.pdt.org.cn" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://nm.pdt.org.cn" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http">
+  <wsdl:types>
+    <xs:schema attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://nm.pdt.org.cn" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="accountInfoQuery" type="tns:accountInfoQuery"/>
+      <xs:element name="accountInfoQueryResponse" type="tns:accountInfoQueryResponse"/>
+      <xs:element name="delRoamInRadioUser" type="tns:delRoamInRadioUser"/>
+      <xs:element name="delRoamInRadioUserResponse" type="tns:delRoamInRadioUserResponse"/>
+      <xs:element name="delRoamInTalkGroup" type="tns:delRoamInTalkGroup"/>
+      <xs:element name="delRoamInTalkGroupResponse" type="tns:delRoamInTalkGroupResponse"/>
+      <xs:element name="groupInfoQuery" type="tns:groupInfoQuery"/>
+      <xs:element name="groupInfoQueryResponse" type="tns:groupInfoQueryResponse"/>
+      <xs:element name="isAlive" type="tns:isAlive"/>
+      <xs:element name="isAliveResponse" type="tns:isAliveResponse"/>
+      <xs:element name="orgInfoQuery" type="tns:orgInfoQuery"/>
+      <xs:element name="orgInfoQueryResponse" type="tns:orgInfoQueryResponse"/>
+      <xs:element name="radioRegisteredInfoQuery" type="tns:radioRegisteredInfoQuery"/>
+      <xs:element name="radioRegisteredInfoQueryResponse" type="tns:radioRegisteredInfoQueryResponse"/>
+      <xs:element name="roamToQuery" type="tns:roamToQuery"/>
+      <xs:element name="roamToQueryResponse" type="tns:roamToQueryResponse"/>
+      <xs:element name="roamUserQuery" type="tns:roamUserQuery"/>
+      <xs:element name="roamUserQueryResponse" type="tns:roamUserQueryResponse"/>
+      <xs:element name="setRadioUserRoamAttr" type="tns:setRadioUserRoamAttr"/>
+      <xs:element name="setRadioUserRoamAttrResponse" type="tns:setRadioUserRoamAttrResponse"/>
+      <xs:element name="setRadioUserRoamToList" type="tns:setRadioUserRoamToList"/>
+      <xs:element name="setRadioUserRoamToListResponse" type="tns:setRadioUserRoamToListResponse"/>
+      <xs:element name="setRadioUserRoamToTscList" type="tns:setRadioUserRoamToTscList"/>
+      <xs:element name="setRadioUserRoamToTscListResponse" type="tns:setRadioUserRoamToTscListResponse"/>
+      <xs:element name="switchStateQuery" type="tns:switchStateQuery"/>
+      <xs:element name="switchStateQueryResponse" type="tns:switchStateQueryResponse"/>
+      <xs:element name="termDevInfoQuery" type="tns:termDevInfoQuery"/>
+      <xs:element name="termDevInfoQueryResponse" type="tns:termDevInfoQueryResponse"/>
+      <xs:element name="termUseInfoQuery" type="tns:termUseInfoQuery"/>
+      <xs:element name="termUseInfoQueryResponse" type="tns:termUseInfoQueryResponse"/>
+      <xs:element name="userInfoQuery" type="tns:userInfoQuery"/>
+      <xs:element name="userInfoQueryResponse" type="tns:userInfoQueryResponse"/>
+      <xs:complexType name="orgInfoQuery">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="input" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="orgInfoQueryResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="faultInfo">
+        <xs:sequence>
+          <xs:element name="faultInfo" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="radioRegisteredInfoQuery">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="input" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="radioRegisteredInfoQueryResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="isAlive">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="input" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="isAliveResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="delRoamInTalkGroup">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="input" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="delRoamInTalkGroupResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="roamToQuery">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="input" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="roamToQueryResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="setRadioUserRoamToList">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="input" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="setRadioUserRoamToListResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="userInfoQuery">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="input" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="userInfoQueryResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="switchStateQuery">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="input" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="switchStateQueryResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="delRoamInRadioUser">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="input" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="delRoamInRadioUserResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="termDevInfoQuery">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="input" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="termDevInfoQueryResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="groupInfoQuery">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="input" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="groupInfoQueryResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="roamUserQuery">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="input" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="roamUserQueryResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="termUseInfoQuery">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="input" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="termUseInfoQueryResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="accountInfoQuery">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="input" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="accountInfoQueryResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="setRadioUserRoamToTscList">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="input" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="setRadioUserRoamToTscListResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="setRadioUserRoamAttr">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="input" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="setRadioUserRoamAttrResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="faultInfo" nillable="true" type="tns:faultInfo"/>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="orgInfoQuery">
+    <wsdl:part element="tns:orgInfoQuery" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="setRadioUserRoamAttrResponse">
+    <wsdl:part element="tns:setRadioUserRoamAttrResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="isAlive">
+    <wsdl:part element="tns:isAlive" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="delRoamInTalkGroup">
+    <wsdl:part element="tns:delRoamInTalkGroup" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="roamToQuery">
+    <wsdl:part element="tns:roamToQuery" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="setRadioUserRoamToList">
+    <wsdl:part element="tns:setRadioUserRoamToList" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="radioRegisteredInfoQueryResponse">
+    <wsdl:part element="tns:radioRegisteredInfoQueryResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="FaultInfoException">
+    <wsdl:part element="tns:faultInfo" name="FaultInfoException"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="switchStateQuery">
+    <wsdl:part element="tns:switchStateQuery" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="orgInfoQueryResponse">
+    <wsdl:part element="tns:orgInfoQueryResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="groupInfoQueryResponse">
+    <wsdl:part element="tns:groupInfoQueryResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="accountInfoQueryResponse">
+    <wsdl:part element="tns:accountInfoQueryResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="delRoamInRadioUser">
+    <wsdl:part element="tns:delRoamInRadioUser" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="termDevInfoQuery">
+    <wsdl:part element="tns:termDevInfoQuery" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="groupInfoQuery">
+    <wsdl:part element="tns:groupInfoQuery" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="roamUserQuery">
+    <wsdl:part element="tns:roamUserQuery" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="userInfoQueryResponse">
+    <wsdl:part element="tns:userInfoQueryResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="isAliveResponse">
+    <wsdl:part element="tns:isAliveResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="delRoamInTalkGroupResponse">
+    <wsdl:part element="tns:delRoamInTalkGroupResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="delRoamInRadioUserResponse">
+    <wsdl:part element="tns:delRoamInRadioUserResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="radioRegisteredInfoQuery">
+    <wsdl:part element="tns:radioRegisteredInfoQuery" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="setRadioUserRoamToListResponse">
+    <wsdl:part element="tns:setRadioUserRoamToListResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="userInfoQuery">
+    <wsdl:part element="tns:userInfoQuery" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="termUseInfoQueryResponse">
+    <wsdl:part element="tns:termUseInfoQueryResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="roamToQueryResponse">
+    <wsdl:part element="tns:roamToQueryResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="roamUserQueryResponse">
+    <wsdl:part element="tns:roamUserQueryResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="setRadioUserRoamToTscListResponse">
+    <wsdl:part element="tns:setRadioUserRoamToTscListResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="switchStateQueryResponse">
+    <wsdl:part element="tns:switchStateQueryResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="termUseInfoQuery">
+    <wsdl:part element="tns:termUseInfoQuery" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="accountInfoQuery">
+    <wsdl:part element="tns:accountInfoQuery" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="setRadioUserRoamToTscList">
+    <wsdl:part element="tns:setRadioUserRoamToTscList" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="termDevInfoQueryResponse">
+    <wsdl:part element="tns:termDevInfoQueryResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="setRadioUserRoamAttr">
+    <wsdl:part element="tns:setRadioUserRoamAttr" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="CityUserInterface">
+    <wsdl:operation name="orgInfoQuery">
+      <wsdl:input message="tns:orgInfoQuery" name="orgInfoQuery"></wsdl:input>
+      <wsdl:output message="tns:orgInfoQueryResponse" name="orgInfoQueryResponse"></wsdl:output>
+      <wsdl:fault message="tns:FaultInfoException" name="FaultInfoException"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="radioRegisteredInfoQuery">
+      <wsdl:input message="tns:radioRegisteredInfoQuery" name="radioRegisteredInfoQuery"></wsdl:input>
+      <wsdl:output message="tns:radioRegisteredInfoQueryResponse" name="radioRegisteredInfoQueryResponse"></wsdl:output>
+      <wsdl:fault message="tns:FaultInfoException" name="FaultInfoException"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="isAlive">
+      <wsdl:input message="tns:isAlive" name="isAlive"></wsdl:input>
+      <wsdl:output message="tns:isAliveResponse" name="isAliveResponse"></wsdl:output>
+      <wsdl:fault message="tns:FaultInfoException" name="FaultInfoException"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="delRoamInTalkGroup">
+      <wsdl:input message="tns:delRoamInTalkGroup" name="delRoamInTalkGroup"></wsdl:input>
+      <wsdl:output message="tns:delRoamInTalkGroupResponse" name="delRoamInTalkGroupResponse"></wsdl:output>
+      <wsdl:fault message="tns:FaultInfoException" name="FaultInfoException"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="roamToQuery">
+      <wsdl:input message="tns:roamToQuery" name="roamToQuery"></wsdl:input>
+      <wsdl:output message="tns:roamToQueryResponse" name="roamToQueryResponse"></wsdl:output>
+      <wsdl:fault message="tns:FaultInfoException" name="FaultInfoException"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="setRadioUserRoamToList">
+      <wsdl:input message="tns:setRadioUserRoamToList" name="setRadioUserRoamToList"></wsdl:input>
+      <wsdl:output message="tns:setRadioUserRoamToListResponse" name="setRadioUserRoamToListResponse"></wsdl:output>
+      <wsdl:fault message="tns:FaultInfoException" name="FaultInfoException"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="userInfoQuery">
+      <wsdl:input message="tns:userInfoQuery" name="userInfoQuery"></wsdl:input>
+      <wsdl:output message="tns:userInfoQueryResponse" name="userInfoQueryResponse"></wsdl:output>
+      <wsdl:fault message="tns:FaultInfoException" name="FaultInfoException"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="switchStateQuery">
+      <wsdl:input message="tns:switchStateQuery" name="switchStateQuery"></wsdl:input>
+      <wsdl:output message="tns:switchStateQueryResponse" name="switchStateQueryResponse"></wsdl:output>
+      <wsdl:fault message="tns:FaultInfoException" name="FaultInfoException"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="delRoamInRadioUser">
+      <wsdl:input message="tns:delRoamInRadioUser" name="delRoamInRadioUser"></wsdl:input>
+      <wsdl:output message="tns:delRoamInRadioUserResponse" name="delRoamInRadioUserResponse"></wsdl:output>
+      <wsdl:fault message="tns:FaultInfoException" name="FaultInfoException"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="termDevInfoQuery">
+      <wsdl:input message="tns:termDevInfoQuery" name="termDevInfoQuery"></wsdl:input>
+      <wsdl:output message="tns:termDevInfoQueryResponse" name="termDevInfoQueryResponse"></wsdl:output>
+      <wsdl:fault message="tns:FaultInfoException" name="FaultInfoException"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="groupInfoQuery">
+      <wsdl:input message="tns:groupInfoQuery" name="groupInfoQuery"></wsdl:input>
+      <wsdl:output message="tns:groupInfoQueryResponse" name="groupInfoQueryResponse"></wsdl:output>
+      <wsdl:fault message="tns:FaultInfoException" name="FaultInfoException"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="roamUserQuery">
+      <wsdl:input message="tns:roamUserQuery" name="roamUserQuery"></wsdl:input>
+      <wsdl:output message="tns:roamUserQueryResponse" name="roamUserQueryResponse"></wsdl:output>
+      <wsdl:fault message="tns:FaultInfoException" name="FaultInfoException"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="termUseInfoQuery">
+      <wsdl:input message="tns:termUseInfoQuery" name="termUseInfoQuery"></wsdl:input>
+      <wsdl:output message="tns:termUseInfoQueryResponse" name="termUseInfoQueryResponse"></wsdl:output>
+      <wsdl:fault message="tns:FaultInfoException" name="FaultInfoException"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="accountInfoQuery">
+      <wsdl:input message="tns:accountInfoQuery" name="accountInfoQuery"></wsdl:input>
+      <wsdl:output message="tns:accountInfoQueryResponse" name="accountInfoQueryResponse"></wsdl:output>
+      <wsdl:fault message="tns:FaultInfoException" name="FaultInfoException"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="setRadioUserRoamToTscList">
+      <wsdl:input message="tns:setRadioUserRoamToTscList" name="setRadioUserRoamToTscList"></wsdl:input>
+      <wsdl:output message="tns:setRadioUserRoamToTscListResponse" name="setRadioUserRoamToTscListResponse"></wsdl:output>
+      <wsdl:fault message="tns:FaultInfoException" name="FaultInfoException"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="setRadioUserRoamAttr">
+      <wsdl:input message="tns:setRadioUserRoamAttr" name="setRadioUserRoamAttr"></wsdl:input>
+      <wsdl:output message="tns:setRadioUserRoamAttrResponse" name="setRadioUserRoamAttrResponse"></wsdl:output>
+      <wsdl:fault message="tns:FaultInfoException" name="FaultInfoException"></wsdl:fault>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CityUserServiceSoapBinding" type="tns:CityUserInterface">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="orgInfoQuery">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="orgInfoQuery">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="orgInfoQueryResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="FaultInfoException">
+        <soap:fault name="FaultInfoException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="radioRegisteredInfoQuery">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="radioRegisteredInfoQuery">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="radioRegisteredInfoQueryResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="FaultInfoException">
+        <soap:fault name="FaultInfoException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="isAlive">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="isAlive">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="isAliveResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="FaultInfoException">
+        <soap:fault name="FaultInfoException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="delRoamInTalkGroup">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="delRoamInTalkGroup">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="delRoamInTalkGroupResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="FaultInfoException">
+        <soap:fault name="FaultInfoException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="roamToQuery">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="roamToQuery">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="roamToQueryResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="FaultInfoException">
+        <soap:fault name="FaultInfoException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="setRadioUserRoamToList">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="setRadioUserRoamToList">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="setRadioUserRoamToListResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="FaultInfoException">
+        <soap:fault name="FaultInfoException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="userInfoQuery">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="userInfoQuery">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="userInfoQueryResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="FaultInfoException">
+        <soap:fault name="FaultInfoException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="switchStateQuery">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="switchStateQuery">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="switchStateQueryResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="FaultInfoException">
+        <soap:fault name="FaultInfoException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="delRoamInRadioUser">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="delRoamInRadioUser">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="delRoamInRadioUserResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="FaultInfoException">
+        <soap:fault name="FaultInfoException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="termDevInfoQuery">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="termDevInfoQuery">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="termDevInfoQueryResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="FaultInfoException">
+        <soap:fault name="FaultInfoException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="groupInfoQuery">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="groupInfoQuery">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="groupInfoQueryResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="FaultInfoException">
+        <soap:fault name="FaultInfoException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="roamUserQuery">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="roamUserQuery">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="roamUserQueryResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="FaultInfoException">
+        <soap:fault name="FaultInfoException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="termUseInfoQuery">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="termUseInfoQuery">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="termUseInfoQueryResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="FaultInfoException">
+        <soap:fault name="FaultInfoException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="accountInfoQuery">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="accountInfoQuery">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="accountInfoQueryResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="FaultInfoException">
+        <soap:fault name="FaultInfoException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="setRadioUserRoamToTscList">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="setRadioUserRoamToTscList">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="setRadioUserRoamToTscListResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="FaultInfoException">
+        <soap:fault name="FaultInfoException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="setRadioUserRoamAttr">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="setRadioUserRoamAttr">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="setRadioUserRoamAttrResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="FaultInfoException">
+        <soap:fault name="FaultInfoException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CityUserService">
+    <wsdl:port binding="tns:CityUserServiceSoapBinding" name="CityUserServicePort">
+      <soap:address location="http://192.168.1.192:8080/nmp/cxf/soap/CityUserService"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content>
+        <con:type>http://schemas.xmlsoap.org/wsdl/</con:type>
+      </con:part>
+    </con:definitionCache>
+    <con:endpoints>
+      <con:endpoint>http://192.168.1.192:8080/nmp/cxf/soap/CityUserService</con:endpoint>
+    </con:endpoints>
+    <con:operation id="e2cdf498-abfe-4968-a498-c3ccad290936" isOneWay="false" action="" name="accountInfoQuery" bindingOperationName="accountInfoQuery" type="Request-Response" outputName="accountInfoQueryResponse" inputName="accountInfoQuery" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
+      <con:settings/>
+      <con:call id="49a1c10f-0d2a-462a-bd7d-01a463d36e20" name="Request 1">
+        <con:settings/>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>http://192.168.1.192:8080/nmp/cxf/soap/CityUserService</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:nm="http://nm.pdt.org.cn">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <nm:accountInfoQuery>\r
+         <!--Optional:-->\r
+         <input>?</input>\r
+      </nm:accountInfoQuery>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://nm.pdt.org.cn/CityUserInterface/accountInfoQuery"/>
+      </con:call>
+    </con:operation>
+    <con:operation id="a1c3876f-abdf-4ea1-9001-f96eec0a6a9c" isOneWay="false" action="" name="delRoamInRadioUser" bindingOperationName="delRoamInRadioUser" type="Request-Response" outputName="delRoamInRadioUserResponse" inputName="delRoamInRadioUser" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
+      <con:settings/>
+      <con:call id="083a720b-32af-4d0a-82bf-d8fd1fb83135" name="Request 1">
+        <con:settings/>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>http://192.168.1.192:8080/nmp/cxf/soap/CityUserService</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:nm="http://nm.pdt.org.cn">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <nm:delRoamInRadioUser>\r
+         <!--Optional:-->\r
+         <input>?</input>\r
+      </nm:delRoamInRadioUser>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://nm.pdt.org.cn/CityUserInterface/delRoamInRadioUser"/>
+      </con:call>
+    </con:operation>
+    <con:operation id="74a89168-4282-4fe4-927a-497d66155eef" isOneWay="false" action="" name="delRoamInTalkGroup" bindingOperationName="delRoamInTalkGroup" type="Request-Response" outputName="delRoamInTalkGroupResponse" inputName="delRoamInTalkGroup" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
+      <con:settings/>
+      <con:call id="08b9b367-275f-415a-a44e-300951502fc3" name="Request 1">
+        <con:settings/>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>http://192.168.1.192:8080/nmp/cxf/soap/CityUserService</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:nm="http://nm.pdt.org.cn">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <nm:delRoamInTalkGroup>\r
+         <!--Optional:-->\r
+         <input>?</input>\r
+      </nm:delRoamInTalkGroup>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://nm.pdt.org.cn/CityUserInterface/delRoamInTalkGroup"/>
+      </con:call>
+    </con:operation>
+    <con:operation id="d95d9d7e-c06f-4dbe-9942-dfc4a396e956" isOneWay="false" action="" name="groupInfoQuery" bindingOperationName="groupInfoQuery" type="Request-Response" outputName="groupInfoQueryResponse" inputName="groupInfoQuery" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
+      <con:settings/>
+      <con:call id="16aef133-9f19-4ff5-863f-f1728267e8be" name="Request 1">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>http://192.168.1.192:8080/nmp/cxf/soap/CityUserService</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:nm="http://nm.pdt.org.cn">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <nm:groupInfoQuery>
+         <!--Optional:-->
+         
+      <input>{"pageNow":1,"pageSize":10}</input></nm:groupInfoQuery>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:credentials>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://nm.pdt.org.cn/CityUserInterface/groupInfoQuery"/>
+        <con:wsrmConfig version="1.2"/>
+      </con:call>
+    </con:operation>
+    <con:operation id="7139b7f4-551b-4fbd-8152-7f1675d88af9" isOneWay="false" action="" name="isAlive" bindingOperationName="isAlive" type="Request-Response" outputName="isAliveResponse" inputName="isAlive" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
+      <con:settings/>
+      <con:call id="05a56ceb-7d41-47c5-b7b3-e42dbc508605" name="Request 1">
+        <con:settings/>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>http://192.168.1.192:8080/nmp/cxf/soap/CityUserService</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:nm="http://nm.pdt.org.cn">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <nm:isAlive>\r
+         <!--Optional:-->\r
+         <input>?</input>\r
+      </nm:isAlive>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://nm.pdt.org.cn/CityUserInterface/isAlive"/>
+      </con:call>
+    </con:operation>
+    <con:operation id="fd40c752-1713-431c-bfe7-ac081929055d" isOneWay="false" action="" name="orgInfoQuery" bindingOperationName="orgInfoQuery" type="Request-Response" outputName="orgInfoQueryResponse" inputName="orgInfoQuery" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
+      <con:settings/>
+      <con:call id="4e2fef54-f16f-4945-a64a-8e3dd00aeaca" name="Request 1">
+        <con:settings/>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>http://192.168.1.192:8080/nmp/cxf/soap/CityUserService</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:nm="http://nm.pdt.org.cn">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <nm:orgInfoQuery>\r
+         <!--Optional:-->\r
+         <input>?</input>\r
+      </nm:orgInfoQuery>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://nm.pdt.org.cn/CityUserInterface/orgInfoQuery"/>
+      </con:call>
+    </con:operation>
+    <con:operation id="94d50990-802d-46ba-babe-66d355773863" isOneWay="false" action="" name="radioRegisteredInfoQuery" bindingOperationName="radioRegisteredInfoQuery" type="Request-Response" outputName="radioRegisteredInfoQueryResponse" inputName="radioRegisteredInfoQuery" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
+      <con:settings/>
+      <con:call id="74fb496a-793e-429d-974c-755d773d0008" name="Request 1">
+        <con:settings/>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>http://192.168.1.192:8080/nmp/cxf/soap/CityUserService</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:nm="http://nm.pdt.org.cn">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <nm:radioRegisteredInfoQuery>\r
+         <!--Optional:-->\r
+         <input>?</input>\r
+      </nm:radioRegisteredInfoQuery>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://nm.pdt.org.cn/CityUserInterface/radioRegisteredInfoQuery"/>
+      </con:call>
+    </con:operation>
+    <con:operation id="9a2aced8-6210-41a4-8f6d-223fe3871e0e" isOneWay="false" action="" name="roamToQuery" bindingOperationName="roamToQuery" type="Request-Response" outputName="roamToQueryResponse" inputName="roamToQuery" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
+      <con:settings/>
+      <con:call id="be9976b7-0c4e-4ca9-9667-9dd89408b50b" name="Request 1">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>http://192.168.1.192:8080/nmp/cxf/soap/CityUserService</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:nm="http://nm.pdt.org.cn">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <nm:roamToQuery>
+         <!--Optional:-->
+         
+      <input>{"groupId":""}</input></nm:roamToQuery>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:credentials>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://nm.pdt.org.cn/CityUserInterface/roamToQuery"/>
+        <con:wsrmConfig version="1.2"/>
+      </con:call>
+    </con:operation>
+    <con:operation id="db549cda-484b-4822-a15e-c9d59e0bf3e6" isOneWay="false" action="" name="roamUserQuery" bindingOperationName="roamUserQuery" type="Request-Response" outputName="roamUserQueryResponse" inputName="roamUserQuery" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
+      <con:settings/>
+      <con:call id="72e84339-5ff6-4521-94be-189663a43dbf" name="Request 1">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>http://192.168.1.192:8080/nmp/cxf/soap/CityUserService</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:nm="http://nm.pdt.org.cn">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <nm:roamUserQuery>
+         <!--Optional:-->
+         
+      </nm:roamUserQuery>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:credentials>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://nm.pdt.org.cn/CityUserInterface/roamUserQuery"/>
+        <con:wsrmConfig version="1.2"/>
+      </con:call>
+    </con:operation>
+    <con:operation id="f03f4fd9-f8fa-45af-8621-dbca411c1be6" isOneWay="false" action="" name="setRadioUserRoamAttr" bindingOperationName="setRadioUserRoamAttr" type="Request-Response" outputName="setRadioUserRoamAttrResponse" inputName="setRadioUserRoamAttr" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
+      <con:settings/>
+      <con:call id="1274b9b7-29fb-4d43-a650-9967e5e38093" name="Request 1">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>http://192.168.1.192:8080/nmp/cxf/soap/CityUserService</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:nm="http://nm.pdt.org.cn">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <nm:setRadioUserRoamAttr>
+         <!--Optional:-->
+         
+      <input>{"expireDate":"2018-03-08","id":32821214,"priority":0,"roamPolicy":true}</input></nm:setRadioUserRoamAttr>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:credentials>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://nm.pdt.org.cn/CityUserInterface/setRadioUserRoamAttr"/>
+        <con:wsrmConfig version="1.2"/>
+      </con:call>
+    </con:operation>
+    <con:operation id="f6c3b7f2-42db-4b03-8f00-a6545f7918b8" isOneWay="false" action="" name="setRadioUserRoamToList" bindingOperationName="setRadioUserRoamToList" type="Request-Response" outputName="setRadioUserRoamToListResponse" inputName="setRadioUserRoamToList" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
+      <con:settings/>
+      <con:call id="8b596a31-79c6-4f13-b065-ab3bd8fda7b1" name="Request 1">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>http://192.168.1.192:8080/nmp/cxf/soap/CityUserService</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:nm="http://nm.pdt.org.cn">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <nm:setRadioUserRoamToList>
+         <!--Optional:-->
+         
+      <input>{"expireDate ":"2018-03-05","id":58998201,"policy":1,"priority":0,"roamToList":["m5911.fj.pdt.cn"]}</input></nm:setRadioUserRoamToList>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:credentials>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://nm.pdt.org.cn/CityUserInterface/setRadioUserRoamToList"/>
+        <con:wsrmConfig version="1.2"/>
+      </con:call>
+    </con:operation>
+    <con:operation id="9a1998d1-9d7c-4537-b26d-0932a452b9b2" isOneWay="false" action="" name="setRadioUserRoamToTscList" bindingOperationName="setRadioUserRoamToTscList" type="Request-Response" outputName="setRadioUserRoamToTscListResponse" inputName="setRadioUserRoamToTscList" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
+      <con:settings/>
+      <con:call id="f0a1f07f-dbf6-4867-b124-32eab25b71fe" name="Request 1">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>http://192.168.1.192:8080/nmp/cxf/soap/CityUserService</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:nm="http://nm.pdt.org.cn">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <nm:setRadioUserRoamToTscList>
+         <!--Optional:-->
+         
+      <input>{"expireDate":"2018-12-12","id":58998204,"policy":1,"priority":0,"roamToList":[{"systemId":"m5911.fj.pdt.cn","tscList":["r11.m5911.fj.pdt.cn"]}]}</input></nm:setRadioUserRoamToTscList>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:credentials>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://nm.pdt.org.cn/CityUserInterface/setRadioUserRoamToTscList"/>
+        <con:wsrmConfig version="1.2"/>
+      </con:call>
+    </con:operation>
+    <con:operation id="bd750880-c9f5-44ae-bef0-2ea0553d92ce" isOneWay="false" action="" name="switchStateQuery" bindingOperationName="switchStateQuery" type="Request-Response" outputName="switchStateQueryResponse" inputName="switchStateQuery" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
+      <con:settings/>
+      <con:call id="1e9d2ad1-8964-4465-ad81-dbfa969cecb4" name="Request 1">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>http://192.168.1.192:8080/nmp/cxf/soap/CityUserService</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:nm="http://nm.pdt.org.cn">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <nm:switchStateQuery>
+         <!--Optional:-->
+         
+      <input>{'pageNum':1}</input></nm:switchStateQuery>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:credentials>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://nm.pdt.org.cn/CityUserInterface/switchStateQuery"/>
+        <con:wsrmConfig version="1.2"/>
+      </con:call>
+    </con:operation>
+    <con:operation id="b7ee9f7a-e633-4a70-bd54-432575c25397" isOneWay="false" action="" name="termDevInfoQuery" bindingOperationName="termDevInfoQuery" type="Request-Response" outputName="termDevInfoQueryResponse" inputName="termDevInfoQuery" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
+      <con:settings/>
+      <con:call id="e8a9a489-f45f-478d-b450-bd8eecdd29e0" name="Request 1">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>http://192.168.1.192:8080/nmp/cxf/soap/CityUserService</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:nm="http://nm.pdt.org.cn">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <nm:termDevInfoQuery>
+         <!--Optional:-->
+         
+      <input>{"endDate":"2018-03-05","startDate":"2017-12-01"}</input></nm:termDevInfoQuery>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:credentials>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://nm.pdt.org.cn/CityUserInterface/termDevInfoQuery"/>
+        <con:wsrmConfig version="1.2"/>
+      </con:call>
+    </con:operation>
+    <con:operation id="97d8f2c1-9e5a-4618-988c-5029b0428fa8" isOneWay="false" action="" name="termUseInfoQuery" bindingOperationName="termUseInfoQuery" type="Request-Response" outputName="termUseInfoQueryResponse" inputName="termUseInfoQuery" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
+      <con:settings/>
+      <con:call id="bc1c8a38-68ad-49a3-829e-9868dbd070c4" name="Request 1">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>http://192.168.1.192:8080/nmp/cxf/soap/CityUserService</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:nm="http://nm.pdt.org.cn">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <nm:termUseInfoQuery>
+         <!--Optional:-->
+         
+      <input>{"endDate":"2018-12-11","startDate":"2017-12-01"}</input></nm:termUseInfoQuery>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:credentials>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://nm.pdt.org.cn/CityUserInterface/termUseInfoQuery"/>
+        <con:wsrmConfig version="1.2"/>
+      </con:call>
+    </con:operation>
+    <con:operation id="8616e3ff-65f5-4f00-925c-958c5640f0cf" isOneWay="false" action="" name="userInfoQuery" bindingOperationName="userInfoQuery" type="Request-Response" outputName="userInfoQueryResponse" inputName="userInfoQuery" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
+      <con:settings/>
+      <con:call id="00bb0f5c-c2c9-4c3b-8115-ed9ed1dd2be9" name="Request 1">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>http://192.168.1.192:8080/nmp/cxf/soap/CityUserService</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:nm="http://nm.pdt.org.cn">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <nm:userInfoQuery>
+         <!--Optional:-->
+         
+      <input>{"endDate":"2018-12-11","startDate":"2011-12-01"}</input></nm:userInfoQuery>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://nm.pdt.org.cn/CityUserInterface/userInfoQuery"/>
+        <con:wsrmConfig version="1.2"/>
+      </con:call>
+    </con:operation>
+  </con:interface>
+  <con:testSuite id="d387e7db-9a1e-4fb5-8ccd-f1d9705cd779" name="CityUserServiceSoapBinding">
+    <con:settings/>
+    <con:runType>SEQUENTIAL</con:runType>
+    <con:testCase id="4bb3952d-3aba-45a7-bfcb-cda1051f6d86" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TestCase 1" searchProperties="true">
+      <con:settings/>
+      <con:testStep type="request" id="04df1049-0340-4bdd-94fb-5d40506317ed" name="termUseInfoQuery - Request 1">
+        <con:settings/>
+        <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:interface>CityUserServiceSoapBinding</con:interface>
+          <con:operation>termUseInfoQuery</con:operation>
+          <con:request name="termUseInfoQuery - Request 1" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="7a2a1152-35ee-4e19-b3ad-527a8ce69232">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:encoding>UTF-8</con:encoding>
+            <con:endpoint>http://192.168.1.192:8080/nmp/cxf/soap/CityUserService</con:endpoint>
+            <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:nm="http://nm.pdt.org.cn">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <nm:termUseInfoQuery>
+         <!--Optional:-->
+         
+      <input>{"endDate":"2018-12-11","startDate":"2017-12-01"}</input></nm:termUseInfoQuery>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+            <con:assertion type="SOAP Response" id="3723df16-3a0e-41f1-b5a4-ebf134114ee0" name="SOAP Response"/>
+            <con:assertion type="Simple Contains" id="1663040b-6a67-4dd4-97ef-d2e8cc8273c3" name="Contains">
+              <con:configuration>
+                <token>devList</token>
+                <ignoreCase>false</ignoreCase>
+                <useRegEx>false</useRegEx>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://nm.pdt.org.cn/CityUserInterface/termUseInfoQuery"/>
+            <con:wsrmConfig version="1.2"/>
+          </con:request>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="request" id="5f83bbd0-8210-47c3-be8f-0fc39cb0c538" name="userInfoQuery - Request 1">
+        <con:settings/>
+        <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:interface>CityUserServiceSoapBinding</con:interface>
+          <con:operation>userInfoQuery</con:operation>
+          <con:request name="userInfoQuery - Request 1" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="8eac218f-bbc4-46a7-9a45-920e86e2f0bf">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:encoding>UTF-8</con:encoding>
+            <con:endpoint>http://192.168.1.192:8080/nmp/cxf/soap/CityUserService</con:endpoint>
+            <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:nm="http://nm.pdt.org.cn">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <nm:userInfoQuery>
+         <!--Optional:-->
+         
+      <input>{"endDate":"2018-12-11","startDate":"2017-12-01"}</input></nm:userInfoQuery>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+            <con:assertion type="SOAP Response" id="32c8e0ca-3b68-44c0-bf6e-a05ad82c6ae1" name="SOAP Response"/>
+            <con:assertion type="Simple Contains" id="93afb2b6-f9c2-4b22-b1d8-efb2c85a164c" name="Contains">
+              <con:configuration>
+                <token>userList</token>
+                <ignoreCase>false</ignoreCase>
+                <useRegEx>false</useRegEx>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://nm.pdt.org.cn/CityUserInterface/userInfoQuery"/>
+            <con:wsrmConfig version="1.2"/>
+          </con:request>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="request" id="4bf7332a-f38f-4ba8-9145-5a87ca510906" name="termDevInfoQuery - Request 1">
+        <con:settings/>
+        <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:interface>CityUserServiceSoapBinding</con:interface>
+          <con:operation>termDevInfoQuery</con:operation>
+          <con:request name="termDevInfoQuery - Request 1" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="9e5643b7-acbd-4e57-9e35-abb3e54a0907">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:encoding>UTF-8</con:encoding>
+            <con:endpoint>http://192.168.1.192:8080/nmp/cxf/soap/CityUserService</con:endpoint>
+            <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:nm="http://nm.pdt.org.cn">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <nm:termDevInfoQuery>
+         <!--Optional:-->
+         
+      <input>{"endDate":"2018-12-05","startDate":"2017-12-01"}</input></nm:termDevInfoQuery>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+            <con:assertion type="SOAP Response" id="512c7d5c-2fc5-4273-aced-1b160a058947" name="SOAP Response"/>
+            <con:assertion type="Simple Contains" id="8d66594f-bb25-4e10-9c62-9c8dea22ef1e" name="Contains">
+              <con:configuration>
+                <token>devList</token>
+                <ignoreCase>false</ignoreCase>
+                <useRegEx>false</useRegEx>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://nm.pdt.org.cn/CityUserInterface/termDevInfoQuery"/>
+            <con:wsrmConfig version="1.2"/>
+          </con:request>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="request" id="b630177d-e3d6-40bb-b11d-301db11b29c3" name="switchStateQuery - Request 1">
+        <con:settings/>
+        <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:interface>CityUserServiceSoapBinding</con:interface>
+          <con:operation>switchStateQuery</con:operation>
+          <con:request name="switchStateQuery - Request 1" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="56de101c-ccc4-4068-8fa4-c64ebf4532ba">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:encoding>UTF-8</con:encoding>
+            <con:endpoint>http://192.168.1.192:8080/nmp/cxf/soap/CityUserService</con:endpoint>
+            <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:nm="http://nm.pdt.org.cn">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <nm:switchStateQuery>
+         <!--Optional:-->
+         
+      <input>{"pageNum":1}</input></nm:switchStateQuery>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+            <con:assertion type="SOAP Response" id="f2ac1907-721c-41b5-8275-e2361ef3f413" name="SOAP Response"/>
+            <con:assertion type="Simple Contains" id="b35f05a5-0482-43ea-9072-af8f962baa9f" name="Contains">
+              <con:configuration>
+                <token>curPageNum</token>
+                <ignoreCase>false</ignoreCase>
+                <useRegEx>false</useRegEx>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="Simple Contains" id="24e33f84-3b44-464c-b487-1860ae7f8daa" name="Contains 1">
+              <con:configuration>
+                <token>isEnd</token>
+                <ignoreCase>false</ignoreCase>
+                <useRegEx>false</useRegEx>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="Simple Contains" id="63fd4ad1-8cdb-4a34-9b0f-29fabd849455" name="Contains 2">
+              <con:configuration>
+                <token>provinceId</token>
+                <ignoreCase>false</ignoreCase>
+                <useRegEx>false</useRegEx>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="Simple Contains" id="12ebbc6c-b5e1-4a07-91c7-23043b6f9cf6" name="Contains 3">
+              <con:configuration>
+                <token>cityId</token>
+                <ignoreCase>false</ignoreCase>
+                <useRegEx>false</useRegEx>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="Simple Contains" id="9d45b5ac-4efb-4868-908a-068cc3a5477b" name="Contains 4">
+              <con:configuration>
+                <token>systemName</token>
+                <ignoreCase>false</ignoreCase>
+                <useRegEx>false</useRegEx>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="Simple Contains" id="f7a3632d-5efd-4ed6-92ba-62d781874d95" name="Contains 5">
+              <con:configuration>
+                <token>systemId</token>
+                <ignoreCase>false</ignoreCase>
+                <useRegEx>false</useRegEx>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="Simple Contains" id="5f58bf11-dc16-4cdb-9ec2-dd9f7e85a433" name="Contains 6">
+              <con:configuration>
+                <token>onOffList</token>
+                <ignoreCase>false</ignoreCase>
+                <useRegEx>false</useRegEx>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://nm.pdt.org.cn/CityUserInterface/switchStateQuery"/>
+            <con:wsrmConfig version="1.2"/>
+          </con:request>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="request" id="1575f93e-6df4-4b23-8237-7070ca503482" name="setRadioUserRoamToTscList - Request 1">
+        <con:settings/>
+        <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:interface>CityUserServiceSoapBinding</con:interface>
+          <con:operation>setRadioUserRoamToTscList</con:operation>
+          <con:request name="setRadioUserRoamToTscList - Request 1" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="ba7889c5-1cc9-4740-bd56-a5389572282d">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:encoding>UTF-8</con:encoding>
+            <con:endpoint>http://192.168.1.192:8080/nmp/cxf/soap/CityUserService</con:endpoint>
+            <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:nm="http://nm.pdt.org.cn">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <nm:setRadioUserRoamToTscList>
+         <!--Optional:-->
+         
+      <input>{"expireDate":"2018-12-12","id":58998204,"policy":1,"priority":0}</input></nm:setRadioUserRoamToTscList>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+            <con:assertion type="SOAP Response" id="4ec3450a-3fd5-4d16-8a57-05421a901c7b" name="SOAP Response"/>
+            <con:assertion type="Simple Contains" id="cf38c085-f7cf-416a-8c9f-c0706fb1b031" name="Contains">
+              <con:configuration>
+                <token>resultIsOK</token>
+                <ignoreCase>false</ignoreCase>
+                <useRegEx>false</useRegEx>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://nm.pdt.org.cn/CityUserInterface/setRadioUserRoamToTscList"/>
+            <con:wsrmConfig version="1.2"/>
+          </con:request>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="request" id="8fc7a614-f91b-41de-b026-3600a9ef7d4d" name="setRadioUserRoamToList - Request 1">
+        <con:settings/>
+        <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:interface>CityUserServiceSoapBinding</con:interface>
+          <con:operation>setRadioUserRoamToList</con:operation>
+          <con:request name="setRadioUserRoamToList - Request 1" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="813e2524-b303-4d86-851f-c521d6b2577b">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:encoding>UTF-8</con:encoding>
+            <con:endpoint>http://192.168.1.192:8080/nmp/cxf/soap/CityUserService</con:endpoint>
+            <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:nm="http://nm.pdt.org.cn">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <nm:setRadioUserRoamToList>
+         <!--Optional:-->
+         
+      <input>{"expireDate ":"2018-03-05","id":58998201,"policy":1,"priority":0,"roamToList":["m5911.fj.pdt.cn"]}</input></nm:setRadioUserRoamToList>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+            <con:assertion type="SOAP Response" id="e482edbf-6b9c-4168-8fb8-2123662e4dc7" name="SOAP Response"/>
+            <con:assertion type="Simple Contains" id="4742b8a8-bdce-46a8-81a3-37853caf0e6d" name="Contains">
+              <con:configuration>
+                <token>resultIsOK</token>
+                <ignoreCase>false</ignoreCase>
+                <useRegEx>false</useRegEx>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://nm.pdt.org.cn/CityUserInterface/setRadioUserRoamToList"/>
+            <con:wsrmConfig version="1.2"/>
+          </con:request>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="request" id="38b0ec00-13e8-479d-a5cf-ae6ef7de4f45" name="setRadioUserRoamAttr - Request 1">
+        <con:settings/>
+        <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:interface>CityUserServiceSoapBinding</con:interface>
+          <con:operation>setRadioUserRoamAttr</con:operation>
+          <con:request name="setRadioUserRoamAttr - Request 1" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="f77c888f-6495-4338-9207-f34f43435a39">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:encoding>UTF-8</con:encoding>
+            <con:endpoint>http://192.168.1.192:8080/nmp/cxf/soap/CityUserService</con:endpoint>
+            <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:nm="http://nm.pdt.org.cn">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <nm:setRadioUserRoamAttr>
+         <!--Optional:-->
+         
+      <input>{"expireDate":"2018-03-08","id":32821214,"priority":0,"roamPolicy":true}</input></nm:setRadioUserRoamAttr>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+            <con:assertion type="SOAP Response" id="2314158b-c307-4591-86ef-822ee666c575" name="SOAP Response"/>
+            <con:assertion type="Simple Contains" id="147fdc61-ff42-4fb3-86d2-2106ce5bd1d1" name="Contains">
+              <con:configuration>
+                <token>resultIsOK</token>
+                <ignoreCase>false</ignoreCase>
+                <useRegEx>false</useRegEx>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://nm.pdt.org.cn/CityUserInterface/setRadioUserRoamAttr"/>
+            <con:wsrmConfig version="1.2"/>
+          </con:request>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="request" id="9c5b87c3-46d7-482d-b323-643756edcd7e" name="roamUserQuery - Request 1">
+        <con:settings/>
+        <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:interface>CityUserServiceSoapBinding</con:interface>
+          <con:operation>roamUserQuery</con:operation>
+          <con:request name="roamUserQuery - Request 1" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="5b165873-ebcc-480f-9462-e6cabcdec617">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:encoding>UTF-8</con:encoding>
+            <con:endpoint>http://192.168.1.192:8080/nmp/cxf/soap/CityUserService</con:endpoint>
+            <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:nm="http://nm.pdt.org.cn">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <nm:roamUserQuery>
+         <!--Optional:-->
+         
+      </nm:roamUserQuery>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+            <con:assertion type="SOAP Response" id="18e561d0-8061-4dd6-a029-b1001c16472e" name="SOAP Response"/>
+            <con:assertion type="Simple Contains" id="7c1f8410-def1-4835-8d09-71536af6affa" name="Contains">
+              <con:configuration>
+                <token>roamUserList</token>
+                <ignoreCase>false</ignoreCase>
+                <useRegEx>false</useRegEx>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://nm.pdt.org.cn/CityUserInterface/roamUserQuery"/>
+            <con:wsrmConfig version="1.2"/>
+          </con:request>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+    </con:testCase>
+    <con:properties/>
+    <con:reportParameters/>
+  </con:testSuite>
+  <con:requirements/>
+  <con:properties/>
+  <con:wssContainer/>
+  <con:databaseConnectionContainer/>
+  <con:oAuth2ProfileContainer/>
+  <con:reporting>
+    <con:reportTemplates/>
+    <con:xmlTemplates/>
+    <con:parameters/>
+  </con:reporting>
+  <con:sensitiveInformation/>
+</con:soapui-project>

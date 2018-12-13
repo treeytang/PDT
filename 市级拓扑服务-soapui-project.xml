@@ -1,0 +1,752 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="b6262211-cfa6-416f-a599-5c9bd66095a7" activeEnvironment="Default" name="市级拓扑服务" resourceRoot="" soapui-version="5.1.2" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings/>
+  <con:interface xsi:type="con:WsdlInterface" id="c2538b82-9c5e-4d5c-a516-106525747d32" wsaVersion="NONE" name="CityTopServiceSoapBinding" type="wsdl" bindingName="{http://nm.pdt.org.cn}CityTopServiceSoapBinding" soapVersion="1_1" anonymous="optional" definition="http://192.168.1.192:8080/nmp/cxf/soap/CityTopService?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:settings/>
+    <con:definitionCache type="TEXT" rootPart="http://192.168.1.192:8080/nmp/cxf/soap/CityTopService?wsdl">
+      <con:part>
+        <con:url>http://192.168.1.192:8080/nmp/cxf/soap/CityTopService?wsdl</con:url>
+        <con:content><![CDATA[<wsdl:definitions name="CityTopService" targetNamespace="http://nm.pdt.org.cn" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://nm.pdt.org.cn" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http">
+  <wsdl:types>
+    <xs:schema attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://nm.pdt.org.cn" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="devInfoQuery" type="tns:devInfoQuery"/>
+      <xs:element name="devInfoQueryResponse" type="tns:devInfoQueryResponse"/>
+      <xs:element name="interconnectionStatusQuery" type="tns:interconnectionStatusQuery"/>
+      <xs:element name="interconnectionStatusQueryResponse" type="tns:interconnectionStatusQueryResponse"/>
+      <xs:element name="isAlive" type="tns:isAlive"/>
+      <xs:element name="isAliveResponse" type="tns:isAliveResponse"/>
+      <xs:element name="setDevIp" type="tns:setDevIp"/>
+      <xs:element name="setDevIpResponse" type="tns:setDevIpResponse"/>
+      <xs:element name="topQuery" type="tns:topQuery"/>
+      <xs:element name="topQueryResponse" type="tns:topQueryResponse"/>
+      <xs:complexType name="interconnectionStatusQuery">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="input" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="interconnectionStatusQueryResponse">
+        <xs:sequence>
+          <xs:element form="qualified" minOccurs="0" name="return" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="faultInfo">
+        <xs:sequence>
+          <xs:element name="faultInfo" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="setDevIp">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="input" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="setDevIpResponse">
+        <xs:sequence>
+          <xs:element form="qualified" minOccurs="0" name="return" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="topQuery">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="input" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="topQueryResponse">
+        <xs:sequence>
+          <xs:element form="qualified" minOccurs="0" name="return" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="devInfoQuery">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="input" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="devInfoQueryResponse">
+        <xs:sequence>
+          <xs:element form="qualified" minOccurs="0" name="return" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="isAlive">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="input" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="isAliveResponse">
+        <xs:sequence>
+          <xs:element form="qualified" minOccurs="0" name="return" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="faultInfo" nillable="true" type="tns:faultInfo"/>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="interconnectionStatusQuery">
+    <wsdl:part element="tns:interconnectionStatusQuery" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="devInfoQueryResponse">
+    <wsdl:part element="tns:devInfoQueryResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="setDevIp">
+    <wsdl:part element="tns:setDevIp" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="topQueryResponse">
+    <wsdl:part element="tns:topQueryResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="topQuery">
+    <wsdl:part element="tns:topQuery" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="interconnectionStatusQueryResponse">
+    <wsdl:part element="tns:interconnectionStatusQueryResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="setDevIpResponse">
+    <wsdl:part element="tns:setDevIpResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="isAlive">
+    <wsdl:part element="tns:isAlive" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="isAliveResponse">
+    <wsdl:part element="tns:isAliveResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="devInfoQuery">
+    <wsdl:part element="tns:devInfoQuery" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="FaultInfoException">
+    <wsdl:part element="tns:faultInfo" name="FaultInfoException"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="CityTopInterface">
+    <wsdl:operation name="interconnectionStatusQuery">
+      <wsdl:input message="tns:interconnectionStatusQuery" name="interconnectionStatusQuery"></wsdl:input>
+      <wsdl:output message="tns:interconnectionStatusQueryResponse" name="interconnectionStatusQueryResponse"></wsdl:output>
+      <wsdl:fault message="tns:FaultInfoException" name="FaultInfoException"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="setDevIp">
+      <wsdl:input message="tns:setDevIp" name="setDevIp"></wsdl:input>
+      <wsdl:output message="tns:setDevIpResponse" name="setDevIpResponse"></wsdl:output>
+      <wsdl:fault message="tns:FaultInfoException" name="FaultInfoException"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="topQuery">
+      <wsdl:input message="tns:topQuery" name="topQuery"></wsdl:input>
+      <wsdl:output message="tns:topQueryResponse" name="topQueryResponse"></wsdl:output>
+      <wsdl:fault message="tns:FaultInfoException" name="FaultInfoException"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="devInfoQuery">
+      <wsdl:input message="tns:devInfoQuery" name="devInfoQuery"></wsdl:input>
+      <wsdl:output message="tns:devInfoQueryResponse" name="devInfoQueryResponse"></wsdl:output>
+      <wsdl:fault message="tns:FaultInfoException" name="FaultInfoException"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="isAlive">
+      <wsdl:input message="tns:isAlive" name="isAlive"></wsdl:input>
+      <wsdl:output message="tns:isAliveResponse" name="isAliveResponse"></wsdl:output>
+      <wsdl:fault message="tns:FaultInfoException" name="FaultInfoException"></wsdl:fault>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CityTopServiceSoapBinding" type="tns:CityTopInterface">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="interconnectionStatusQuery">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="interconnectionStatusQuery">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="interconnectionStatusQueryResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="FaultInfoException">
+        <soap:fault name="FaultInfoException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="setDevIp">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="setDevIp">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="setDevIpResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="FaultInfoException">
+        <soap:fault name="FaultInfoException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="topQuery">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="topQuery">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="topQueryResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="FaultInfoException">
+        <soap:fault name="FaultInfoException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="devInfoQuery">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="devInfoQuery">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="devInfoQueryResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="FaultInfoException">
+        <soap:fault name="FaultInfoException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="isAlive">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="isAlive">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="isAliveResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="FaultInfoException">
+        <soap:fault name="FaultInfoException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CityTopService">
+    <wsdl:port binding="tns:CityTopServiceSoapBinding" name="CityTopInterfacePort">
+      <soap:address location="http://192.168.1.192:8080/nmp/cxf/soap/CityTopService"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content>
+        <con:type>http://schemas.xmlsoap.org/wsdl/</con:type>
+      </con:part>
+    </con:definitionCache>
+    <con:endpoints>
+      <con:endpoint>http://192.168.1.192:8080/nmp/cxf/soap/CityTopService</con:endpoint>
+    </con:endpoints>
+    <con:operation id="f1d4e44a-4aeb-4fc9-a8ce-dc2a475cd867" isOneWay="false" action="" name="devInfoQuery" bindingOperationName="devInfoQuery" type="Request-Response" outputName="devInfoQueryResponse" inputName="devInfoQuery" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
+      <con:settings/>
+      <con:call id="b5126b0a-b4ed-4ffe-acca-5f4ee0254a4d" name="Request 1">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>http://192.168.1.192:8080/nmp/cxf/soap/CityTopService</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:nm="http://nm.pdt.org.cn">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <nm:devInfoQuery>
+         <!--Optional:-->
+         
+      <input>{"devId":"r105.pdt.cn2018","systemId":"双流"}</input></nm:devInfoQuery>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:credentials>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://nm.pdt.org.cn/CityTopInterface/devInfoQuery"/>
+        <con:wsrmConfig version="1.2"/>
+      </con:call>
+    </con:operation>
+    <con:operation id="09a75e76-73a6-400f-8bdc-8540c5ded5fe" isOneWay="false" action="" name="interconnectionStatusQuery" bindingOperationName="interconnectionStatusQuery" type="Request-Response" outputName="interconnectionStatusQueryResponse" inputName="interconnectionStatusQuery" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
+      <con:settings/>
+      <con:call id="19ce48ad-311d-4015-a47f-a9c7b1455a06" name="Request 1">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>http://192.168.1.192:8080/nmp/cxf/soap/CityTopService</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:nm="http://nm.pdt.org.cn">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <nm:interconnectionStatusQuery>
+         <!--Optional:-->
+         
+      <input>“�?</input></nm:interconnectionStatusQuery>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:credentials>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://nm.pdt.org.cn/CityTopInterface/interconnectionStatusQuery"/>
+        <con:wsrmConfig version="1.2"/>
+      </con:call>
+    </con:operation>
+    <con:operation id="e7b3a667-cb1f-493d-a2ca-81897a272a2b" isOneWay="false" action="" name="isAlive" bindingOperationName="isAlive" type="Request-Response" outputName="isAliveResponse" inputName="isAlive" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
+      <con:settings/>
+      <con:call id="2848412c-2d41-4b15-89e0-65a1bc2c5d13" name="Request 1">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>http://192.168.1.192:8080/nmp/cxf/soap/CityTopService</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:nm="http://nm.pdt.org.cn">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <nm:isAlive>
+         <!--Optional:-->
+         
+      <input>""</input></nm:isAlive>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:credentials>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://nm.pdt.org.cn/CityTopInterface/isAlive"/>
+        <con:wsrmConfig version="1.2"/>
+      </con:call>
+    </con:operation>
+    <con:operation id="e456c3aa-3551-4716-b07c-f5d27254ac0d" isOneWay="false" action="" name="setDevIp" bindingOperationName="setDevIp" type="Request-Response" outputName="setDevIpResponse" inputName="setDevIp" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
+      <con:settings/>
+      <con:call id="d1446aec-f46a-4c1c-9d42-f85db230e1ba" name="Request 1">
+        <con:settings/>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>http://192.168.1.192:8080/nmp/cxf/soap/CityTopService</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:nm="http://nm.pdt.org.cn">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <nm:setDevIp>\r
+         <!--Optional:-->\r
+         <input>?</input>\r
+      </nm:setDevIp>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://nm.pdt.org.cn/CityTopInterface/setDevIp"/>
+      </con:call>
+    </con:operation>
+    <con:operation id="22a20554-b33b-45f1-8fbe-014bd032566c" isOneWay="false" action="" name="topQuery" bindingOperationName="topQuery" type="Request-Response" outputName="topQueryResponse" inputName="topQuery" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
+      <con:settings/>
+      <con:call id="a2872a28-144a-443a-a293-3d3cb553e0fe" name="Request 1">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>http://192.168.1.192:8080/nmp/cxf/soap/CityTopService</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:nm="http://nm.pdt.org.cn">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <nm:topQuery>
+         <!--Optional:-->
+         
+      <input>""</input></nm:topQuery>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:credentials>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://nm.pdt.org.cn/CityTopInterface/topQuery"/>
+        <con:wsrmConfig version="1.2"/>
+      </con:call>
+    </con:operation>
+  </con:interface>
+  <con:testSuite id="e765c88d-64c3-4097-a39a-18b68370e04b" name="TestSuite 1">
+    <con:settings/>
+    <con:runType>SEQUENTIAL</con:runType>
+    <con:testCase id="8a563e9f-307e-4015-b44c-b682eb839a92" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TestCase 1" searchProperties="true">
+      <con:settings/>
+      <con:testStep type="request" id="327dc6a0-d8d2-4106-b7c1-353d1e48f82e" name="topQuery - Request 1">
+        <con:settings/>
+        <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:interface>CityTopServiceSoapBinding</con:interface>
+          <con:operation>topQuery</con:operation>
+          <con:request name="topQuery - Request 1" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="61015390-d537-4354-967a-252e983a80ff">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:encoding>UTF-8</con:encoding>
+            <con:endpoint>http://192.168.1.192:8080/nmp/cxf/soap/CityTopService</con:endpoint>
+            <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:nm="http://nm.pdt.org.cn">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <nm:topQuery>
+         <!--Optional:-->
+         
+      <input>""</input></nm:topQuery>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+            <con:assertion type="SOAP Response" id="c726e091-d0ea-4605-90cf-7519c25e3982" name="SOAP Response"/>
+            <con:assertion type="Simple Contains" id="fc336963-4227-4a57-8cd2-24ce8a315733" name="Contains">
+              <con:configuration>
+                <token>topList</token>
+                <ignoreCase>false</ignoreCase>
+                <useRegEx>false</useRegEx>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://nm.pdt.org.cn/CityTopInterface/topQuery"/>
+            <con:wsrmConfig version="1.2"/>
+          </con:request>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="request" id="b58cdce6-2a57-49a7-882a-69978fd71d5e" name="devInfoQuery - Request 1">
+        <con:settings/>
+        <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:interface>CityTopServiceSoapBinding</con:interface>
+          <con:operation>devInfoQuery</con:operation>
+          <con:request name="devInfoQuery - Request 1" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="0fe29ee7-a896-4c40-a4f6-5f00288fd73e">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:encoding>UTF-8</con:encoding>
+            <con:endpoint>http://192.168.1.192:8080/nmp/cxf/soap/CityTopService</con:endpoint>
+            <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:nm="http://nm.pdt.org.cn">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <nm:devInfoQuery>
+         <!--Optional:-->
+         
+      <input>{"devId":"r106.pdt.cn2018","systemId":"131"}</input></nm:devInfoQuery>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+            <con:assertion type="SOAP Response" id="a9989f43-84c7-4863-8d35-11fcc63c5cf6" name="SOAP Response"/>
+            <con:assertion type="Simple Contains" id="ab990fdb-2058-4b9a-a33d-8b55bbf9bf44" name="Contains">
+              <con:configuration>
+                <token>linkQualityList</token>
+                <ignoreCase>false</ignoreCase>
+                <useRegEx>false</useRegEx>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://nm.pdt.org.cn/CityTopInterface/devInfoQuery"/>
+            <con:wsrmConfig version="1.2"/>
+          </con:request>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="request" id="9756fcac-39fd-4cd6-b84a-eee0076afb5b" name="interconnectionStatusQuery - Request 1">
+        <con:settings/>
+        <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:interface>CityTopServiceSoapBinding</con:interface>
+          <con:operation>interconnectionStatusQuery</con:operation>
+          <con:request name="interconnectionStatusQuery - Request 1" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="df4709f6-a7f7-47e9-992a-cee653319556">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:encoding>UTF-8</con:encoding>
+            <con:endpoint>http://192.168.1.192:8080/nmp/cxf/soap/CityTopService</con:endpoint>
+            <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:nm="http://nm.pdt.org.cn">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <nm:interconnectionStatusQuery>
+         <!--Optional:-->
+         
+      <input>“�?</input></nm:interconnectionStatusQuery>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+            <con:assertion type="SOAP Response" id="82f7ba7b-a22f-4c1f-b182-3ba0ae30fc21" name="SOAP Response"/>
+            <con:assertion type="Simple Contains" id="370cfff8-c046-4294-81eb-a81f18108283" name="Contains">
+              <con:configuration>
+                <token>interconnectionStatusList</token>
+                <ignoreCase>false</ignoreCase>
+                <useRegEx>false</useRegEx>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://nm.pdt.org.cn/CityTopInterface/interconnectionStatusQuery"/>
+            <con:wsrmConfig version="1.2"/>
+          </con:request>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="request" id="0f302fb4-a7c7-4a35-ae5f-933b18a4867b" name="isAlive - Request 1">
+        <con:settings/>
+        <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:interface>CityTopServiceSoapBinding</con:interface>
+          <con:operation>isAlive</con:operation>
+          <con:request name="isAlive - Request 1" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="65537384-e457-4cc2-95c3-ba4bd4a7142c">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:encoding>UTF-8</con:encoding>
+            <con:endpoint>http://192.168.1.192:8080/nmp/cxf/soap/CityTopService</con:endpoint>
+            <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:nm="http://nm.pdt.org.cn">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <nm:isAlive>
+         <!--Optional:-->
+         
+      <input>""</input></nm:isAlive>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+            <con:assertion type="SOAP Response" id="986bb347-466a-458c-b578-285dc40589bd" name="SOAP Response"/>
+            <con:assertion type="Simple Contains" id="3bb9db0b-af94-4f61-b5d1-f4ca4a1e3c30" name="Contains">
+              <con:configuration>
+                <token>resultIsAlive</token>
+                <ignoreCase>false</ignoreCase>
+                <useRegEx>false</useRegEx>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://nm.pdt.org.cn/CityTopInterface/isAlive"/>
+            <con:wsrmConfig version="1.2"/>
+          </con:request>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+    </con:testCase>
+    <con:testCase id="c7f75877-73bc-4ecb-975d-e8e49f704116" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="devInfoQuery" searchProperties="true">
+      <con:settings/>
+      <con:testStep type="request" id="adc32b97-7672-42fa-a314-60a31c65b50c" name="devInfoQuery - 正确的域�?>
+        <con:settings/>
+        <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:interface>CityTopServiceSoapBinding</con:interface>
+          <con:operation>devInfoQuery</con:operation>
+          <con:request name="devInfoQuery - 正确的域�? outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="a61b45b2-9ca2-4fb4-8706-4915af14b36f">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:encoding>UTF-8</con:encoding>
+            <con:endpoint>http://192.168.1.192:8080/nmp/cxf/soap/CityTopService</con:endpoint>
+            <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:nm="http://nm.pdt.org.cn">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <nm:devInfoQuery>
+         <!--Optional:-->
+         
+      <input>{"devId":"r106.pdt.cn2018","systemId":"192.168.1.252"}</input></nm:devInfoQuery>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+            <con:assertion type="SOAP Response" id="b2fe11f0-7c79-40b3-be74-7181fa980869" name="SOAP Response"/>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://nm.pdt.org.cn/CityTopInterface/devInfoQuery"/>
+            <con:wsrmConfig version="1.2"/>
+          </con:request>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="request" id="5d8634d3-8664-438f-bbdc-ba500e6ce2f7" name="devInfoQuery - 交换中心域名为空，设备域名正�?>
+        <con:settings/>
+        <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:interface>CityTopServiceSoapBinding</con:interface>
+          <con:operation>devInfoQuery</con:operation>
+          <con:request name="devInfoQuery - 交换中心域名为空，设备域名正�? outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="938f0d3f-84d1-4dac-8c4c-6d1cf1352e5f">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:encoding>UTF-8</con:encoding>
+            <con:endpoint>http://192.168.1.192:8080/nmp/cxf/soap/CityTopService</con:endpoint>
+            <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:nm="http://nm.pdt.org.cn">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <nm:devInfoQuery>
+         <!--Optional:-->
+         
+      <input>{"devId":"r106.pdt.cn2018","systemId":""}</input></nm:devInfoQuery>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+            <con:assertion type="SOAP Response" id="9173b76f-4ea5-4ed5-a252-e3c18ddfcdca" name="SOAP Response"/>
+            <con:assertion type="Simple Contains" id="dbcf14a0-ce9d-49c0-a6c0-d7649071cf8b" name="Contains">
+              <con:configuration>
+                <token>004</token>
+                <ignoreCase>false</ignoreCase>
+                <useRegEx>false</useRegEx>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://nm.pdt.org.cn/CityTopInterface/devInfoQuery"/>
+            <con:wsrmConfig version="1.2"/>
+          </con:request>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="request" id="7222ac85-e124-4570-8933-41c844da4215" name="devInfoQuery - 设备域名为空，交换中心域名正�?>
+        <con:settings/>
+        <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:interface>CityTopServiceSoapBinding</con:interface>
+          <con:operation>devInfoQuery</con:operation>
+          <con:request name="devInfoQuery - 设备域名为空，交换中心域名正�? outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="62b464b9-8a64-49a7-be70-f20acfd4a7ed">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:encoding>UTF-8</con:encoding>
+            <con:endpoint>http://192.168.1.192:8080/nmp/cxf/soap/CityTopService</con:endpoint>
+            <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:nm="http://nm.pdt.org.cn">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <nm:devInfoQuery>
+         <!--Optional:-->
+         
+      <input>{"devId":"","systemId":"192.168.1.252"}</input></nm:devInfoQuery>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+            <con:assertion type="SOAP Response" id="a7b6f11d-acd0-44fd-ab87-c7c02de702f1" name="SOAP Response"/>
+            <con:assertion type="Simple Contains" id="e0fe17a2-e201-46e3-b110-4887a11d4a63" name="Contains">
+              <con:configuration>
+                <token>004</token>
+                <ignoreCase>false</ignoreCase>
+                <useRegEx>false</useRegEx>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://nm.pdt.org.cn/CityTopInterface/devInfoQuery"/>
+            <con:wsrmConfig version="1.2"/>
+          </con:request>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+    </con:testCase>
+    <con:testCase id="23eca5b8-fbd1-4c41-8315-e056e88ae304" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="topQuery" searchProperties="true">
+      <con:settings/>
+      <con:testStep type="request" id="8562b608-471a-4d76-b3be-1e84fbe1e25e" name="topQuery - Request 1">
+        <con:settings/>
+        <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:interface>CityTopServiceSoapBinding</con:interface>
+          <con:operation>topQuery</con:operation>
+          <con:request name="topQuery - Request 1" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="c4565cdd-65a3-4fdf-b103-5fd501a98f5a">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:encoding>UTF-8</con:encoding>
+            <con:endpoint>http://192.168.1.192:8080/nmp/cxf/soap/CityTopService</con:endpoint>
+            <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:nm="http://nm.pdt.org.cn">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <nm:topQuery>
+         <!--Optional:-->
+         
+      <input>""</input></nm:topQuery>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+            <con:assertion type="SOAP Response" id="407b65d4-5d86-47e6-a5a7-0e08e1df0267" name="SOAP Response"/>
+            <con:assertion type="Simple Contains" id="334d5a2d-3e82-413d-863d-cb39231fe70e" name="Contains">
+              <con:configuration>
+                <token>topList</token>
+                <ignoreCase>false</ignoreCase>
+                <useRegEx>false</useRegEx>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://nm.pdt.org.cn/CityTopInterface/topQuery"/>
+            <con:wsrmConfig version="1.2"/>
+          </con:request>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+    </con:testCase>
+    <con:testCase id="0e4e7e12-ab00-4121-97ad-cea8721dc6b4" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="interconnectionStatusQuery" searchProperties="true">
+      <con:settings/>
+      <con:testStep type="request" id="933d8b25-c770-46e6-ad0b-57c0595e5424" name="interconnectionStatusQuery -">
+        <con:settings/>
+        <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:interface>CityTopServiceSoapBinding</con:interface>
+          <con:operation>interconnectionStatusQuery</con:operation>
+          <con:request name="interconnectionStatusQuery -" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="ca85c1bf-e2f1-4121-bdf4-4cd6bc1027b2">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:encoding>UTF-8</con:encoding>
+            <con:endpoint>http://192.168.1.192:8080/nmp/cxf/soap/CityTopService</con:endpoint>
+            <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:nm="http://nm.pdt.org.cn">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <nm:interconnectionStatusQuery>
+         <!--Optional:-->
+         
+      <input>""</input></nm:interconnectionStatusQuery>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+            <con:assertion type="SOAP Response" id="e2e46852-8acb-4e35-8a26-b709b16c483c" name="SOAP Response"/>
+            <con:assertion type="Simple Contains" id="a9e47bff-ffb6-4290-b0ab-8099cf0abde7" name="Contains">
+              <con:configuration>
+                <token>interconnectionStatusList</token>
+                <ignoreCase>false</ignoreCase>
+                <useRegEx>false</useRegEx>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://nm.pdt.org.cn/CityTopInterface/interconnectionStatusQuery"/>
+            <con:wsrmConfig version="1.2"/>
+          </con:request>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+    </con:testCase>
+    <con:testCase id="ebddf593-ea11-404c-8ca8-14e53bb2b566" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="isAlive" searchProperties="true">
+      <con:settings/>
+      <con:testStep type="request" id="fe1ec537-938f-4b63-a6c8-09c2cf2acf95" name="isAlive - Request 1">
+        <con:settings/>
+        <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:interface>CityTopServiceSoapBinding</con:interface>
+          <con:operation>isAlive</con:operation>
+          <con:request name="isAlive - Request 1" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="f44b75f9-5f94-432d-9301-7f4b441e62ea">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:encoding>UTF-8</con:encoding>
+            <con:endpoint>http://192.168.1.192:8080/nmp/cxf/soap/CityTopService</con:endpoint>
+            <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:nm="http://nm.pdt.org.cn">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <nm:isAlive>
+         <!--Optional:-->
+         
+      <input>""</input></nm:isAlive>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+            <con:assertion type="SOAP Response" id="66f55785-95c4-476a-8489-2bd52906db11" name="SOAP Response"/>
+            <con:assertion type="Simple Contains" id="27033d61-0e46-4ac3-92b1-aad81d51e946" name="Contains">
+              <con:configuration>
+                <token>resultIsAlive</token>
+                <ignoreCase>false</ignoreCase>
+                <useRegEx>false</useRegEx>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://nm.pdt.org.cn/CityTopInterface/isAlive"/>
+            <con:wsrmConfig version="1.2"/>
+          </con:request>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+    </con:testCase>
+    <con:properties/>
+    <con:reportParameters/>
+  </con:testSuite>
+  <con:requirements/>
+  <con:properties/>
+  <con:wssContainer/>
+  <con:databaseConnectionContainer/>
+  <con:oAuth2ProfileContainer/>
+  <con:reporting>
+    <con:xmlTemplates/>
+    <con:parameters/>
+  </con:reporting>
+  <con:sensitiveInformation/>
+</con:soapui-project>

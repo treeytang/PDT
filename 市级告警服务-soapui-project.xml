@@ -1,0 +1,959 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="c1942cbc-58ee-4125-842b-9838bf3082da" activeEnvironment="Default" name="市级告警服务" resourceRoot="" soapui-version="5.1.2" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings/>
+  <con:interface xsi:type="con:WsdlInterface" id="98eecde5-dc29-483c-a7bf-73fbe4c3de0c" wsaVersion="NONE" name="CityAlmServiceSoapBinding" type="wsdl" bindingName="{http://nm.pdt.org.cn}CityAlmServiceSoapBinding" soapVersion="1_1" anonymous="optional" definition="http://192.168.1.192:8080/nmp/cxf/soap/CityAlmService?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:settings/>
+    <con:definitionCache type="TEXT" rootPart="http://192.168.1.192:8080/nmp/cxf/soap/CityAlmService?wsdl">
+      <con:part>
+        <con:url>http://192.168.1.192:8080/nmp/cxf/soap/CityAlmService?wsdl</con:url>
+        <con:content><![CDATA[<wsdl:definitions name="CityAlmService" targetNamespace="http://nm.pdt.org.cn" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://nm.pdt.org.cn" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http">
+  <wsdl:types>
+    <xs:schema attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://nm.pdt.org.cn" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="almClearQuery" type="tns:almClearQuery"/>
+      <xs:element name="almClearQueryResponse" type="tns:almClearQueryResponse"/>
+      <xs:element name="almQuery" type="tns:almQuery"/>
+      <xs:element name="almQueryResponse" type="tns:almQueryResponse"/>
+      <xs:element name="almStatQuery" type="tns:almStatQuery"/>
+      <xs:element name="almStatQueryResponse" type="tns:almStatQueryResponse"/>
+      <xs:element name="isAlive" type="tns:isAlive"/>
+      <xs:element name="isAliveResponse" type="tns:isAliveResponse"/>
+      <xs:complexType name="almClearQuery">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="input" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="almClearQueryResponse">
+        <xs:sequence>
+          <xs:element form="qualified" minOccurs="0" name="return" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="faultInfo">
+        <xs:sequence>
+          <xs:element name="faultInfo" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="almQuery">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="input" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="almQueryResponse">
+        <xs:sequence>
+          <xs:element form="qualified" minOccurs="0" name="return" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="almStatQuery">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="input" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="almStatQueryResponse">
+        <xs:sequence>
+          <xs:element form="qualified" minOccurs="0" name="return" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="isAlive">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="input" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="isAliveResponse">
+        <xs:sequence>
+          <xs:element form="qualified" minOccurs="0" name="return" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="faultInfo" nillable="true" type="tns:faultInfo"/>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="almQueryResponse">
+    <wsdl:part element="tns:almQueryResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="almStatQuery">
+    <wsdl:part element="tns:almStatQuery" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="isAlive">
+    <wsdl:part element="tns:isAlive" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="almClearQueryResponse">
+    <wsdl:part element="tns:almClearQueryResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="almStatQueryResponse">
+    <wsdl:part element="tns:almStatQueryResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="almClearQuery">
+    <wsdl:part element="tns:almClearQuery" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="isAliveResponse">
+    <wsdl:part element="tns:isAliveResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="FaultInfoException">
+    <wsdl:part element="tns:faultInfo" name="FaultInfoException"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="almQuery">
+    <wsdl:part element="tns:almQuery" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="CityAlmInterface">
+    <wsdl:operation name="almClearQuery">
+      <wsdl:input message="tns:almClearQuery" name="almClearQuery"></wsdl:input>
+      <wsdl:output message="tns:almClearQueryResponse" name="almClearQueryResponse"></wsdl:output>
+      <wsdl:fault message="tns:FaultInfoException" name="FaultInfoException"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="almQuery">
+      <wsdl:input message="tns:almQuery" name="almQuery"></wsdl:input>
+      <wsdl:output message="tns:almQueryResponse" name="almQueryResponse"></wsdl:output>
+      <wsdl:fault message="tns:FaultInfoException" name="FaultInfoException"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="almStatQuery">
+      <wsdl:input message="tns:almStatQuery" name="almStatQuery"></wsdl:input>
+      <wsdl:output message="tns:almStatQueryResponse" name="almStatQueryResponse"></wsdl:output>
+      <wsdl:fault message="tns:FaultInfoException" name="FaultInfoException"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="isAlive">
+      <wsdl:input message="tns:isAlive" name="isAlive"></wsdl:input>
+      <wsdl:output message="tns:isAliveResponse" name="isAliveResponse"></wsdl:output>
+      <wsdl:fault message="tns:FaultInfoException" name="FaultInfoException"></wsdl:fault>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CityAlmServiceSoapBinding" type="tns:CityAlmInterface">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="almClearQuery">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="almClearQuery">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="almClearQueryResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="FaultInfoException">
+        <soap:fault name="FaultInfoException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="almQuery">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="almQuery">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="almQueryResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="FaultInfoException">
+        <soap:fault name="FaultInfoException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="almStatQuery">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="almStatQuery">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="almStatQueryResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="FaultInfoException">
+        <soap:fault name="FaultInfoException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="isAlive">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="isAlive">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="isAliveResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="FaultInfoException">
+        <soap:fault name="FaultInfoException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CityAlmService">
+    <wsdl:port binding="tns:CityAlmServiceSoapBinding" name="CityAlmInterfacePort">
+      <soap:address location="http://192.168.1.192:8080/nmp/cxf/soap/CityAlmService"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content>
+        <con:type>http://schemas.xmlsoap.org/wsdl/</con:type>
+      </con:part>
+    </con:definitionCache>
+    <con:endpoints>
+      <con:endpoint>http://192.168.1.192:8080/nmp/cxf/soap/CityAlmService</con:endpoint>
+    </con:endpoints>
+    <con:operation id="a1fa0831-84c1-4bb4-b8cd-7d41a94d5f81" isOneWay="false" action="" name="almClearQuery" bindingOperationName="almClearQuery" type="Request-Response" outputName="almClearQueryResponse" inputName="almClearQuery" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
+      <con:settings/>
+      <con:call id="fb269f61-fa90-4e99-8e62-5c4f4ce42a6d" name="Request 1">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>http://192.168.1.192:8080/nmp/cxf/soap/CityAlmService</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:nm="http://nm.pdt.org.cn">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <nm:almClearQuery>
+         <!--Optional:-->
+         
+      <input>{"endTime":"2018-12-05 13:42:00","startTime":"2018-01-01 13:42:00"}</input></nm:almClearQuery>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:credentials>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://nm.pdt.org.cn/CityAlmInterface/almClearQuery"/>
+        <con:wsrmConfig version="1.2"/>
+      </con:call>
+    </con:operation>
+    <con:operation id="3fc28888-7a67-48c7-ad45-58a7158fbb4f" isOneWay="false" action="" name="almQuery" bindingOperationName="almQuery" type="Request-Response" outputName="almQueryResponse" inputName="almQuery" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
+      <con:settings/>
+      <con:call id="0a19b16b-7896-49d4-a7c8-aac640fa1669" name="Request 1">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>http://192.168.1.192:8080/nmp/cxf/soap/CityAlmService</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:nm="http://nm.pdt.org.cn">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <nm:almQuery>
+         <!--Optional:-->
+         
+      <input>{"endTime":"2018-12-05 13:42:00","startTime":"2018-01-01 13:42:00"}</input></nm:almQuery>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:credentials>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://nm.pdt.org.cn/CityAlmInterface/almQuery"/>
+        <con:wsrmConfig version="1.2"/>
+      </con:call>
+    </con:operation>
+    <con:operation id="d398ff53-4394-44cd-9cfb-1cf7fb694ade" isOneWay="false" action="" name="almStatQuery" bindingOperationName="almStatQuery" type="Request-Response" outputName="almStatQueryResponse" inputName="almStatQuery" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
+      <con:settings/>
+      <con:call id="25520d4b-2de6-462a-b0c3-c487043831db" name="Request 1">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>http://192.168.1.192:8080/nmp/cxf/soap/CityAlmService</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:nm="http://nm.pdt.org.cn">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <nm:almStatQuery>
+         <!--Optional:-->
+         
+      <input>{"endTime":"2018-12-05 13:42:00","startTime":"2018-01-01 13:42:00"}</input></nm:almStatQuery>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:credentials>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://nm.pdt.org.cn/CityAlmInterface/almStatQuery"/>
+        <con:wsrmConfig version="1.2"/>
+      </con:call>
+    </con:operation>
+    <con:operation id="027e3da4-a803-4e2b-b091-8bd9b3c0c8db" isOneWay="false" action="" name="isAlive" bindingOperationName="isAlive" type="Request-Response" outputName="isAliveResponse" inputName="isAlive" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
+      <con:settings/>
+      <con:call id="60b461b5-c221-4148-9aeb-38f2d8a0af99" name="Request 1">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>http://192.168.1.192:8080/nmp/cxf/soap/CityAlmService</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:nm="http://nm.pdt.org.cn">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <nm:isAlive>
+         <!--Optional:-->
+         
+      <input>@!#</input></nm:isAlive>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:credentials>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://nm.pdt.org.cn/CityAlmInterface/isAlive"/>
+        <con:wsrmConfig version="1.2"/>
+      </con:call>
+    </con:operation>
+  </con:interface>
+  <con:testSuite id="6ef5a93a-11ea-4154-ae58-b1a29aa0b29c" name="TestSuite 1">
+    <con:settings/>
+    <con:runType>SEQUENTIAL</con:runType>
+    <con:testCase id="7fc6d5e5-215c-42ee-919a-1c4dccb9aebf" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="test_interface_usability" searchProperties="true">
+      <con:settings/>
+      <con:testStep type="request" id="93bde549-e131-47eb-a760-af08ded6f6de" name="almQuery - Request 1">
+        <con:settings/>
+        <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:interface>CityAlmServiceSoapBinding</con:interface>
+          <con:operation>almQuery</con:operation>
+          <con:request name="almQuery - Request 1" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="efc6b1fa-749c-4c24-9771-93f2985b38d6">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:encoding>UTF-8</con:encoding>
+            <con:endpoint>http://192.168.1.192:8080/nmp/cxf/soap/CityAlmService</con:endpoint>
+            <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:nm="http://nm.pdt.org.cn">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <nm:almQuery>
+         <!--Optional:-->
+         
+      <input>{"endTime":"2018-12-05 13:42:00","startTime":"2018-01-01 13:42:00"}</input></nm:almQuery>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+            <con:assertion type="SOAP Response" id="86f312e8-2c65-447a-be9c-720e53104410" name="SOAP Response"/>
+            <con:assertion type="Simple Contains" id="27c25deb-0ba4-420d-9a68-6d5405e57932" name="Contains">
+              <con:configuration>
+                <token>almList</token>
+                <ignoreCase>false</ignoreCase>
+                <useRegEx>false</useRegEx>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://nm.pdt.org.cn/CityAlmInterface/almQuery"/>
+            <con:wsrmConfig version="1.2"/>
+          </con:request>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="request" id="1f13e420-b057-42dd-8fc8-fa6c247f238a" name="almClearQuery - Request 1">
+        <con:settings/>
+        <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:interface>CityAlmServiceSoapBinding</con:interface>
+          <con:operation>almClearQuery</con:operation>
+          <con:request name="almClearQuery - Request 1" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="1ab3d39b-da65-427a-9986-f6f5e8808054">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:encoding>UTF-8</con:encoding>
+            <con:endpoint>http://192.168.1.192:8080/nmp/cxf/soap/CityAlmService</con:endpoint>
+            <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:nm="http://nm.pdt.org.cn">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <nm:almClearQuery>
+         <!--Optional:-->
+         
+      <input>{"endTime":"2018-12-05 13:42:00","startTime":"2018-01-01 13:42:00"}</input></nm:almClearQuery>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+            <con:assertion type="SOAP Response" id="a82caeee-78ca-48f6-915c-aa9424da0c34" name="SOAP Response"/>
+            <con:assertion type="Simple Contains" id="28ffd3d6-5c78-4fdd-bbb6-2bafc522b632" name="Contains">
+              <con:configuration>
+                <token>almList</token>
+                <ignoreCase>false</ignoreCase>
+                <useRegEx>false</useRegEx>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://nm.pdt.org.cn/CityAlmInterface/almClearQuery"/>
+            <con:wsrmConfig version="1.2"/>
+          </con:request>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="request" id="b99a5c2c-5ed7-4d9e-9694-42bf48a5f9d7" name="almStatQuery - Request 1">
+        <con:settings/>
+        <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:interface>CityAlmServiceSoapBinding</con:interface>
+          <con:operation>almStatQuery</con:operation>
+          <con:request name="almStatQuery - Request 1" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="9e95bf34-994c-40f7-994e-d076c9bce38f">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:encoding>UTF-8</con:encoding>
+            <con:endpoint>http://192.168.1.192:8080/nmp/cxf/soap/CityAlmService</con:endpoint>
+            <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:nm="http://nm.pdt.org.cn">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <nm:almStatQuery>
+         <!--Optional:-->
+         
+      <input>{"endTime":"2018-12-5 13:42:00","startTime":"2018-1-1 13:42:00"}</input></nm:almStatQuery>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+            <con:assertion type="SOAP Response" id="b6cb621b-abcf-4083-a53c-b24601fdb641" name="SOAP Response"/>
+            <con:assertion type="Simple Contains" id="0d249b4a-2357-464f-943e-8c58f1601aab" name="Contains">
+              <con:configuration>
+                <token>kaiList</token>
+                <ignoreCase>false</ignoreCase>
+                <useRegEx>false</useRegEx>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://nm.pdt.org.cn/CityAlmInterface/almStatQuery"/>
+            <con:wsrmConfig version="1.2"/>
+          </con:request>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="request" id="b2c6a891-621f-463c-ac3f-a166ebdfa9d0" name="isAlive - Request 1">
+        <con:settings/>
+        <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:interface>CityAlmServiceSoapBinding</con:interface>
+          <con:operation>isAlive</con:operation>
+          <con:request name="isAlive - Request 1" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="d643ea39-c742-478c-a158-e9c7a0f20976">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:encoding>UTF-8</con:encoding>
+            <con:endpoint>http://192.168.1.192:8080/nmp/cxf/soap/CityAlmService</con:endpoint>
+            <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:nm="http://nm.pdt.org.cn">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <nm:isAlive>
+         <!--Optional:-->
+         
+      <input>""</input></nm:isAlive>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+            <con:assertion type="SOAP Response" id="aedfa496-bd41-4b6d-b7b8-2f88526f3d38" name="SOAP Response"/>
+            <con:assertion type="Simple Contains" id="6fff3ced-5347-4343-bde7-ce0ff8bce534" name="Contains">
+              <con:configuration>
+                <token>resultIsAlive</token>
+                <ignoreCase>false</ignoreCase>
+                <useRegEx>false</useRegEx>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://nm.pdt.org.cn/CityAlmInterface/isAlive"/>
+            <con:wsrmConfig version="1.2"/>
+          </con:request>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+    </con:testCase>
+    <con:testCase id="9675b182-7ebb-40f9-98be-b1b27f8f733c" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="almQuery" searchProperties="true">
+      <con:settings/>
+      <con:testStep type="request" id="0f3cb0d3-1c86-4f00-a8bb-a17328a68317" name="almQuery - 正确的开始结束时�?>
+        <con:settings/>
+        <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:interface>CityAlmServiceSoapBinding</con:interface>
+          <con:operation>almQuery</con:operation>
+          <con:request name="almQuery - 正确的开始结束时�? outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="7a14a28b-f095-4b6b-9d8f-5fd14a688b01">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:encoding>UTF-8</con:encoding>
+            <con:endpoint>http://192.168.1.192:8080/nmp/cxf/soap/CityAlmService</con:endpoint>
+            <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:nm="http://nm.pdt.org.cn">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <nm:almQuery>
+         <!--Optional:-->
+         
+      <input>{"endTime":"2018-12-05 13:42:00","startTime":"2019-12-12 13:42:00"}</input></nm:almQuery>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+            <con:assertion type="SOAP Response" id="53bd6273-6d45-43d6-b1e2-6b1473efcfce" name="SOAP Response"/>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://nm.pdt.org.cn/CityAlmInterface/almQuery"/>
+            <con:wsrmConfig version="1.2"/>
+          </con:request>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="request" id="d447c6eb-60ce-4564-b4c4-af418fa8084e" name="almQuery - 不完整的�?��时间，完整的结束时间">
+        <con:settings/>
+        <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:interface>CityAlmServiceSoapBinding</con:interface>
+          <con:operation>almQuery</con:operation>
+          <con:request name="almQuery - 不完整的�?��时间，完整的结束时间" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="eb98144b-0382-46fd-a2f8-1289527ea8c0">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:encoding>UTF-8</con:encoding>
+            <con:endpoint>http://192.168.1.192:8080/nmp/cxf/soap/CityAlmService</con:endpoint>
+            <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:nm="http://nm.pdt.org.cn">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <nm:almQuery>
+         <!--Optional:-->
+         
+      <input>{"endTime":"2018-12-11 16:20:00","startTime":"2018-9-22"}</input></nm:almQuery>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+            <con:assertion type="SOAP Response" id="8ef303de-071d-426b-9740-606df5d4d798" name="SOAP Response"/>
+            <con:assertion type="Simple Contains" id="dc889e88-185c-4399-a88b-f885d1204d3a" name="Contains">
+              <con:configuration>
+                <token>Fault</token>
+                <ignoreCase>false</ignoreCase>
+                <useRegEx>false</useRegEx>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://nm.pdt.org.cn/CityAlmInterface/almQuery"/>
+            <con:wsrmConfig version="1.2"/>
+          </con:request>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="request" id="1e62f22b-b132-4d2c-83d3-8f234ad4f048" name="almQuery - 完整的开始时间，不完整的结束时间">
+        <con:settings/>
+        <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:interface>CityAlmServiceSoapBinding</con:interface>
+          <con:operation>almQuery</con:operation>
+          <con:request name="almQuery - 完整的开始时间，不完整的结束时间" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="a394add8-7c5a-4cfd-b731-7559032289e2">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:encoding>UTF-8</con:encoding>
+            <con:endpoint>http://192.168.1.192:8080/nmp/cxf/soap/CityAlmService</con:endpoint>
+            <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:nm="http://nm.pdt.org.cn">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <nm:almQuery>
+         <!--Optional:-->
+         
+      <input>{"endTime":"2018-9-22","startTime":"2018-2-11 16:20:00"}</input></nm:almQuery>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+            <con:assertion type="SOAP Response" id="17aa9723-4d16-419f-8d51-4fbcd532a33e" name="SOAP Response"/>
+            <con:assertion type="Simple Contains" id="391f21a8-7b49-4557-99cb-2107964c87ea" name="Contains">
+              <con:configuration>
+                <token>Fault</token>
+                <ignoreCase>false</ignoreCase>
+                <useRegEx>false</useRegEx>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://nm.pdt.org.cn/CityAlmInterface/almQuery"/>
+            <con:wsrmConfig version="1.2"/>
+          </con:request>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="request" id="68a24a80-1fe3-441c-aaaa-1eb65d62f288" name="almQuery - 不完整的�?��结束时间">
+        <con:settings/>
+        <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:interface>CityAlmServiceSoapBinding</con:interface>
+          <con:operation>almQuery</con:operation>
+          <con:request name="almQuery - 不完整的�?��结束时间" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="71d3e177-5ec6-4650-8765-b7ee01ae289c">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:encoding>UTF-8</con:encoding>
+            <con:endpoint>http://192.168.1.192:8080/nmp/cxf/soap/CityAlmService</con:endpoint>
+            <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:nm="http://nm.pdt.org.cn">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <nm:almQuery>
+         <!--Optional:-->
+         
+      <input>{"endTime":"2018-9-22","startTime":"2018-2-11"}</input></nm:almQuery>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+            <con:assertion type="SOAP Response" id="830235c7-f506-4e1d-b6ac-6506ac92fd3a" name="SOAP Response"/>
+            <con:assertion type="Simple Contains" id="944bc337-4114-439c-9941-11e4301b049e" name="Contains">
+              <con:configuration>
+                <token>Fault</token>
+                <ignoreCase>false</ignoreCase>
+                <useRegEx>false</useRegEx>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://nm.pdt.org.cn/CityAlmInterface/almQuery"/>
+            <con:wsrmConfig version="1.2"/>
+          </con:request>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+    </con:testCase>
+    <con:testCase id="e19b7bc4-a096-4bcc-aa86-5c739df1ecb0" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="almClearQuery" searchProperties="true">
+      <con:settings/>
+      <con:testStep type="request" id="8486cee8-bdfb-4f82-96fb-a44ac5b1d502" name="almClearQuery 完整的开始结束时�?>
+        <con:settings/>
+        <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:interface>CityAlmServiceSoapBinding</con:interface>
+          <con:operation>almClearQuery</con:operation>
+          <con:request name="almClearQuery 完整的开始结束时�? outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="42bfd27b-3dbc-45b1-bae2-de39675b487d">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:encoding>UTF-8</con:encoding>
+            <con:endpoint>http://192.168.1.192:8080/nmp/cxf/soap/CityAlmService</con:endpoint>
+            <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:nm="http://nm.pdt.org.cn">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <nm:almClearQuery>
+         <!--Optional:-->
+         
+      <input>{"endTime":"2018-12-05 20:20:00","startTime":"2018-1-1 10:20:00"}</input></nm:almClearQuery>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+            <con:assertion type="SOAP Response" id="4a9688f8-d0c6-4b6a-a09e-d830eda4fd9d" name="SOAP Response"/>
+            <con:assertion type="Simple Contains" id="3020c9ac-86fd-4811-bce7-a295bcd4aa81" name="Contains">
+              <con:configuration>
+                <token>almList</token>
+                <ignoreCase>false</ignoreCase>
+                <useRegEx>false</useRegEx>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://nm.pdt.org.cn/CityAlmInterface/almClearQuery"/>
+            <con:wsrmConfig version="1.2"/>
+          </con:request>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="request" id="8893f624-4bbf-4b12-8c1d-37b422a19b2f" name="almClearQuery - 不完整的�?��时间，完整的结束时间">
+        <con:settings/>
+        <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:interface>CityAlmServiceSoapBinding</con:interface>
+          <con:operation>almClearQuery</con:operation>
+          <con:request name="almClearQuery - 不完整的�?��时间，完整的结束时间" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="f743d574-a3ae-422c-8f99-5f74102ebef1">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:encoding>UTF-8</con:encoding>
+            <con:endpoint>http://192.168.1.192:8080/nmp/cxf/soap/CityAlmService</con:endpoint>
+            <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:nm="http://nm.pdt.org.cn">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <nm:almClearQuery>
+         <!--Optional:-->
+         
+      <input>{"endTime":"2018-12-11 16:20:00","startTime":"2018-9-22"}</input></nm:almClearQuery>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+            <con:assertion type="SOAP Response" id="4d14c5e0-d150-481f-8b10-bf224f89f7c9" name="SOAP Response"/>
+            <con:assertion type="Simple Contains" id="8e714a22-e7a9-43a0-b4f5-24ecd48a07c1" name="Contains">
+              <con:configuration>
+                <token>Fault</token>
+                <ignoreCase>false</ignoreCase>
+                <useRegEx>false</useRegEx>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://nm.pdt.org.cn/CityAlmInterface/almClearQuery"/>
+            <con:wsrmConfig version="1.2"/>
+          </con:request>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="request" id="41ce7e0f-e604-496d-8733-85ddbf85f5a8" name="almClearQuery - 完整的开始时间，不完整的结束时间">
+        <con:settings/>
+        <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:interface>CityAlmServiceSoapBinding</con:interface>
+          <con:operation>almClearQuery</con:operation>
+          <con:request name="almClearQuery - 完整的开始时间，不完整的结束时间" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="b675fdee-688c-400a-b7fd-79e41ebdde09">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:encoding>UTF-8</con:encoding>
+            <con:endpoint>http://192.168.1.192:8080/nmp/cxf/soap/CityAlmService</con:endpoint>
+            <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:nm="http://nm.pdt.org.cn">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <nm:almClearQuery>
+         <!--Optional:-->
+         
+      <input>{"endTime":"2018-9-22","startTime":"2018-2-11 16:20:00"}</input></nm:almClearQuery>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+            <con:assertion type="SOAP Response" id="31b83e66-c82f-4ebc-aa48-85d8f27ca014" name="SOAP Response"/>
+            <con:assertion type="Simple Contains" id="781c4fe0-c541-4388-a1b7-4505219a7aae" name="Contains">
+              <con:configuration>
+                <token>Fault</token>
+                <ignoreCase>false</ignoreCase>
+                <useRegEx>false</useRegEx>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://nm.pdt.org.cn/CityAlmInterface/almClearQuery"/>
+            <con:wsrmConfig version="1.2"/>
+          </con:request>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="request" id="09b73ca4-a4b2-4967-b5f0-1719fa3ded1c" name="almClearQuery - 不完整的�?��结束时间">
+        <con:settings/>
+        <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:interface>CityAlmServiceSoapBinding</con:interface>
+          <con:operation>almClearQuery</con:operation>
+          <con:request name="almClearQuery - 不完整的�?��结束时间" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="5ad22aab-86a2-4d68-a945-4c5cada996f0">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:encoding>UTF-8</con:encoding>
+            <con:endpoint>http://192.168.1.192:8080/nmp/cxf/soap/CityAlmService</con:endpoint>
+            <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:nm="http://nm.pdt.org.cn">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <nm:almClearQuery>
+         <!--Optional:-->
+         
+      <input>{"endTime":"2018-9-22","startTime":"2018-1-11"}</input></nm:almClearQuery>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+            <con:assertion type="SOAP Response" id="172ef7a8-244b-4607-86ed-22ccdc8c79a9" name="SOAP Response"/>
+            <con:assertion type="Simple Contains" id="1fd30c6d-e67b-400e-a06e-bcc8c771d034" name="Contains">
+              <con:configuration>
+                <token>Fault</token>
+                <ignoreCase>false</ignoreCase>
+                <useRegEx>false</useRegEx>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://nm.pdt.org.cn/CityAlmInterface/almClearQuery"/>
+            <con:wsrmConfig version="1.2"/>
+          </con:request>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+    </con:testCase>
+    <con:testCase id="4efcaee6-1cbd-4df3-8fef-75402a495aaf" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="almStatQuery" searchProperties="true">
+      <con:settings/>
+      <con:testStep type="request" id="a50e4d4e-a154-4d69-878b-7f923305be74" name="almStatQuery - 完整的开始结束时�?>
+        <con:settings/>
+        <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:interface>CityAlmServiceSoapBinding</con:interface>
+          <con:operation>almStatQuery</con:operation>
+          <con:request name="almStatQuery - 完整的开始结束时�? outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="59c64efe-7180-41a8-8e06-91a7376641b0">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:encoding>UTF-8</con:encoding>
+            <con:endpoint>http://192.168.1.192:8080/nmp/cxf/soap/CityAlmService</con:endpoint>
+            <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:nm="http://nm.pdt.org.cn">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <nm:almStatQuery>
+         <!--Optional:-->
+         
+      <input>{"endTime":"2018-11-11 20:20:00","startTime":"2018-1-1 10:20:00"}</input></nm:almStatQuery>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+            <con:assertion type="SOAP Response" id="7a1e0aef-461a-462f-9cd4-e845a77602a6" name="SOAP Response"/>
+            <con:assertion type="Simple Contains" id="6eb61cb5-32f2-42fb-b9af-11f4ba3eb87d" name="Contains">
+              <con:configuration>
+                <token>kaiList</token>
+                <ignoreCase>false</ignoreCase>
+                <useRegEx>false</useRegEx>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://nm.pdt.org.cn/CityAlmInterface/almStatQuery"/>
+            <con:wsrmConfig version="1.2"/>
+          </con:request>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="request" id="ca6b6b3e-6d72-4358-8b49-7a772b608252" name="almStatQuery - 不完整开始的时间，完整的结束时间">
+        <con:settings/>
+        <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:interface>CityAlmServiceSoapBinding</con:interface>
+          <con:operation>almStatQuery</con:operation>
+          <con:request name="almStatQuery - 不完整开始的时间，完整的结束时间" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="db3e6603-f408-4493-91f0-de97c5a2edb3">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:encoding>UTF-8</con:encoding>
+            <con:endpoint>http://192.168.1.192:8080/nmp/cxf/soap/CityAlmService</con:endpoint>
+            <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:nm="http://nm.pdt.org.cn">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <nm:almStatQuery>
+         <!--Optional:-->
+         
+      <input>{"endTime":"2018-12-1105 16:20:00","startTime":"2018-9-22"}</input></nm:almStatQuery>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+            <con:assertion type="SOAP Response" id="3e255e05-db21-49e6-84f0-5de1e66933f8" name="SOAP Response"/>
+            <con:assertion type="Simple Contains" id="0c81f1dc-548b-41a7-a87b-6a5289b0bc10" name="Contains">
+              <con:configuration>
+                <token>Fault</token>
+                <ignoreCase>false</ignoreCase>
+                <useRegEx>false</useRegEx>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://nm.pdt.org.cn/CityAlmInterface/almStatQuery"/>
+            <con:wsrmConfig version="1.2"/>
+          </con:request>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="request" id="5eacd92b-673a-49dd-afe4-0e4f9404d8f7" name="almStatQuery - 完整的开始时间，不完整的结束时间">
+        <con:settings/>
+        <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:interface>CityAlmServiceSoapBinding</con:interface>
+          <con:operation>almStatQuery</con:operation>
+          <con:request name="almStatQuery - 完整的开始时间，不完整的结束时间" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="ef30ba56-ab19-41b1-83dd-54261d6c9e4d">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:encoding>UTF-8</con:encoding>
+            <con:endpoint>http://192.168.1.192:8080/nmp/cxf/soap/CityAlmService</con:endpoint>
+            <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:nm="http://nm.pdt.org.cn">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <nm:almStatQuery>
+         <!--Optional:-->
+         
+      <input>{"endTime":"2018-9-22","startTime":"2018-2-11 16:20:00"}</input></nm:almStatQuery>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+            <con:assertion type="SOAP Response" id="8a34c747-9774-40fc-a941-3b6285b06025" name="SOAP Response"/>
+            <con:assertion type="Simple Contains" id="d9251e19-df28-4d3f-ac5b-aeac0043d721" name="Contains">
+              <con:configuration>
+                <token>Fault</token>
+                <ignoreCase>false</ignoreCase>
+                <useRegEx>false</useRegEx>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://nm.pdt.org.cn/CityAlmInterface/almStatQuery"/>
+            <con:wsrmConfig version="1.2"/>
+          </con:request>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="request" id="566aa573-e355-49b0-a97d-23c3f622ad6f" name="almStatQuery - 不完整的�?��结束时间">
+        <con:settings/>
+        <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:interface>CityAlmServiceSoapBinding</con:interface>
+          <con:operation>almStatQuery</con:operation>
+          <con:request name="almStatQuery - 不完整的�?��结束时间" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="d2759d83-032d-4fea-a5e2-a20d983f5892">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:encoding>UTF-8</con:encoding>
+            <con:endpoint>http://192.168.1.192:8080/nmp/cxf/soap/CityAlmService</con:endpoint>
+            <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:nm="http://nm.pdt.org.cn">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <nm:almStatQuery>
+         <!--Optional:-->
+         
+      <input>{"endTime":"2018-12-05","startTime":"2018-01-01"}</input></nm:almStatQuery>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+            <con:assertion type="SOAP Response" id="fac20e5e-27e7-47a8-ac97-cf66c7034a81" name="SOAP Response"/>
+            <con:assertion type="Simple Contains" id="2d9a699e-6f83-4460-ac4a-0ab6aa9d523b" name="Contains">
+              <con:configuration>
+                <token>Fault</token>
+                <ignoreCase>false</ignoreCase>
+                <useRegEx>false</useRegEx>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://nm.pdt.org.cn/CityAlmInterface/almStatQuery"/>
+            <con:wsrmConfig version="1.2"/>
+          </con:request>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+    </con:testCase>
+    <con:testCase id="8b3d2225-01e4-430e-b080-1962231074b7" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="isAlive" searchProperties="true">
+      <con:settings/>
+      <con:testStep type="request" id="daadbe6d-5490-4d1d-96e6-aaa332ad4c05" name="isAlive - Request 1">
+        <con:settings/>
+        <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:interface>CityAlmServiceSoapBinding</con:interface>
+          <con:operation>isAlive</con:operation>
+          <con:request name="isAlive - Request 1" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="8467a263-0a4b-4f9d-8d6e-e39f19d8d57e">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:encoding>UTF-8</con:encoding>
+            <con:endpoint>http://192.168.1.192:8080/nmp/cxf/soap/CityAlmService</con:endpoint>
+            <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:nm="http://nm.pdt.org.cn">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <nm:isAlive>
+         <!--Optional:-->
+         
+      <input>""</input></nm:isAlive>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+            <con:assertion type="SOAP Response" id="053c0245-6a20-4c7e-88dc-cf288c12f524" name="SOAP Response"/>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://nm.pdt.org.cn/CityAlmInterface/isAlive"/>
+            <con:wsrmConfig version="1.2"/>
+          </con:request>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+    </con:testCase>
+    <con:properties/>
+    <con:reportParameters/>
+  </con:testSuite>
+  <con:requirements/>
+  <con:properties/>
+  <con:wssContainer/>
+  <con:databaseConnectionContainer/>
+  <con:oAuth2ProfileContainer/>
+  <con:reporting>
+    <con:reportTemplates/>
+    <con:xmlTemplates/>
+    <con:parameters/>
+  </con:reporting>
+  <con:sensitiveInformation/>
+</con:soapui-project>
