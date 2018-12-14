@@ -1,6 +1,7 @@
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from comm.read_config import GetConfig
+from selenium.webdriver.common.keys import Keys
 
 
 class Page(object):
@@ -53,6 +54,14 @@ class Page(object):
 
     def switch_to_default(self):
         return self.driver.switch_to_default_content()
+
+    def alert_location(self):
+        return self.driver.switch_to_alert()
+
+    def send_enter(self,*loc):
+        return self.find_element(*loc).send_keys(Keys.ENTER)
+
+
 
 
 

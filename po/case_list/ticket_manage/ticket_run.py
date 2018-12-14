@@ -56,15 +56,15 @@ def new_report(testreport):
 
 if __name__ == '__main__':
         now = time.strftime("Y-%m-%d %H_%M_%S")
-        filename = os.path.dirname(os.path.abspath('.'))+'\\report\\test_report\\'+now+'result.html'
+        filename = os.path.dirname(os.path.dirname(os.path.abspath('.')))+'\\report\\test_report\\'+now+'result.html'
         fp = open(filename, 'wb')
         runner = HTMLTestRunner(stream=fp, title='selenium自动化测试报告',
                         description='测试环境：windows 7  浏览器：Chrome')
-        discover = unittest.defaultTestLoader.discover('.\\ticket_manage',
+        discover = unittest.defaultTestLoader.discover('.',
                                                pattern='*_sta.py')
         runner.run(discover)
         fp.close()
-        file_path = os.path.dirname(os.path.abspath('.'))+'\\report\\test_report'
+        file_path = os.path.dirname(os.path.dirname(os.path.abspath('.')))+'\\report\\test_report'
         file_name = new_report(file_path)
         if send_mail(mailto_list, file_name):
             print("发送成功")
