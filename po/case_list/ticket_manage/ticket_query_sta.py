@@ -79,6 +79,7 @@ class Ticket_Query(myunit.MyTest):
         picture.insert_img(self.driver, 'custom_query.png')
 
 
+
     def test_query_calling_sms_num(self):
         '''查询用户2018/11/1到2018/11/30主叫 短信 数量'''
         self.user_login(username='thy', password='admin')
@@ -95,16 +96,39 @@ class Ticket_Query(myunit.MyTest):
         picture.insert_img(self.driver, 'custom_query.png')
 
 
-    def test_query_called_num(self):
-        '''查询用户2018/11/1到2018/11/30被叫数量'''
+    def test_query_called_voc_num(self):
+        '''查询用户2018/11/1到2018/11/30被叫 语音 数量'''
         self.user_login(username='thy', password='admin')
-        msg = Ticket_Manage_Query(self.driver).query_called_num()
+        msg = Ticket_Manage_Query(self.driver).query_called_voc_num()
         self.assertEqual(msg, "3")
         picture.insert_img(self.driver, 'custom_query.png')
 
+    def test_query_called_reg_num(self):
+        '''查询用户2018/11/1到2018/11/30被叫 语音 数量'''
+        self.user_login(username='thy', password='admin')
+        msg = Ticket_Manage_Query(self.driver).query_called_reg_num()
+        self.assertEqual(msg, "509")
+        picture.insert_img(self.driver, 'custom_query.png')
+
+    def test_query_called_sms_num(self):
+        '''查询用户2018/11/1到2018/11/30被叫 短信 数量'''
+        self.user_login(username='thy', password='admin')
+        msg = Ticket_Manage_Query(self.driver).query_called_sms_num()
+        self.assertEqual(msg, "2423")
+        picture.insert_img(self.driver, 'custom_query.png')
 
 
+    def test_query_called_gps_num(self):
+        '''查询用户2018/11/1到2018/11/30被叫 gps 数量'''
+        self.user_login(username='thy', password='admin')
+        msg = Ticket_Manage_Query(self.driver).query_called_gps_num()
+        self.assertEqual(msg, "1346")
+        picture.insert_img(self.driver, 'custom_query.png')
 
 
-
-
+    def test_query_called_stun_num(self):
+        '''查询用户2018/11/1到2018/11/30被叫 gps 数量'''
+        self.user_login(username='thy', password='admin')
+        msg = Ticket_Manage_Query(self.driver).query_called_stun_num()
+        self.assertEqual(msg, "2")
+        picture.insert_img(self.driver, 'custom_query.png')

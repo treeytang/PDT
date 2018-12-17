@@ -141,7 +141,7 @@ class Ticket_Manage_Query(Page):
         js = "var q=document.documentElement.scrollTop=1000000"
         self.script(js)
         return self.find_element(*self.query_num_loc)
-
+    # 获取分页中显示的数量
     def get_query_num(self):
         a = self.query_num().text
         s = a.split("\n")
@@ -150,6 +150,73 @@ class Ticket_Manage_Query(Page):
         s = s.join(re.findall('\d', a))
         # print("查询条数共计：%s条" % s)
         return s
+
+    # 进入表单页面
+    def come_ticket(self):
+        self.find_element(*self.ticket_come_loc).click()
+        # 进入到右侧表单
+        self.switch_frame(self.ticket_iframe_id)
+
+        js = "var q=document.documentElement.scrollTop=10000"
+        self.script(js)
+        # 出现弹窗，返回上一层表单
+        self.switch_to_default()
+        if self.find_element(*self.hint_cancel):
+            # 关闭提示窗口
+            self.find_element(*self.hint_cancel).click()
+            self.switch_frame(self.ticket_iframe_id)
+            js = "var q=document.documentElement.scrollTop=10000"
+            self.script(js)
+
+    #指定时间查询主叫用户对应的类型
+    def designate_time(self, calling_user):
+        ActionChains(self.driver).move_to_element(self.find_element(*self.start_time_loc)).perform()
+        self.find_element(*self.custom_loc).click()
+        self.find_element(*self.start_date_loc).send_keys("2018-11-01 00:00:00")
+        self.find_element(*self.custom_loc).click()
+        self.find_element(*self.end_date_loc).send_keys("2018-11-30 23:59:59")
+        self.find_element(*self.custom_loc).click()
+        self.find_element(*self.end_date_loc).click()
+        self.find_element(*self.end_date_loc).send_keys(Keys.ENTER)
+        js = "var q=document.documentElement.scrollTop=10000"
+        self.script(js)
+        self.find_element(*self.page_any_loc).send_keys("1")
+        self.find_element(*self.page_any_loc).send_keys(Keys.ENTER)
+        ActionChains(self.driver).move_to_element(self.find_element(*self.calling_user_loc)).perform()
+        self.find_element(*self.calling_user_loc).click()
+        self.find_element(*self.calling_user_box_loc).send_keys(calling_user)
+        self.find_element(*self.calling_user_box_loc).send_keys(Keys.ENTER)
+        sleep(1)
+        ActionChains(self.driver).move_to_element(self.find_element(*self.session_type_loc)).perform()
+
+
+    #指定时间查询被叫用户对应的类型
+    def designate_time_called(self, called_user, start_time="2018-11-01 00:00:00", end_time="2018-11-30 23:59:59"):
+        ActionChains(self.driver).move_to_element(self.find_element(*self.start_time_loc)).perform()
+        self.find_element(*self.custom_loc).click()
+        self.find_element(*self.start_date_loc).send_keys(start_time)
+        self.find_element(*self.custom_loc).click()
+        self.find_element(*self.end_date_loc).send_keys(end_time)
+        self.find_element(*self.custom_loc).click()
+        self.find_element(*self.end_date_loc).click()
+        self.find_element(*self.end_date_loc).send_keys(Keys.ENTER)
+        js = "var q=document.documentElement.scrollTop=10000"
+        self.script(js)
+        # 每页显示多少条
+        self.find_element(*self.page_any_loc).send_keys("1")
+        self.find_element(*self.page_any_loc).send_keys(Keys.ENTER)
+        # 输入查询用户
+        ActionChains(self.driver).move_to_element(self.find_element(*self.called_user_loc)).perform()
+        sleep(1)
+        self.find_element(*self.called_user_loc).click()
+        self.find_element(*self.called_user_box_loc).send_keys(called_user)
+        self.find_element(*self.called_user_box_loc).send_keys(Keys.ENTER)
+        sleep(1)
+        ActionChains(self.driver).move_to_element(self.find_element(*self.session_type_loc)).perform()
+
+
+
+
 
 
 
@@ -179,22 +246,9 @@ class Ticket_Manage_Query(Page):
 
 
 
-    #验证话单查询显示数量与实际数量   30  天
+    #验证话单查询显示数量与实际数量   7  天
     def query_num_verify(self):
-        self.find_element(*self.ticket_come_loc).click()
-        # 进入到右侧表单
-        self.switch_frame(self.ticket_iframe_id)
-
-        js = "var q=document.documentElement.scrollTop=10000"
-        self.script(js)
-        # 出现弹窗，返回上一层表单
-        self.switch_to_default()
-        if self.find_element(*self.hint_cancel):
-            # 关闭提示窗口
-            self.find_element(*self.hint_cancel).click()
-            self.switch_frame(self.ticket_iframe_id)
-            js = "var q=document.documentElement.scrollTop=10000"
-            self.script(js)
+        self.come_ticket()
         ActionChains(self.driver).move_to_element(self.find_element(*self.start_time_loc)).perform()
         self.find_element(*self.one_week_loc).click()
         a = self.query_num().text
@@ -212,20 +266,7 @@ class Ticket_Manage_Query(Page):
             return 'fail'
 
     def page_define_num(self):
-        self.find_element(*self.ticket_come_loc).click()
-        # 进入到右侧表单
-        self.switch_frame(self.ticket_iframe_id)
-
-        js = "var q=document.documentElement.scrollTop=10000"
-        self.script(js)
-        # 出现弹窗，返回上一层表单
-        self.switch_to_default()
-        if self.find_element(*self.hint_cancel):
-            # 关闭提示窗口
-            self.find_element(*self.hint_cancel).click()
-            self.switch_frame(self.ticket_iframe_id)
-            js = "var q=document.documentElement.scrollTop=10000"
-            self.script(js)
+        self.come_ticket()
         ActionChains(self.driver).move_to_element(self.find_element(*self.start_time_loc)).perform()
         self.find_element(*self.one_week_loc).click()
         input_num = str(random.randrange(1,10))
@@ -246,19 +287,7 @@ class Ticket_Manage_Query(Page):
 
     def custom_time_query1(self):
         '''自定义时间查询 正确的起止时间'''
-        self.find_element(*self.ticket_come_loc).click()
-        # 进入到右侧表单
-        self.switch_frame(self.ticket_iframe_id)
-        js = "var q=document.documentElement.scrollTop=10000"
-        self.script(js)
-        # 出现弹窗，返回上一层表单
-        self.switch_to_default()
-        if self.find_element(*self.hint_cancel):
-            # 关闭提示窗口
-            self.find_element(*self.hint_cancel).click()
-            self.switch_frame(self.ticket_iframe_id)
-            js = "var q=document.documentElement.scrollTop=10000"
-            self.script(js)
+        self.come_ticket()
         ActionChains(self.driver).move_to_element(self.find_element(*self.start_time_loc)).perform()
         self.find_element(*self.custom_loc).click()
         self.find_element(*self.start_date_loc).send_keys("2018-11-12 00:00:00")
@@ -275,20 +304,7 @@ class Ticket_Manage_Query(Page):
 
     def custom_time_query2(self):
         '''自定义时间查询 正确的起始时间，超期的结束时间'''
-        self.find_element(*self.ticket_come_loc).click()
-        # 进入到右侧表单
-        self.switch_frame(self.ticket_iframe_id)
-        js = "var q=document.documentElement.scrollTop=10000"
-        self.script(js)
-        # sleep(2)
-        # 出现弹窗，返回上一层表单
-        self.switch_to_default()
-        if self.find_element(*self.hint_cancel):
-            # 关闭提示窗口
-            self.find_element(*self.hint_cancel).click()
-            self.switch_frame(self.ticket_iframe_id)
-            js = "var q=document.documentElement.scrollTop=10000"
-            self.script(js)
+        self.come_ticket()
         ActionChains(self.driver).move_to_element(self.find_element(*self.start_time_loc)).perform()
         self.find_element(*self.custom_loc).click()
         self.find_element(*self.start_date_loc).send_keys("2018-01-01 00:00:00")
@@ -306,20 +322,7 @@ class Ticket_Manage_Query(Page):
 
     def custom_time_query3(self):
         '''自定义时间查询 正确的起始时间，延后的结束时间'''
-        self.find_element(*self.ticket_come_loc).click()
-        # 进入到右侧表单
-        self.switch_frame(self.ticket_iframe_id)
-        js = "var q=document.documentElement.scrollTop=10000"
-        self.script(js)
-        # sleep(2)
-        # 出现弹窗，返回上一层表单
-        self.switch_to_default()
-        if self.find_element(*self.hint_cancel):
-            # 关闭提示窗口
-            self.find_element(*self.hint_cancel).click()
-            self.switch_frame(self.ticket_iframe_id)
-            js = "var q=document.documentElement.scrollTop=10000"
-            self.script(js)
+        self.come_ticket()
         ActionChains(self.driver).move_to_element(self.find_element(*self.start_time_loc)).perform()
         self.find_element(*self.custom_loc).click()
         self.find_element(*self.start_date_loc).send_keys("2018-12-12 00:00:00")
@@ -336,20 +339,7 @@ class Ticket_Manage_Query(Page):
 
     def custom_time_query4(self):
         '''自定义时间查询 超期的起始时间，正确的结束时间'''
-        self.find_element(*self.ticket_come_loc).click()
-        # 进入到右侧表单
-        self.switch_frame(self.ticket_iframe_id)
-        js = "var q=document.documentElement.scrollTop=10000"
-        self.script(js)
-        # sleep(2)
-        # 出现弹窗，返回上一层表单
-        self.switch_to_default()
-        if self.find_element(*self.hint_cancel):
-            # 关闭提示窗口
-            self.find_element(*self.hint_cancel).click()
-            self.switch_frame(self.ticket_iframe_id)
-            js = "var q=document.documentElement.scrollTop=10000"
-            self.script(js)
+        self.come_ticket()
         ActionChains(self.driver).move_to_element(self.find_element(*self.start_time_loc)).perform()
         self.find_element(*self.custom_loc).click()
         self.find_element(*self.start_date_loc).send_keys("2019-12-12 00:00:00")
@@ -363,74 +353,22 @@ class Ticket_Manage_Query(Page):
             print("没有找到alert")
             return "没有弹窗"
 
+
     def query_calling_voc_num(self):
         '''查询用户2018/11/1到2018/11/30主叫语音数量'''
-        self.find_element(*self.ticket_come_loc).click()
-        # 进入到右侧表单
-        self.switch_frame(self.ticket_iframe_id)
-        js = "var q=document.documentElement.scrollTop=10000"
-        self.script(js)
-        # 出现弹窗，返回上一层表单
-        self.switch_to_default()
-        if self.find_element(*self.hint_cancel):
-            # 关闭提示窗口
-            self.find_element(*self.hint_cancel).click()
-            self.switch_frame(self.ticket_iframe_id)
-            js = "var q=document.documentElement.scrollTop=10000"
-            self.script(js)
-        ActionChains(self.driver).move_to_element(self.find_element(*self.start_time_loc)).perform()
-        self.find_element(*self.custom_loc).click()
-        self.find_element(*self.start_date_loc).send_keys("2018-11-01 00:00:00")
-        self.find_element(*self.custom_loc).click()
-        self.find_element(*self.end_date_loc).send_keys("2018-11-30 23:59:59")
-        self.find_element(*self.custom_loc).click()
-        self.find_element(*self.end_date_loc).click()
-        self.find_element(*self.end_date_loc).send_keys(Keys.ENTER)
-        js = "var q=document.documentElement.scrollTop=10000"
-        self.script(js)
-        self.find_element(*self.page_any_loc).send_keys("1")
-        self.find_element(*self.page_any_loc).send_keys(Keys.ENTER)
-        ActionChains(self.driver).move_to_element(self.find_element(*self.calling_user_loc)).perform()
-        self.find_element(*self.calling_user_loc).click()
-        self.find_element(*self.calling_user_box_loc).send_keys("445101")
-        self.find_element(*self.calling_user_box_loc).send_keys(Keys.ENTER)
+        self.come_ticket()
+        calling_user = "445101"
+        self.designate_time(calling_user)
         s = self.get_query_num()
         print("查询条数共计：%s条" % s)
         return s
 
+
     def query_calling_reg_num(self):
-        '''查询用户2018/11/1到2018/11/30主叫语音数量'''
-        self.find_element(*self.ticket_come_loc).click()
-        # 进入到右侧表单
-        self.switch_frame(self.ticket_iframe_id)
-        js = "var q=document.documentElement.scrollTop=10000"
-        self.script(js)
-        # sleep(2)
-        # 出现弹窗，返回上一层表单
-        self.switch_to_default()
-        if self.find_element(*self.hint_cancel):
-            # 关闭提示窗口
-            self.find_element(*self.hint_cancel).click()
-            self.switch_frame(self.ticket_iframe_id)
-            js = "var q=document.documentElement.scrollTop=10000"
-            self.script(js)
-        ActionChains(self.driver).move_to_element(self.find_element(*self.start_time_loc)).perform()
-        self.find_element(*self.custom_loc).click()
-        self.find_element(*self.start_date_loc).send_keys("2018-11-01 00:00:00")
-        self.find_element(*self.custom_loc).click()
-        self.find_element(*self.end_date_loc).send_keys("2018-11-30 23:59:59")
-        self.find_element(*self.custom_loc).click()
-        self.find_element(*self.end_date_loc).click()
-        self.find_element(*self.end_date_loc).send_keys(Keys.ENTER)
-        js = "var q=document.documentElement.scrollTop=10000"
-        self.script(js)
-        self.find_element(*self.page_any_loc).send_keys("1")
-        self.find_element(*self.page_any_loc).send_keys(Keys.ENTER)
-        ActionChains(self.driver).move_to_element(self.find_element(*self.calling_user_loc)).perform()
-        self.find_element(*self.calling_user_loc).click()
-        self.find_element(*self.calling_user_box_loc).send_keys("445101")
-        self.find_element(*self.calling_user_box_loc).send_keys(Keys.ENTER)
-        ActionChains(self.driver).move_to_element(self.find_element(*self.session_type_loc)).perform()
+        '''查询用户2018/11/1到2018/11/30主叫注册数量'''
+        self.come_ticket()
+        calling_user = "445101"
+        self.designate_time(calling_user)
         self.find_element(*self.reg_loc).click()
         s = self.get_query_num()
         print("查询条数共计：%s条" % s)
@@ -438,38 +376,9 @@ class Ticket_Manage_Query(Page):
 
     def query_calling_sms_num(self):
         '''查询用户2018/11/1到2018/11/30主叫短信数量'''
-        self.find_element(*self.ticket_come_loc).click()
-        # 进入到右侧表单
-        self.switch_frame(self.ticket_iframe_id)
-        js = "var q=document.documentElement.scrollTop=10000"
-        self.script(js)
-        # sleep(2)
-        # 出现弹窗，返回上一层表单
-        self.switch_to_default()
-        if self.find_element(*self.hint_cancel):
-            # 关闭提示窗口
-            self.find_element(*self.hint_cancel).click()
-            self.switch_frame(self.ticket_iframe_id)
-            js = "var q=document.documentElement.scrollTop=10000"
-            self.script(js)
-        ActionChains(self.driver).move_to_element(self.find_element(*self.start_time_loc)).perform()
-        self.find_element(*self.custom_loc).click()
-        self.find_element(*self.start_date_loc).send_keys("2018-11-01 00:00:00")
-        self.find_element(*self.custom_loc).click()
-        self.find_element(*self.end_date_loc).send_keys("2018-11-30 23:59:59")
-        self.find_element(*self.custom_loc).click()
-        self.find_element(*self.end_date_loc).click()
-        self.find_element(*self.end_date_loc).send_keys(Keys.ENTER)
-        js = "var q=document.documentElement.scrollTop=10000"
-        self.script(js)
-        self.find_element(*self.page_any_loc).send_keys("1")
-        self.find_element(*self.page_any_loc).send_keys(Keys.ENTER)
-        ActionChains(self.driver).move_to_element(self.find_element(*self.calling_user_loc)).perform()
-        self.find_element(*self.calling_user_loc).click()
-        sleep(1)
-        self.find_element(*self.calling_user_box_loc).send_keys("445101")
-        self.find_element(*self.calling_user_box_loc).send_keys(Keys.ENTER)
-        ActionChains(self.driver).move_to_element(self.find_element(*self.session_type_loc)).perform()
+        self.come_ticket()
+        calling_user = "445101"
+        self.designate_time(calling_user)
         self.find_element(*self.SMS_loc).click()
         s = self.get_query_num()
         print("查询条数共计：%s条" % s)
@@ -478,38 +387,9 @@ class Ticket_Manage_Query(Page):
 
     def query_calling_gps_num(self):
         '''查询用户2018/11/1到2018/11/30主叫gps数量'''
-        self.find_element(*self.ticket_come_loc).click()
-        # 进入到右侧表单
-        self.switch_frame(self.ticket_iframe_id)
-        js = "var q=document.documentElement.scrollTop=10000"
-        self.script(js)
-        # sleep(2)
-        # 出现弹窗，返回上一层表单
-        self.switch_to_default()
-        if self.find_element(*self.hint_cancel):
-            # 关闭提示窗口
-            self.find_element(*self.hint_cancel).click()
-            self.switch_frame(self.ticket_iframe_id)
-            js = "var q=document.documentElement.scrollTop=10000"
-            self.script(js)
-        ActionChains(self.driver).move_to_element(self.find_element(*self.start_time_loc)).perform()
-        self.find_element(*self.custom_loc).click()
-        self.find_element(*self.start_date_loc).send_keys("2018-11-01 00:00:00")
-        self.find_element(*self.custom_loc).click()
-        self.find_element(*self.end_date_loc).send_keys("2018-11-30 23:59:59")
-        self.find_element(*self.custom_loc).click()
-        self.find_element(*self.end_date_loc).click()
-        self.find_element(*self.end_date_loc).send_keys(Keys.ENTER)
-        js = "var q=document.documentElement.scrollTop=10000"
-        self.script(js)
-        self.find_element(*self.page_any_loc).send_keys("1")
-        self.find_element(*self.page_any_loc).send_keys(Keys.ENTER)
-        ActionChains(self.driver).move_to_element(self.find_element(*self.calling_user_loc)).perform()
-        self.find_element(*self.calling_user_loc).click()
-        self.find_element(*self.calling_user_box_loc).send_keys("445105")
-        self.find_element(*self.calling_user_box_loc).send_keys(Keys.ENTER)
-        sleep(1)
-        ActionChains(self.driver).move_to_element(self.find_element(*self.session_type_loc)).perform()
+        self.come_ticket()
+        calling_user = '445105'
+        self.designate_time(calling_user)
         self.find_element(*self.GPS_loc).click()
         # 获取查询条数
         s = self.get_query_num()
@@ -517,48 +397,60 @@ class Ticket_Manage_Query(Page):
         return s
 
 
-    def query_called_num(self):
+    def query_called_voc_num(self):
         '''查询用户2018/11/1到2018/11/30被叫数量'''
-        self.find_element(*self.ticket_come_loc).click()
-        # 进入到右侧表单
-        self.switch_frame(self.ticket_iframe_id)
-        js = "var q=document.documentElement.scrollTop=10000"
-        self.script(js)
-        # sleep(2)
-        # 出现弹窗，返回上一层表单
-        self.switch_to_default()
-        if self.find_element(*self.hint_cancel):
-            # 关闭提示窗口
-            self.find_element(*self.hint_cancel).click()
-            self.switch_frame(self.ticket_iframe_id)
-            js = "var q=document.documentElement.scrollTop=10000"
-            self.script(js)
-        # 指定时间段
-        ActionChains(self.driver).move_to_element(self.find_element(*self.start_time_loc)).perform()
-        self.find_element(*self.custom_loc).click()
-        self.find_element(*self.start_date_loc).send_keys("2018-11-01 00:00:00")
-        self.find_element(*self.custom_loc).click()
-        self.find_element(*self.end_date_loc).send_keys("2018-11-30 23:59:59")
-        self.find_element(*self.custom_loc).click()
-        self.find_element(*self.end_date_loc).click()
-        self.find_element(*self.end_date_loc).send_keys(Keys.ENTER)
-        js = "var q=document.documentElement.scrollTop=10000"
-        self.script(js)
-        # 每页显示多少条
-        self.find_element(*self.page_any_loc).send_keys("1")
-        self.find_element(*self.page_any_loc).send_keys(Keys.ENTER)
-        # 输入查询用户
-        ActionChains(self.driver).move_to_element(self.find_element(*self.called_user_loc)).perform()
-        sleep(1)
-        self.find_element(*self.called_user_loc).click()
-        self.find_element(*self.called_user_box_loc).send_keys("44530212")
-        self.find_element(*self.called_user_box_loc).send_keys(Keys.ENTER)
+        self.come_ticket()
+        called_user = "44530212"
+        self.designate_time_called(called_user)
         # 获取查询条数
         s = self.get_query_num()
-        # a = self.query_num().text
-        # s = a.split("\n")
-        # a = s.pop()
-        # s = ""
-        # s = s.join(re.findall('\d', a))
+        print("查询条数共计：%s条" % s)
+        return s
+
+
+    def query_called_reg_num(self):
+        '''查询用户2018/11/1到2018/11/30被叫 注册 数量'''
+        self.come_ticket()
+        called_user = "4459601"
+        self.designate_time_called(called_user)
+        self.find_element(*self.reg_loc).click()
+        # 获取查询条数
+        s = self.get_query_num()
+        print("查询条数共计：%s条" % s)
+        return s
+
+    def query_called_sms_num(self):
+        '''查询用户2018/11/1到2018/11/30被叫 注册 数量'''
+        self.come_ticket()
+        called_user = "44530211"
+        self.designate_time_called(called_user)
+        self.find_element(*self.SMS_loc).click()
+        # 获取查询条数
+        s = self.get_query_num()
+        print("查询条数共计：%s条" % s)
+        return s
+
+    def query_called_gps_num(self):
+        '''查询用户2018/11/1到2018/11/30被叫 gps 数量'''
+        self.come_ticket()
+        called_user = "44530211"
+        self.designate_time_called(called_user)
+        self.find_element(*self.GPS_loc).click()
+        # 获取查询条数
+        s = self.get_query_num()
+        print("查询条数共计：%s条" % s)
+        return s
+
+
+    def query_called_stun_num(self):
+        '''查询用户2018/11/1到2018/11/30被叫 gps 数量'''
+        self.come_ticket()
+        called_user = "62224501"
+        start_time = "2018-09-01 00:00:00"
+        end_time = "2018-09-30 23:59:59"
+        self.designate_time_called(called_user, start_time, end_time)
+        self.find_element(*self.stun_loc).click()
+        # 获取查询条数
+        s = self.get_query_num()
         print("查询条数共计：%s条" % s)
         return s
