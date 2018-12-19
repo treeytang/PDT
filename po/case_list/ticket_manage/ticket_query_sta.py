@@ -95,6 +95,21 @@ class Ticket_Query(myunit.MyTest):
         self.assertEqual(msg, "14")
         picture.insert_img(self.driver, 'custom_query.png')
 
+    def test_query_calling_stun_num(self):
+        '''查询用户2018/11/1到2018/11/30主叫 复活 数量'''
+        self.user_login(username='thy', password='admin')
+        msg = Ticket_Manage_Query(self.driver).query_calling_stun_num()
+        self.assertEqual(msg, "2")
+        picture.insert_img(self.driver, 'custom_query.png')
+
+
+    def test_query_calling_grp_num(self):
+        '''查询用户2018/11/1到2018/11/30主叫 重组/去重组 数量'''
+        self.user_login(username='thy', password='admin')
+        msg = Ticket_Manage_Query(self.driver).query_calling_grp_num()
+        self.assertEqual(msg, "3")
+        picture.insert_img(self.driver, 'custom_query.png')
+
 
     def test_query_called_voc_num(self):
         '''查询用户2018/11/1到2018/11/30被叫 语音 数量'''
@@ -132,3 +147,5 @@ class Ticket_Query(myunit.MyTest):
         msg = Ticket_Manage_Query(self.driver).query_called_stun_num()
         self.assertEqual(msg, "2")
         picture.insert_img(self.driver, 'custom_query.png')
+
+    # def test_query_called_

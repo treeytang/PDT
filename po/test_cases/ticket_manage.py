@@ -112,6 +112,11 @@ class Ticket_Manage_Query(Page):
     login_user_success_loc = (By.XPATH, '//*[@id="zhongduanshu"]/div[1]')
 
 
+
+    # 以下为公用函数
+
+
+
     # 登录用户名
     def login_username(self, username):
         self.find_element(*self.login_username_loc).clear()
@@ -151,6 +156,8 @@ class Ticket_Manage_Query(Page):
         # print("查询条数共计：%s条" % s)
         return s
 
+
+
     # 进入表单页面
     def come_ticket(self):
         self.find_element(*self.ticket_come_loc).click()
@@ -168,13 +175,16 @@ class Ticket_Manage_Query(Page):
             js = "var q=document.documentElement.scrollTop=10000"
             self.script(js)
 
+
+
+
     #指定时间查询主叫用户对应的类型
-    def designate_time(self, calling_user):
+    def designate_time(self, calling_user, start_time="2018-11-01 00:00:00", end_time="2018-11-30 23:59:59"):
         ActionChains(self.driver).move_to_element(self.find_element(*self.start_time_loc)).perform()
         self.find_element(*self.custom_loc).click()
-        self.find_element(*self.start_date_loc).send_keys("2018-11-01 00:00:00")
+        self.find_element(*self.start_date_loc).send_keys(start_time)
         self.find_element(*self.custom_loc).click()
-        self.find_element(*self.end_date_loc).send_keys("2018-11-30 23:59:59")
+        self.find_element(*self.end_date_loc).send_keys(end_time)
         self.find_element(*self.custom_loc).click()
         self.find_element(*self.end_date_loc).click()
         self.find_element(*self.end_date_loc).send_keys(Keys.ENTER)
@@ -188,6 +198,7 @@ class Ticket_Manage_Query(Page):
         self.find_element(*self.calling_user_box_loc).send_keys(Keys.ENTER)
         sleep(1)
         ActionChains(self.driver).move_to_element(self.find_element(*self.session_type_loc)).perform()
+
 
 
     #指定时间查询被叫用户对应的类型
@@ -218,7 +229,7 @@ class Ticket_Manage_Query(Page):
 
 
 
-
+    # 以下为用例的具体运行步骤
 
 
 
@@ -265,6 +276,8 @@ class Ticket_Manage_Query(Page):
         else:
             return 'fail'
 
+
+
     def page_define_num(self):
         self.come_ticket()
         ActionChains(self.driver).move_to_element(self.find_element(*self.start_time_loc)).perform()
@@ -302,6 +315,8 @@ class Ticket_Manage_Query(Page):
             sleep(3)
             return "fail"
 
+
+
     def custom_time_query2(self):
         '''自定义时间查询 正确的起始时间，超期的结束时间'''
         self.come_ticket()
@@ -318,6 +333,7 @@ class Ticket_Manage_Query(Page):
             print("没有找到alert")
 
             return "没有弹窗"
+
 
 
     def custom_time_query3(self):
@@ -337,6 +353,8 @@ class Ticket_Manage_Query(Page):
 
             return "没有弹窗"
 
+
+
     def custom_time_query4(self):
         '''自定义时间查询 超期的起始时间，正确的结束时间'''
         self.come_ticket()
@@ -354,6 +372,7 @@ class Ticket_Manage_Query(Page):
             return "没有弹窗"
 
 
+
     def query_calling_voc_num(self):
         '''查询用户2018/11/1到2018/11/30主叫语音数量'''
         self.come_ticket()
@@ -362,6 +381,7 @@ class Ticket_Manage_Query(Page):
         s = self.get_query_num()
         print("查询条数共计：%s条" % s)
         return s
+
 
 
     def query_calling_reg_num(self):
@@ -374,6 +394,8 @@ class Ticket_Manage_Query(Page):
         print("查询条数共计：%s条" % s)
         return s
 
+
+
     def query_calling_sms_num(self):
         '''查询用户2018/11/1到2018/11/30主叫短信数量'''
         self.come_ticket()
@@ -383,6 +405,7 @@ class Ticket_Manage_Query(Page):
         s = self.get_query_num()
         print("查询条数共计：%s条" % s)
         return s
+
 
 
     def query_calling_gps_num(self):
@@ -395,6 +418,39 @@ class Ticket_Manage_Query(Page):
         s = self.get_query_num()
         print("查询条数共计：%s条" % s)
         return s
+
+
+
+    def query_calling_stun_num(self):
+        '''查询用户2018/11/1到2018/11/30被叫 复活 数量'''
+        self.come_ticket()
+        calling_user = "445105"
+        start_time = "2018-09-01 00:00:00"
+        end_time = "2018-09-30 23:59:59"
+        self.designate_time(calling_user, start_time, end_time)
+        self.find_element(*self.stun_loc).click()
+        sleep(1)
+        # 获取查询条数
+        s = self.get_query_num()
+        print("查询条数共计：%s条" % s)
+        return s
+
+
+
+    def query_calling_grp_num(self):
+        '''查询用户2018/11/1到2018/11/30主叫 重组/去重组 数量'''
+        self.come_ticket()
+        calling_user = '445100'
+        start_time = "2018-08-01 00:00:00"
+        end_time = "2018-08-31 23:59:59"
+        self.designate_time(calling_user, start_time, end_time)
+        self.find_element(*self.group_loc).click()
+        # 获取查询条数
+        s = self.get_query_num()
+        print("查询条数共计：%s条" % s)
+        return s
+
+
 
 
     def query_called_voc_num(self):
@@ -430,6 +486,8 @@ class Ticket_Manage_Query(Page):
         print("查询条数共计：%s条" % s)
         return s
 
+
+
     def query_called_gps_num(self):
         '''查询用户2018/11/1到2018/11/30被叫 gps 数量'''
         self.come_ticket()
@@ -442,8 +500,9 @@ class Ticket_Manage_Query(Page):
         return s
 
 
+
     def query_called_stun_num(self):
-        '''查询用户2018/11/1到2018/11/30被叫 gps 数量'''
+        '''查询用户2018/11/1到2018/11/30被叫 复活 数量'''
         self.come_ticket()
         called_user = "62224501"
         start_time = "2018-09-01 00:00:00"

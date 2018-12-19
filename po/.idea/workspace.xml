@@ -7,6 +7,7 @@
       <change afterPath="$PROJECT_DIR$/test_cases/ticket_manage.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/case_list/ticket_manage/ticket_query_sta.py" beforeDir="false" afterPath="$PROJECT_DIR$/case_list/ticket_manage/ticket_query_sta.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/ticket_manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_cases/ticket_manage.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -41,15 +42,17 @@
     <SUITE FILE_PATH="coverage/po$Unittests_for_ticket_query_sta_Ticket_Query_test_query_called_num.coverage" NAME="Unittests for ticket_query_sta.Ticket_Query.test_query_called_num Coverage Results" MODIFIED="1545015890853" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/ticket_manage" />
     <SUITE FILE_PATH="coverage/po$Unittests_for_login_sta_LoginTest_test_login5.coverage" NAME="Unittests for login_sta.LoginTest.test_login5 Coverage Results" MODIFIED="1544086691040" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list" />
     <SUITE FILE_PATH="coverage/po$base.coverage" NAME="base Coverage Results" MODIFIED="1544025831871" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/page_obj" />
-    <SUITE FILE_PATH="coverage/po$ticket_run.coverage" NAME="ticket_run Coverage Results" MODIFIED="1544778983748" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/ticket_manage" />
+    <SUITE FILE_PATH="coverage/po$ticket_run.coverage" NAME="ticket_run Coverage Results" MODIFIED="1545202943085" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/ticket_manage" />
     <SUITE FILE_PATH="coverage/po$Unittests_for_ticket_query_sta_Ticket_Query_test_query_calling_gps_num.coverage" NAME="Unittests for ticket_query_sta.Ticket_Query.test_query_calling_gps_num Coverage Results" MODIFIED="1545015606248" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/ticket_manage" />
     <SUITE FILE_PATH="coverage/po$Unittests_for_ticket_query_sta_Ticket_Query_test_query_called_reg_num.coverage" NAME="Unittests for ticket_query_sta.Ticket_Query.test_query_called_reg_num Coverage Results" MODIFIED="1545016434517" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/ticket_manage" />
     <SUITE FILE_PATH="coverage/po$Unittests_for_ticket_query_sta_Ticket_Query_test_query_called_gps_num.coverage" NAME="Unittests for ticket_query_sta.Ticket_Query.test_query_called_gps_num Coverage Results" MODIFIED="1545017966745" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/ticket_manage" />
+    <SUITE FILE_PATH="coverage/po$Unittests_for_ticket_query_sta_Ticket_Query_test_query_calling_stun_num.coverage" NAME="Unittests for ticket_query_sta.Ticket_Query.test_query_calling_stun_num Coverage Results" MODIFIED="1545028641195" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/ticket_manage" />
     <SUITE FILE_PATH="coverage/po$testssss.coverage" NAME="testssss Coverage Results" MODIFIED="1544021130851" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/runner_unittest" />
     <SUITE FILE_PATH="coverage/po$sendemail.coverage" NAME="sendemail Coverage Results" MODIFIED="1544073581013" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/comm" />
     <SUITE FILE_PATH="coverage/po$Unittests_for_ticket_query_sta_Ticket_Query_test_query_calling_reg_num.coverage" NAME="Unittests for ticket_query_sta.Ticket_Query.test_query_calling_reg_num Coverage Results" MODIFIED="1545015542041" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/ticket_manage" />
     <SUITE FILE_PATH="coverage/po$Unittests_in_login_sta_py.coverage" NAME="Unittests in login_sta.py Coverage Results" MODIFIED="1544063503541" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/po$Unittests_for_ticket_query_sta_Ticket_Query_test_custom_query4.coverage" NAME="Unittests for ticket_query_sta.Ticket_Query.test_custom_query4 Coverage Results" MODIFIED="1544758758338" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/ticket_manage" />
+    <SUITE FILE_PATH="coverage/po$Unittests_for_ticket_query_sta_Ticket_Query_test_query_calling_grp_num.coverage" NAME="Unittests for ticket_query_sta.Ticket_Query.test_query_calling_grp_num Coverage Results" MODIFIED="1545028666675" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/ticket_manage" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
@@ -74,11 +77,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test_cases/ticket_manage.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="99">
-              <caret line="442" lean-forward="true" selection-start-line="442" selection-end-line="442" />
+            <state relative-caret-position="751">
+              <caret line="453" lean-forward="true" selection-start-line="453" selection-end-line="453" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -89,8 +92,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/case_list/ticket_manage/ticket_query_sta.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="398">
-              <caret line="133" column="59" lean-forward="true" selection-start-line="133" selection-start-column="59" selection-end-line="133" selection-end-column="59" />
+            <state relative-caret-position="222">
+              <caret line="73" column="41" lean-forward="true" selection-start-line="73" selection-start-column="41" selection-end-line="73" selection-end-column="41" />
               <folding>
                 <element signature="e#0#22#0" expanded="true" />
               </folding>
@@ -98,11 +101,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/case_list/ticket_manage/ticket_run.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="13" column="23" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
+            <state relative-caret-position="479">
+              <caret line="75" lean-forward="true" selection-start-line="75" selection-end-line="75" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -149,7 +152,7 @@
     </replaceStrings>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/test_cases" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -191,7 +194,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -220,6 +222,46 @@
               <item name="po" type="462c0819:PsiDirectoryNode" />
               <item name="report" type="462c0819:PsiDirectoryNode" />
               <item name="test_report" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Scope 'Default Changelist'; set:Default Changelist; class com.intellij.packageDependencies.ChangeListScope">
+          <expand>
+            <path>
+              <item name="po" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+        <subPane subId="Scope 'Changed Files'; set:Changed Files; ALL; class com.intellij.packageDependencies.ChangeListScope">
+          <expand>
+            <path>
+              <item name="po" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
+          <expand>
+            <path>
+              <item name="po" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+            </path>
+            <path>
+              <item name="po" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="case_list" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="po" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="case_list" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="ticket_manage" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
           </expand>
           <select />
@@ -256,7 +298,29 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python tests.Unittests for ticket_query_sta.Ticket_Query.test_query_called_stun_num">
+  <component name="RunManager" selected="Python.ticket_run">
+    <configuration name="ticket_run" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="po" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/case_list/ticket_manage" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/case_list/ticket_manage/ticket_run.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="Unittests for ticket_query_sta.Ticket_Query.test_query_called_gps_num" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="po" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -269,51 +333,6 @@
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
       <option name="_new_target" value="&quot;ticket_query_sta.Ticket_Query.test_query_called_gps_num&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Unittests for ticket_query_sta.Ticket_Query.test_query_called_num" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <module name="po" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/case_list/ticket_manage" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;ticket_query_sta.Ticket_Query.test_query_called_num&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Unittests for ticket_query_sta.Ticket_Query.test_query_called_reg_num" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <module name="po" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/case_list/ticket_manage" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;ticket_query_sta.Ticket_Query.test_query_called_reg_num&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Unittests for ticket_query_sta.Ticket_Query.test_query_called_sms_num" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <module name="po" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/case_list/ticket_manage" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;ticket_query_sta.Ticket_Query.test_query_called_sms_num&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -332,20 +351,50 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
+    <configuration name="Unittests for ticket_query_sta.Ticket_Query.test_query_calling_grp_num" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="po" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/case_list/ticket_manage" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;ticket_query_sta.Ticket_Query.test_query_calling_grp_num&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests for ticket_query_sta.Ticket_Query.test_query_calling_stun_num" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="po" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/case_list/ticket_manage" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;ticket_query_sta.Ticket_Query.test_query_calling_stun_num&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
     <list>
-      <item itemvalue="Python tests.Unittests for ticket_query_sta.Ticket_Query.test_query_called_num" />
-      <item itemvalue="Python tests.Unittests for ticket_query_sta.Ticket_Query.test_query_called_reg_num" />
-      <item itemvalue="Python tests.Unittests for ticket_query_sta.Ticket_Query.test_query_called_sms_num" />
+      <item itemvalue="Python.ticket_run" />
       <item itemvalue="Python tests.Unittests for ticket_query_sta.Ticket_Query.test_query_called_gps_num" />
       <item itemvalue="Python tests.Unittests for ticket_query_sta.Ticket_Query.test_query_called_stun_num" />
+      <item itemvalue="Python tests.Unittests for ticket_query_sta.Ticket_Query.test_query_calling_grp_num" />
+      <item itemvalue="Python tests.Unittests for ticket_query_sta.Ticket_Query.test_query_calling_stun_num" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.ticket_run" />
+        <item itemvalue="Python tests.Unittests for ticket_query_sta.Ticket_Query.test_query_calling_grp_num" />
+        <item itemvalue="Python tests.Unittests for ticket_query_sta.Ticket_Query.test_query_calling_stun_num" />
         <item itemvalue="Python tests.Unittests for ticket_query_sta.Ticket_Query.test_query_called_stun_num" />
         <item itemvalue="Python tests.Unittests for ticket_query_sta.Ticket_Query.test_query_called_gps_num" />
-        <item itemvalue="Python tests.Unittests for ticket_query_sta.Ticket_Query.test_query_called_sms_num" />
-        <item itemvalue="Python tests.Unittests for ticket_query_sta.Ticket_Query.test_query_called_reg_num" />
-        <item itemvalue="Python tests.Unittests for ticket_query_sta.Ticket_Query.test_query_called_num" />
       </list>
     </recent_temporary>
   </component>
@@ -368,32 +417,13 @@
       <workItem from="1544691859152" duration="2469000" />
       <workItem from="1544751153854" duration="25593000" />
       <workItem from="1545009635987" duration="4392000" />
-      <workItem from="1545014607551" duration="3829000" />
+      <workItem from="1545014607551" duration="8947000" />
+      <workItem from="1545030103377" duration="1124000" />
+      <workItem from="1545202860600" duration="1061000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_for_ticket_query_sta_Ticket_Query_test_query_called_reg_num - 2018.12.17 at 11h 14m 13s.xml">
-      <configuration name="Unittests for ticket_query_sta.Ticket_Query.test_query_called_reg_num" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_ticket_query_sta_Ticket_Query_test_query_called_sms_num - 2018.12.17 at 11h 20m 13s.xml">
-      <configuration name="Unittests for ticket_query_sta.Ticket_Query.test_query_called_sms_num" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_ticket_query_sta_Ticket_Query_test_query_called_gps_num - 2018.12.17 at 11h 22m 52s.xml">
-      <configuration name="Unittests for ticket_query_sta.Ticket_Query.test_query_called_gps_num" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_ticket_query_sta_Ticket_Query_test_query_called_gps_num - 2018.12.17 at 11h 39m 44s.xml">
-      <configuration name="Unittests for ticket_query_sta.Ticket_Query.test_query_called_gps_num" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_ticket_query_sta_Ticket_Query_test_query_called_stun_num - 2018.12.17 at 11h 41m 21s.xml">
-      <configuration name="Unittests for ticket_query_sta.Ticket_Query.test_query_called_stun_num" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_ticket_query_sta_Ticket_Query_test_query_called_stun_num - 2018.12.17 at 11h 42m 20s.xml">
-      <configuration name="Unittests for ticket_query_sta.Ticket_Query.test_query_called_stun_num" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_for_ticket_query_sta_Ticket_Query_test_query_called_stun_num - 2018.12.17 at 11h 43m 30s.xml">
-      <configuration name="Unittests for ticket_query_sta.Ticket_Query.test_query_called_stun_num" configurationId="tests" />
-    </history-entry>
     <history-entry file="Unittests_for_ticket_query_sta_Ticket_Query_test_query_called_stun_num - 2018.12.17 at 11h 43m 52s.xml">
       <configuration name="Unittests for ticket_query_sta.Ticket_Query.test_query_called_stun_num" configurationId="tests" />
     </history-entry>
@@ -403,16 +433,37 @@
     <history-entry file="Unittests_for_ticket_query_sta_Ticket_Query_test_query_called_stun_num - 2018.12.17 at 11h 45m 13s.xml">
       <configuration name="Unittests for ticket_query_sta.Ticket_Query.test_query_called_stun_num" configurationId="tests" />
     </history-entry>
+    <history-entry file="Unittests_for_ticket_query_sta_Ticket_Query_test_query_calling_grp_num - 2018.12.17 at 14h 20m 10s.xml">
+      <configuration name="Unittests for ticket_query_sta.Ticket_Query.test_query_calling_grp_num" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_ticket_query_sta_Ticket_Query_test_query_calling_grp_num - 2018.12.17 at 14h 20m 41s.xml">
+      <configuration name="Unittests for ticket_query_sta.Ticket_Query.test_query_calling_grp_num" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_ticket_query_sta_Ticket_Query_test_query_calling_stun_num - 2018.12.17 at 14h 33m 08s.xml">
+      <configuration name="Unittests for ticket_query_sta.Ticket_Query.test_query_calling_stun_num" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_ticket_query_sta_Ticket_Query_test_query_calling_stun_num - 2018.12.17 at 14h 34m 45s.xml">
+      <configuration name="Unittests for ticket_query_sta.Ticket_Query.test_query_calling_stun_num" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_ticket_query_sta_Ticket_Query_test_query_calling_stun_num - 2018.12.17 at 14h 35m 26s.xml">
+      <configuration name="Unittests for ticket_query_sta.Ticket_Query.test_query_calling_stun_num" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_ticket_query_sta_Ticket_Query_test_query_calling_stun_num - 2018.12.17 at 14h 37m 40s.xml">
+      <configuration name="Unittests for ticket_query_sta.Ticket_Query.test_query_calling_stun_num" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_ticket_query_sta_Ticket_Query_test_query_calling_grp_num - 2018.12.17 at 14h 38m 03s.xml">
+      <configuration name="Unittests for ticket_query_sta.Ticket_Query.test_query_calling_grp_num" configurationId="tests" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="96446000" />
+    <option name="totallyTimeSpent" value="103749000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
+    <frame x="-8" y="-8" width="1696" height="1026" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="1" weight="0.4" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.18765281" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Database Changes" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="1" weight="0.32922733" />
@@ -422,7 +473,7 @@
       <window_info anchor="bottom" id="Docker" order="5" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="6" />
       <window_info anchor="bottom" id="Find" order="7" weight="0.32997763" />
-      <window_info active="true" anchor="bottom" id="Run" order="8" visible="true" weight="0.343785" />
+      <window_info anchor="bottom" id="Run" order="8" visible="true" weight="0.20156775" />
       <window_info anchor="bottom" id="Debug" order="9" weight="0.21724524" />
       <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
@@ -638,10 +689,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/case_list/ticket_manage/ticket_run.py">
+    <entry file="file://$PROJECT_DIR$/test_cases/ticket_manage.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="13" column="23" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
+        <state relative-caret-position="751">
+          <caret line="453" lean-forward="true" selection-start-line="453" selection-end-line="453" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
@@ -650,18 +701,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/case_list/ticket_manage/ticket_query_sta.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="398">
-          <caret line="133" column="59" lean-forward="true" selection-start-line="133" selection-start-column="59" selection-end-line="133" selection-end-column="59" />
+        <state relative-caret-position="222">
+          <caret line="73" column="41" lean-forward="true" selection-start-line="73" selection-start-column="41" selection-end-line="73" selection-end-column="41" />
           <folding>
             <element signature="e#0#22#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_cases/ticket_manage.py">
+    <entry file="file://$PROJECT_DIR$/case_list/ticket_manage/ticket_run.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="99">
-          <caret line="442" lean-forward="true" selection-start-line="442" selection-end-line="442" />
+        <state relative-caret-position="479">
+          <caret line="75" lean-forward="true" selection-start-line="75" selection-end-line="75" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
