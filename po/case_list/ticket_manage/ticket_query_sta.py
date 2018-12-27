@@ -1,7 +1,7 @@
 from time import sleep
 import unittest, random, sys,time
 from comm import myunit, picture
-from test_cases.ticket_manage import Ticket_Manage_Query
+from test_cases.ticket_manage.ticket_manage import Ticket_Manage_Query
 import HTMLTestRunner
 
 
