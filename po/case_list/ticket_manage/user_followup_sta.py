@@ -1,7 +1,7 @@
 from time import sleep
 import unittest, random, sys,time
 from comm import myunit, picture
-from test_cases.ticket_manage.user_followup import User_FollowUp
+from test_cases.ticket_manage.user_followup_page import User_FollowUp
 import HTMLTestRunner
 
 

@@ -49,6 +49,9 @@ class User_FollowUp(Page):
         self.login_button()
         sleep(3)
 
+
+
+
     # 进入话单管理页面--默认进入话单查询  定位
     ticket_come_loc = (By.XPATH, '//*[@id="menu600"]/div[1]/a')
     #用户追踪定位
@@ -81,6 +84,9 @@ class User_FollowUp(Page):
     sms_num_loc = (By.XPATH, '//*[@id="track-data-summary"]/tr[5]/td[2]')
 
 
+
+
+
     def come_page(self):
         #进入表单公用函数
         self.find_element(*self.ticket_come_loc).click()
@@ -102,6 +108,7 @@ class User_FollowUp(Page):
 
 
     def query_user_verify(self):
+        #查询   公用函数
         self.come_page()
         self.find_element(*self.input_box_loc).send_keys('445101')
         sleep(1)

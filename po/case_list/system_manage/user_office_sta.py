@@ -32,7 +32,7 @@ class Ticket_Query(myunit.MyTest):
         picture.insert_img(self.driver, "user_pwd_true.png")
 
     def test_4_office_add(self):
-        '''进入添加下级单位 循环添加十各单位 与实际显示成功添加的单位检验'''
+        '''进入添加下级单位 循环添加十个单位 与实际显示成功添加的单位检验'''
         self.user_login(username="thy", password="admin")
         msg = User_Office(self.driver).head_add_next_office_verify()
         self.assertEqual(msg.strip(), "10")
