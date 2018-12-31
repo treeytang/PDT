@@ -61,6 +61,9 @@ class Page(object):
     def send_enter(self,*loc):
         return self.find_element(*loc).send_keys(Keys.ENTER)
 
+    def url(self):
+        return self.driver.current_url
+
 
 
 
