@@ -97,10 +97,33 @@ class User_manage(Page):
         return str(len(elements))
 
     def input_query_2(self):
-        #通过登录名模糊查询 查询登录名中含有w的用户
+        #通过登录名模糊查询 查询姓名中含有h的用户
         self.come_iframe_page()
         self.find_element(*self.name_input).send_keys('h')
         self.send_enter(*self.name_input)
         elements = self.find_elements(*self.user_nums)
         print(len(elements))
         return str(len(elements))
+
+    def add_user(self):
+        #添加用户
+        self.come_iframe_page()
+        #进入用户添加界面进行操作
+        self.find_element(*(By.LINK_TEXT, '用户添加')).click()
+        self.find_element(*(By.ID, 'no')).send_keys('007')
+        self.find_element(*(By.ID, 'name')).send_keys('测试007')
+        self.find_element(*(By.ID, 'loginName')).send_keys('007')
+        self.find_element(*(By.ID, 'newPassword')).send_keys('admin')
+        self.find_element(*(By.ID, 'confirmNewPassword')).send_keys('admin')
+        self.find_element(*(By.ID, 'btnSubmit')).click()
+        #查找出添加的用户是否存在
+        self.find_element(*self.name_input).send_keys('测试007')
+        self.send_enter(*self.name_input)
+        element = self.find_element(*(By.XPATH, '//*[@id="contentTable"]/tbody/tr/td[1]')).text
+        self.find_element(*(By.XPATH, '//*[@id="contentTable"]/tbody/tr/td[8]/a[2]')).click()
+        self.switch_to_default()
+        self.find_element(*(By.XPATH, '//*[@id="jbox-state-state0"]/div[2]/button[1]')).click()
+        print(element)
+        if element:
+            return True
+        return False

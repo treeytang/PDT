@@ -55,7 +55,7 @@ def new_report(testreport):
 
 
 if __name__ == '__main__':
-        now = time.strftime("Y-%m-%d %H_%M_%S")
+        now = time.strftime("%Y-%m-%d %H_%M_%S")
         filename = os.path.dirname(os.path.dirname(os.path.abspath('.')))+'\\report\\test_report\\'+now+'result.html'
         fp = open(filename, 'wb')
         runner = HTMLTestRunner(stream=fp, title='selenium自动化测试报告',
