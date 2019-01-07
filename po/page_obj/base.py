@@ -2,6 +2,7 @@ from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from comm.read_config import GetConfig
 from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.support.select import Select
 
 
 class Page(object):
@@ -64,15 +65,18 @@ class Page(object):
     def url(self):
         return self.driver.current_url
 
+    def select(self, *loc):
+        return Select(self.driver.find_element(*loc))
 
 
 
 
 
-    def send_keys(self, loc, value, clear_first=True, click_first=True):
+
+    def send_keys(self, *loc, value, clear_first=True, click_first=True):
         try:
             # getattr相当于self.loc
-            loc = getattr(self, "_%s" % loc)
+            # loc = getattr(self, "%s" % loc)
             if click_first:
                 self.find_element(*loc).click()
             if clear_first:
