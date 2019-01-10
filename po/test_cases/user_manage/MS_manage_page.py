@@ -68,6 +68,47 @@ class Mobile_Station(Page):
     del_loc = (By.XPATH, '//*[@id="muserList"]/tr/td[14]/button[5]')
     # 删除确定按钮
     del_ensure = (By.XPATH, '//*[@id="jbox-state-state0"]/div[2]/button[1]')
+    #矩阵显示模式按钮定位
+    show_matrix_loc = (By.ID, 'togglePage')
+
+
+    #用户映射定位
+    user_map_loc = (By.LINK_TEXT, '用户映射')
+    #列表显示数量定位
+    map_show_num = (By.XPATH, '//*[@id="relate"]/tr')
+    #每页显示数量输入框定位
+    page_num_loc = (By.XPATH, '//*[@id="freestyle"]/div/div[2]/div[2]/div[1]/div[5]/input')
+    #用户号码范围 区号输入框
+    map_area_loc = (By.XPATH, '//*[@id="phone1"]/div[2]/span[1]/input')
+    #用户号码范围 队号输入框
+    map_team_loc = (By.XPATH, '//*[@id="qh"]/input')
+    #用户号码范围 个号输入框
+    map_individual_loc_1 = (By.XPATH, '//*[@id="phone1"]/div[2]/span[5]/input')
+    map_individual_loc_2 = (By.XPATH, '//*[@id="phone1"]/div[2]/span[7]/input')
+    # PDT用户号码范围 区号输入框
+    PDT_area_loc = (By.XPATH, '//*[@id="phone2"]/div[2]/span[1]/input')
+    # PDT用户号码范围 队号输入框
+    PDT_team_loc = (By.XPATH, '//*[@id="phone2"]/div[2]/span[3]/input')
+    # PDT用户号码范围 个号输入框
+    PDT_individual_loc_1 = (By.XPATH, '//*[@id="phone2"]/div[2]/span[5]/input')
+    PDT_individual_loc_2 = (By.XPATH, '//*[@id="phone2"]/div[2]/span[7]/input')
+    #添加按钮定位
+    map_add_btn_loc = (By.ID, 'add')
+    #所有删除操作按钮定位
+    map_del_btn_loc = (By.XPATH, '//*[@id="relate"]/tr/td[10]/button')
+    #提示弹窗定位
+    map_alert_loc = (By.XPATH, '/html/body/div[2]')
+
+    #本地在线用户定位
+    local_online_user_loc = (By.XPATH, '//*[@id="m_class"]/li[3]/a')
+    #列表数量定位
+    LOU_show_num = (By.XPATH, '//*[@id="regUserList"]/tr')
+    #每页显示数量输入框定位
+    LOU_input_loc = (By.XPATH, '//*[@id="freestyle"]/div/div[2]/div/div[5]/input')
+
+
+
+
 
 
 
@@ -145,7 +186,7 @@ class Mobile_Station(Page):
 
     '''
         进入开户界面进行测试
-        1.号码范围的取值：区号328--806   队号20--41  个号200--899 各个分别提取边界值进行验证
+        1.号码范围的取值：区号328--806   队号20--89  个号200--899 各个分别提取边界值进行验证
         2.空中实名制别名：默认为个号 场景法 不填写 填写大于7位（当大于7位时 前段默认会删除第七位后的其它字符）
         3.通话限时 场景法 
         4.
@@ -159,7 +200,7 @@ class Mobile_Station(Page):
         self.find_element(*self.team_code_loc).send_keys(team_num)
         self.find_element(*self.individual_code_loc).send_keys(individual_num)
         self.select(*self.th_box_select_loc).select_by_value(first_num)
-        self.send_keys(*(By.ID, 'session_timer'), value=value)
+        self.send_keys(value, *(By.ID, 'session_timer'))
         self.find_element(*self.serial_num).send_keys(serial_num)
 
     def real_name_system(self, text='海格恒通', gender='女', policeType='交警', position='二级警员'):
@@ -217,7 +258,7 @@ class Mobile_Station(Page):
         return False
 
     def add_icon_1_2(self):
-        #进入开户界面 只填写基本信息 验证 号码范围 错误的区号 区号最大值加一 807  区号328--806   队号20--41  个号200--899
+        #进入开户界面 只填写基本信息 验证 号码范围 错误的区号 区号最大值加一 807  区号328--806   队号20--89  个号200--899
         self.basic_msg('807', '20', '410', first_num='1', serial_num='555555555555555', value='300')
         msg = self.find_element(*self.nullty_num_loc).text
         if msg=='无效号码':
@@ -233,15 +274,33 @@ class Mobile_Station(Page):
         return False
 
     def add_icon_1_4(self):
-        #进入开户界面 只填写基本信息 验证 号码范围 错误的区号 输入中文：警察  区号328--806   队号20--41  个号200--899
+        #进入开户界面 只填写基本信息 验证 号码范围 错误的区号 输入中文：警察  区号328--806   队号20--89  个号200--899
         self.basic_msg('警察', '20', '410', first_num='1', serial_num='555555555555555', value='300')
         msg = self.find_element(*self.nullty_num_loc).text
         if msg=='无效号码':
             return True
         return False
 
+    def add_icon_1_7(self):
+        #进入开户界面 只填写基本信息 验证 号码范围 错误的区号 4位区号  区号328--806   队号20--89  个号200--899
+        self.basic_msg('3333', '20', '410', first_num='1', serial_num='555555555555555', value='300')
+        sleep(5)
+        msg = self.find_element(*self.nullty_num_loc).text
+        if msg=='无效号码':
+            return True
+        return False
+
+    def add_icon_1_8(self):
+        #进入开户界面 只填写基本信息 验证 号码范围 错误的区号 2位区号  区号328--806   队号20--89  个号200--899
+        self.basic_msg('44', '20', '410', first_num='1', serial_num='555555555555555', value='300')
+        msg = self.find_element(*self.nullty_num_loc).text
+        if msg=='无效号码':
+            return True
+        return False
+
+
     def add_icon_1_5(self):
-        #进入开户界面 只填写基本信息 验证 号码的范围 错误的队号 最大值加一：42
+        #进入开户界面 只填写基本信息 验证 号码的范围 错误的队号 最大值加一：90
         self.basic_msg('800', '90', '300', first_num='1', serial_num='555555555555555', value='300')
         msg = self.find_element(*self.nullty_num_loc).text
         sleep(5)
@@ -257,6 +316,53 @@ class Mobile_Station(Page):
             return True
         return False
 
+    def add_icon_1_9(self):
+        #进入开户界面 只填写基本信息 验证 号码的范围 错误的队号 输入英文:aa
+        self.basic_msg('800', 'aa', '300', first_num='1', serial_num='555555555555555', value='300')
+        msg = self.find_element(*self.nullty_num_loc).text
+        if msg == '无效号码':
+            return True
+        return False
+
+    def add_icon_1_10(self):
+        #进入开户界面 只填写基本信息 验证 号码的范围 错误的队号 输入中文:警察
+        self.basic_msg('800', '警察', '300', first_num='1', serial_num='555555555555555', value='300')
+        msg = self.find_element(*self.nullty_num_loc).text
+        if msg == '无效号码':
+            return True
+        return False
+
+    def add_icon_1_11(self):
+        #进入开户界面 只填写基本信息 验证 号码的范围 错误的个号 最大值加一：900
+        self.basic_msg('800', '23', '900', first_num='1', serial_num='555555555555555', value='300')
+        msg = self.find_element(*self.nullty_num_loc).text
+        if msg == '无效号码':
+            return True
+        return False
+
+    def add_icon_1_12(self):
+        #进入开户界面 只填写基本信息 验证 号码的范围 错误的个号 最小值减一：199
+        self.basic_msg('800', '23', '199', first_num='1', serial_num='555555555555555', value='300')
+        msg = self.find_element(*self.nullty_num_loc).text
+        if msg == '无效号码':
+            return True
+        return False
+
+    def add_icon_1_13(self):
+        #进入开户界面 只填写基本信息 验证 号码的范围 错误的个号 输入英文:aaa
+        self.basic_msg('800', '23', 'aaa', first_num='1', serial_num='555555555555555', value='300')
+        msg = self.find_element(*self.nullty_num_loc).text
+        if msg == '无效号码':
+            return True
+        return False
+
+    def add_icon_1_14(self):
+        #进入开户界面 只填写基本信息 验证 号码的范围 错误的个号 输入中文:一二三
+        self.basic_msg('800', '23', '一二三', first_num='1', serial_num='555555555555555', value='300')
+        msg = self.find_element(*self.nullty_num_loc).text
+        if msg == '无效号码':
+            return True
+        return False
 
     def add_icon_2(self):
         # 进入开户界面 只填写基本信息 验证 已注册的正确基本信息
@@ -283,4 +389,375 @@ class Mobile_Station(Page):
         self.find_element(*self.add_loc).click()
         self.query_del('555555555555555')
         return msg
+
+    def show_matrix(self):
+        #进入矩阵显示模式页面
+        self.come_iframe_page()
+        self.find_element(*self.show_matrix_loc).click()
+        msg = self.find_element(*(By.ID, 'togglePage')).text
+        if msg == '切换至列表显示模式':
+            return True
+        return False
+
+
+
+
+    #移动台管理  --------用户映射
+
+
+
+
+    def user_map_show_num(self):
+        #进入用户映射页面 验证显示数量
+        self.come_iframe_page()
+        self.find_element(*self.user_map_loc).click()
+        elements = self.find_elements(*self.map_show_num)
+        return str(len(elements))
+
+    def user_map_show_num_1(self):
+        #进入用户映射页面 验证分页显示显示数量
+        self.come_iframe_page()
+        self.find_element(*self.user_map_loc).click()
+        self.send_keys('1', *self.page_num_loc)
+        self.send_enter(*self.page_num_loc)
+        sleep(1)
+        elements = self.find_elements(*self.map_show_num)
+        return str(len(elements))
+
+
+    def del_(self):
+        #用户映射界面公用删除函数
+        elements = self.find_elements(*self.map_del_btn_loc)
+        if len(elements)!=5:
+            return False
+        elements.pop().click()
+        sleep(2)
+        self.switch_to_default()
+        self.find_element(*self.del_ensure).click()
+
+
+    def user_map_show_num_2(self):
+        #进入用户映射页面 验证 配置一条新的用户号码映射范围 800 41 200/210  800 41 300/310
+        self.come_iframe_page()
+        self.find_element(*self.user_map_loc).click()
+        self.send_keys('800', *self.map_area_loc)
+        self.send_keys('41', *self.map_team_loc)
+        self.send_keys('200', *self.map_individual_loc_1)
+        self.send_keys('210', *self.map_individual_loc_2)
+        self.send_keys('800', *self.PDT_area_loc)
+        self.send_keys('41', *self.PDT_team_loc)
+        self.send_keys('300', *self.PDT_individual_loc_1)
+        self.send_keys('310', *self.PDT_individual_loc_2)
+        self.find_element(*self.map_add_btn_loc).click()
+        element = self.find_element(*(By.LINK_TEXT, '800-41-200'))
+        self.del_()
+        if element:
+            return True
+        return False
+
+    def user_map_show_num_2_1(self):
+        #进入用户映射页面 验证 配置一条新的用户号码映射范围 错误的区号 区号最小值减一：327 327 41 200/210  327 41 300/310
+        self.come_iframe_page()
+        self.find_element(*self.user_map_loc).click()
+        self.send_keys('327', *self.map_area_loc)
+        self.send_keys('41', *self.map_team_loc)
+        self.send_keys('200', *self.map_individual_loc_1)
+        self.send_keys('210', *self.map_individual_loc_2)
+        self.send_keys('327', *self.PDT_area_loc)
+        self.send_keys('41', *self.PDT_team_loc)
+        self.send_keys('300', *self.PDT_individual_loc_1)
+        self.send_keys('310', *self.PDT_individual_loc_2)
+        element = self.find_element(*self.map_add_btn_loc)
+        # element = self.find_element(*(By.LINK_TEXT, '800-41-200'))
+        # self.del_()
+        if element:
+            return False
+        return True
+
+    def user_map_show_num_2_2(self):
+        #进入用户映射页面 验证 配置一条新的用户号码映射范围 错误的区号 区号最大值加一：807  807 41 200/210  807 41 300/310
+        self.come_iframe_page()
+        self.find_element(*self.user_map_loc).click()
+        self.send_keys('807', *self.map_area_loc)
+        self.send_keys('41', *self.map_team_loc)
+        self.send_keys('200', *self.map_individual_loc_1)
+        self.send_keys('210', *self.map_individual_loc_2)
+        self.send_keys('807', *self.PDT_area_loc)
+        self.send_keys('41', *self.PDT_team_loc)
+        self.send_keys('300', *self.PDT_individual_loc_1)
+        self.send_keys('310', *self.PDT_individual_loc_2)
+        element = self.find_element(*self.map_add_btn_loc)
+        # element = self.find_element(*(By.LINK_TEXT, '800-41-200'))
+        # self.del_()
+        if element:
+            return False
+        return True
+
+
+    def user_map_show_num_2_3(self):
+        #进入用户映射页面 验证 配置一条新的用户号码映射范围 错误的区号 区号为英文字母：aaa  aaa 41 200/210  aaa 41 300/310
+        self.come_iframe_page()
+        self.find_element(*self.user_map_loc).click()
+        self.send_keys('aaa', *self.map_area_loc)
+        self.send_keys('41', *self.map_team_loc)
+        self.send_keys('200', *self.map_individual_loc_1)
+        self.send_keys('210', *self.map_individual_loc_2)
+        self.send_keys('aaa', *self.PDT_area_loc)
+        self.send_keys('41', *self.PDT_team_loc)
+        self.send_keys('300', *self.PDT_individual_loc_1)
+        self.send_keys('310', *self.PDT_individual_loc_2)
+        element = self.find_element(*self.map_add_btn_loc)
+        # element = self.find_element(*(By.LINK_TEXT, '800-41-200'))
+        # self.del_()
+        if element:
+            return False
+        return True
+
+    def user_map_show_num_2_4(self):
+        #进入用户映射页面 验证 配置一条新的用户号码映射范围 错误的区号 区号为中文：警察  警察 41 200/210  警察 41 300/310
+        self.come_iframe_page()
+        self.find_element(*self.user_map_loc).click()
+        self.send_keys('警察', *self.map_area_loc)
+        self.send_keys('41', *self.map_team_loc)
+        self.send_keys('200', *self.map_individual_loc_1)
+        self.send_keys('210', *self.map_individual_loc_2)
+        self.send_keys('警察', *self.PDT_area_loc)
+        self.send_keys('41', *self.PDT_team_loc)
+        self.send_keys('300', *self.PDT_individual_loc_1)
+        self.send_keys('310', *self.PDT_individual_loc_2)
+        element = self.find_element(*self.map_add_btn_loc)
+        # element = self.find_element(*(By.LINK_TEXT, '800-41-200'))
+        # self.del_()
+        if element:
+            return False
+        return True
+
+    def user_map_show_num_2_5(self):
+        #进入用户映射页面 验证 配置一条新的用户号码映射范围 错误的区号 区号为两位数字：33 33 41 200/210  33 41 300/310
+        self.come_iframe_page()
+        self.find_element(*self.user_map_loc).click()
+        self.send_keys('33', *self.map_area_loc)
+        self.send_keys('41', *self.map_team_loc)
+        self.send_keys('200', *self.map_individual_loc_1)
+        self.send_keys('210', *self.map_individual_loc_2)
+        self.send_keys('33', *self.PDT_area_loc)
+        self.send_keys('41', *self.PDT_team_loc)
+        self.send_keys('300', *self.PDT_individual_loc_1)
+        self.send_keys('310', *self.PDT_individual_loc_2)
+        element = self.find_element(*self.map_add_btn_loc)
+        # element = self.find_element(*(By.LINK_TEXT, '800-41-200'))
+        # self.del_()
+        if element:
+            return False
+        return True
+
+    def user_map_show_num_2_6(self):
+        #进入用户映射页面 验证 配置一条新的用户号码映射范围 错误的队号 队号为最小值减一：19  328 19 200/210  328 19 300/310
+        self.come_iframe_page()
+        self.find_element(*self.user_map_loc).click()
+        self.send_keys('328', *self.map_area_loc)
+        self.send_keys('19', *self.map_team_loc)
+        self.send_keys('200', *self.map_individual_loc_1)
+        self.send_keys('210', *self.map_individual_loc_2)
+        self.send_keys('328', *self.PDT_area_loc)
+        self.send_keys('19', *self.PDT_team_loc)
+        self.send_keys('300', *self.PDT_individual_loc_1)
+        self.send_keys('310', *self.PDT_individual_loc_2)
+        element = self.find_element(*self.map_add_btn_loc)
+        if element:
+            return False
+        return True
+
+    def user_map_show_num_2_7(self):
+        #进入用户映射页面 验证 配置一条新的用户号码映射范围 错误的队号 队号为最大值加一：90  328 90 200/210  328 90 300/310
+        self.come_iframe_page()
+        self.find_element(*self.user_map_loc).click()
+        self.send_keys('328', *self.map_area_loc)
+        self.send_keys('90', *self.map_team_loc)
+        self.send_keys('200', *self.map_individual_loc_1)
+        self.send_keys('210', *self.map_individual_loc_2)
+        self.send_keys('328', *self.PDT_area_loc)
+        self.send_keys('90', *self.PDT_team_loc)
+        self.send_keys('300', *self.PDT_individual_loc_1)
+        self.send_keys('310', *self.PDT_individual_loc_2)
+        element = self.find_element(*self.map_add_btn_loc)
+        if element:
+            return False
+        return True
+
+
+    def user_map_show_num_2_8(self):
+        #进入用户映射页面 验证 配置一条新的用户号码映射范围 错误的队号 队号为英文字母：aa  328 aa 200/210  328 aa 300/310
+        self.come_iframe_page()
+        self.find_element(*self.user_map_loc).click()
+        self.send_keys('328', *self.map_area_loc)
+        self.send_keys('aa', *self.map_team_loc)
+        self.send_keys('200', *self.map_individual_loc_1)
+        self.send_keys('210', *self.map_individual_loc_2)
+        self.send_keys('328', *self.PDT_area_loc)
+        self.send_keys('aa', *self.PDT_team_loc)
+        self.send_keys('300', *self.PDT_individual_loc_1)
+        self.send_keys('310', *self.PDT_individual_loc_2)
+        element = self.find_element(*self.map_add_btn_loc)
+        if element:
+            return False
+        return True
+
+    def user_map_show_num_2_9(self):
+        #进入用户映射页面 验证 配置一条新的用户号码映射范围 错误的队号 队号为中文：警察  328 警察 200/210  328 警察 300/310
+        self.come_iframe_page()
+        self.find_element(*self.user_map_loc).click()
+        self.send_keys('328', *self.map_area_loc)
+        self.send_keys('警察', *self.map_team_loc)
+        self.send_keys('200', *self.map_individual_loc_1)
+        self.send_keys('210', *self.map_individual_loc_2)
+        self.send_keys('328', *self.PDT_area_loc)
+        self.send_keys('警察', *self.PDT_team_loc)
+        self.send_keys('300', *self.PDT_individual_loc_1)
+        self.send_keys('310', *self.PDT_individual_loc_2)
+        element = self.find_element(*self.map_add_btn_loc)
+        if element:
+            return False
+        return True
+
+    def user_map_show_num_2_10(self):
+        #进入用户映射页面 验证 配置一条新的用户号码映射范围 错误的队号 队号为符号：%^  328 %^ 200/210  328 %^ 300/310
+        self.come_iframe_page()
+        self.find_element(*self.user_map_loc).click()
+        self.send_keys('328', *self.map_area_loc)
+        self.send_keys('%^', *self.map_team_loc)
+        self.send_keys('200', *self.map_individual_loc_1)
+        self.send_keys('210', *self.map_individual_loc_2)
+        self.send_keys('328', *self.PDT_area_loc)
+        self.send_keys('%^', *self.PDT_team_loc)
+        self.send_keys('300', *self.PDT_individual_loc_1)
+        self.send_keys('310', *self.PDT_individual_loc_2)
+        element = self.find_element(*self.map_add_btn_loc)
+        if element:
+            return False
+        return True
+
+    def user_map_show_num_2_11(self):
+        #进入用户映射页面 验证 配置一条新的用户号码映射范围 错误的个号 个号为最大值加一：900  328 40 900/355  328 40 355/900
+        self.come_iframe_page()
+        self.find_element(*self.user_map_loc).click()
+        self.send_keys('328', *self.map_area_loc)
+        self.send_keys('40', *self.map_team_loc)
+        self.send_keys('900', *self.map_individual_loc_1)
+        self.send_keys('210', *self.map_individual_loc_2)
+        self.send_keys('328', *self.PDT_area_loc)
+        self.send_keys('40', *self.PDT_team_loc)
+        self.send_keys('300', *self.PDT_individual_loc_1)
+        self.send_keys('900', *self.PDT_individual_loc_2)
+        element = self.find_element(*self.map_add_btn_loc)
+        if element:
+            return False
+        return True
+
+    def user_map_show_num_2_12(self):
+        #进入用户映射页面 验证 配置一条新的用户号码映射范围 错误的个号 个号为最小值减一：199  328 40 199/355  328 40 355/199
+        self.come_iframe_page()
+        self.find_element(*self.user_map_loc).click()
+        self.send_keys('328', *self.map_area_loc)
+        self.send_keys('40', *self.map_team_loc)
+        self.send_keys('199', *self.map_individual_loc_1)
+        self.send_keys('210', *self.map_individual_loc_2)
+        self.send_keys('328', *self.PDT_area_loc)
+        self.send_keys('40', *self.PDT_team_loc)
+        self.send_keys('300', *self.PDT_individual_loc_1)
+        self.send_keys('199', *self.PDT_individual_loc_2)
+        element = self.find_element(*self.map_add_btn_loc)
+        if element:
+            return False
+        return True
+
+    def user_map_show_num_2_13(self):
+        #进入用户映射页面 验证 配置一条新的用户号码映射范围 错误的个号 个号为英文字母：aaa  328 40 aaa/355  328 40 355/aaa
+        self.come_iframe_page()
+        self.find_element(*self.user_map_loc).click()
+        self.send_keys('328', *self.map_area_loc)
+        self.send_keys('40', *self.map_team_loc)
+        self.send_keys('aaa', *self.map_individual_loc_1)
+        self.send_keys('210', *self.map_individual_loc_2)
+        self.send_keys('328', *self.PDT_area_loc)
+        self.send_keys('40', *self.PDT_team_loc)
+        self.send_keys('300', *self.PDT_individual_loc_1)
+        self.send_keys('aaa', *self.PDT_individual_loc_2)
+        element = self.find_element(*self.map_add_btn_loc)
+        if element:
+            return False
+        return True
+
+    def user_map_show_num_2_14(self):
+        #进入用户映射页面 验证 配置一条新的用户号码映射范围 错误的个号 个号为中文：成都市  328 40 成都市/355  328 40 355/成都市
+        self.come_iframe_page()
+        self.find_element(*self.user_map_loc).click()
+        self.send_keys('328', *self.map_area_loc)
+        self.send_keys('40', *self.map_team_loc)
+        self.send_keys('成都市', *self.map_individual_loc_1)
+        self.send_keys('210', *self.map_individual_loc_2)
+        self.send_keys('328', *self.PDT_area_loc)
+        self.send_keys('40', *self.PDT_team_loc)
+        self.send_keys('300', *self.PDT_individual_loc_1)
+        self.send_keys('成都市', *self.PDT_individual_loc_2)
+        element = self.find_element(*self.map_add_btn_loc)
+        if element:
+            return False
+        return True
+
+    def user_map_show_num_2_15(self):
+        #进入用户映射页面 验证 配置一条新的用户号码映射范围 错误的个号 个号为符号：%^&  328 40 %^&/355  328 40 355/%^&
+        self.come_iframe_page()
+        self.find_element(*self.user_map_loc).click()
+        self.send_keys('328', *self.map_area_loc)
+        self.send_keys('40', *self.map_team_loc)
+        self.send_keys('%^&', *self.map_individual_loc_1)
+        self.send_keys('210', *self.map_individual_loc_2)
+        self.send_keys('328', *self.PDT_area_loc)
+        self.send_keys('40', *self.PDT_team_loc)
+        self.send_keys('300', *self.PDT_individual_loc_1)
+        self.send_keys('%^&', *self.PDT_individual_loc_2)
+        element = self.find_element(*self.map_add_btn_loc)
+        if element:
+            return False
+        return True
+
+    def user_map_show_num_3(self):
+        #进入用户映射页面 验证 配置用户号码映射范围 添加一条已存在的范围
+        self.come_iframe_page()
+        self.find_element(*self.user_map_loc).click()
+        self.send_keys('445', *self.map_area_loc)
+        self.send_keys('30', *self.map_team_loc)
+        self.send_keys('200', *self.map_individual_loc_1)
+        self.send_keys('210', *self.map_individual_loc_2)
+        self.send_keys('445', *self.PDT_area_loc)
+        self.send_keys('30', *self.PDT_team_loc)
+        self.send_keys('300', *self.PDT_individual_loc_1)
+        self.send_keys('310', *self.PDT_individual_loc_2)
+        self.find_element(*self.map_add_btn_loc).click()
+        element = self.find_element(*self.map_alert_loc)
+        self.find_element(*(By.XPATH, '/html/body/div[2]/div[2]/button[2]')).click()
+        if element:
+            return True
+        return False
+
+    def local_online_user(self):
+        #进入本地在线用户 检查显示数量
+        self.come_iframe_page()
+        self.find_element(*self.local_online_user_loc).click()
+        elements = self.find_elements(*self.LOU_show_num)
+        return str(len(elements))
+
+    def local_online_user_page(self):
+        #进入本地在线用户 检查分页
+        self.come_iframe_page()
+        self.find_element(*self.local_online_user_loc).click()
+        self.send_keys('1',*self.LOU_input_loc)
+        self.send_enter(*self.LOU_input_loc)
+        sleep(1)
+        elements = self.find_elements(*self.LOU_show_num)
+        print(len(elements))
+        return str(len(elements))
+
+
 

@@ -73,7 +73,7 @@ class Page(object):
 
 
 
-    def send_keys(self, *loc, value, clear_first=True, click_first=True):
+    def send_keys(self, value, *loc, clear_first=True, click_first=True):
         try:
             # getattr相当于self.loc
             # loc = getattr(self, "%s" % loc)
