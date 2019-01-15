@@ -69,10 +69,6 @@ class Page(object):
         return Select(self.driver.find_element(*loc))
 
 
-
-
-
-
     def send_keys(self, value, *loc, clear_first=True, click_first=True):
         try:
             # getattr相当于self.loc

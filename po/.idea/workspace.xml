@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b34fe379-733d-47ea-bcc8-c7be62cdbc2b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/case_list/user_manage/test_run1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/case_list/user_manage/call_group_manage_sta.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/test_cases/__init__.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/test_cases/alarm_manage/__init__.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/test_cases/alarm_manage/alarm_query_page.py" afterDir="false" />
@@ -19,8 +19,8 @@
       <change afterPath="$PROJECT_DIR$/test_cases/ticket_manage/user_followup_page.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/test_cases/user_manage/MS_manage_page.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/test_cases/user_manage/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_cases/user_manage/call_group_manage_page.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case_list/user_manage/MS_manage_sta.py" beforeDir="false" afterPath="$PROJECT_DIR$/case_list/user_manage/MS_manage_sta.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/page_obj/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/page_obj/base.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -31,6 +31,7 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/po$Unittests_in_123123_py.coverage" NAME="Unittests in 123123.py Coverage Results" MODIFIED="1544679015527" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/123123" />
+    <SUITE FILE_PATH="coverage/po$Unittests_for_call_group_manage_sta_Ticket_Query_test_add_group_4.coverage" NAME="Unittests for call_group_manage_sta.Ticket_Query.test_add_group_4 Coverage Results" MODIFIED="1547432006680" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/user_manage" />
     <SUITE FILE_PATH="coverage/po$Unittests_for_MS_manage_sta_Ticket_Query_test_user_map_show_num_2_11.coverage" NAME="Unittests for MS_manage_sta.Ticket_Query.test_user_map_show_num_2_11 Coverage Results" MODIFIED="1547101020741" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/user_manage" />
     <SUITE FILE_PATH="coverage/po$Unittests_for_user_office_sta_Ticket_Query_test_4_office_add.coverage" NAME="Unittests for user_office_sta.Ticket_Query.test_4_office_add Coverage Results" MODIFIED="1545619257476" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/system_manage" />
     <SUITE FILE_PATH="coverage/po$Unittests_for_user_permission_sta_Ticket_Query_test_modify_permission.coverage" NAME="Unittests for user_permission_sta.Ticket_Query.test_modify_permission Coverage Results" MODIFIED="1546593443452" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/system_manage" />
@@ -38,17 +39,23 @@
     <SUITE FILE_PATH="coverage/po$Unittests_for_MS_manage_sta_Ticket_Query_test_add_icon_verify_1_11.coverage" NAME="Unittests for MS_manage_sta.Ticket_Query.test_add_icon_verify_1_11 Coverage Results" MODIFIED="1547105950676" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/user_manage" />
     <SUITE FILE_PATH="coverage/po$Unittests_for_user_office_sta_Ticket_Query_test_office_3_add.coverage" NAME="Unittests for user_office_sta.Ticket_Query.test_office_3_add Coverage Results" MODIFIED="1545383503476" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/system_manage" />
     <SUITE FILE_PATH="coverage/po$Unittests_for_user_manage_sta_Ticket_Query_test_verify_input_query_user_2.coverage" NAME="Unittests for user_manage_sta.Ticket_Query.test_verify_input_query_user_2 Coverage Results" MODIFIED="1546563843856" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/system_manage" />
+    <SUITE FILE_PATH="coverage/po$Unittests_for_call_group_manage_sta_Ticket_Query_test_roma_group_list_1.coverage" NAME="Unittests for call_group_manage_sta.Ticket_Query.test_roma_group_list_1 Coverage Results" MODIFIED="1547445641280" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/user_manage" />
     <SUITE FILE_PATH="coverage/po$Unittests_for_MS_manage_sta_Ticket_Query_test_user_map_show_num_1.coverage" NAME="Unittests for MS_manage_sta.Ticket_Query.test_user_map_show_num_1 Coverage Results" MODIFIED="1547084747915" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/user_manage" />
     <SUITE FILE_PATH="coverage/po$Unittests_for_MS_manage_sta_Ticket_Query_test_user_map_show_num_2_5.coverage" NAME="Unittests for MS_manage_sta.Ticket_Query.test_user_map_show_num_2_5 Coverage Results" MODIFIED="1547091386643" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/user_manage" />
     <SUITE FILE_PATH="coverage/po$Unittests_for_alarm_query_sta_Ticket_Query_test_network_event_log_verify.coverage" NAME="Unittests for alarm_query_sta.Ticket_Query.test_network_event_log_verify Coverage Results" MODIFIED="1546157996271" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/alarm_manage" />
+    <SUITE FILE_PATH="coverage/po$Unittests_for_call_group_manage_sta_Ticket_Query_test_roma_group_list_7.coverage" NAME="Unittests for call_group_manage_sta.Ticket_Query.test_roma_group_list_7 Coverage Results" MODIFIED="1547516114684" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/user_manage" />
     <SUITE FILE_PATH="coverage/po$Unittests_for_user_permission_sta_Ticket_Query_test_verify_user_num.coverage" NAME="Unittests for user_permission_sta.Ticket_Query.test_verify_user_num Coverage Results" MODIFIED="1546592498971" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/system_manage" />
     <SUITE FILE_PATH="coverage/po$Unittests_for_MS_manage_sta_Ticket_Query_test_add_icon_verify_1_2.coverage" NAME="Unittests for MS_manage_sta.Ticket_Query.test_add_icon_verify_1_2 Coverage Results" MODIFIED="1546852902883" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/user_manage" />
     <SUITE FILE_PATH="coverage/po$Unittests_for_ticket_query_sta_Ticket_Query_test_ticket_query.coverage" NAME="Unittests for ticket_query_sta.Ticket_Query.test_ticket_query Coverage Results" MODIFIED="1545010383332" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/ticket_manage" />
     <SUITE FILE_PATH="coverage/po$Unittests_for_MS_manage_sta_Ticket_Query_test_add_icon_verify_1_8.coverage" NAME="Unittests for MS_manage_sta.Ticket_Query.test_add_icon_verify_1_8 Coverage Results" MODIFIED="1546913755726" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/user_manage" />
     <SUITE FILE_PATH="coverage/po$Unittests_for_MS_manage_sta_Ticket_Query_test_user_map_show_num_2.coverage" NAME="Unittests for MS_manage_sta.Ticket_Query.test_user_map_show_num_2 Coverage Results" MODIFIED="1547088349915" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/user_manage" />
+    <SUITE FILE_PATH="coverage/po$Unittests_for_call_group_manage_sta_Ticket_Query_test_add_group_1_1.coverage" NAME="Unittests for call_group_manage_sta.Ticket_Query.test_add_group_1_1 Coverage Results" MODIFIED="1547280727303" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/user_manage" />
     <SUITE FILE_PATH="coverage/po$Unittests_for_ticket_query_sta_Ticket_Query_test_query_calling_sms_num.coverage" NAME="Unittests for ticket_query_sta.Ticket_Query.test_query_calling_sms_num Coverage Results" MODIFIED="1545015585633" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/ticket_manage" />
+    <SUITE FILE_PATH="coverage/po$Unittests_for_call_group_manage_sta_Ticket_Query_test_grade_group.coverage" NAME="Unittests for call_group_manage_sta.Ticket_Query.test_grade_group Coverage Results" MODIFIED="1547533627989" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/user_manage" />
     <SUITE FILE_PATH="coverage/po$Unittests_for_user_followup_sta_Ticket_Query_test_query_user_1.coverage" NAME="Unittests for user_followup_sta.Ticket_Query.test_query_user_1 Coverage Results" MODIFIED="1545805635487" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/ticket_manage" />
     <SUITE FILE_PATH="coverage/po$Unittests_for_MS_manage_sta_Ticket_Query_test_add_icon_verify_1_12.coverage" NAME="Unittests for MS_manage_sta.Ticket_Query.test_add_icon_verify_1_12 Coverage Results" MODIFIED="1546913686573" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/user_manage" />
+    <SUITE FILE_PATH="coverage/po$Unittests_for_call_group_manage_sta_Ticket_Query_test_add_group_5.coverage" NAME="Unittests for call_group_manage_sta.Ticket_Query.test_add_group_5 Coverage Results" MODIFIED="1547432025943" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/user_manage" />
+    <SUITE FILE_PATH="coverage/po$Unittests_for_call_group_manage_sta_Ticket_Query_test_roma_group_list_2.coverage" NAME="Unittests for call_group_manage_sta.Ticket_Query.test_roma_group_list_2 Coverage Results" MODIFIED="1547450588563" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/user_manage" />
     <SUITE FILE_PATH="coverage/po$Unittests_for_login_sta_LoginTest_test_login5.coverage" NAME="Unittests for login_sta.LoginTest.test_login5 Coverage Results" MODIFIED="1544086691040" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list" />
     <SUITE FILE_PATH="coverage/po$base.coverage" NAME="base Coverage Results" MODIFIED="1544025831871" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/page_obj" />
     <SUITE FILE_PATH="coverage/po$Unittests_for_user_office_sta_Ticket_Query_test_2_office_add.coverage" NAME="Unittests for user_office_sta.Ticket_Query.test_2_office_add Coverage Results" MODIFIED="1545615718412" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/system_manage" />
@@ -56,12 +63,15 @@
     <SUITE FILE_PATH="coverage/po$Unittests_for_user_followup_sta_Ticket_Query_test_query_user.coverage" NAME="Unittests for user_followup_sta.Ticket_Query.test_query_user Coverage Results" MODIFIED="1545806724384" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/ticket_manage" />
     <SUITE FILE_PATH="coverage/po$Unittests_for_ticket_query_sta_Ticket_Query_test_query_called_reg_num.coverage" NAME="Unittests for ticket_query_sta.Ticket_Query.test_query_called_reg_num Coverage Results" MODIFIED="1545016434517" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/ticket_manage" />
     <SUITE FILE_PATH="coverage/po$testssss.coverage" NAME="testssss Coverage Results" MODIFIED="1544021130851" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/runner_unittest" />
+    <SUITE FILE_PATH="coverage/po$Unittests_for_call_group_manage_sta_Ticket_Query_test_roma_group_list_8.coverage" NAME="Unittests for call_group_manage_sta.Ticket_Query.test_roma_group_list_8 Coverage Results" MODIFIED="1547516688550" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/user_manage" />
     <SUITE FILE_PATH="coverage/po$Unittests_for_MS_manage_sta_Ticket_Query_test_add_icon_verify_1_3.coverage" NAME="Unittests for MS_manage_sta.Ticket_Query.test_add_icon_verify_1_3 Coverage Results" MODIFIED="1547105985826" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/user_manage" />
+    <SUITE FILE_PATH="coverage/po$Unittests_for_call_group_manage_sta_Ticket_Query_test_grade_group_1.coverage" NAME="Unittests for call_group_manage_sta.Ticket_Query.test_grade_group_1 Coverage Results" MODIFIED="1547537124618" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/user_manage" />
     <SUITE FILE_PATH="coverage/po$sendemail.coverage" NAME="sendemail Coverage Results" MODIFIED="1544073581013" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/comm" />
     <SUITE FILE_PATH="coverage/po$Unittests_for_MS_manage_sta_Ticket_Query_test_add_icon_verify_1_9.coverage" NAME="Unittests for MS_manage_sta.Ticket_Query.test_add_icon_verify_1_9 Coverage Results" MODIFIED="1546913739349" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/user_manage" />
     <SUITE FILE_PATH="coverage/po$Unittests_for_real_alarm_query_sta_Ticket_Query_test_come_ticket_query_verify.coverage" NAME="Unittests for real_alarm_query_sta.Ticket_Query.test_come_ticket_query_verify Coverage Results" MODIFIED="1546159249646" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/alarm_manage" />
     <SUITE FILE_PATH="coverage/po$Unittests_for_MS_manage_sta_Ticket_Query_test_user_map_show_num_2_10.coverage" NAME="Unittests for MS_manage_sta.Ticket_Query.test_user_map_show_num_2_10 Coverage Results" MODIFIED="1547100797576" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/user_manage" />
     <SUITE FILE_PATH="coverage/po$Unittests_for_user_office_sta_Ticket_Query_test_office_add.coverage" NAME="Unittests for user_office_sta.Ticket_Query.test_office_add Coverage Results" MODIFIED="1545382374290" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/system_manage" />
+    <SUITE FILE_PATH="coverage/po$Unittests_for_call_group_manage_sta_Ticket_Query_test_roma_group_list_3.coverage" NAME="Unittests for call_group_manage_sta.Ticket_Query.test_roma_group_list_3 Coverage Results" MODIFIED="1547452207344" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/user_manage" />
     <SUITE FILE_PATH="coverage/po$Unittests_for_ticket_query_sta_Ticket_Query_test_custom_query.coverage" NAME="Unittests for ticket_query_sta.Ticket_Query.test_custom_query Coverage Results" MODIFIED="1544752469782" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/ticket_manage" />
     <SUITE FILE_PATH="coverage/po$Unittests_for_MS_manage_sta_Ticket_Query_test_user_map_show_num_2_3.coverage" NAME="Unittests for MS_manage_sta.Ticket_Query.test_user_map_show_num_2_3 Coverage Results" MODIFIED="1547090996814" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/user_manage" />
     <SUITE FILE_PATH="coverage/po$Unittests_for_ticket_query_sta_Ticket_Query_test_custom_query2.coverage" NAME="Unittests for ticket_query_sta.Ticket_Query.test_custom_query2 Coverage Results" MODIFIED="1544757668030" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/ticket_manage" />
@@ -69,6 +79,8 @@
     <SUITE FILE_PATH="coverage/po$Unittests_for_MS_manage_sta_Ticket_Query_test_come_user_map.coverage" NAME="Unittests for MS_manage_sta.Ticket_Query.test_come_user_map Coverage Results" MODIFIED="1546940264727" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/user_manage" />
     <SUITE FILE_PATH="coverage/po$Unittests_for_MS_manage_sta_Ticket_Query_test_add_icon_verify_1.coverage" NAME="Unittests for MS_manage_sta.Ticket_Query.test_add_icon_verify_1 Coverage Results" MODIFIED="1547085605271" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/user_manage" />
     <SUITE FILE_PATH="coverage/po$Unittests_for_user_followup_sta_Ticket_Query_test_query_user_2.coverage" NAME="Unittests for user_followup_sta.Ticket_Query.test_query_user_2 Coverage Results" MODIFIED="1545812171944" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/ticket_manage" />
+    <SUITE FILE_PATH="coverage/po$Unittests_for_call_group_manage_sta_Ticket_Query_test_add_group_6.coverage" NAME="Unittests for call_group_manage_sta.Ticket_Query.test_add_group_6 Coverage Results" MODIFIED="1547435211337" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/user_manage" />
+    <SUITE FILE_PATH="coverage/po$Unittests_for_call_group_manage_sta_Ticket_Query_test_add_group_3.coverage" NAME="Unittests for call_group_manage_sta.Ticket_Query.test_add_group_3 Coverage Results" MODIFIED="1547431991183" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/user_manage" />
     <SUITE FILE_PATH="coverage/po$test_run.coverage" NAME="test_run Coverage Results" MODIFIED="1545815647819" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/ticket_manage" />
     <SUITE FILE_PATH="coverage/po$Unittests_for_MS_manage_sta_Ticket_Query_test_add_icon_verify_4.coverage" NAME="Unittests for MS_manage_sta.Ticket_Query.test_add_icon_verify_4 Coverage Results" MODIFIED="1546848922794" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/user_manage" />
     <SUITE FILE_PATH="coverage/po$Unittests_for_MS_manage_sta_Ticket_Query_test_add_icon_verify_1_7.coverage" NAME="Unittests for MS_manage_sta.Ticket_Query.test_add_icon_verify_1_7 Coverage Results" MODIFIED="1546913780031" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/user_manage" />
@@ -78,14 +90,17 @@
     <SUITE FILE_PATH="coverage/po$Unittests_for_delete_aaa_test_aa.coverage" NAME="Unittests for delete.aaa.test_aa Coverage Results" MODIFIED="1544086339416" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/page_obj" />
     <SUITE FILE_PATH="coverage/po$Unittests_for_ticket_stat_sta_Ticket_Query_test_come_follow_page_verify.coverage" NAME="Unittests for ticket_stat_sta.Ticket_Query.test_come_follow_page_verify Coverage Results" MODIFIED="1545875955067" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/ticket_manage" />
     <SUITE FILE_PATH="coverage/po$Unittests_for_MS_manage_sta_Ticket_Query_test_add_icon_verify_1_5.coverage" NAME="Unittests for MS_manage_sta.Ticket_Query.test_add_icon_verify_1_5 Coverage Results" MODIFIED="1546857768214" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/user_manage" />
+    <SUITE FILE_PATH="coverage/po$Unittests_for_call_group_manage_sta_Ticket_Query_test_add_group_1_4.coverage" NAME="Unittests for call_group_manage_sta.Ticket_Query.test_add_group_1_4 Coverage Results" MODIFIED="1547458137516" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/user_manage" />
     <SUITE FILE_PATH="coverage/po$Unittests_for_user_manage_sta_Ticket_Query_test_verify_input_query_user.coverage" NAME="Unittests for user_manage_sta.Ticket_Query.test_verify_input_query_user Coverage Results" MODIFIED="1546227116707" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/system_manage" />
     <SUITE FILE_PATH="coverage/po$Unittests_for_user_permission_sta_Ticket_Query_test_add_permission.coverage" NAME="Unittests for user_permission_sta.Ticket_Query.test_add_permission Coverage Results" MODIFIED="1546572097113" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/system_manage" />
+    <SUITE FILE_PATH="coverage/po$Unittests_for_call_group_manage_sta_Ticket_Query_test_grade_group_3.coverage" NAME="Unittests for call_group_manage_sta.Ticket_Query.test_grade_group_3 Coverage Results" MODIFIED="1547540241044" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/user_manage" />
     <SUITE FILE_PATH="coverage/po$Unittests_for_ticket_query_sta_Ticket_Query_test_query_called_sms_num.coverage" NAME="Unittests for ticket_query_sta.Ticket_Query.test_query_called_sms_num Coverage Results" MODIFIED="1545016795019" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/ticket_manage" />
     <SUITE FILE_PATH="coverage/po$read_config.coverage" NAME="read_config Coverage Results" MODIFIED="1544025744047" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/comm" />
+    <SUITE FILE_PATH="coverage/po$Unittests_for_call_group_manage_sta_Ticket_Query_test_roma_group_list_5.coverage" NAME="Unittests for call_group_manage_sta.Ticket_Query.test_roma_group_list_5 Coverage Results" MODIFIED="1547455970691" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/user_manage" />
     <SUITE FILE_PATH="coverage/po$ticket_run.coverage" NAME="ticket_run Coverage Results" MODIFIED="1545903074822" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/ticket_manage" />
     <SUITE FILE_PATH="coverage/po$Unittests_for_alarm_query_sta_Ticket_Query_test_custom_time_quert_2.coverage" NAME="Unittests for alarm_query_sta.Ticket_Query.test_custom_time_quert_2 Coverage Results" MODIFIED="1546138666620" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/alarm_manage" />
     <SUITE FILE_PATH="coverage/po$Unittests_for_MS_manage_sta_Ticket_Query_test_user_map_show_num_2_8.coverage" NAME="Unittests for MS_manage_sta.Ticket_Query.test_user_map_show_num_2_8 Coverage Results" MODIFIED="1547106235458" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/user_manage" />
-    <SUITE FILE_PATH="coverage/po$test_run1.coverage" NAME="test_run1 Coverage Results" MODIFIED="1547110250460" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/user_manage" />
+    <SUITE FILE_PATH="coverage/po$test_run1.coverage" NAME="test_run1 Coverage Results" MODIFIED="1547168667406" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/user_manage" />
     <SUITE FILE_PATH="coverage/po$Unittests_for_MS_manage_sta_Ticket_Query_test_user_map_show_num_2_13.coverage" NAME="Unittests for MS_manage_sta.Ticket_Query.test_user_map_show_num_2_13 Coverage Results" MODIFIED="1547101222767" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/user_manage" />
     <SUITE FILE_PATH="coverage/po$Unittests_for_ticket_query_sta_Ticket_Query_test_query_called_gps_num.coverage" NAME="Unittests for ticket_query_sta.Ticket_Query.test_query_called_gps_num Coverage Results" MODIFIED="1545017966745" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/ticket_manage" />
     <SUITE FILE_PATH="coverage/po$Unittests_for_log_query_sta_Ticket_Query_test_log_num_verify.coverage" NAME="Unittests for log_query_sta.Ticket_Query.test_log_num_verify Coverage Results" MODIFIED="1546589306579" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/system_manage" />
@@ -96,21 +111,26 @@
     <SUITE FILE_PATH="coverage/po$Unittests_for_user_permission_sta_Ticket_Query_test_1_come_user_manage.coverage" NAME="Unittests for user_permission_sta.Ticket_Query.test_1_come_user_manage Coverage Results" MODIFIED="1546569028230" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/system_manage" />
     <SUITE FILE_PATH="coverage/po$Unittests_for_user_followup_sta_Ticket_Query_test_query_user_4.coverage" NAME="Unittests for user_followup_sta.Ticket_Query.test_query_user_4 Coverage Results" MODIFIED="1545814492073" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/ticket_manage" />
     <SUITE FILE_PATH="coverage/po$Unittests_for_ticket_stat_sta_Ticket_Query_test_rcu_occupied_query_verify_1.coverage" NAME="Unittests for ticket_stat_sta.Ticket_Query.test_rcu_occupied_query_verify_1 Coverage Results" MODIFIED="1545903020506" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/ticket_manage" />
+    <SUITE FILE_PATH="coverage/po$Unittests_for_call_group_manage_sta_Ticket_Query_test_add_group_1.coverage" NAME="Unittests for call_group_manage_sta.Ticket_Query.test_add_group_1 Coverage Results" MODIFIED="1547200417380" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/user_manage" />
     <SUITE FILE_PATH="coverage/po$Unittests_for_alarm_query_sta_Ticket_Query_test_custom_time_quert.coverage" NAME="Unittests for alarm_query_sta.Ticket_Query.test_custom_time_quert Coverage Results" MODIFIED="1546137696720" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/alarm_manage" />
     <SUITE FILE_PATH="coverage/po$Unittests_for_alarm_query_sta_Ticket_Query_test_custom_time_quert_1.coverage" NAME="Unittests for alarm_query_sta.Ticket_Query.test_custom_time_quert_1 Coverage Results" MODIFIED="1546138401457" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/alarm_manage" />
     <SUITE FILE_PATH="coverage/po$Unittests_for_MS_manage_sta_Ticket_Query_test_add_icon_verify_1_14.coverage" NAME="Unittests for MS_manage_sta.Ticket_Query.test_add_icon_verify_1_14 Coverage Results" MODIFIED="1546913655903" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/user_manage" />
     <SUITE FILE_PATH="coverage/po$Unittests_for_user_followup_sta_Ticket_Query_test_come_follow_page_verify.coverage" NAME="Unittests for user_followup_sta.Ticket_Query.test_come_follow_page_verify Coverage Results" MODIFIED="1545798550841" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/ticket_manage" />
+    <SUITE FILE_PATH="coverage/po$Unittests_for_call_group_manage_sta_Ticket_Query_test_grade_group_1_1.coverage" NAME="Unittests for call_group_manage_sta.Ticket_Query.test_grade_group_1_1 Coverage Results" MODIFIED="1547543663559" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/user_manage" />
     <SUITE FILE_PATH="coverage/po$system_run.coverage" NAME="system_run Coverage Results" MODIFIED="1546592976139" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/system_manage" />
     <SUITE FILE_PATH="coverage/po$Unittests_for_ticket_query_sta_Ticket_Query.coverage" NAME="Unittests for ticket_query_sta.Ticket_Query Coverage Results" MODIFIED="1544752266461" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/ticket_manage" />
     <SUITE FILE_PATH="coverage/po$Unittests_for_user_office_sta_Ticket_Query_test_5_office_del.coverage" NAME="Unittests for user_office_sta.Ticket_Query.test_5_office_del Coverage Results" MODIFIED="1545619301083" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/system_manage" />
+    <SUITE FILE_PATH="coverage/po$Unittests_for_call_group_manage_sta_Ticket_Query_test_roma_group_list_4.coverage" NAME="Unittests for call_group_manage_sta.Ticket_Query.test_roma_group_list_4 Coverage Results" MODIFIED="1547452750640" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/user_manage" />
     <SUITE FILE_PATH="coverage/po$loginPDT.coverage" NAME="loginPDT Coverage Results" MODIFIED="1544078489333" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/comm" />
     <SUITE FILE_PATH="coverage/po$Unittests_for_user_followup_sta_Ticket_Query_test_query_user_3.coverage" NAME="Unittests for user_followup_sta.Ticket_Query.test_query_user_3 Coverage Results" MODIFIED="1545813499879" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/ticket_manage" />
     <SUITE FILE_PATH="coverage/po$Unittests_for_user_followup_sta_Ticket_Query_test_input.coverage" NAME="Unittests for user_followup_sta.Ticket_Query.test_input Coverage Results" MODIFIED="1545798971131" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/ticket_manage" />
     <SUITE FILE_PATH="coverage/po$Unittests_for_MS_manage_sta_Ticket_Query_test_add_icon_verify_2.coverage" NAME="Unittests for MS_manage_sta.Ticket_Query.test_add_icon_verify_2 Coverage Results" MODIFIED="1546843782171" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/user_manage" />
     <SUITE FILE_PATH="coverage/po$Unittests_for_123123_A123_test1.coverage" NAME="Unittests for 123123.A123.test1 Coverage Results" MODIFIED="1544677524936" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/123123" />
     <SUITE FILE_PATH="coverage/po$Unittests_for_MS_manage_sta_Ticket_Query_test_come_matrix_verify.coverage" NAME="Unittests for MS_manage_sta.Ticket_Query.test_come_matrix_verify Coverage Results" MODIFIED="1546930706017" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/user_manage" />
+    <SUITE FILE_PATH="coverage/po$Unittests_for_call_group_manage_sta_Ticket_Query_test_add_group_1_3.coverage" NAME="Unittests for call_group_manage_sta.Ticket_Query.test_add_group_1_3 Coverage Results" MODIFIED="1547431962785" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/user_manage" />
     <SUITE FILE_PATH="coverage/po$Unittests_for_MS_manage_sta_Ticket_Query_test_user_map_show_num_2_14.coverage" NAME="Unittests for MS_manage_sta.Ticket_Query.test_user_map_show_num_2_14 Coverage Results" MODIFIED="1547101456555" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/user_manage" />
     <SUITE FILE_PATH="coverage/po$Unittests_for_alarm_query_sta_Ticket_Query_test_network_event_log.coverage" NAME="Unittests for alarm_query_sta.Ticket_Query.test_network_event_log Coverage Results" MODIFIED="1546156840017" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/alarm_manage" />
+    <SUITE FILE_PATH="coverage/po$Unittests_for_call_group_manage_sta_Ticket_Query_test_roma_group_list.coverage" NAME="Unittests for call_group_manage_sta.Ticket_Query.test_roma_group_list Coverage Results" MODIFIED="1547437568186" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/user_manage" />
     <SUITE FILE_PATH="coverage/po$Unittests_for_ticket_query_sta_Ticket_Query_test_custom_query3.coverage" NAME="Unittests for ticket_query_sta.Ticket_Query.test_custom_query3 Coverage Results" MODIFIED="1544762333695" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/ticket_manage" />
     <SUITE FILE_PATH="coverage/po$Unittests_for_MS_manage_sta_Ticket_Query_test_add_icon_verify_3.coverage" NAME="Unittests for MS_manage_sta.Ticket_Query.test_add_icon_verify_3 Coverage Results" MODIFIED="1546850266536" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/user_manage" />
     <SUITE FILE_PATH="coverage/po$Unittests_for_ticket_query_sta_Ticket_Query_test_query_called_stun_num.coverage" NAME="Unittests for ticket_query_sta.Ticket_Query.test_query_called_stun_num Coverage Results" MODIFIED="1545637531697" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/ticket_manage" />
@@ -125,35 +145,45 @@
     <SUITE FILE_PATH="coverage/po$Unittests_for_ticket_query_sta_Ticket_Query_test_query_calling_stun_num.coverage" NAME="Unittests for ticket_query_sta.Ticket_Query.test_query_calling_stun_num Coverage Results" MODIFIED="1545904375831" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/ticket_manage" />
     <SUITE FILE_PATH="coverage/po$Unittests_for_log_query_sta_Ticket_Query_test_log_num_verify_2.coverage" NAME="Unittests for log_query_sta.Ticket_Query.test_log_num_verify_2 Coverage Results" MODIFIED="1546590696226" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/system_manage" />
     <SUITE FILE_PATH="coverage/po$Unittests_for_MS_manage_sta_Ticket_Query_test_user_map_show_num_2_1.coverage" NAME="Unittests for MS_manage_sta.Ticket_Query.test_user_map_show_num_2_1 Coverage Results" MODIFIED="1547090303026" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/user_manage" />
+    <SUITE FILE_PATH="coverage/po$Unittests_for_call_group_manage_sta_Ticket_Query_test_temp_group.coverage" NAME="Unittests for call_group_manage_sta.Ticket_Query.test_temp_group Coverage Results" MODIFIED="1547548239552" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/user_manage" />
+    <SUITE FILE_PATH="coverage/po$Unittests_for_call_group_manage_sta_Ticket_Query_test_add_group_1_2.coverage" NAME="Unittests for call_group_manage_sta.Ticket_Query.test_add_group_1_2 Coverage Results" MODIFIED="1547430412878" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/user_manage" />
     <SUITE FILE_PATH="coverage/po$Unittests_for_MS_manage_sta_Ticket_Query_test_user_map_show_num_3.coverage" NAME="Unittests for MS_manage_sta.Ticket_Query.test_user_map_show_num_3 Coverage Results" MODIFIED="1547089735444" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/user_manage" />
     <SUITE FILE_PATH="coverage/po$Unittests_for_ticket_query_sta_Ticket_Query_test_custom_query4.coverage" NAME="Unittests for ticket_query_sta.Ticket_Query.test_custom_query4 Coverage Results" MODIFIED="1544758758338" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/ticket_manage" />
     <SUITE FILE_PATH="coverage/po$Unittests_for_user_manage_sta_Ticket_Query_test_1_come_user_office.coverage" NAME="Unittests for user_manage_sta.Ticket_Query.test_1_come_user_office Coverage Results" MODIFIED="1546226066429" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/system_manage" />
     <SUITE FILE_PATH="coverage/po$Unittests_for_MS_manage_sta_Ticket_Query_test_add_icon_verify_1_13.coverage" NAME="Unittests for MS_manage_sta.Ticket_Query.test_add_icon_verify_1_13 Coverage Results" MODIFIED="1546913672366" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/user_manage" />
+    <SUITE FILE_PATH="coverage/po$Unittests_for_call_group_manage_sta_Ticket_Query_test_come_page.coverage" NAME="Unittests for call_group_manage_sta.Ticket_Query.test_come_page Coverage Results" MODIFIED="1547175820554" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/user_manage" />
     <SUITE FILE_PATH="coverage/po$Unittests_for_user_office_sta_Ticket_Query_test_office_2_del.coverage" NAME="Unittests for user_office_sta.Ticket_Query.test_office_2_del Coverage Results" MODIFIED="1545383612134" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/system_manage" />
     <SUITE FILE_PATH="coverage/po$Unittests_for_MS_manage_sta_Ticket_Query_test_user_map_show_num_2_9.coverage" NAME="Unittests for MS_manage_sta.Ticket_Query.test_user_map_show_num_2_9 Coverage Results" MODIFIED="1547100543137" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/user_manage" />
     <SUITE FILE_PATH="coverage/po$Unittests_for_MS_manage_sta_Ticket_Query_test_user_map_show_num_2_6.coverage" NAME="Unittests for MS_manage_sta.Ticket_Query.test_user_map_show_num_2_6 Coverage Results" MODIFIED="1547091868875" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/user_manage" />
+    <SUITE FILE_PATH="coverage/po$Unittests_for_call_group_manage_sta_Ticket_Query_test_roma_group_list_6.coverage" NAME="Unittests for call_group_manage_sta.Ticket_Query.test_roma_group_list_6 Coverage Results" MODIFIED="1547457914374" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/user_manage" />
     <SUITE FILE_PATH="coverage/po$Unittests_for_alarm_query_sta_Ticket_Query_test_come_ticket_query_verify.coverage" NAME="Unittests for alarm_query_sta.Ticket_Query.test_come_ticket_query_verify Coverage Results" MODIFIED="1546219883432" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/alarm_manage" />
     <SUITE FILE_PATH="coverage/po$Unittests_for_ticket_query_sta_Ticket_Query_test_input_num_query.coverage" NAME="Unittests for ticket_query_sta.Ticket_Query.test_input_num_query Coverage Results" MODIFIED="1544685588661" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/ticket_manage" />
     <SUITE FILE_PATH="coverage/po$Unittests_for_user_manage_sta_Ticket_Query_test_verify_input_query_user_1.coverage" NAME="Unittests for user_manage_sta.Ticket_Query.test_verify_input_query_user_1 Coverage Results" MODIFIED="1546563816304" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/system_manage" />
     <SUITE FILE_PATH="coverage/po$test_baidu_mnav.coverage" NAME="test_baidu_mnav Coverage Results" MODIFIED="1544161649678" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/123123" />
+    <SUITE FILE_PATH="coverage/po$Unittests_for_call_group_manage_sta_Ticket_Query_test_add_group_1_5.coverage" NAME="Unittests for call_group_manage_sta.Ticket_Query.test_add_group_1_5 Coverage Results" MODIFIED="1547456143507" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/user_manage" />
     <SUITE FILE_PATH="coverage/po$Unittests_for_ticket_query_sta_Ticket_Query_test_query_calling_voc_num.coverage" NAME="Unittests for ticket_query_sta.Ticket_Query.test_query_calling_voc_num Coverage Results" MODIFIED="1545015563729" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/ticket_manage" />
     <SUITE FILE_PATH="coverage/po$Unittests_for_ticket_query_sta_Ticket_Query_test_ticket_query_week.coverage" NAME="Unittests for ticket_query_sta.Ticket_Query.test_ticket_query_week Coverage Results" MODIFIED="1544152643597" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/ticket_manage" />
     <SUITE FILE_PATH="coverage/po$Unittests_for_MS_manage_sta_Ticket_Query_test_add_icon_verify_1_4.coverage" NAME="Unittests for MS_manage_sta.Ticket_Query.test_add_icon_verify_1_4 Coverage Results" MODIFIED="1547106094668" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/user_manage" />
     <SUITE FILE_PATH="coverage/po$Unittests_for_real_alarm_query_sta_Ticket_Query_test_real_alarm_num_verify.coverage" NAME="Unittests for real_alarm_query_sta.Ticket_Query.test_real_alarm_num_verify Coverage Results" MODIFIED="1546162951996" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/alarm_manage" />
     <SUITE FILE_PATH="coverage/po$Unittests_for_MS_manage_sta_Ticket_Query_test_come_page.coverage" NAME="Unittests for MS_manage_sta.Ticket_Query.test_come_page Coverage Results" MODIFIED="1546656350304" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/user_manage" />
     <SUITE FILE_PATH="coverage/po$Unittests_for_MS_manage_sta_Ticket_Query_test_local_online_user_1.coverage" NAME="Unittests for MS_manage_sta.Ticket_Query.test_local_online_user_1 Coverage Results" MODIFIED="1547110204549" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/user_manage" />
+    <SUITE FILE_PATH="coverage/po$Unittests_for_call_group_manage_sta_Ticket_Query_test_temp_group_1.coverage" NAME="Unittests for call_group_manage_sta.Ticket_Query.test_temp_group_1 Coverage Results" MODIFIED="1547548284053" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/user_manage" />
     <SUITE FILE_PATH="coverage/po$time_now.coverage" NAME="time_now Coverage Results" MODIFIED="1544091512807" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/comm" />
     <SUITE FILE_PATH="coverage/po$Unittests_for_ticket_stat_sta_Ticket_Query_test_rcu_occupied_query_verify.coverage" NAME="Unittests for ticket_stat_sta.Ticket_Query.test_rcu_occupied_query_verify Coverage Results" MODIFIED="1545902885261" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/ticket_manage" />
     <SUITE FILE_PATH="coverage/po$Unittests_for_user_manage_sta_Ticket_Query_test_verify_user_num_verify.coverage" NAME="Unittests for user_manage_sta.Ticket_Query.test_verify_user_num_verify Coverage Results" MODIFIED="1546226444778" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/system_manage" />
+    <SUITE FILE_PATH="coverage/po$Unittests_for_call_group_manage_sta_Ticket_Query_test_grade_group_2.coverage" NAME="Unittests for call_group_manage_sta.Ticket_Query.test_grade_group_2 Coverage Results" MODIFIED="1547538920198" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/user_manage" />
     <SUITE FILE_PATH="coverage/po$Unittests_for_user_office_sta_Ticket_Query_test_3_office_del.coverage" NAME="Unittests for user_office_sta.Ticket_Query.test_3_office_del Coverage Results" MODIFIED="1545963168384" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/system_manage" />
     <SUITE FILE_PATH="coverage/po$Unittests_for_user_manage_sta_Ticket_Query_test_add_user_verify.coverage" NAME="Unittests for user_manage_sta.Ticket_Query.test_add_user_verify Coverage Results" MODIFIED="1546567569173" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/system_manage" />
     <SUITE FILE_PATH="coverage/po$Unittests_for_ticket_query_sta_Ticket_Query_test_query_called_num.coverage" NAME="Unittests for ticket_query_sta.Ticket_Query.test_query_called_num Coverage Results" MODIFIED="1545015890853" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/ticket_manage" />
+    <SUITE FILE_PATH="coverage/po$Unittests_for_call_group_manage_sta_Ticket_Query_test_come_page_1.coverage" NAME="Unittests for call_group_manage_sta.Ticket_Query.test_come_page_1 Coverage Results" MODIFIED="1547176428790" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/user_manage" />
     <SUITE FILE_PATH="coverage/po$Unittests_for_MS_manage_sta_Ticket_Query_test_add_icon_verify.coverage" NAME="Unittests for MS_manage_sta.Ticket_Query.test_add_icon_verify Coverage Results" MODIFIED="1546842518150" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/user_manage" />
     <SUITE FILE_PATH="coverage/po$Unittests_for_MS_manage_sta_Ticket_Query_test_user_map_show_num_2_4.coverage" NAME="Unittests for MS_manage_sta.Ticket_Query.test_user_map_show_num_2_4 Coverage Results" MODIFIED="1547091221609" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/user_manage" />
     <SUITE FILE_PATH="coverage/po$Unittests_for_MS_manage_sta_Ticket_Query_test_user_map_show_num_2_12.coverage" NAME="Unittests for MS_manage_sta.Ticket_Query.test_user_map_show_num_2_12 Coverage Results" MODIFIED="1547101120306" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/user_manage" />
+    <SUITE FILE_PATH="coverage/po$Unittests_for_call_group_manage_sta_Ticket_Query_test_grade_group_4.coverage" NAME="Unittests for call_group_manage_sta.Ticket_Query.test_grade_group_4 Coverage Results" MODIFIED="1547542807195" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/user_manage" />
     <SUITE FILE_PATH="coverage/po$Unittests_for_alarm_query_sta_Ticket_Query_test_custom_time_quert_3.coverage" NAME="Unittests for alarm_query_sta.Ticket_Query.test_custom_time_quert_3 Coverage Results" MODIFIED="1546138896926" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/alarm_manage" />
     <SUITE FILE_PATH="coverage/po$Unittests_for_MS_manage_sta_Ticket_Query_test_add_icon_verify_1_1.coverage" NAME="Unittests for MS_manage_sta.Ticket_Query.test_add_icon_verify_1_1 Coverage Results" MODIFIED="1546852582592" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/user_manage" />
     <SUITE FILE_PATH="coverage/po$Unittests_for_MS_manage_sta_Ticket_Query_test_add_icon_verify_1_10.coverage" NAME="Unittests for MS_manage_sta.Ticket_Query.test_add_icon_verify_1_10 Coverage Results" MODIFIED="1546913725556" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/user_manage" />
+    <SUITE FILE_PATH="coverage/po$Unittests_for_call_group_manage_sta_Ticket_Query_test_add_group_2.coverage" NAME="Unittests for call_group_manage_sta.Ticket_Query.test_add_group_2 Coverage Results" MODIFIED="1547264869365" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/user_manage" />
     <SUITE FILE_PATH="coverage/po$Unittests_for_ticket_query_sta_Ticket_Query_test_query_calling_reg_num.coverage" NAME="Unittests for ticket_query_sta.Ticket_Query.test_query_calling_reg_num Coverage Results" MODIFIED="1545015542041" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/ticket_manage" />
     <SUITE FILE_PATH="coverage/po$Unittests_for_MS_manage_sta_Ticket_Query_test_add_icon_verify_1_6.coverage" NAME="Unittests for MS_manage_sta.Ticket_Query.test_add_icon_verify_1_6 Coverage Results" MODIFIED="1546856157176" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/user_manage" />
     <SUITE FILE_PATH="coverage/po$Unittests_for_ticket_query_sta_Ticket_Query_test_query_calling_grp_num.coverage" NAME="Unittests for ticket_query_sta.Ticket_Query.test_query_calling_grp_num Coverage Results" MODIFIED="1545028666675" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/ticket_manage" />
@@ -161,85 +191,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/case_list/system_manage/user_permission_sta.py">
+        <entry file="file://$PROJECT_DIR$/test_cases/user_manage/call_group_manage_page.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="22" lean-forward="true" selection-start-column="22" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/case_list/user_manage/MS_manage_sta.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="469">
-              <caret line="289" lean-forward="true" selection-start-line="289" selection-end-line="289" />
-              <folding>
-                <element signature="e#0#22#0" expanded="true" />
-                <element signature="e#275#333#0" />
-                <element signature="e#373#623#0" />
-                <element signature="e#669#919#0" />
-                <element signature="e#971#1227#0" />
-                <element signature="e#1273#1461#0" />
-                <element signature="e#1510#1708#0" />
-                <element signature="e#1759#1966#0" />
-                <element signature="e#2016#2223#0" />
-                <element signature="e#2273#2476#0" />
-                <element signature="e#2526#2729#0" />
-                <element signature="e#2779#2983#0" />
-                <element signature="e#3033#3237#0" />
-                <element signature="e#3287#3487#0" />
-                <element signature="e#3538#3738#0" />
-                <element signature="e#3788#3991#0" />
-                <element signature="e#4042#4246#0" />
-                <element signature="e#4297#4503#0" />
-                <element signature="e#4554#4760#0" />
-                <element signature="e#4811#5016#0" />
-                <element signature="e#5067#5273#0" />
-                <element signature="e#5322#5510#0" />
-                <element signature="e#5559#5791#0" />
-                <element signature="e#5840#6072#0" />
-                <element signature="e#6122#6308#0" />
-                <element signature="e#6357#6558#0" />
-                <element signature="e#6606#6807#0" />
-                <element signature="e#6880#7087#0" />
-                <element signature="e#7176#7412#0" />
-                <element signature="e#7478#7734#0" />
-                <element signature="e#7788#8083#0" />
-                <element signature="e#8143#8400#0" />
-                <element signature="e#8401#8653#0" />
-                <element signature="e#8713#8965#0" />
-                <element signature="e#9022#9279#0" />
-                <element signature="e#9339#9596#0" />
-                <element signature="e#9633#9889#0" />
-                <element signature="e#9939#10193#0" />
-                <element signature="e#10248#10503#0" />
-                <element signature="e#10565#10824#0" />
-                <element signature="e#10881#11140#0" />
-                <element signature="e#11192#11450#0" />
-                <element signature="e#11501#11757#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test_cases/user_manage/MS_manage_page.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
-              <caret line="756" column="15" selection-start-line="756" selection-start-column="15" selection-end-line="756" selection-end-column="15" />
-              <folding>
-                <element signature="e#0#57#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/page_obj/base.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="179">
-              <caret line="75" column="8" selection-start-line="75" selection-start-column="8" selection-end-line="75" selection-end-column="8" />
+            <state relative-caret-position="247">
+              <caret line="829" column="33" lean-forward="true" selection-start-line="829" selection-start-column="33" selection-end-line="829" selection-end-column="33" />
               <folding>
                 <element signature="e#0#57#0" expanded="true" />
               </folding>
@@ -248,10 +203,34 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/case_list/user_manage/call_group_manage_sta.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="576">
+              <caret line="197" column="27" selection-start-line="197" selection-start-column="27" selection-end-line="197" selection-end-column="27" />
+              <folding>
+                <element signature="e#0#22#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/page_obj/base.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="100">
+              <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+              <folding>
+                <element signature="e#0#57#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/case_list/user_manage/test_run1.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="705">
-              <caret line="71" column="25" lean-forward="true" selection-start-line="71" selection-start-column="25" selection-end-line="71" selection-end-column="25" />
+            <state relative-caret-position="1173">
+              <caret line="57" column="48" selection-start-line="57" selection-start-column="48" selection-end-line="57" selection-end-column="48" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -279,6 +258,7 @@
       <find>test_add_icon_verify_1_3</find>
       <find>test_add_icon_verify_1_4</find>
       <find>test_user_map_show_num_2_8</find>
+      <find>sele</find>
     </findStrings>
     <replaceStrings>
       <replace>picture</replace>
@@ -290,8 +270,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/comm/read_config.py" />
-        <option value="$PROJECT_DIR$/comm/sendemail.py" />
         <option value="$PROJECT_DIR$/runner_unittest/run.py" />
         <option value="$PROJECT_DIR$/comm/loginPDT.py" />
         <option value="$PROJECT_DIR$/case_list/ticket_manage/ticket_query.py" />
@@ -338,9 +316,11 @@
         <option value="$PROJECT_DIR$/case_list/system_manage/system_run.py" />
         <option value="$PROJECT_DIR$/test_cases/system_page/user_permission_page.py" />
         <option value="$PROJECT_DIR$/case_list/user_manage/test_run1.py" />
-        <option value="$PROJECT_DIR$/page_obj/base.py" />
         <option value="$PROJECT_DIR$/case_list/user_manage/MS_manage_sta.py" />
         <option value="$PROJECT_DIR$/test_cases/user_manage/MS_manage_page.py" />
+        <option value="$PROJECT_DIR$/page_obj/base.py" />
+        <option value="$PROJECT_DIR$/test_cases/user_manage/call_group_manage_page.py" />
+        <option value="$PROJECT_DIR$/case_list/user_manage/call_group_manage_sta.py" />
       </list>
     </option>
   </component>
@@ -372,12 +352,6 @@
               <item name="po" type="b2602c69:ProjectViewProjectNode" />
               <item name="po" type="462c0819:PsiDirectoryNode" />
               <item name="case_list" type="462c0819:PsiDirectoryNode" />
-              <item name="ticket_manage" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="po" type="b2602c69:ProjectViewProjectNode" />
-              <item name="po" type="462c0819:PsiDirectoryNode" />
-              <item name="case_list" type="462c0819:PsiDirectoryNode" />
               <item name="user_manage" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -393,8 +367,19 @@
             <path>
               <item name="po" type="b2602c69:ProjectViewProjectNode" />
               <item name="po" type="462c0819:PsiDirectoryNode" />
-              <item name="report" type="462c0819:PsiDirectoryNode" />
-              <item name="test_report" type="462c0819:PsiDirectoryNode" />
+              <item name="test_cases" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="po" type="b2602c69:ProjectViewProjectNode" />
+              <item name="po" type="462c0819:PsiDirectoryNode" />
+              <item name="test_cases" type="462c0819:PsiDirectoryNode" />
+              <item name="system_page" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="po" type="b2602c69:ProjectViewProjectNode" />
+              <item name="po" type="462c0819:PsiDirectoryNode" />
+              <item name="test_cases" type="462c0819:PsiDirectoryNode" />
+              <item name="user_manage" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -474,30 +459,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.test_run1">
-    <configuration name="test_run1" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="po" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/case_list/user_manage" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/case_list/user_manage/test_run1.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Unittests for MS_manage_sta.Ticket_Query.test_local_online_user" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python tests.Unittests for call_group_manage_sta.Ticket_Query.test_temp_group_1">
+    <configuration name="Unittests for call_group_manage_sta.Ticket_Query.test_grade_group_1_1" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="po" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -508,11 +471,11 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;MS_manage_sta.Ticket_Query.test_local_online_user&quot;" />
+      <option name="_new_target" value="&quot;call_group_manage_sta.Ticket_Query.test_grade_group_1_1&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests for MS_manage_sta.Ticket_Query.test_local_online_user_1" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="Unittests for call_group_manage_sta.Ticket_Query.test_grade_group_3" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="po" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -523,11 +486,11 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;MS_manage_sta.Ticket_Query.test_local_online_user_1&quot;" />
+      <option name="_new_target" value="&quot;call_group_manage_sta.Ticket_Query.test_grade_group_3&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests for MS_manage_sta.Ticket_Query.test_user_map_show_num" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="Unittests for call_group_manage_sta.Ticket_Query.test_grade_group_4" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="po" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -538,11 +501,11 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;MS_manage_sta.Ticket_Query.test_user_map_show_num&quot;" />
+      <option name="_new_target" value="&quot;call_group_manage_sta.Ticket_Query.test_grade_group_4&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests for MS_manage_sta.Ticket_Query.test_user_map_show_num_2_8" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="Unittests for call_group_manage_sta.Ticket_Query.test_temp_group" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="po" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -553,24 +516,39 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;MS_manage_sta.Ticket_Query.test_user_map_show_num_2_8&quot;" />
+      <option name="_new_target" value="&quot;call_group_manage_sta.Ticket_Query.test_temp_group&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests for call_group_manage_sta.Ticket_Query.test_temp_group_1" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="po" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/case_list/user_manage" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;call_group_manage_sta.Ticket_Query.test_temp_group_1&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python tests.Unittests for MS_manage_sta.Ticket_Query.test_user_map_show_num" />
-      <item itemvalue="Python tests.Unittests for MS_manage_sta.Ticket_Query.test_user_map_show_num_2_8" />
-      <item itemvalue="Python tests.Unittests for MS_manage_sta.Ticket_Query.test_local_online_user" />
-      <item itemvalue="Python tests.Unittests for MS_manage_sta.Ticket_Query.test_local_online_user_1" />
-      <item itemvalue="Python.test_run1" />
+      <item itemvalue="Python tests.Unittests for call_group_manage_sta.Ticket_Query.test_grade_group_3" />
+      <item itemvalue="Python tests.Unittests for call_group_manage_sta.Ticket_Query.test_grade_group_4" />
+      <item itemvalue="Python tests.Unittests for call_group_manage_sta.Ticket_Query.test_grade_group_1_1" />
+      <item itemvalue="Python tests.Unittests for call_group_manage_sta.Ticket_Query.test_temp_group" />
+      <item itemvalue="Python tests.Unittests for call_group_manage_sta.Ticket_Query.test_temp_group_1" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.test_run1" />
-        <item itemvalue="Python tests.Unittests for MS_manage_sta.Ticket_Query.test_local_online_user" />
-        <item itemvalue="Python tests.Unittests for MS_manage_sta.Ticket_Query.test_local_online_user_1" />
-        <item itemvalue="Python tests.Unittests for MS_manage_sta.Ticket_Query.test_user_map_show_num_2_8" />
-        <item itemvalue="Python tests.Unittests for MS_manage_sta.Ticket_Query.test_user_map_show_num" />
+        <item itemvalue="Python tests.Unittests for call_group_manage_sta.Ticket_Query.test_temp_group_1" />
+        <item itemvalue="Python tests.Unittests for call_group_manage_sta.Ticket_Query.test_temp_group" />
+        <item itemvalue="Python tests.Unittests for call_group_manage_sta.Ticket_Query.test_grade_group_1_1" />
+        <item itemvalue="Python tests.Unittests for call_group_manage_sta.Ticket_Query.test_grade_group_4" />
+        <item itemvalue="Python tests.Unittests for call_group_manage_sta.Ticket_Query.test_grade_group_3" />
       </list>
     </recent_temporary>
   </component>
@@ -610,49 +588,53 @@
       <workItem from="1546823577697" duration="26325000" />
       <workItem from="1546910094305" duration="12026000" />
       <workItem from="1547083266241" duration="16973000" />
+      <workItem from="1547168650090" duration="16826000" />
+      <workItem from="1547254779059" duration="13117000" />
+      <workItem from="1547428480772" duration="22587000" />
+      <workItem from="1547514431798" duration="19081000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_for_MS_manage_sta_Ticket_Query_test_local_online_user - 2019.01.10 at 16h 34m 36s.xml">
-      <configuration name="Unittests for MS_manage_sta.Ticket_Query.test_local_online_user" configurationId="tests" />
+    <history-entry file="Unittests_for_call_group_manage_sta_Ticket_Query_test_grade_group_4 - 2019.01.15 at 16h 46m 07s.xml">
+      <configuration name="Unittests for call_group_manage_sta.Ticket_Query.test_grade_group_4" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_MS_manage_sta_Ticket_Query_test_local_online_user - 2019.01.10 at 16h 37m 42s.xml">
-      <configuration name="Unittests for MS_manage_sta.Ticket_Query.test_local_online_user" configurationId="tests" />
+    <history-entry file="Unittests_for_call_group_manage_sta_Ticket_Query_test_grade_group_4 - 2019.01.15 at 16h 46m 35s.xml">
+      <configuration name="Unittests for call_group_manage_sta.Ticket_Query.test_grade_group_4" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_MS_manage_sta_Ticket_Query_test_local_online_user - 2019.01.10 at 16h 38m 08s.xml">
-      <configuration name="Unittests for MS_manage_sta.Ticket_Query.test_local_online_user" configurationId="tests" />
+    <history-entry file="Unittests_for_call_group_manage_sta_Ticket_Query_test_grade_group_4 - 2019.01.15 at 16h 59m 41s.xml">
+      <configuration name="Unittests for call_group_manage_sta.Ticket_Query.test_grade_group_4" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_MS_manage_sta_Ticket_Query_test_local_online_user - 2019.01.10 at 16h 38m 49s.xml">
-      <configuration name="Unittests for MS_manage_sta.Ticket_Query.test_local_online_user" configurationId="tests" />
+    <history-entry file="Unittests_for_call_group_manage_sta_Ticket_Query_test_grade_group_4 - 2019.01.15 at 17h 00m 21s.xml">
+      <configuration name="Unittests for call_group_manage_sta.Ticket_Query.test_grade_group_4" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_MS_manage_sta_Ticket_Query_test_local_online_user - 2019.01.10 at 16h 47m 59s.xml">
-      <configuration name="Unittests for MS_manage_sta.Ticket_Query.test_local_online_user" configurationId="tests" />
+    <history-entry file="Unittests_for_call_group_manage_sta_Ticket_Query_test_grade_group_1_1 - 2019.01.15 at 17h 10m 02s.xml">
+      <configuration name="Unittests for call_group_manage_sta.Ticket_Query.test_grade_group_1_1" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_MS_manage_sta_Ticket_Query_test_local_online_user_1 - 2019.01.10 at 16h 48m 01s.xml">
-      <configuration name="Unittests for MS_manage_sta.Ticket_Query.test_local_online_user_1" configurationId="tests" />
+    <history-entry file="Unittests_for_call_group_manage_sta_Ticket_Query_test_grade_group_1_1 - 2019.01.15 at 17h 14m 39s.xml">
+      <configuration name="Unittests for call_group_manage_sta.Ticket_Query.test_grade_group_1_1" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_MS_manage_sta_Ticket_Query_test_local_online_user_1 - 2019.01.10 at 16h 48m 56s.xml">
-      <configuration name="Unittests for MS_manage_sta.Ticket_Query.test_local_online_user_1" configurationId="tests" />
+    <history-entry file="Unittests_for_call_group_manage_sta_Ticket_Query_test_temp_group - 2019.01.15 at 18h 28m 16s.xml">
+      <configuration name="Unittests for call_group_manage_sta.Ticket_Query.test_temp_group" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_MS_manage_sta_Ticket_Query_test_local_online_user_1 - 2019.01.10 at 16h 49m 46s.xml">
-      <configuration name="Unittests for MS_manage_sta.Ticket_Query.test_local_online_user_1" configurationId="tests" />
+    <history-entry file="Unittests_for_call_group_manage_sta_Ticket_Query_test_temp_group - 2019.01.15 at 18h 29m 00s.xml">
+      <configuration name="Unittests for call_group_manage_sta.Ticket_Query.test_temp_group" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_MS_manage_sta_Ticket_Query_test_local_online_user_1 - 2019.01.10 at 16h 50m 20s.xml">
-      <configuration name="Unittests for MS_manage_sta.Ticket_Query.test_local_online_user_1" configurationId="tests" />
+    <history-entry file="Unittests_for_call_group_manage_sta_Ticket_Query_test_temp_group - 2019.01.15 at 18h 30m 53s.xml">
+      <configuration name="Unittests for call_group_manage_sta.Ticket_Query.test_temp_group" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_MS_manage_sta_Ticket_Query_test_local_online_user - 2019.01.10 at 16h 50m 40s.xml">
-      <configuration name="Unittests for MS_manage_sta.Ticket_Query.test_local_online_user" configurationId="tests" />
+    <history-entry file="Unittests_for_call_group_manage_sta_Ticket_Query_test_temp_group_1 - 2019.01.15 at 18h 31m 36s.xml">
+      <configuration name="Unittests for call_group_manage_sta.Ticket_Query.test_temp_group_1" configurationId="tests" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="290912000" />
+    <option name="totallyTimeSpent" value="362523000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.14119804" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.16503668" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Database Changes" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="1" weight="0.32922733" />
@@ -662,14 +644,14 @@
       <window_info anchor="bottom" id="Docker" order="5" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="6" />
       <window_info anchor="bottom" id="Find" order="7" weight="0.32997763" />
-      <window_info anchor="bottom" id="Run" order="8" weight="0.32474804" />
+      <window_info anchor="bottom" id="Run" order="8" weight="0.4356103" />
       <window_info anchor="bottom" id="Debug" order="9" weight="0.3661814" />
       <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="12" />
       <window_info anchor="right" id="Database" order="0" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="SciView" order="2" />
+      <window_info anchor="right" id="SciView" order="2" weight="0.3294621" />
       <window_info anchor="right" id="Ant Build" order="3" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="4" weight="0.25" />
     </layout>
@@ -701,27 +683,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/report/test_report/Y-12-14 11_27_27result.html" />
-    <entry file="file://$PROJECT_DIR$/case_list/login/login_run.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="27" column="34" lean-forward="true" selection-start-line="27" selection-start-column="34" selection-end-line="27" selection-end-column="34" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/comm/picture.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="11" column="36" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
-          <folding>
-            <element signature="e#0#30#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/case_list/login/login_sta.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1127">
@@ -868,16 +829,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_cases/system_page/office_page.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="143" column="36" lean-forward="true" selection-start-line="143" selection-start-column="12" selection-end-line="143" selection-end-column="36" />
-          <folding>
-            <element signature="e#0#57#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test_cases/system_page/user_manage_page.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="397">
@@ -906,13 +857,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="183">
           <caret line="410" selection-start-line="410" selection-end-line="410" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/python36/Lib/site-packages/selenium/webdriver/remote/webdriver.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="318" selection-start-line="318" selection-end-line="318" />
         </state>
       </provider>
     </entry>
@@ -1003,13 +947,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_cases/ticket_manage/ticket_manage_page.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-414">
-          <caret column="9" lean-forward="true" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/case_list/system_manage/user_manage_sta.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="276">
@@ -1070,17 +1007,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/report/test_report/2019-01-10 15_22_44result.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/case_list/system_manage/user_permission_sta.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="22" lean-forward="true" selection-start-column="22" selection-end-column="22" />
+          <caret column="22" selection-start-column="22" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/page_obj/base.py">
+    <entry file="file://$PROJECT_DIR$/test_cases/ticket_manage/ticket_manage_page.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="75" column="8" selection-start-line="75" selection-start-column="8" selection-end-line="75" selection-end-column="8" />
+        <state relative-caret-position="115">
+          <caret line="167" column="23" selection-start-line="166" selection-start-column="8" selection-end-line="167" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/python36/Lib/site-packages/selenium/webdriver/remote/webelement.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="632" selection-start-line="632" selection-end-line="632" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_cases/system_page/office_page.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-759">
+          <caret line="135" column="40" lean-forward="true" selection-start-line="135" selection-start-column="40" selection-end-line="135" selection-end-column="40" />
           <folding>
             <element signature="e#0#57#0" expanded="true" />
           </folding>
@@ -1089,75 +1046,69 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/case_list/user_manage/MS_manage_sta.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="469">
-          <caret line="289" lean-forward="true" selection-start-line="289" selection-end-line="289" />
+        <state relative-caret-position="92">
+          <caret line="4" column="21" lean-forward="true" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
           <folding>
             <element signature="e#0#22#0" expanded="true" />
             <element signature="e#275#333#0" />
             <element signature="e#373#623#0" />
-            <element signature="e#669#919#0" />
-            <element signature="e#971#1227#0" />
-            <element signature="e#1273#1461#0" />
-            <element signature="e#1510#1708#0" />
-            <element signature="e#1759#1966#0" />
-            <element signature="e#2016#2223#0" />
-            <element signature="e#2273#2476#0" />
-            <element signature="e#2526#2729#0" />
-            <element signature="e#2779#2983#0" />
-            <element signature="e#3033#3237#0" />
-            <element signature="e#3287#3487#0" />
-            <element signature="e#3538#3738#0" />
-            <element signature="e#3788#3991#0" />
-            <element signature="e#4042#4246#0" />
-            <element signature="e#4297#4503#0" />
-            <element signature="e#4554#4760#0" />
-            <element signature="e#4811#5016#0" />
-            <element signature="e#5067#5273#0" />
-            <element signature="e#5322#5510#0" />
-            <element signature="e#5559#5791#0" />
-            <element signature="e#5840#6072#0" />
-            <element signature="e#6122#6308#0" />
-            <element signature="e#6357#6558#0" />
-            <element signature="e#6606#6807#0" />
-            <element signature="e#6880#7087#0" />
-            <element signature="e#7176#7412#0" />
-            <element signature="e#7478#7734#0" />
-            <element signature="e#7788#8083#0" />
-            <element signature="e#8143#8400#0" />
-            <element signature="e#8401#8653#0" />
-            <element signature="e#8713#8965#0" />
-            <element signature="e#9022#9279#0" />
-            <element signature="e#9339#9596#0" />
-            <element signature="e#9633#9889#0" />
-            <element signature="e#9939#10193#0" />
-            <element signature="e#10248#10503#0" />
-            <element signature="e#10565#10824#0" />
-            <element signature="e#10881#11140#0" />
-            <element signature="e#11192#11450#0" />
-            <element signature="e#11501#11757#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test_cases/user_manage/MS_manage_page.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="756" column="15" selection-start-line="756" selection-start-column="15" selection-end-line="756" selection-end-column="15" />
+        <state relative-caret-position="201">
+          <caret line="201" column="71" lean-forward="true" selection-start-line="201" selection-start-column="45" selection-end-line="201" selection-end-column="71" />
           <folding>
             <element signature="e#0#57#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/report/test_report/2019-01-10 15_22_44result.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/case_list/user_manage/test_run1.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="705">
-          <caret line="71" column="25" lean-forward="true" selection-start-line="71" selection-start-column="25" selection-end-line="71" selection-end-column="25" />
+        <state relative-caret-position="1173">
+          <caret line="57" column="48" selection-start-line="57" selection-start-column="48" selection-end-line="57" selection-end-column="48" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/python36/Lib/site-packages/selenium/webdriver/remote/webdriver.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-940">
+          <caret line="802" column="21" selection-start-line="802" selection-start-column="21" selection-end-line="802" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page_obj/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+          <folding>
+            <element signature="e#0#57#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_cases/user_manage/call_group_manage_page.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="829" column="33" lean-forward="true" selection-start-line="829" selection-start-column="33" selection-end-line="829" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#57#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/case_list/user_manage/call_group_manage_sta.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="576">
+          <caret line="197" column="27" selection-start-line="197" selection-start-column="27" selection-end-line="197" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#22#0" expanded="true" />
           </folding>
         </state>
       </provider>
