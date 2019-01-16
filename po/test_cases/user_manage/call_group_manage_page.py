@@ -803,6 +803,24 @@ class Call_Group(Page):
     #分页图标按钮定位
     temp_page_btn_loc = (By.XPATH, '//*[@id="freestyle"]/div/div[3]/div/div[1]/ul/li/a')
 
+    #添加按钮定位
+    temp_add_loc = (By.ID, 'add')
+    #号码范围区号定位
+    temp_area_code_loc = (By.XPATH, '//*[@id="tempgsi"]/div/div/input[1]')
+    #号码范围队号定位
+    temp_team_code_loc = (By.XPATH, '//*[@id="tempgsi"]/div/div/input[2]')
+    #号码范围组号定位
+    temp_group_code_loc = (By.XPATH, '//*[@id="tempgsi"]/div/div/input[3]')
+    # 号码范围组号定位
+    temp_group_code_loc_1 = (By.XPATH, '//*[@id="tempgsi"]/div/div/input[5]')
+    #名称输入框定位
+    temp_nameInput_loc = (By.ID, 'alias')
+    #逾期时间定位
+    temp_outTime_loc = (By.ID, 'expires')
+
+
+
+
     def temp_group_list(self):
         #进入临时应急组页面 验证组用户数量
         self.come_iframe_page()
@@ -821,6 +839,7 @@ class Call_Group(Page):
         #进入临时应急组页面 验证分页显示按钮显示是否正确
         self.come_iframe_page()
         self.find_element(*self.temp_group_loc).click()
+        sleep(2)
         js = "var q=document.documentElement.scrollTop=10000"
         self.script(js)
         self.send_keys('100', *self.temp_page_show_num)
