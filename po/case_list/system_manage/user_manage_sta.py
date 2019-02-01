@@ -21,19 +21,19 @@ class Ticket_Query(myunit.MyTest):
         '''检查用户管理页面 用户显示数量验证'''
         self.user_login(username="thy", password="admin")
         msg = User_manage(self.driver).query_user_num()
-        self.assertEqual(msg.strip(), '7')
+        self.assertEqual(msg.strip(), '4')
         picture.insert_img(self.driver, "user_pwd_true.png")
 
     def test_verify_input_query_user_1(self):
         '''检查用户管理页面 通过登录名模糊查询 查询登录名中含有w的用户数量'''
         self.user_login(username="thy", password="admin")
         msg = User_manage(self.driver).input_query_1()
-        self.assertEqual(msg.strip(), '2')
+        self.assertEqual(msg.strip(), '1')
         picture.insert_img(self.driver, "user_pwd_true.png")
 
 
     def test_verify_input_query_user_2(self):
-        '''检查用户管理页面 通过登录名模糊查询 查询登录名中含有h的用户数量'''
+        '''检查用户管理页面 通过登录名模糊查询 查询姓名名中含有“测试”的用户数量'''
         self.user_login(username="thy", password="admin")
         msg = User_manage(self.driver).input_query_2()
         self.assertEqual(msg.strip(), '1')

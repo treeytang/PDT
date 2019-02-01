@@ -241,18 +241,7 @@ class Ticket_Manage_Query(Page):
         self.find_element(*self.ticket_come_loc).click()
         # 进入到右侧表单
         self.switch_frame(self.ticket_iframe_id)
-        # js = "var q=document.documentElement.scrollTop=10000"
-        # self.script(js)
-        # # 出现弹窗，返回上一层表单
-        # self.switch_to_default()
-        # if self.find_element(*self.hint_cancel):
-        #     # 关闭提示窗口
-        #     self.find_element(*self.hint_cancel).click()
-        #     self.switch_frame(self.ticket_iframe_id)
-        #     js = "var q=document.documentElement.scrollTop=10000"
-        #     self.script(js)
-        # sleep(2)
-        # self.find_element(*self.next_page).click()
+
         return self.find_element(*self.iframe_verify).text
 
 
@@ -282,7 +271,7 @@ class Ticket_Manage_Query(Page):
         self.come_ticket()
         ActionChains(self.driver).move_to_element(self.find_element(*self.start_time_loc)).perform()
         self.find_element(*self.one_week_loc).click()
-        input_num = str(random.randrange(1,10))
+        input_num = str(random.randrange(1,7))
         print(input_num)
         self.find_element(*self.page_any_loc).send_keys(input_num)
         self.find_element(*self.page_any_loc).send_keys(Keys.ENTER)
@@ -291,7 +280,7 @@ class Ticket_Manage_Query(Page):
         for i in num:
             check_num += 1
         print(check_num)
-        if input_num==check_num:
+        if int(input_num)==int(check_num):
             return "ok"
         else:
             return "fail"

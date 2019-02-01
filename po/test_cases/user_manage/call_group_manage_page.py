@@ -220,14 +220,14 @@ class Call_Group(Page):
         self.send_enter(*self.end_num_loc)
         sleep(3)
         elements = self.find_elements(*self.call_group_list_show_num)
-        sleep(1)
+        sleep(2)
         #循环删除所添加的组号码
         while True:
             element = self.find_element(*self.del_btn_loc)
             if element:
                 self.find_element(*self.del_btn_loc).click()
                 self.system_hint(*self.alert_sure_loc)
-                sleep(1)
+                sleep(2)
             else:
                 break
 
@@ -255,7 +255,7 @@ class Call_Group(Page):
         self.send_enter(*self.end_num_loc)
         sleep(3)
         elements = self.find_elements(*self.call_group_list_show_num)
-        sleep(1)
+        sleep(2)
         #复选框全选删除所添加的组号码
         self.find_element(*self.checkbox_all_loc).click()
         self.find_element(*self.del_loc).click()
@@ -284,7 +284,7 @@ class Call_Group(Page):
         self.send_enter(*self.end_num_loc)
         sleep(3)
         elements = self.find_elements(*self.call_group_list_show_num)
-        sleep(1)
+        sleep(2)
         #复选框全选删除所添加的组号码
         self.find_element(*self.checkbox_all_loc).click()
         self.find_element(*self.del_loc).click()
@@ -323,7 +323,7 @@ class Call_Group(Page):
         self.send_enter(*(By.ID, 'alias'))
         sleep(3)
         elements = self.find_elements(*self.call_group_list_show_num)
-        sleep(1)
+        sleep(2)
         # 复选框全选删除所添加的组号码
         self.find_element(*self.checkbox_all_loc).click()
         self.find_element(*self.del_loc).click()
@@ -698,7 +698,7 @@ class Call_Group(Page):
     def grade_group(self):
         #验证分级组管理页面列表显示数量
         self.come_iframe_page()
-        self.find_element(*self.grade_group_loc).clicktemp_()
+        self.find_element(*self.grade_group_loc).click()
         elements = self.find_elements(*self.ggp_show_num_loc)
         return str(len(elements))
 
@@ -747,11 +747,15 @@ class Call_Group(Page):
         self.find_element(*self.ggp_ensure_loc).click()
         self.find_element(*(By.LINK_TEXT, '97001')).click()
         self.find_element(*self.ggp_whether_use_loc).click()
+        sleep(1)
         self.find_element(*self.ggp_ensure_loc).click()
         self.system_hint(*self.alert_sure_loc)
-        element = self.find_element(*self.ggp_verify_modify_loc)
+        self.find_element(*(By.ID, 'back')).click()
+        element = self.find_element(*self.ggp_verify_modify_loc).text
         print(element)
-        if element:
+        self.find_element(*(By.XPATH, '//*[@id="grade-group-list"]/tr[1]/td[8]/button')).click()
+        self.system_hint(*self.alert_sure_loc)
+        if element=="启用":
             return True
         return False
 

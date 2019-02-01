@@ -14,15 +14,16 @@ class Ticket_Query(myunit.MyTest):
     def test_come_ticket_query_verify(self):
         '''进入告警查询页面验证'''
         self.user_login(username="admin", password="admin")
-        msg = Alarm_Query(self.driver).paging_verify()
-        self.assertEqual(msg.strip(), "1")
+        msg = Alarm_Query(self.driver).come_alarm_query_verify()
+        self.assertEqual(msg.strip(), "告警查询")
         picture.insert_img(self.driver, "user_pwd_true.png")
+
 
     def test_paging_verify(self):
         '''自定义分页显示数量（每页显示1条）'''
         self.user_login(username="admin", password="admin")
-        msg = Alarm_Query(self.driver).come_alarm_query_verify()
-        self.assertEqual(msg.strip(), "告警查询")
+        msg = Alarm_Query(self.driver).paging_verify()
+        self.assertEqual(msg.strip(), "1")
         picture.insert_img(self.driver, "user_pwd_true.png")
 
     def test_custom_time_quert(self):

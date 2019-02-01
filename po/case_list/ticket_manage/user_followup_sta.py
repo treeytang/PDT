@@ -38,14 +38,14 @@ class Ticket_Query(myunit.MyTest):
         #输入正确的用户名时间进行搜索 比对语音数据
         self.user_login(username="admin", password="admin")
         msg = User_FollowUp(self.driver).query_user_verify_2()
-        self.assertEqual(msg.strip(), "20876")
+        self.assertEqual(msg.strip(), "0")
         picture.insert_img(self.driver, "user_pwd_true.png")
 
     def test_query_user_3(self):
         # 输入正确的用户名时间进行搜索 比对语音数据
         self.user_login(username="admin", password="admin")
         msg = User_FollowUp(self.driver).query_user_verify_3()
-        self.assertEqual(msg.strip(), "654")
+        self.assertEqual(msg.strip(), "0")
         picture.insert_img(self.driver, "user_pwd_true.png")
 
 
@@ -53,5 +53,5 @@ class Ticket_Query(myunit.MyTest):
         # 输入正确的用户名时间进行搜索 比对语音数据
         self.user_login(username="admin", password="admin")
         msg = User_FollowUp(self.driver).query_user_verify_4()
-        self.assertEqual(msg.strip(), "1195")
+        self.assertEqual(msg.strip(), "0")
         picture.insert_img(self.driver, "user_pwd_true.png")

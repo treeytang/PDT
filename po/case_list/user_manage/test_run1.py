@@ -61,7 +61,7 @@ if __name__ == '__main__':
         runner = HTMLTestRunner(stream=fp, title='selenium自动化测试报告',
                         description='测试环境：windows 7  浏览器：Chrome')
         discover = unittest.defaultTestLoader.discover('.',
-                                               pattern='*_sta.py')
+                                               pattern='DRM_user_sta.py')
         runner.run(discover)
         fp.close()
         file_path = os.path.dirname(os.path.dirname(os.path.abspath('.')))+'\\report\\test_report'

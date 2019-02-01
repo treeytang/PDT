@@ -19,12 +19,12 @@ class Ticket_Query(myunit.MyTest):
         picture.insert_img(self.driver, "user_pwd_true.png")
 
 
-    def test_ticket_query(self):
-        '''话单查询页面列表显示数量与实际数量比较'''
-        self.user_login(username='thy', password='admin')
-        msg = Ticket_Manage_Query(self.driver).query_num_verify()
-        self.assertEqual(msg,'ok')
-        picture.insert_img(self.driver, 'user_query.png')
+    # def test_ticket_query(self):
+    #     '''话单查询页面列表显示数量与实际数量比较'''
+    #     self.user_login(username='thy', password='admin')
+    #     msg = Ticket_Manage_Query(self.driver).query_num_verify()
+    #     self.assertEqual(msg,'ok')
+    #     picture.insert_img(self.driver, 'user_query.png')
 
 
     def test_input_num_query(self):

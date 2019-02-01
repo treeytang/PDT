@@ -99,7 +99,7 @@ class User_manage(Page):
     def input_query_2(self):
         #通过登录名模糊查询 查询姓名中含有h的用户
         self.come_iframe_page()
-        self.find_element(*self.name_input).send_keys('h')
+        self.find_element(*self.name_input).send_keys('测试')
         self.send_enter(*self.name_input)
         elements = self.find_elements(*self.user_nums)
         print(len(elements))
