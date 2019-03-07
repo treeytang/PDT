@@ -7,7 +7,7 @@ import time
 
 class User_Register():
     def __init__(self):
-        self.recv_ip = "192.168.1.68"
+        self.recv_ip = "192.168.1.54"
         self.recv_port = 18820
         self.send_ip = "192.168.1.249"
         self.send_port = 5060
@@ -47,8 +47,7 @@ class User_Register():
         return (random.randrange(30, 999))
 
 
-    def ur_udp_socket_recv_client(self, udp_socket_client, recv_address):
-        # udp_socket_client.bind(recv_address)
+    def ur_udp_socket_recv_client(self, udp_socket_client):
         while True:
             try:
                 recv_data, recv_addr = udp_socket_client.recvfrom(1024)
@@ -74,8 +73,8 @@ class User_Register():
                         "f:<p:{}>;g={}\r\n" \
                         "t:-\r\n" \
                         "Q:{} R\r\n" \
-                        "v:r124.pdt.cn;b={}~\r\n" \
-                        "m:<s:r124.pdt.cn;m=192.168.1.68:18820>\r\n" \
+                        "v:r108.pdt.cn;b={}~\r\n" \
+                        "m:<s:r108.pdt.cn;m=192.168.1.54:18820>\r\n" \
                         "H:70\r\n" \
                         "ua:46 ACTEC-PDT-RCU-1.5.0.0\r\n" \
                         "c:a/m\r\n" \
@@ -111,10 +110,10 @@ class User_Register():
                                               args=(udp_socket_client, send_address)
                                               )
         socket_recv_thread = threading.Thread(target=self.ur_udp_socket_recv_client,
-                                              args=(udp_socket_client, recv_address)
+                                              args=(udp_socket_client,)
                                               )
         socket_recv_thread.start()
         socket_send_thread.start()
         print(1)
 
-User_Register().user_register()
+# User_Register().user_register()

@@ -73,8 +73,8 @@ def udp_socket_send_client(udp_socket_client, send_address):
                     "f:<p:{}>;g={}\r\n" \
                     "t:-\r\n" \
                     "Q:{} R\r\n" \
-                    "v:r109.pdt.cn;b={}~\r\n" \
-                    "m:<s:r109.pdt.cn;m=192.168.1.56:15062>;e=0\r\n" \
+                    "v:r108.pdt.cn;b={}~\r\n" \
+                    "m:<s:r108.pdt.cn;m=192.168.1.54:15062>;e=0\r\n" \
                     "H:70\r\n" \
                     "ua:46 ACTEC-PDT-RCU-1.5.0.0\r\n" \
                     "l:0\r\n" \

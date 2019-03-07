@@ -4,26 +4,24 @@ import datetime
 import socket
 
 
-
-
 pattern_list = [
     [
-        [0.02,0],[0.02,0],[0.02,0],[0.02,0],[0.02,0],[0.02,0],[0.02,0],[0.02,0],[0.02,0],[0.02,0],
-        [0.02,0],[0.02,0],[0.02,0],[0.02,0],[0.02,0],[0.02,0],[0.02,0],[0.02,0],[0.02,0],[0.02,0],
-        [0.02,0],[0.02,0],[0.02,0],[0.02,0],[0.02,0],[0.02,0],[0.02,0],[0.02,0],[0.02,0],[0.02,0],
-        [0.02,0],[0.02,0],[0.02,0],[0.02,0],[0.02,0],[0.02,0],[0.02,0],[0.02,0],[0.02,0],[0.02,0],
-        [0.02,0],[0.02,0],[0.02,0],[0.02,0],[0.02,0],[0.02,0],[0.02,0],[0.02,0],[0.02,0],[0.02,0],
-        [0.02,0],[0.02,0],[0.02,0],[0.02,0],[0.02,0],[0.02,0],[0.02,0],[0.02,0],[0.02,0],[0.02,0],
-        [0.02,0],[0.02,0],[0.02,0],[0.02,0],[0.02,0],[0.02,0],[0.02,0],[0.02,0],[0.02,0],[0.02,0],
-        [0.02,0],[0.02,0],[0.02,0],[0.02,0],[0.02,0],[0.02,0],[0.02,0],[0.02,0],[0.02,0],[0.02,0],
-        [0.02,0],[0.02,0],[0.02,0],[0.02,0],[0.02,0],[0.02,0],[0.02,0],[0.02,0],[0.02,0],[0.02,0],
-        [0.02,0],[0.02,0],[0.02,0],[0.02,0],[0.02,0],[0.02,0],[0.02,0],[0.02,0],[0.02,0],[0.02,0],
-        [0.02,0],[0.02,0],[0.02,0],[0.02,0],[0.02,0],[0.02,0],[0.02,0],[0.02,0],[0.02,0],[0.02,0],
-        [0.02,0],[0.02,0],[0.02,0],[0.02,0],[0.02,0],[0.02,0],[0.02,0],[0.02,0],[0.02,0],[0.02,0],
-        [0.02,0],[0.02,0],[0.02,0],[0.02,0],[0.02,0],[0.02,0],[0.02,0],[0.02,0],[0.02,0],[0.02,0],
-        [0.02,0],[0.02,0],[0.02,0],[0.02,0],[0.02,0],[0.02,0],[0.02,0],[0.02,0],[0.02,0],[0.02,0],
-        [0.02,0],[0.02,0],[0.02,0],[0.02,0],[0.02,0],[0.02,0],[0.02,0],[0.02,0],[0.02,0],[0.02,0],
-        [0.02,0],[0.02,0],[0.02,0],[0.02,0],[0.02,0],[0.02,0],[0.02,0],[0.02,0],[0.02,0],[0.02,0]
+        [0.0002,0],[0.0002,0],[0.0002,0],[0.0002,0],[0.0002,0],[0.0002,0],[0.0002,0],[0.0002,0],[0.0002,0],[0.0002,0],
+        [0.0002,0],[0.0002,0],[0.0002,0],[0.0002,0],[0.0002,0],[0.0002,0],[0.0002,0],[0.0002,0],[0.0002,0],[0.0002,0],
+        [0.0002,0],[0.0002,0],[0.0002,0],[0.0002,0],[0.0002,0],[0.0002,0],[0.0002,0],[0.0002,0],[0.0002,0],[0.0002,0],
+        [0.0002,0],[0.0002,0],[0.0002,0],[0.0002,0],[0.0002,0],[0.0002,0],[0.0002,0],[0.0002,0],[0.0002,0],[0.0002,0],
+        [0.0002,0],[0.0002,0],[0.0002,0],[0.0002,0],[0.0002,0],[0.0002,0],[0.0002,0],[0.0002,0],[0.0002,0],[0.0002,0],
+        [0.0002,0],[0.0002,0],[0.0002,0],[0.0002,0],[0.0002,0],[0.0002,0],[0.0002,0],[0.0002,0],[0.0002,0],[0.0002,0],
+        [0.0002,0],[0.0002,0],[0.0002,0],[0.0002,0],[0.0002,0],[0.0002,0],[0.0002,0],[0.0002,0],[0.0002,0],[0.0002,0],
+        [0.0002,0],[0.0002,0],[0.0002,0],[0.0002,0],[0.0002,0],[0.0002,0],[0.0002,0],[0.0002,0],[0.0002,0],[0.0002,0],
+        [0.0002,0],[0.0002,0],[0.0002,0],[0.0002,0],[0.0002,0],[0.0002,0],[0.0002,0],[0.0002,0],[0.0002,0],[0.0002,0],
+        [0.0002,0],[0.0002,0],[0.0002,0],[0.0002,0],[0.0002,0],[0.0002,0],[0.0002,0],[0.0002,0],[0.0002,0],[0.0002,0],
+        [0.0002,0],[0.0002,0],[0.0002,0],[0.0002,0],[0.0002,0],[0.0002,0],[0.0002,0],[0.0002,0],[0.0002,0],[0.0002,0],
+        [0.0002,0],[0.0002,0],[0.0002,0],[0.0002,0],[0.0002,0],[0.0002,0],[0.0002,0],[0.0002,0],[0.0002,0],[0.0002,0],
+        [0.0002,0],[0.0002,0],[0.0002,0],[0.0002,0],[0.0002,0],[0.0002,0],[0.0002,0],[0.0002,0],[0.0002,0],[0.0002,0],
+        [0.0002,0],[0.0002,0],[0.0002,0],[0.0002,0],[0.0002,0],[0.0002,0],[0.0002,0],[0.0002,0],[0.0002,0],[0.0002,0],
+        [0.0002,0],[0.0002,0],[0.0002,0],[0.0002,0],[0.0002,0],[0.0002,0],[0.0002,0],[0.0002,0],[0.0002,0],[0.0002,0],
+        [0.0002,0],[0.0002,0],[0.0002,0],[0.0002,0],[0.0002,0],[0.0002,0],[0.0002,0],[0.0002,0],[0.0002,0],[0.0002,0]
     ],
     [
         [0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],
@@ -46,61 +44,115 @@ pattern_list = [
 ]
 
 
-class Gps_Signal():
+class GPS_Signal():
+
     def __init__(self):
         self.udp_socket_client = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-        recv_ip = "192.168.1.67"
-        recv_port = 16888
+        recv_ip = "192.168.1.54"
+        recv_port = 16889
         send_ip = "192.168.1.249"
         send_port = 6004
+        self.Bs_dn = 'r108.pdt.cn'
+        self.lai = '108'
         self.udp_socket_client.bind((recv_ip, recv_port))
         self.recv_address = (recv_ip, int(recv_port))
         self.send_address = (send_ip, int(send_port))
-
-    # 北纬
-    def northern(self):
-        north = str(30) + str(random.choice(range(31,))) + '.' + str(
-            random.choice(range(100, 999)))
-        return north
-
-    # 东经
-    def easts(self):
-        east = str(random.choice(range(10345, 10385))) + "." + str(
-            random.choice(range(100, 999)))
-        return east
-
-    # 高度
-    def altitude(self):
-        h = random.choice(range(1, 1000))
-        return h
+        self.rcu_north = 30.62097
+        self.rcu_east = 104.07126
 
 
-    # 时间
     def utc_time(self):
         t = ("%.3f" % float(datetime.datetime.now().strftime("%H%M%S.%f")))
         return t
 
+    def floatrange(self, start, stop, steps):
+        return [start+float(i)*(stop-start)/(float(steps)-1) for i in range(steps)]
 
-    # 对移动用户的经纬度进行标记
-    def move_user_dic(self, lst):
-        dic = {}
-        for user in lst:
-            north = self.northern()
-            east = self.easts()
-            dic[user] = "{},{}".format(north, east)
-        return dic
 
-    def change_northern_1(self, user, dic, carousel):
-        value = dic[user].split(",")
+    def north(self):
+        start = self.rcu_north - 0.1
+        stop = self.rcu_north + 0.1
+        step = 20000
+        north_list = self.floatrange(start, stop, step)
+        return north_list
+
+    def east(self):
+        start = self.rcu_east - 0.1
+        stop = self.rcu_east + 0.1
+        step = 20000
+        east_list = self.floatrange(start, stop, step)
+        return east_list
+
+
+    def coordinate(self, north_list, east_list):
+        north = float(random.choice(north_list))
+        east = float(random.choice(east_list))
+        a = self.rcu_north-north
+        b = self.rcu_east-east
+        r = 0.1
+        if a**2+b**2>r**2:
+            return self.coordinate(north_list, east_list)
+        else:
+            return [north, east]
+
+
+
+    def transition(self,paramters):
+        paramter = str(paramters).split('.')
+        degree = paramter[0]
+        minutes_second = (str(float("0."+paramter[1])*60)).split('.')
+        minutes = minutes_second[0]
+        if len(minutes)==1:
+            minutes = "0"+minutes
+        second = str(round((float('0.'+minutes_second[1])*60), 2)).split('.')
+        a = 0
+        for i in second:
+            if len(i)==1:
+                second[a]='0'+(i)
+            a+=1
+        seconds = second[0]+second[1]
+        return degree+minutes+'.'+seconds
+
+    def upstream_field_strength(self, north, east):
+        maximum = max(abs(self.rcu_north - float(north)), abs(self.rcu_east - float(east)))
+        if maximum < 0.02:
+            return str(random.choice(range(-60, -50)))
+        elif 0.02 <= maximum < 0.04:
+            return str(random.choice(range(-70, -60)))
+        elif 0.04 <= maximum < 0.06:
+            return str(random.choice(range(-80, -70)))
+        elif 0.06 <= maximum < 0.08:
+            return str(random.choice(range(-90, -80)))
+        elif 0.08 <= maximum < 0.1:
+            return str(random.choice(range(-100, -90)))
+
+    def down_field_strength(self, north, east):
+        maximum = max(abs(self.rcu_north-float(north)), abs(self.rcu_east-float(east)))
+        if maximum<0.02:
+            return '-60~-70'
+        elif 0.02<=maximum<0.04:
+            return '-70~-80'
+        elif 0.04<=maximum<0.06:
+            return '-80~-90'
+        elif 0.06<=maximum<0.08:
+            return '-90~-100'
+        elif 0.08<=maximum<0.1:
+            return '-100~-110'
+
+
+    def send_signal(self, user, dic):
+        value = dic[user].split(',')
         flag = value[0]
         north = value[1]
         east = value[2]
         count = value[3]
-        # print(flag, north, east, count)
-        # if (i+1)%2==1:
-        send_data = "GPGLL,{},{},N,{},E,A,500,,{},<5%,-55,I,15,,62224901,,,r124.pdt.cn,124,,,,,,,".format(user,north,east,self.utc_time())
-        if (carousel+1)%2==0:
-            send_data = "GPGLL,{},{},N,{},E,A,500,,{},-60~-70,-55,I,15,,62224901,,,r124.pdt.cn,124,,,,,,,".format(user,north,east,self.utc_time())
+        down_fs = self.down_field_strength(north, east)
+        upstream_fs = self.upstream_field_strength(north, east)
+        norths = self.transition(north)
+        easts = self.transition(east)
+        send_data = "GPGLL,{},{},N,{},E,A,500,,{},<5%,{},I,15,,62224901,,,{},{},,,,,,,".format(user,norths,easts,self.utc_time(), upstream_fs, self.Bs_dn, self.lai)
+        if int(count)%2==0:
+            send_data = "GPGLL,{},{},N,{},E,A,500,,{},{},{},I,15,,62224901,,,{},{},,,,,,,".format(user,norths,easts,self.utc_time(),down_fs, upstream_fs, self.Bs_dn, self.lai)
         a = 0
         for i in send_data:
             a = a ^ (ord(i))
@@ -109,56 +161,49 @@ class Gps_Signal():
         print(send_datas)
         self.udp_socket_client.sendto(send_datas.encode('utf-8'), self.send_address)
         if int(flag) == 1:
-            north = ("%.3f" % (float(north) - float(pattern_list[0][int(count)][0])))
-            east = ("%.3f" % (float(east) - float(pattern_list[0][int(count)][1])))
-            count = int(count) + 1
-        dic[user] = "{},{},{},{}".format(flag, north, east, count)
+            north = (float(north) - float(0.00005))
+            # east = (float(east) - float(0.))
+        counts = int(count) + 1
+        dic[user] = "{},{},{},{}".format(flag, north, east, counts)
 
 
     def start(self):
-        # sleep(100)
+        sleep(400)
         initialize = 1
         filename = open('./userid.txt', 'r')
         l = (filename.read()).split('***')
-
         filename.close()
         l.pop()
-        l = [str(((int(x) - 1048577) // 32768 + 328)) + str(((int(x) - 1048577) % 32768) // 700 + 20) + str(((int(x) - 1048577) % 32768) % 700 + 200) for x in l]
-        # print(l)
+        #将已经注册了的用户的空口好转换为用户号
+        l = [str(((int(x) - 1048577) // 32768 + 328)) + str(((int(x) - 1048577) % 32768) // 700 + 20) + str(
+            ((int(x) - 1048577) % 32768) % 700 + 200) for x in l]
+        # 获取所有的经纬度可用列表点位
+        north_list = self.north()
+        east_list = self.east()
         while True:
             print("循环进入第%d次" % initialize)
-            # l = ['40020200', '40020201', '40020202', '40020203', '40020204', '40020205', '40020206', '40020207',
-            #      '40020208', '40020209']
-            # print(len(l))
-
-
             dic = {}
             counts = 0
             # 筛选出需要变动的用户
             for user in l:
+                # 标记需要变动的用户
                 flag = random.choice(range(0, 2))
                 if flag == 1:
                     counts += 1
-                    # print(count)
                 if counts > (len(l) // 4):
                     flag = 0
-                    # print(counts, flag)
-
-                north = self.northern()
-                east = self.easts()
-                count = 0
+                n_e = self.coordinate(north_list, east_list)
+                north = n_e[0]
+                east = n_e[1]
+                count = 1
                 dic[user] = "{},{},{},{}".format(flag, north, east, count)
-            # print(dic)
-            carousel = 0
             for i in range(160):
                 for user in dic:
-                    # print("i的值为：",i)
-                    carousel+=1
-                    self.change_northern_1(user, dic, carousel)
-                sleep(1)
-                # print(dic)
+                    self.send_signal(user, dic)
+
+                sleep(15)
+            sleep(2)
             initialize += 1
 
 
-s = Gps_Signal()
-s.start()
+# GPS_Signal().start()

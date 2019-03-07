@@ -14,9 +14,9 @@ class Heart_Beat():
         self.mfid = (1, 0, 0, 0, 0, 0, 0, 0)
         # 序号  2个字节大
         # 基站系统号  2个字节大小
-        self.lai = (124, 0)
+        self.lai = (108, 0)
         # 基站RCU的IP地址  4个字节大小
-        self.rcu_ip = (192, 168, 1, 68)
+        self.rcu_ip = (192, 168, 1, 54)
         # 组网类型  4个字节大小
         self.np = (1, 0, 0, 0)
         # rsvd1 2字节大小
@@ -26,7 +26,7 @@ class Heart_Beat():
         # 网络丢包率，0-100%  4个字节大小
         self.net_ll = (112, 87, 86, 90)
 
-        self.recv_ip = "192.168.1.68"
+        self.recv_ip = "192.168.1.54"
         self.recv_port = 16888
         self.send_ip = "192.168.1.249"
         self.send_port = 17000
@@ -59,17 +59,13 @@ class Heart_Beat():
         while True:
             try:
                 recv_data, recv_addr = udp_socket_client.recvfrom(4096)
-                # print('收到來自<%s>的信息' % recv_addr[0],
-                #       recv_data + '\n' + '<<', end='')
                 print([hex(i) for i in struct.unpack('104B', recv_data)])
             except Exception as e:
                 print(e)
 
     def hb_udp_socket_send_client(self, udp_socket_client, send_address):
         print('连接成功,开始发送信息了:)')
-        a = 0
         while True:
-
             g = 0
             for i in range(2, 256, 2):
                 num = 1
@@ -84,9 +80,9 @@ class Heart_Beat():
                                     *(0, 0, 0, 0, 0, 0, 0, 0), *self.np, *self.diff(), *self.rsvd1, *self.net_jit(),
                                     *net_heath, *self.net_dly,
                                     *self.net_ll, *self.fn())
-
-                    sleep(5)
                     udp_socket_client.sendto(s, send_address)
+                    sleep(5)
+
 
 
     def heartbeat(self):

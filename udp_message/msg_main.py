@@ -1,8 +1,8 @@
 import multiprocessing
 
-from udp_message.GPS_signal import Gps_Signal
-from udp_message.rcu_heartbeat import Heart_Beat
-from udp_message.user_register import User_Register
+from GPS_signal import GPS_Signal
+from rcu_heartbeat import Heart_Beat
+from user_register import User_Register
 
 '''
     author:haoyu Tang
@@ -15,12 +15,13 @@ from udp_message.user_register import User_Register
 
 
 if __name__ == "__main__":
+    print('start')
     #心跳
     heartbeat = Heart_Beat()
     #用户注册
     user_register = User_Register()
     #用户GPS
-    user_GPS = Gps_Signal()
+    user_GPS = GPS_Signal()
     p1 = multiprocessing.Process(target = heartbeat.heartbeat)
     p2 = multiprocessing.Process(target = user_register.user_register)
     p3 = multiprocessing.Process(target = user_GPS.start)
