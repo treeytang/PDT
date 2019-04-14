@@ -12,37 +12,32 @@ class Ticket_Query(myunit.MyTest):
 
     def test_1_come_user_manage(self):
         '''检查进入用户管理页面验证'''
-        self.user_login(username="thy", password="admin")
+        self.user_login(username="t", password="admin")
         msg = User_manage(self.driver).come_page_verify()
         self.assertEqual(msg, True)
-        picture.insert_img(self.driver, "user_pwd_true.png")
 
     def test_verify_user_num_verify(self):
-        '''检查用户管理页面 用户显示数量验证'''
-        self.user_login(username="thy", password="admin")
+        '''检查用户管理页面 验证用户显示数量'''
+        self.user_login(username="t", password="admin")
         msg = User_manage(self.driver).query_user_num()
         self.assertEqual(msg.strip(), '4')
-        picture.insert_img(self.driver, "user_pwd_true.png")
 
     def test_verify_input_query_user_1(self):
         '''检查用户管理页面 通过登录名模糊查询 查询登录名中含有w的用户数量'''
-        self.user_login(username="thy", password="admin")
+        self.user_login(username="t", password="admin")
         msg = User_manage(self.driver).input_query_1()
         self.assertEqual(msg.strip(), '1')
-        picture.insert_img(self.driver, "user_pwd_true.png")
 
 
     def test_verify_input_query_user_2(self):
-        '''检查用户管理页面 通过登录名模糊查询 查询姓名名中含有“测试”的用户数量'''
-        self.user_login(username="thy", password="admin")
+        '''检查用户管理页面 通过登录名模糊查询 查询姓名名中含有“管理员”的用户数量'''
+        self.user_login(username="t", password="admin")
         msg = User_manage(self.driver).input_query_2()
         self.assertEqual(msg.strip(), '1')
-        picture.insert_img(self.driver, "user_pwd_true.png")
 
 
     def test_add_user_verify(self):
-        '''检查用户管理页面 用户添加信息验证'''
-        self.user_login(username='admin', password='admin')
+        '''检查用户管理页面 用户添加，和删除用户 验证'''
+        self.user_login(username='t', password='admin')
         msg = User_manage(self.driver).add_user()
         self.assertEqual(msg, True)
-        picture.insert_img(self.driver, 'user_pwd_true.png')

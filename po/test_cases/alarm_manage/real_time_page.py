@@ -93,7 +93,10 @@ class Real_Alarm_Query(Page):
         #实时告警数量验证
         num = self.get_alarm_num()
         self.come_iframe_page()
-        msg = self.find_elements(*self.real_alarm_num)
-        s = (str(len(msg)))
-        l = [s, str(num)]
-        return l
+        if self.find_elements(*self.real_alarm_num):
+            msg = self.find_elements(*self.real_alarm_num)
+            s = (str(len(msg)))
+            l = [s, str(num)]
+            return l
+        else:
+            return ['0',str(num)]

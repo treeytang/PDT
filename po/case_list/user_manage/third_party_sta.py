@@ -29,37 +29,37 @@ class Ticket_Query(myunit.MyTest):
         self.assertEqual(msg, True)
 
     def test_add_user_1(self):
-        '''检查进入第三方用户界面 点击用户添加并保存 号码为英文 验证添加失败'''
+        '''检查进入第三方用户界面 点击用户添加并保存 号码为英文'''
         self.user_login(username="admin", password="admin")
         msg = ThirdParty(self.driver).add_user_1()
         self.assertEqual(msg, True)
 
     def test_add_user_2(self):
-        '''检查进入第三方用户界面 点击用户添加并保存 号码为数字+英文 验证：添加失败'''
+        '''检查进入第三方用户界面 点击用户添加并保存 号码为数字+英文'''
         self.user_login(username="admin", password="admin")
         msg = ThirdParty(self.driver).add_user_2()
         self.assertEqual(msg, True)
 
     def test_add_user_3(self):
-        '''检查进入第三方用户界面 点击用户添加并保存 号码为中文 验证：添加失败'''
+        '''检查进入第三方用户界面 点击用户添加并保存 号码为中文 '''
         self.user_login(username="admin", password="admin")
         msg = ThirdParty(self.driver).add_user_3()
         self.assertEqual(msg, True)
 
     def test_add_user_4(self):
-        '''检查进入第三方用户界面 点击用户添加并保存 号码为符号 验证：添加失败'''
+        '''检查进入第三方用户界面 点击用户添加并保存 号码为符号 '''
         self.user_login(username="admin", password="admin")
         msg = ThirdParty(self.driver).add_user_4()
         self.assertEqual(msg, True)
 
     def test_add_user_5(self):
-        '''检查进入第三方用户界面 点击用户添加并保存 号码已存在号码 验证：是否出现弹窗'''
+        '''检查进入第三方用户界面 点击用户添加,添加一个已存在的用户并保存 是否出现弹窗'''
         self.user_login(username="admin", password="admin")
         msg = ThirdParty(self.driver).add_user_5()
-        self.assertEqual(msg, True)
+        self.assertEqual(msg, True)#在测试中，如果添加后直接到了列表页面，并找到了用户，那么说明没有提示窗口
 
     def test_del_user(self):
-        '''检查进入第三方用户界面 点击删除一个用户号码 验证：是否删除成功'''
+        '''检查进入第三方用户界面 点击删除一个用户号码 验证：是否成功删除用户'''
         self.user_login(username="admin", password="admin")
         msg = ThirdParty(self.driver).del_user()
         self.assertEqual(msg, True)

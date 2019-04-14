@@ -14,7 +14,7 @@ class Ticket_Query(myunit.MyTest):
         '''检查进入通话组管理界面(默认进入通话组列表) 验证页面显示数量'''
         self.user_login(username="admin", password="admin")
         msg = Call_Group(self.driver).verify_show_num()
-        self.assertEqual(msg.strip(), '655')
+        self.assertEqual(msg.strip(), '669')
 
     def test_show_page_num_1(self):
         '''检查进入通话组管理界面(默认进入通话组列表) 验证每页显示输入框与定量显示'''
@@ -26,7 +26,7 @@ class Ticket_Query(myunit.MyTest):
         '''检查进入通话组管理界面(默认进入通话组列表) 点击添加 添加一个正确的组 只填写号码范围 800-40-900/40-910 而后通过操作栏删除'''
         self.user_login(username="admin", password="admin")
         msg = Call_Group(self.driver).add_group_1()
-        self.assertEqual(msg.strip(), '11')
+        self.assertEqual(msg.strip(), 'pass')
 
     def test_add_group_1_1(self):
         '''检查进入通话组管理界面(默认进入通话组列表) 点击添加 添加一个正确的组 只填写号码范围 800-40-900/40-910 而后通过复选框全选删除'''
@@ -59,32 +59,32 @@ class Ticket_Query(myunit.MyTest):
      #   self.assertEqual(msg.strip(), '1')
 
     def test_add_group_2(self):
-        '''检查进入通话组管理界面(默认进入通话组列表) 点击添加 添加一个以存在的组 号码范围 328 20 901/910 验证:是否出现替换提示弹窗'''
+        '''检查进入通话组管理界面(默认进入通话组列表) 点击添加 添加一个以存在的组 号码范围 328 20 990/999 验证:是否出现替换提示弹窗'''
         self.user_login(username="admin", password="admin")
         msg = Call_Group(self.driver).add_group_2()
         self.assertEqual(msg, True)
 
 
     def test_add_group_3(self):
-        '''检查进入通话组管理界面(默认进入通话组列表) 点击添加 添加一个以存在的组 号码范围 328 20 901/910 验证:点击取消是否关闭弹窗留在添加页面'''
+        '''检查进入通话组管理界面(默认进入通话组列表) 点击添加 添加一个已存在的组 号码范围 328 20 990/999 验证:点击取消是否关闭弹窗留在添加页面'''
         self.user_login(username="admin", password="admin")
         msg = Call_Group(self.driver).add_group_3()
         self.assertEqual(msg, True)
 
     def test_add_group_4(self):
-        '''检查进入通话组管理界面(默认进入通话组列表) 点击添加 添加一个以存在的组 号码范围 328 20 901/910 验证:点击多选择框和“是” 是否返回通话组列表页面'''
+        '''检查进入通话组管理界面(默认进入通话组列表) 点击添加 添加一个已存在的组 号码范围 328 20 990/999 验证:点击多选择框和“是” 是否返回通话组列表页面'''
         self.user_login(username="admin", password="admin")
         msg = Call_Group(self.driver).add_group_4()
         self.assertEqual(msg, True)
 
     def test_add_group_5(self):
-        '''检查进入通话组管理界面(默认进入通话组列表) 点击添加 添加一个以存在的组 号码范围 328 20 901/910 验证:点击多选择框和“否” 是否返回通话组列表页面'''
+        '''检查进入通话组管理界面(默认进入通话组列表) 点击添加 添加一个已存在的组 号码范围 328 20 990/999 验证:点击多选择框和“否” 是否返回通话组列表页面'''
         self.user_login(username="admin", password="admin")
         msg = Call_Group(self.driver).add_group_5()
         self.assertEqual(msg, True)
 
     def test_add_group_6(self):
-        '''检查进入通话组管理界面(默认进入通话组列表) 点击添加 添加一个以存在的组 号码范围 328 20 992 验证:点击多选择框和“是” 是否返回通话组列表页面'''
+        '''检查进入通话组管理界面(默认进入通话组列表) 点击添加 添加一个已存在的组 号码范围 328 20 990 验证:点击多选择框和“是” 是否返回通话组列表页面'''
         self.user_login(username="admin", password="admin")
         msg = Call_Group(self.driver).add_group_6()
         self.assertEqual(msg, True)

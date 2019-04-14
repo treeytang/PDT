@@ -99,3 +99,4 @@ class Heart_Beat():
         socket_recv_thread.start()
         socket_send_thread.start()
 
+Heart_Beat().heartbeat()

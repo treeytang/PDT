@@ -46,8 +46,14 @@ class Ticket_Manage_Query(Page):
     start_date_loc = (By.NAME, "beginDate")
     #自定义查询结束输入框定位
     end_date_loc = (By.ID, "endDate")
-
-
+    #自定义时间选择框嵌套页面定位
+    custom_iframe = (By.XPATH, '/html/body/div[2]/iframe')
+    #自定义时间选择框月定位
+    custom_month_loc = (By.XPATH, '//*[@id="dpTitle"]/div[3]/input')
+    # 自定义时间选择框月定位
+    custom_year_loc = (By.XPATH, '//*[@id="dpTitle"]/div[4]/input')
+    #开始时间确定按钮定位
+    custom_submit_loc = (By.ID, 'dpOkInput')
 
 
     #定义一页显示多少条定位
@@ -179,15 +185,20 @@ class Ticket_Manage_Query(Page):
 
 
     #指定时间查询主叫用户对应的类型
-    def designate_time(self, calling_user, start_time="2018-11-01 00:00:00", end_time="2018-11-30 23:59:59"):
+    def designate_time(self, calling_user, start_time="2019-03-01 00:00:00", end_time="2019-04-01 23:59:59"):
         ActionChains(self.driver).move_to_element(self.find_element(*self.start_time_loc)).perform()
         self.find_element(*self.custom_loc).click()
-        self.find_element(*self.start_date_loc).send_keys(start_time)
-        self.find_element(*self.custom_loc).click()
-        self.find_element(*self.end_date_loc).send_keys(end_time)
-        self.find_element(*self.custom_loc).click()
+        js = "document.querySelector('#startDate').value = '{}'".format(start_time)
+        self.script(js)
+        js = "document.querySelector('#endDate').value = '{}'".format(end_time)
+        self.script(js)
         self.find_element(*self.end_date_loc).click()
-        self.find_element(*self.end_date_loc).send_keys(Keys.ENTER)
+        self.switch_to_default()
+        self.switch_frame(self.find_element(*self.custom_iframe))
+        self.find_element(*self.custom_submit_loc).click()
+        self.switch_to_default()
+        self.switch_frame(self.ticket_iframe_id)
+        sleep(0.5)
         js = "var q=document.documentElement.scrollTop=10000"
         self.script(js)
         self.find_element(*self.page_any_loc).send_keys("1")
@@ -202,15 +213,19 @@ class Ticket_Manage_Query(Page):
 
 
     #指定时间查询被叫用户对应的类型
-    def designate_time_called(self, called_user, start_time="2018-11-01 00:00:00", end_time="2018-11-30 23:59:59"):
+    def designate_time_called(self, called_user, start_time="2019-03-01 00:00:00", end_time="2019-04-01 23:59:59"):
         ActionChains(self.driver).move_to_element(self.find_element(*self.start_time_loc)).perform()
         self.find_element(*self.custom_loc).click()
-        self.find_element(*self.start_date_loc).send_keys(start_time)
-        self.find_element(*self.custom_loc).click()
-        self.find_element(*self.end_date_loc).send_keys(end_time)
-        self.find_element(*self.custom_loc).click()
+        js = "document.querySelector('#startDate').value = '{}'".format(start_time)
+        self.script(js)
+        js = "document.querySelector('#endDate').value = '{}'".format(end_time)
+        self.script(js)
         self.find_element(*self.end_date_loc).click()
-        self.find_element(*self.end_date_loc).send_keys(Keys.ENTER)
+        self.switch_to_default()
+        self.switch_frame(self.find_element(*self.custom_iframe))
+        self.find_element(*self.custom_submit_loc).click()
+        self.switch_to_default()
+        self.switch_frame(self.ticket_iframe_id)
         js = "var q=document.documentElement.scrollTop=10000"
         self.script(js)
         # 每页显示多少条
@@ -287,21 +302,28 @@ class Ticket_Manage_Query(Page):
 
 
 
+
+
     def custom_time_query1(self):
         '''自定义时间查询 正确的起止时间'''
         self.come_ticket()
+        #鼠标移动到摸一个元素后，先不执行，等到执行perform再执行
         ActionChains(self.driver).move_to_element(self.find_element(*self.start_time_loc)).perform()
         self.find_element(*self.custom_loc).click()
-        self.find_element(*self.start_date_loc).send_keys("2018-11-12 00:00:00")
-        self.find_element(*self.end_date_loc).send_keys("2018-12-12 00:00:00")
-        sleep(3)
-        self.find_element(*self.end_date_loc).send_keys(Keys.ENTER)
-        # sleep(3)
+
+        js = "document.querySelector('#startDate').value = '2019-03-01 00:00:00'"
+        self.script(js)
+        js = "document.querySelector('#endDate').value = '2019-04-01 23:59:59'"
+        self.script(js)
+        self.find_element(*self.end_date_loc).click()
+        self.switch_to_default()
+        self.switch_frame(self.find_element(*self.custom_iframe))
+        self.find_element(*self.custom_submit_loc).click()
+        self.switch_to_default()
+        self.switch_frame(self.ticket_iframe_id)
         if self.find_element(*self.table_line):
-            sleep(3)
-            return "ok"
+            return "pass"
         else:
-            sleep(3)
             return "fail"
 
 
@@ -311,17 +333,24 @@ class Ticket_Manage_Query(Page):
         self.come_ticket()
         ActionChains(self.driver).move_to_element(self.find_element(*self.start_time_loc)).perform()
         self.find_element(*self.custom_loc).click()
-        self.find_element(*self.start_date_loc).send_keys("2018-01-01 00:00:00")
-        self.find_element(*self.end_date_loc).send_keys("2019-12-12 23:59:59")
-        self.find_element(*self.end_date_loc).send_keys(Keys.ENTER)
+        self.switch_to_default()
+        self.switch_frame(self.ticket_iframe_id)
+        js = "document.querySelector('#startDate').value = '2019-03-01 00:00:00'"
+        self.script(js)
+        js = "document.querySelector('#endDate').value = '2019-05-01 23:59:59'"
+        self.script(js)
+        self.find_element(*self.end_date_loc).click()
+        self.switch_to_default()
+        self.switch_to_default()
+        self.find_element(*(By.ID, 'logo')).click()
         try:
-            WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(*self.alert_location()))
-            print("找到了alert")
-            return "出现弹窗"
+            if self.alert_location():
+                print(self.alert_location().text)
+                print("找到了alert")
+            return "pass"
         except:
             print("没有找到alert")
-
-            return "没有弹窗"
+            return "fail"
 
 
 
@@ -330,17 +359,22 @@ class Ticket_Manage_Query(Page):
         self.come_ticket()
         ActionChains(self.driver).move_to_element(self.find_element(*self.start_time_loc)).perform()
         self.find_element(*self.custom_loc).click()
-        self.find_element(*self.start_date_loc).send_keys("2018-12-12 00:00:00")
-        self.find_element(*self.end_date_loc).send_keys("2018-10-10 23:59:59")
-        self.find_element(*self.end_date_loc).send_keys(Keys.ENTER)
+        js = "document.querySelector('#startDate').value = '2019-03-10 00:00:00'"
+        self.script(js)
+        js = "document.querySelector('#endDate').value = '2019-03-09 00:00:00'"
+        self.script(js)
+        self.find_element(*self.end_date_loc).click()
+        self.switch_to_default()
+        self.switch_to_default()
+        self.find_element(*(By.ID, 'logo')).click()
         try:
-            WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(*self.alert_location()))
-            print("找到了alert")
-            return "出现弹窗"
+            if self.alert_location():
+                print(self.alert_location().text)
+                print("找到了alert")
+            return "pass"
         except:
             print("没有找到alert")
-
-            return "没有弹窗"
+            return "fail"
 
 
 
@@ -349,23 +383,29 @@ class Ticket_Manage_Query(Page):
         self.come_ticket()
         ActionChains(self.driver).move_to_element(self.find_element(*self.start_time_loc)).perform()
         self.find_element(*self.custom_loc).click()
-        self.find_element(*self.start_date_loc).send_keys("2019-12-12 00:00:00")
-        self.find_element(*self.end_date_loc).send_keys("2018-12-12 23:59:59")
-        self.find_element(*self.end_date_loc).send_keys(Keys.ENTER)
+        js = "document.querySelector('#startDate').value = '2020-03-10 00:00:00'"
+        self.script(js)
+        js = "document.querySelector('#endDate').value = '2019-04-01 00:00:00'"
+        self.script(js)
+        self.find_element(*self.end_date_loc).click()
+        self.switch_to_default()
+        self.switch_to_default()
+        self.find_element(*(By.ID, 'logo')).click()
         try:
-            WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(*self.alert_location()))
-            print("找到了alert")
-            return "出现弹窗"
+            if self.alert_location():
+                print(self.alert_location().text)
+                print("找到了alert")
+            return "pass"
         except:
             print("没有找到alert")
-            return "没有弹窗"
+            return "fail"
 
 
 
     def query_calling_voc_num(self):
-        '''查询用户2018/11/1到2018/11/30主叫语音数量'''
+        '''查询用户2019/03/01到201/04/01主叫语音数量'''
         self.come_ticket()
-        calling_user = "445101"
+        calling_user = "44530214"
         self.designate_time(calling_user)
         s = self.get_query_num()
         print("查询条数共计：%s条" % s)
@@ -374,9 +414,9 @@ class Ticket_Manage_Query(Page):
 
 
     def query_calling_reg_num(self):
-        '''查询用户2018/11/1到2018/11/30主叫注册数量'''
+        '''查询用户2019/03/01到2019/04/01主叫注册数量'''
         self.come_ticket()
-        calling_user = "445101"
+        calling_user = "44530214"
         self.designate_time(calling_user)
         self.find_element(*self.reg_loc).click()
         s = self.get_query_num()
@@ -386,9 +426,9 @@ class Ticket_Manage_Query(Page):
 
 
     def query_calling_sms_num(self):
-        '''查询用户2018/11/1到2018/11/30主叫短信数量'''
+        '''查询用户2019/03/01到201/04/01主叫短信数量'''
         self.come_ticket()
-        calling_user = "445101"
+        calling_user = "44530214"
         self.designate_time(calling_user)
         self.find_element(*self.SMS_loc).click()
         s = self.get_query_num()
@@ -398,9 +438,9 @@ class Ticket_Manage_Query(Page):
 
 
     def query_calling_gps_num(self):
-        '''查询用户2018/11/1到2018/11/30主叫gps数量'''
+        '''查询用户2019/03/01到201/04/01主叫gps数量'''
         self.come_ticket()
-        calling_user = '445105'
+        calling_user = '445110'
         self.designate_time(calling_user)
         self.find_element(*self.GPS_loc).click()
         # 获取查询条数
@@ -411,12 +451,12 @@ class Ticket_Manage_Query(Page):
 
 
     def query_calling_stun_num(self):
-        '''查询用户2018/11/1到2018/11/30被叫 复活 数量'''
+        '''查询用户2019/03/01到2019/04/01被叫 复活 数量'''
         self.come_ticket()
-        calling_user = "445105"
-        start_time = "2018-09-01 00:00:00"
-        end_time = "2018-09-30 23:59:59"
-        self.designate_time(calling_user, start_time, end_time)
+        calling_user = "445110"
+        start_time = "2019/03/01 00:00:00"
+        end_time = "2019/04/01 23:59:59"
+        self.designate_time(calling_user)
         self.find_element(*self.stun_loc).click()
         sleep(1)
         # 获取查询条数
@@ -429,10 +469,8 @@ class Ticket_Manage_Query(Page):
     def query_calling_grp_num(self):
         '''查询用户2018/11/1到2018/11/30主叫 重组/去重组 数量'''
         self.come_ticket()
-        calling_user = '445100'
-        start_time = "2018-08-01 00:00:00"
-        end_time = "2018-08-31 23:59:59"
-        self.designate_time(calling_user, start_time, end_time)
+        calling_user = '445110'
+        self.designate_time(calling_user)
         self.find_element(*self.group_loc).click()
         # 获取查询条数
         s = self.get_query_num()
@@ -443,9 +481,9 @@ class Ticket_Manage_Query(Page):
 
 
     def query_called_voc_num(self):
-        '''查询用户2018/11/1到2018/11/30被叫数量'''
+        '''查询用户2019/03/01到2019/04/01被叫数量'''
         self.come_ticket()
-        called_user = "44530212"
+        called_user = "44530214"
         self.designate_time_called(called_user)
         # 获取查询条数
         s = self.get_query_num()
@@ -454,9 +492,9 @@ class Ticket_Manage_Query(Page):
 
 
     def query_called_reg_num(self):
-        '''查询用户2018/11/1到2018/11/30被叫 注册 数量'''
+        '''查询用户2019/03/01到2019/04/01被叫 注册/注销 数量'''
         self.come_ticket()
-        called_user = "4459601"
+        called_user = "44530214"
         self.designate_time_called(called_user)
         self.find_element(*self.reg_loc).click()
         # 获取查询条数
@@ -465,9 +503,9 @@ class Ticket_Manage_Query(Page):
         return s
 
     def query_called_sms_num(self):
-        '''查询用户2018/11/1到2018/11/30被叫 注册 数量'''
+        '''查询用户2019/03/01到2019/04/01被叫 短信 数量'''
         self.come_ticket()
-        called_user = "44530211"
+        called_user = "44530214"
         self.designate_time_called(called_user)
         self.find_element(*self.SMS_loc).click()
         # 获取查询条数
@@ -478,9 +516,9 @@ class Ticket_Manage_Query(Page):
 
 
     def query_called_gps_num(self):
-        '''查询用户2018/11/1到2018/11/30被叫 gps 数量'''
+        '''查询用户2019/03/01到2019/04/01被叫 gps 数量'''
         self.come_ticket()
-        called_user = "44530211"
+        called_user = "44530214"
         self.designate_time_called(called_user)
         self.find_element(*self.GPS_loc).click()
         # 获取查询条数
@@ -491,12 +529,10 @@ class Ticket_Manage_Query(Page):
 
 
     def query_called_stun_num(self):
-        '''查询用户2018/11/1到2018/11/30被叫 复活 数量'''
+        '''查询用户2019/03/01到2019/04/01被叫 复活 数量'''
         self.come_ticket()
-        called_user = "62224501"
-        start_time = "2018-09-01 00:00:00"
-        end_time = "2018-09-30 23:59:59"
-        self.designate_time_called(called_user, start_time, end_time)
+        called_user = "44530214"
+        self.designate_time_called(called_user)
         self.find_element(*self.stun_loc).click()
         # 获取查询条数
         s = self.get_query_num()

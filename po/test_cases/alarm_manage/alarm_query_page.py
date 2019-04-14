@@ -77,6 +77,15 @@ class Alarm_Query(Page):
     # 告警等级一般定位
     alarm_level_slight = (By.XPATH, '//*[@id="contentTable"]/tbody[1]/tr/th[5]/div[3]/div[4]/span')
 
+    # 查询 自定义 天定位
+    custom_loc = (By.XPATH, '//*[@id="custom"]/a')
+    # 自定义查询结束输入框定位
+    end_date_loc = (By.ID, "endDate")
+    # 自定义时间选择框嵌套页面定位
+    custom_iframe = (By.XPATH, '/html/body/div[2]/iframe')
+    # 开始时间确定按钮定位
+    custom_submit_loc = (By.ID, 'dpOkInput')
+
     def come_iframe_comm(self):
         #   公用函数   进入告警查询页面
         self.find_element(*self.alarm_manage_loc).click()
@@ -101,9 +110,9 @@ class Alarm_Query(Page):
         self.come_iframe_comm()
         self.find_element(*self.sta_end_time_loc).click()
         self.find_element(*self.custom_time_loc).click()
-        self.find_element(*self.start_time_loc).send_keys('2018-01-01 00:00:00')
+        self.find_element(*self.start_time_loc).send_keys('2019-03-01 00:00:00')
         self.find_element(*self.custom_time_loc).click()
-        self.find_element(*self.end_time_loc).send_keys('2018-12-29 23:59:59')
+        self.find_element(*self.end_time_loc).send_keys('2019-03-31 23:59:59')
         self.find_element(*self.custom_time_loc).click()
         self.find_element(*self.end_time_loc).click()
         self.send_enter(*self.end_time_loc)
@@ -120,10 +129,46 @@ class Alarm_Query(Page):
         print("查询条数共计：%s条" % s)
         return s
 
+    # 指定时间查询被叫用户对应的类型
+    def designate_time_called(self, called_user='', start_time="2019-03-01 00:00:00", end_time="2019-03-31 23:59:59"):
+        self.come_iframe_comm()
+        self.find_element(*self.sta_end_time_loc).click()
+        ActionChains(self.driver).move_to_element(self.find_element(*self.custom_loc)).perform()
+        self.find_element(*self.custom_loc).click()
+        js = "document.querySelector('#startDate').value = '{}'".format(start_time)
+        self.script(js)
+        js = "document.querySelector('#endDate').value = '{}'".format(end_time)
+        self.script(js)
+        self.find_element(*self.end_date_loc).click()
+        self.switch_to_default()
+        self.switch_frame(self.find_element(*self.custom_iframe))
+        self.find_element(*self.custom_submit_loc).click()
+        self.switch_to_default()
+        self.switch_frame(self.iframe_id_loc)
+        # # 每页显示多少条
+        # self.find_element(*self.page_any_loc).send_keys("1")
+        # self.find_element(*self.page_any_loc).send_keys(Keys.ENTER)
+        js = "var q=document.documentElement.scrollTop=10000"
+        self.script(js)
+        sleep(0.5)
+        # 每页显示多少条
+        self.find_element(*self.page_any_loc).send_keys("1")
+        self.find_element(*self.page_any_loc).send_keys(Keys.ENTER)
+        # # 输入查询用户
+        # ActionChains(self.driver).move_to_element(self.find_element(*self.called_user_loc)).perform()
+        # sleep(1)
+        # self.find_element(*self.called_user_loc).click()
+        # self.find_element(*self.called_user_box_loc).send_keys(called_user)
+        # self.find_element(*self.called_user_box_loc).send_keys(Keys.ENTER)
+        # sleep(1)
+        # ActionChains(self.driver).move_to_element(self.find_element(*self.session_type_loc)).perform()
+
+
+
 
     def paging_verify(self):
         #验证分页查询每页显示数量
-        self.custom_time_query_comm()
+        self.designate_time_called()
         num = self.find_elements(*(By.CLASS_NAME, 'contentbody'))
         return str(len(num))
 
@@ -131,13 +176,13 @@ class Alarm_Query(Page):
 
     def custom_time_verify_0(self):
         #自定义时间查询所有告警数量
-        self.custom_time_query_comm()
+        self.designate_time_called()
         s = self.query_num()
         return s
 
     def custom_time_verify_1(self):
         #自定义时间查询告警等级为严重的数量
-        self.custom_time_query_comm()
+        self.designate_time_called()
         self.find_element(*self.alarm_level_loc).click()
         self.find_element(*self.alarm_level_serious).click()
         s = self.query_num()
@@ -145,7 +190,7 @@ class Alarm_Query(Page):
 
     def custom_time_verify_2(self):
         #自定义时间查询告警等级为一般的数量
-        self.custom_time_query_comm()
+        self.designate_time_called()
         self.find_element(*self.alarm_level_loc).click()
         self.find_element(*self.alarm_level_generic).click()
         s = self.query_num()
@@ -153,7 +198,7 @@ class Alarm_Query(Page):
 
     def custom_time_verify_3(self):
         #自定义时间查询告警等级为轻微的数量
-        self.custom_time_query_comm()
+        self.designate_time_called()
         self.find_element(*self.alarm_level_loc).click()
         self.find_element(*self.alarm_level_slight).click()
         s = self.query_num()

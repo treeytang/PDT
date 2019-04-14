@@ -3,6 +3,9 @@ import random
 import socket
 import threading
 import time
+import os
+
+
 
 
 class User_Register():
@@ -58,11 +61,10 @@ class User_Register():
 
 
     def ur_udp_socket_send_client(self, udp_socket_client, send_address):
-        begin_time = time.time()
         print('连接成功,开始发送信息了:')
         sleep(5)
         a = 1
-        for userid in range(3407873, 3410873):
+        for userid in range(4882433, 4882450):
 
             print("用户注册 信息发送第%d遍" % a)
             filename = open("userid.txt", "a")
@@ -80,7 +82,7 @@ class User_Register():
                         "c:a/m\r\n" \
                         "l:43\r\n" \
                         "\r\n" \
-                        "<attachgroup><AG>1146886</AG></attachgroup>\r\n".format(userid, self.call_ID(), userid,
+                        "<attachgroup><AG>16515073</AG></attachgroup>\r\n".format(userid, self.call_ID(), userid,
                                                                                  self.tags(), self.Qseq(), self.via_by())
             a += 1
             # # 退出程序
@@ -93,15 +95,16 @@ class User_Register():
             # else:
             #     print("发送内容为：",send_data)
             udp_socket_client.sendto(send_data.encode('utf-8'), send_address)
-            sleep(0.02)
+            sleep(0.05)
 
-        end_time = time.time()
-        print(end_time-begin_time)
-
+        pid = os.getpid()
+        cmd = 'taskkill /pid ' + str(pid) + ' /f'
+        os.system(cmd)
 
 
     def user_register(self):
-        # sleep(20)
+        print(os.getpid())
+        # sleep(5)
         udp_socket_client = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
         udp_socket_client.bind((self.recv_ip, self.recv_port))
         recv_address = (self.recv_ip, self.recv_port)
@@ -116,4 +119,4 @@ class User_Register():
         socket_send_thread.start()
         print(1)
 
-# User_Register().user_register()
+User_Register().user_register()

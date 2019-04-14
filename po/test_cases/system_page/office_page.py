@@ -116,6 +116,7 @@ class User_Office(Page):
             s = '测试' + str(i)
             self.find_element(*self.office_area_name).send_keys(s)
             self.find_element(*self.organization_name).send_keys('成都')
+            self.find_element(*self.office_code).clear()
             self.find_element(*self.office_code).send_keys('111111111111')
             self.find_element(*self.save_loc).click()
             sleep(1)
@@ -124,15 +125,17 @@ class User_Office(Page):
             if msg:
                 add_list.append(msg)
         print(len(add_list))
-        print(len(self.find_elements(*(By.LINK_TEXT, '111111111111'))))
-        return str(len(add_list))
+        # print(len(self.find_elements(*(By.LINK_TEXT, '测试*成都'))))
+        if self.office_del_verify():
+            return str(len(add_list))
+        return False
 
 
-
-    #单位删除测试 循环删除 10 个单位
+    #单位删除测试 循环删除单位
     def office_del_verify(self):
-        self.come_office_manage()
+        # self.come_office_manage()
         del_list = self.find_elements(*(By.LINK_TEXT, '删除'))
+        # print(del_list)
         print("共有%d条记录"%(len(del_list)))
         i = 0
         while True:
@@ -145,12 +148,12 @@ class User_Office(Page):
             self.find_element(*(By.XPATH, '//*[@id="jbox-state-state0"]/div[2]/button[1]')).click()
             self.switch_frame(self.office_iframe_id)
             i+=1
-
-        length = len(self.find_elements(*(By.LINK_TEXT, '删除')))
+        if self.find_elements(*(By.LINK_TEXT, '删除')):
+        # length = len(self.find_elements(*(By.LINK_TEXT, '删除')))
         # element = WebDriverWait(self.driver, 5, 0.5).until(
         #     EC.presence_of_all_elements_located((By.LINK_TEXT, "删除"))
         # )
-        if length>0:
+        # if length>0:
             return False
         else:
             return True
@@ -176,7 +179,9 @@ class User_Office(Page):
         num = len(self.find_elements(*(By.XPATH, '//*[@id="treeTableList"]/tr')))-1
         print(num)
         print(len(add_list))
-        return str(num)
+        if self.office_del_verify():
+            return str(num)
+        return False
 
 
     def add_show_verify(self):
@@ -190,4 +195,6 @@ class User_Office(Page):
         self.find_element(*self.office_code).send_keys('111111111111')
         self.find_element(*self.save_loc).click()
         verify = self.find_element(*(By.LINK_TEXT, "测试成都")).text
-        return verify
+        if self.office_del_verify():
+            return verify
+        return False

@@ -16,7 +16,6 @@ class Ticket_Query(myunit.MyTest):
         self.user_login(username="admin", password="admin")
         msg = Alarm_Query(self.driver).come_alarm_query_verify()
         self.assertEqual(msg.strip(), "告警查询")
-        picture.insert_img(self.driver, "user_pwd_true.png")
 
 
     def test_paging_verify(self):
@@ -24,35 +23,34 @@ class Ticket_Query(myunit.MyTest):
         self.user_login(username="admin", password="admin")
         msg = Alarm_Query(self.driver).paging_verify()
         self.assertEqual(msg.strip(), "1")
-        picture.insert_img(self.driver, "user_pwd_true.png")
 
     def test_custom_time_quert(self):
-        '''自定义时间查询 2018-01-01 00:00:00-----2018-12-29 23:59:59'''
+        '''自定义时间查询 2019-03-01 00:00:00-----2019-03-31 23:59:59'''
         self.user_login(username="admin", password="admin")
         msg = Alarm_Query(self.driver).custom_time_verify_0()
-        self.assertEqual(msg.strip(), "575")
-        picture.insert_img(self.driver, "user_pwd_true.png")
+        self.assertEqual(msg.strip(), "17")
+
 
     def test_custom_time_quert_1(self):
-        '''自定义时间查询 2018-01-01 00:00:00-----2018-12-29 23:59:59 告警等级为严重得数量'''
+        '''自定义时间查询 2019-03-01 00:00:00-----2019-03-31 23:59:59 告警等级为严重得数量'''
         self.user_login(username="admin", password="admin")
         msg = Alarm_Query(self.driver).custom_time_verify_1()
-        self.assertEqual(msg.strip(), "56")
-        picture.insert_img(self.driver, "user_pwd_true.png")
+        self.assertEqual(msg.strip(), "11")
 
-    def test_custom_time_quert_2(self):
-        '''自定义时间查询 2018-01-01 00:00:00-----2018-12-29 23:59:59 告警等级为严重得数量'''
-        self.user_login(username="admin", password="admin")
-        msg = Alarm_Query(self.driver).custom_time_verify_2()
-        self.assertEqual(msg.strip(), "19")
-        picture.insert_img(self.driver, "user_pwd_true.png")
+    #该用例暂时未启用，无相应的数据进行检验
+    # def test_custom_time_quert_2(self):
+    #     '''自定义时间查询 2019-03-01 00:00:00-----2019-03-31 23:59:59 告警等级为一般得数量'''
+    #     self.user_login(username="admin", password="admin")
+    #     msg = Alarm_Query(self.driver).custom_time_verify_2()
+    #     self.assertEqual(msg.strip(), "0")
+
 
     def test_custom_time_query_3(self):
-        '''自定义时间查询 2018-01-01 00:00:00-----2018-12-29 23:59:59 告警等级为严重得数量'''
+        '''自定义时间查询 2018-01-01 00:00:00-----2018-12-29 23:59:59 告警等级为轻微得数量'''
         self.user_login(username="admin", password="admin")
         msg = Alarm_Query(self.driver).custom_time_verify_3()
-        self.assertEqual(msg.strip(), "500")
-        picture.insert_img(self.driver, "user_pwd_true.png")
+        self.assertEqual(msg.strip(), "6")
+
 
     def test_network_event_log(self):
         '''进入网络事件日志'''

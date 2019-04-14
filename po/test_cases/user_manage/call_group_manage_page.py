@@ -230,8 +230,9 @@ class Call_Group(Page):
                 sleep(2)
             else:
                 break
-
-        return str(len(elements))
+        if len(elements)==11:
+            return 'pass'
+        return 'fail'
 
     def add_group_1_1(self):
         #添加组 只输入号码范围80040900/910
@@ -284,7 +285,7 @@ class Call_Group(Page):
         self.send_enter(*self.end_num_loc)
         sleep(3)
         elements = self.find_elements(*self.call_group_list_show_num)
-        sleep(2)
+        sleep(1)
         #复选框全选删除所添加的组号码
         self.find_element(*self.checkbox_all_loc).click()
         self.find_element(*self.del_loc).click()
@@ -299,9 +300,9 @@ class Call_Group(Page):
         self.send_keys('800', *self.group_area_code_loc)
         self.send_keys('40', *self.group_team_code_loc)
         self.send_keys('900', *self.group_group_code_loc)
-        #测试取消按钮
+        #测试确定按钮
         self.find_element(*self.ensure_loc).click()
-        #查看是否出现系统提示弹窗
+        #查看是否出现系统提示弹窗来确认添加
         self.switch_to_default()
         if self.find_element(*self.alert_sure_loc):
             return False

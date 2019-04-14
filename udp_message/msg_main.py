@@ -1,8 +1,8 @@
 import multiprocessing
 
-from GPS_signal import GPS_Signal
 from rcu_heartbeat import Heart_Beat
 from user_register import User_Register
+from GPS_signal import GPS_Signal
 
 '''
     author:haoyu Tang
@@ -27,7 +27,7 @@ if __name__ == "__main__":
     p3 = multiprocessing.Process(target = user_GPS.start)
     p1.start()
     p2.start()
-    p3.start()
+    # p3.start()
     print("The number of CPU is:" + str(multiprocessing.cpu_count()))
     for p in multiprocessing.active_children():
         print("child   p.name:" + p.name + "\tp.id" + str(p.pid))

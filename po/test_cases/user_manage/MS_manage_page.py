@@ -246,40 +246,40 @@ class Mobile_Station(Page):
         sleep(4)
         element = self.query_del('555555555555555')
         if len(element) == 1:
-            return '添加成功'
-        return 'Fail'
+            return "pass"
+        return 'fail'
 
     def add_icon_1_1(self):
         #进入开户界面 只填写基本信息 验证 号码范围 错误的区号 区号最小值减一 327
         self.basic_msg('327', '20', '410', first_num='1', serial_num='555555555555555', value='300')
         msg = self.find_element(*self.nullty_num_loc).text
         if msg=='无效号码':
-            return True
-        return False
+            return "pass"
+        return "fail"
 
     def add_icon_1_2(self):
         #进入开户界面 只填写基本信息 验证 号码范围 错误的区号 区号最大值加一 807  区号328--806   队号20--89  个号200--899
         self.basic_msg('807', '20', '410', first_num='1', serial_num='555555555555555', value='300')
         msg = self.find_element(*self.nullty_num_loc).text
         if msg=='无效号码':
-            return True
-        return False
+            return "pass"
+        return "fail"
 
     def add_icon_1_3(self):
         #进入开户界面 只填写基本信息 验证 号码范围 错误的区号 输入英文：aa  区号328--806   队号20--89  个号200--899
         self.basic_msg('aa', '20', '410', first_num='1', serial_num='555555555555555', value='300')
         msg = self.find_element(*self.nullty_num_loc).text
         if msg=='无效号码':
-            return True
-        return False
+            return "pass"
+        return "fail"
 
     def add_icon_1_4(self):
         #进入开户界面 只填写基本信息 验证 号码范围 错误的区号 输入中文：警察  区号328--806   队号20--89  个号200--899
         self.basic_msg('警察', '20', '410', first_num='1', serial_num='555555555555555', value='300')
         msg = self.find_element(*self.nullty_num_loc).text
         if msg=='无效号码':
-            return True
-        return False
+            return "pass"
+        return "fail"
 
     def add_icon_1_7(self):
         #进入开户界面 只填写基本信息 验证 号码范围 错误的区号 4位区号  区号328--806   队号20--89  个号200--899
@@ -287,16 +287,16 @@ class Mobile_Station(Page):
         sleep(5)
         msg = self.find_element(*self.nullty_num_loc).text
         if msg=='无效号码':
-            return True
-        return False
+            return "pass"
+        return "fail"
 
     def add_icon_1_8(self):
         #进入开户界面 只填写基本信息 验证 号码范围 错误的区号 2位区号  区号328--806   队号20--89  个号200--899
         self.basic_msg('44', '20', '410', first_num='1', serial_num='555555555555555', value='300')
         msg = self.find_element(*self.nullty_num_loc).text
         if msg=='无效号码':
-            return True
-        return False
+            return "pass"
+        return "fail"
 
 
     def add_icon_1_5(self):
@@ -305,74 +305,74 @@ class Mobile_Station(Page):
         msg = self.find_element(*self.nullty_num_loc).text
         sleep(5)
         if msg == '无效号码':
-            return True
-        return False
+            return "pass"
+        return "fail"
 
     def add_icon_1_6(self):
         #进入开户界面 只填写基本信息 验证 号码的范围 错误的队号 最小值减一：19
         self.basic_msg('800', '19', '300', first_num='1', serial_num='555555555555555', value='300')
         msg = self.find_element(*self.nullty_num_loc).text
         if msg == '无效号码':
-            return True
-        return False
+            return "pass"
+        return "fail"
 
     def add_icon_1_9(self):
         #进入开户界面 只填写基本信息 验证 号码的范围 错误的队号 输入英文:aa
         self.basic_msg('800', 'aa', '300', first_num='1', serial_num='555555555555555', value='300')
         msg = self.find_element(*self.nullty_num_loc).text
         if msg == '无效号码':
-            return True
-        return False
+            return "pass"
+        return "fail"
 
     def add_icon_1_10(self):
         #进入开户界面 只填写基本信息 验证 号码的范围 错误的队号 输入中文:警察
         self.basic_msg('800', '警察', '300', first_num='1', serial_num='555555555555555', value='300')
         msg = self.find_element(*self.nullty_num_loc).text
         if msg == '无效号码':
-            return True
-        return False
+            return "pass"
+        return "fail"
 
     def add_icon_1_11(self):
         #进入开户界面 只填写基本信息 验证 号码的范围 错误的个号 最大值加一：900
         self.basic_msg('800', '23', '900', first_num='1', serial_num='555555555555555', value='300')
         msg = self.find_element(*self.nullty_num_loc).text
         if msg == '无效号码':
-            return True
-        return False
+            return "pass"
+        return "fail"
 
     def add_icon_1_12(self):
         #进入开户界面 只填写基本信息 验证 号码的范围 错误的个号 最小值减一：199
         self.basic_msg('800', '23', '199', first_num='1', serial_num='555555555555555', value='300')
         msg = self.find_element(*self.nullty_num_loc).text
         if msg == '无效号码':
-            return True
-        return False
+            return "pass"
+        return "fail"
 
     def add_icon_1_13(self):
         #进入开户界面 只填写基本信息 验证 号码的范围 错误的个号 输入英文:aaa
         self.basic_msg('800', '23', 'aaa', first_num='1', serial_num='555555555555555', value='300')
         msg = self.find_element(*self.nullty_num_loc).text
         if msg == '无效号码':
-            return True
-        return False
+            return "pass"
+        return "fail"
 
     def add_icon_1_14(self):
         #进入开户界面 只填写基本信息 验证 号码的范围 错误的个号 输入中文:一二三
         self.basic_msg('800', '23', '一二三', first_num='1', serial_num='555555555555555', value='300')
         msg = self.find_element(*self.nullty_num_loc).text
         if msg == '无效号码':
-            return True
-        return False
+            return "pass"
+        return "fail"
 
     def add_icon_2(self):
         # 进入开户界面 只填写基本信息 验证 已注册的正确基本信息
-        self.basic_msg('328', '21', '203', first_num='0', serial_num='555555555555555', value='300')
+        self.basic_msg('445', '30', '214', first_num='0', serial_num='555555555555555', value='300')
         self.find_element(*self.add_loc).click()
         msg = self.find_element(*self.alert_loc).text
         self.find_element(*self.cancel_btn_loc).click()
         if msg == '以下号码已通过实名制审批，需要覆盖吗？':
-            return True
-        return False
+            return "pass"
+        return "fail"
 
     def add_icon_3(self):
         #进入开户界面 先填写基本信息再填写实名制信息 验证 实名制信息相关选择(边界值 全选第一个)
@@ -380,7 +380,9 @@ class Mobile_Station(Page):
         msg = self.real_name_system(text='海格恒通', gender='女', policeType='交警', position='二级警员')
         self.find_element(*self.add_loc).click()
         self.query_del('555555555555555')
-        return msg
+        if msg == ['海格恒通', '女', '交警', '二级警员']:
+            return "pass"
+        return "fail"
 
     def add_icon_4(self):
         #进入开户界面 先填写基本信息再填写实名制信息 验证 实名制信息相关选择(边界值 全选最后一个个)
@@ -388,7 +390,9 @@ class Mobile_Station(Page):
         msg = self.real_name_system(text='科立讯', gender='男', policeType='巡警', position='总警监')
         self.find_element(*self.add_loc).click()
         self.query_del('555555555555555')
-        return msg
+        if msg==['科立讯', '男', '巡警', '总警监']:
+            return "pass"
+        return "fail"
 
     def show_matrix(self):
         #进入矩阵显示模式页面
@@ -743,10 +747,13 @@ class Mobile_Station(Page):
 
     def local_online_user(self):
         #进入本地在线用户 检查显示数量
+        num = self.find_element(*(By.ID, 'radioNumber')).text
         self.come_iframe_page()
         self.find_element(*self.local_online_user_loc).click()
         elements = self.find_elements(*self.LOU_show_num)
-        return str(len(elements))
+        if str(len(elements))==num:
+            return "pass"
+        return "fail"
 
     def local_online_user_page(self):
         #进入本地在线用户 检查分页

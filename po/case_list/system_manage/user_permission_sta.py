@@ -11,25 +11,22 @@ class Ticket_Query(myunit.MyTest):
         User_permission(self.driver).user_login(username, password)
 
     def test_1_come_user_manage(self):
-        '''检查进入用户权限页面 验证'''
-        self.user_login(username="admin", password="admin")
+        '''检查进入用户权限页面验证'''
+        self.user_login(username="t", password="admin")
         msg = User_permission(self.driver).come_iframe_verify()
         self.assertEqual(msg.strip(), '权限列表')
-        picture.insert_img(self.driver, "user_pwd_true.png")
 
     def test_verify_user_num(self):
-        '''检查进入用户权限页面 显示数量 验证'''
-        self.user_login(username="admin", password="admin")
+        '''检查进入用户权限页面 验证显示数量'''
+        self.user_login(username="t", password="admin")
         msg = User_permission(self.driver).verify_user_num()
         self.assertEqual(msg.strip(), '4')
-        picture.insert_img(self.driver, "user_pwd_true.png")
 
     def test_add_permission(self):
         '''检查进入用户权限页面并进行 权限添加 验证'''
-        self.user_login(username="admin", password="admin")
+        self.user_login(username="t", password="admin")
         msg = User_permission(self.driver).add_permission()
         self.assertEqual(msg.strip(), '自动化测试1')
-        picture.insert_img(self.driver, "user_pwd_true.png")
 
     def test_modify_permission(self):
         '''检查进入用户权限页面 权限修改 验证'''

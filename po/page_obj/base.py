@@ -36,7 +36,7 @@ class Page(object):
         # return self.driver.find_element(*loc)
         try:
         # 确保所有元素是可见的
-        # 注意：以下入参为元组的元素，需要加*。python存在这种特性，就是将入参放在元组里。
+        # 注意：以下入参为元组的元素，需要加 * python存在这种特性，就是将入参放在元组里。
         #WebDriverWait(self.driver,10).until(lambda driver: driver.find_element(*loc).is_displayed())
         # 注意：以下入参本身是元组，不需要加*
             WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(loc))
@@ -45,22 +45,36 @@ class Page(object):
             print("%s 页面中未能找到 %s 元素"%(self, loc))
 
     def find_elements(self, *loc):
-        return self.driver.find_elements(*loc)
+        try:
+            WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(loc))
+            return self.driver.find_elements(*loc)
+        except:
+            print("%s 页面中未能找到 %s 元素" % (self, loc))
 
+    #用于执行一些js
     def script(self, src):
         return self.driver.execute_script(src)
 
+    #进入嵌套页面
     def switch_frame(self, loc):
         return self.driver.switch_to_frame(loc)
 
+    #返回上一层页面
     def switch_to_default(self):
         return self.driver.switch_to_default_content()
 
+    #获取弹窗
     def alert_location(self):
         return self.driver.switch_to_alert()
 
+    #回车
     def send_enter(self,*loc):
-        return self.find_element(*loc).send_keys(Keys.ENTER)
+        try:
+            WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(loc))
+            return self.find_element(*loc).send_keys(Keys.ENTER)
+        except:
+            print("%s 页面中未能找到 %s 元素" % (self, loc))
+
 
     def url(self):
         return self.driver.current_url
@@ -68,11 +82,10 @@ class Page(object):
     def select(self, *loc):
         return Select(self.driver.find_element(*loc))
 
-
+    #输入值
     def send_keys(self, value, *loc, clear_first=True, click_first=True):
         try:
-            # getattr相当于self.loc
-            # loc = getattr(self, "%s" % loc)
+
             if click_first:
                 self.find_element(*loc).click()
             if clear_first:

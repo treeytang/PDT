@@ -82,6 +82,11 @@ class User_FollowUp(Page):
     regist_num_loc = (By.XPATH, '//*[@id="track-data-summary"]/tr[3]/td[2]')
     #短信数量
     sms_num_loc = (By.XPATH, '//*[@id="track-data-summary"]/tr[5]/td[2]')
+    #摇晕复活数量
+    stun_num1_loc = (By.XPATH, '//*[@id="track-data-summary"]/tr[10]/td[2]')
+    stun_num2_loc = (By.XPATH, '//*[@id="track-data-summary"]/tr[12]/td[2]')
+    #gps数量
+    gps_num_loc = (By.XPATH, '//*[@id="track-data-summary"]/tr[13]/td[2]')
 
 
 
@@ -102,18 +107,19 @@ class User_FollowUp(Page):
         #进入表单验证
         self.come_page()
         verify = self.find_element(*self.verify_loc).text
-        return verify
-
+        if verify=='请输入需要查询的用户':
+            return 'pass'
+        return 'fail'
 
 
 
     def query_user_verify(self):
         #查询   公用函数
         self.come_page()
-        self.find_element(*self.input_box_loc).send_keys('445101')
+        self.find_element(*self.input_box_loc).send_keys('44530214')
         sleep(1)
         self.find_element(*self.year_moth_loc).click()
-        self.find_element(*self.year_moth_input_loc).send_keys('2018-11')
+        self.find_element(*self.year_moth_input_loc).send_keys('2019-03')
         self.send_enter(*self.year_moth_input_loc)
         sleep(3)
 
@@ -126,7 +132,7 @@ class User_FollowUp(Page):
     def query_user_verify_1(self):
         #输入正确的用户名 错误的时间 验证
         self.come_page()
-        self.find_element(*self.input_box_loc).send_keys('445101')
+        self.find_element(*self.input_box_loc).send_keys('44530214')
         sleep(1)
         self.find_element(*self.year_moth_loc).click()
         self.find_element(*self.year_moth_input_loc).send_keys('2019-11')
@@ -135,11 +141,13 @@ class User_FollowUp(Page):
 
 
     def query_user_verify_2(self):
-        # 输入正确的用户名时间 比对语音数据
+        # 输入正确的用户名时间 比对语音数据(单呼、组呼)
         self.query_user_verify()
         group = self.find_element(*self.group_call_num).text
         only = self.find_element(*self.only_call_num).text
+        print(group, only)
         num = int(group)+int(only)
+
         return str(num)
 
 
@@ -154,3 +162,16 @@ class User_FollowUp(Page):
         self.query_user_verify()
         sms_num = self.find_element(*self.sms_num_loc).text
         return sms_num
+
+    def query_user_verify_5(self):
+        # 输入正确的用户名时间进行搜索 比对摇晕复活数据
+        self.query_user_verify()
+        stun1 = self.find_element(*self.stun_num1_loc).text
+        stun2 = self.find_element(*self.stun_num2_loc).text
+        return str(int(stun1)+int(stun2))
+
+    def query_user_verify_6(self):
+        # 输入正确的用户名时间进行搜索 比对gps数据
+        self.query_user_verify()
+        gps = self.find_element(*self.gps_num_loc).text
+        return gps

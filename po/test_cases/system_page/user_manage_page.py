@@ -84,7 +84,6 @@ class User_manage(Page):
         #页面显示用户数量验证
         self.come_iframe_page()
         elements = self.find_elements(*self.user_nums)
-        print(len(elements))
         return str(len(elements))
 
     def input_query_1(self):
@@ -93,16 +92,14 @@ class User_manage(Page):
         self.find_element(*self.login_name_input).send_keys('w')
         self.send_enter(*self.login_name_input)
         elements = self.find_elements(*self.user_nums)
-        print(len(elements))
         return str(len(elements))
 
     def input_query_2(self):
         #通过登录名模糊查询 查询姓名中含有h的用户
         self.come_iframe_page()
-        self.find_element(*self.name_input).send_keys('测试')
+        self.find_element(*self.name_input).send_keys('管理员')
         self.send_enter(*self.name_input)
         elements = self.find_elements(*self.user_nums)
-        print(len(elements))
         return str(len(elements))
 
     def add_user(self):

@@ -83,7 +83,6 @@ class GPS_Signal():
         east_list = self.floatrange(start, stop, step)
         return east_list
 
-
     def coordinate(self, north_list, east_list):
         north = float(random.choice(north_list))
         east = float(random.choice(east_list))
@@ -94,8 +93,6 @@ class GPS_Signal():
             return self.coordinate(north_list, east_list)
         else:
             return [north, east]
-
-
 
     def transition(self,paramters):
         paramter = str(paramters).split('.')
@@ -113,6 +110,7 @@ class GPS_Signal():
         seconds = second[0]+second[1]
         return degree+minutes+'.'+seconds
 
+    #场强
     def upstream_field_strength(self, north, east):
         maximum = max(abs(self.rcu_north - float(north)), abs(self.rcu_east - float(east)))
         if maximum < 0.02:
@@ -150,9 +148,16 @@ class GPS_Signal():
         upstream_fs = self.upstream_field_strength(north, east)
         norths = self.transition(north)
         easts = self.transition(east)
-        send_data = "GPGLL,{},{},N,{},E,A,500,,{},<5%,{},I,15,,62224901,,,{},{},,,,,,,".format(user,norths,easts,self.utc_time(), upstream_fs, self.Bs_dn, self.lai)
+        send_data = "GPGLL,{},{},N,{},E,A,500,,{},<5%,{},I,15,,32820954,,,{},{},,,,,,,".format(user,norths,easts,
+                                                                                               self.utc_time(),
+                                                                                               upstream_fs,
+                                                                                               self.Bs_dn,
+                                                                                               self.lai)
         if int(count)%2==0:
-            send_data = "GPGLL,{},{},N,{},E,A,500,,{},{},{},I,15,,62224901,,,{},{},,,,,,,".format(user,norths,easts,self.utc_time(),down_fs, upstream_fs, self.Bs_dn, self.lai)
+            send_data = "GPGLL,{},{},N,{},E,A,500,,{},{},{},I,15,,32820954,,,{},{},,,,,,,".format(user,norths,easts,
+                                                                                                  self.utc_time(),
+                                                                                                  down_fs, upstream_fs,
+                                                                                                  self.Bs_dn, self.lai)
         a = 0
         for i in send_data:
             a = a ^ (ord(i))
@@ -161,14 +166,15 @@ class GPS_Signal():
         print(send_datas)
         self.udp_socket_client.sendto(send_datas.encode('utf-8'), self.send_address)
         if int(flag) == 1:
-            north = (float(north) - float(0.00005))
+            north = (float(north) - float(0.00008))
+            # north = (float(north) - float(0.005))
             # east = (float(east) - float(0.))
         counts = int(count) + 1
         dic[user] = "{},{},{},{}".format(flag, north, east, counts)
 
 
     def start(self):
-        sleep(400)
+        # sleep(500)
         initialize = 1
         filename = open('./userid.txt', 'r')
         l = (filename.read()).split('***')
@@ -188,9 +194,10 @@ class GPS_Signal():
             for user in l:
                 # 标记需要变动的用户
                 flag = random.choice(range(0, 2))
+                # flag = 1
                 if flag == 1:
                     counts += 1
-                if counts > (len(l) // 4):
+                if counts > (len(l) // 3):
                     flag = 0
                 n_e = self.coordinate(north_list, east_list)
                 north = n_e[0]
@@ -201,9 +208,9 @@ class GPS_Signal():
                 for user in dic:
                     self.send_signal(user, dic)
 
-                sleep(15)
+                sleep(5)
             sleep(2)
             initialize += 1
 
 
-# GPS_Signal().start()
+GPS_Signal().start()

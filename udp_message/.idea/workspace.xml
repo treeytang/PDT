@@ -2,9 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="16e395f4-b245-471c-a9cd-64ab1eef73ce" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GPS2.py" beforeDir="false" afterPath="$PROJECT_DIR$/GPS2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_gps/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_gps/gps66_122.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_gps/gps67_123.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_gps/gps68_124.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_gps/test_rcu_heartbeat.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_gps/test_user_register.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../po/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../po/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../po/case_list/user_manage/test_run1.py" beforeDir="false" afterPath="$PROJECT_DIR$/../po/case_list/user_manage/test_run1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GPS_signal.py" beforeDir="false" afterPath="$PROJECT_DIR$/GPS_signal.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/msg_main.py" beforeDir="false" afterPath="$PROJECT_DIR$/msg_main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rcu_heartbeat.py" beforeDir="false" afterPath="$PROJECT_DIR$/rcu_heartbeat.py" afterDir="false" />
@@ -19,43 +25,63 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/udp_message$msg_main.coverage" NAME="msg_main Coverage Results" MODIFIED="1551949647202" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/udp_message$user_register.coverage" NAME="user_register Coverage Results" MODIFIED="1551948588820" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/udp_message$gps66_122.coverage" NAME="gps66_122 Coverage Results" MODIFIED="1553681039549" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test_gps" />
+    <SUITE FILE_PATH="coverage/udp_message$test_user_register.coverage" NAME="test_user_register Coverage Results" MODIFIED="1554175636619" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test_gps" />
+    <SUITE FILE_PATH="coverage/udp_message$GPS_signal.coverage" NAME="GPS_signal Coverage Results" MODIFIED="1554710598729" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/udp_message$44530214.coverage" NAME="44530214 Coverage Results" MODIFIED="1553762090021" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test_gps" />
+    <SUITE FILE_PATH="coverage/udp_message$rcu_heartbeat.coverage" NAME="rcu_heartbeat Coverage Results" MODIFIED="1554713778631" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/udp_message$gps67_123.coverage" NAME="gps67_123 Coverage Results" MODIFIED="1553247615373" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test_gps" />
+    <SUITE FILE_PATH="coverage/udp_message$gps69_124.coverage" NAME="gps69_124 Coverage Results" MODIFIED="1552620781903" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test_gps" />
+    <SUITE FILE_PATH="coverage/udp_message$msg_main.coverage" NAME="msg_main Coverage Results" MODIFIED="1552353949996" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/udp_message$user_register.coverage" NAME="user_register Coverage Results" MODIFIED="1554715442312" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/udp_message$GPS2.coverage" NAME="GPS2 Coverage Results" MODIFIED="1551925300122" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/udp_message$GPS_signal.coverage" NAME="GPS_signal Coverage Results" MODIFIED="1551944685575" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/udp_message$user_writeoff.coverage" NAME="user_writeoff Coverage Results" MODIFIED="1551949195531" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/udp_message$gps68_124.coverage" NAME="gps68_124 Coverage Results" MODIFIED="1553681116989" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test_gps" />
+    <SUITE FILE_PATH="coverage/udp_message$test_rcu_heartbeat.coverage" NAME="test_rcu_heartbeat Coverage Results" MODIFIED="1554346434410" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test_gps" />
+    <SUITE FILE_PATH="coverage/udp_message$user_writeoff.coverage" NAME="user_writeoff Coverage Results" MODIFIED="1554715277659" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/GPS_signal.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-599">
-              <caret line="170" column="18" lean-forward="true" selection-start-line="170" selection-start-column="18" selection-end-line="170" selection-end-column="18" />
-              <folding>
-                <element signature="e#0#22#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/msg_main.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-              <folding>
-                <element signature="e#0#22#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/rcu_heartbeat.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-116">
-              <caret line="84" lean-forward="true" selection-start-line="84" selection-end-line="84" />
+            <state relative-caret-position="-529">
+              <caret line="64" lean-forward="true" selection-start-line="64" selection-end-line="64" />
+              <folding>
+                <element signature="e#0#22#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/user_register.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="591">
+              <caret line="121" column="31" selection-start-line="121" selection-start-column="31" selection-end-line="121" selection-end-column="31" />
+              <folding>
+                <element signature="e#0#22#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/user_writeoff.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-57">
+              <caret line="108" column="20" selection-start-line="108" selection-start-column="20" selection-end-line="108" selection-end-column="20" />
+              <folding>
+                <element signature="e#0#13#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/GPS_signal.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="326">
+              <caret line="210" column="24" lean-forward="true" selection-start-line="210" selection-start-column="24" selection-end-line="210" selection-end-column="24" />
               <folding>
                 <element signature="e#0#22#0" expanded="true" />
               </folding>
@@ -68,35 +94,19 @@
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/user_register.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2691">
-              <caret line="117" lean-forward="true" selection-start-line="117" selection-end-line="117" />
-              <folding>
-                <element signature="e#0#22#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/user_writeoff.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-58">
-              <caret line="104" column="29" lean-forward="true" selection-start-line="104" selection-start-column="29" selection-end-line="104" selection-end-column="29" />
-              <folding>
-                <element signature="e#0#13#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
       <find>print</find>
+      <find>3407873</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -106,19 +116,28 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/GPS2.py" />
+        <option value="$PROJECT_DIR$/msg_main.py" />
+        <option value="$PROJECT_DIR$/test_gps/gps69_124.py" />
+        <option value="$PROJECT_DIR$/gps69_124.py" />
+        <option value="$PROJECT_DIR$/test_gps/gps67_123.py" />
+        <option value="$PROJECT_DIR$/test_gps/userid.txt" />
+        <option value="$PROJECT_DIR$/test_gps/test_user_register.py" />
+        <option value="$PROJECT_DIR$/test_gps/gps68_124.py" />
+        <option value="$PROJECT_DIR$/test_gps/gps66_122.py" />
+        <option value="$PROJECT_DIR$/test_gps/44530214.py" />
         <option value="$PROJECT_DIR$/GPS_signal.py" />
+        <option value="$PROJECT_DIR$/test_gps/test_rcu_heartbeat.py" />
         <option value="$PROJECT_DIR$/user_writeoff.py" />
         <option value="$PROJECT_DIR$/rcu_heartbeat.py" />
         <option value="$PROJECT_DIR$/userid.txt" />
-        <option value="$PROJECT_DIR$/msg_main.py" />
         <option value="$PROJECT_DIR$/user_register.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="-507" />
-    <option name="y" value="12" />
-    <option name="width" value="1696" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="211" />
+    <option name="y" value="43" />
+    <option name="width" value="1465" />
     <option name="height" value="912" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -135,6 +154,11 @@
               <item name="udp_message" type="b2602c69:ProjectViewProjectNode" />
               <item name="udp_message" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="udp_message" type="b2602c69:ProjectViewProjectNode" />
+              <item name="udp_message" type="462c0819:PsiDirectoryNode" />
+              <item name="test_gps" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -143,9 +167,19 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/PDT_WEB" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\WorkSpace\udp_message\test_gps" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\WorkSpace\udp_message\test_gps" />
+      <recent name="D:\WorkSpace\udp_message" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -159,29 +193,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.user_writeoff">
-    <configuration name="GPS2" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="udp_message" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/GPS2.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.user_register">
     <configuration name="GPS_signal" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="udp_message" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -204,7 +216,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="msg_main" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="rcu_heartbeat" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="udp_message" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -217,7 +229,29 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/msg_main.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/rcu_heartbeat.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test_rcu_heartbeat" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="udp_message" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test_gps" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test_gps/test_rcu_heartbeat.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -272,11 +306,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.msg_main" />
-        <item itemvalue="Python.user_writeoff" />
         <item itemvalue="Python.user_register" />
+        <item itemvalue="Python.user_writeoff" />
+        <item itemvalue="Python.rcu_heartbeat" />
         <item itemvalue="Python.GPS_signal" />
-        <item itemvalue="Python.GPS2" />
+        <item itemvalue="Python.test_rcu_heartbeat" />
       </list>
     </recent_temporary>
   </component>
@@ -295,12 +329,33 @@
       <workItem from="1551923690802" duration="516000" />
       <workItem from="1551925260204" duration="471000" />
       <workItem from="1551926331300" duration="2403000" />
-      <workItem from="1551943109381" duration="6721000" />
+      <workItem from="1551943109381" duration="8397000" />
+      <workItem from="1552037277437" duration="716000" />
+      <workItem from="1552272195154" duration="5343000" />
+      <workItem from="1552353274740" duration="7228000" />
+      <workItem from="1552528797161" duration="4741000" />
+      <workItem from="1552617958843" duration="10401000" />
+      <workItem from="1552873777267" duration="5629000" />
+      <workItem from="1552958567503" duration="3455000" />
+      <workItem from="1553063494339" duration="4457000" />
+      <workItem from="1553130408703" duration="4263000" />
+      <workItem from="1553217363017" duration="19116000" />
+      <workItem from="1553504778922" duration="3122000" />
+      <workItem from="1553567041869" duration="3029000" />
+      <workItem from="1553651508522" duration="6702000" />
+      <workItem from="1553735261647" duration="17169000" />
+      <workItem from="1553825920199" duration="5140000" />
+      <workItem from="1554081215127" duration="10990000" />
+      <workItem from="1554167017743" duration="7293000" />
+      <workItem from="1554253522311" duration="4686000" />
+      <workItem from="1554339459089" duration="7880000" />
+      <workItem from="1554367806226" duration="186000" />
+      <workItem from="1554687627031" duration="9861000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20446000" />
+    <option name="totallyTimeSpent" value="163529000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -312,18 +367,18 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1696" height="1026" extended-state="7" />
+    <frame x="211" y="43" width="1465" height="912" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.21577017" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13736655" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.22620381" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Debug" order="2" weight="0.39529675" />
+      <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="5" weight="0.394095" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32922733" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32922733" />
@@ -338,15 +393,15 @@
       <window_info anchor="right" id="Database" order="4" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21577017" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.11797066" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.26651737" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Debug" order="2" weight="0.39529675" />
+      <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
+      <window_info active="true" anchor="bottom" id="Run" order="5" visible="true" weight="0.36394176" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32922733" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32922733" />
@@ -375,30 +430,71 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/user_writeoff.py">
+    <entry file="file://$PROJECT_DIR$/test_gps/gps67_123.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-58">
-          <caret line="104" column="29" lean-forward="true" selection-start-line="104" selection-start-column="29" selection-end-line="104" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GPS_signal.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-599">
-          <caret line="170" column="18" lean-forward="true" selection-start-line="170" selection-start-column="18" selection-end-line="170" selection-end-column="18" />
+        <state relative-caret-position="380">
+          <caret line="192" column="57" selection-start-line="192" selection-start-column="57" selection-end-line="192" selection-end-column="57" />
           <folding>
             <element signature="e#0#22#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rcu_heartbeat.py">
+    <entry file="file://$PROJECT_DIR$/test_gps/userid.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-116">
-          <caret line="84" lean-forward="true" selection-start-line="84" selection-end-line="84" />
+        <state>
+          <caret selection-end-column="3760" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_gps/gps66_122.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4255">
+          <caret line="188" column="27" selection-start-line="188" selection-start-column="27" selection-end-line="188" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#22#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_gps/gps68_124.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3427">
+          <caret line="152" column="99" selection-start-line="152" selection-start-column="95" selection-end-line="152" selection-end-column="99" />
+          <folding>
+            <element signature="e#0#22#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_gps/test_rcu_heartbeat.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1334">
+          <caret line="62" selection-start-line="62" selection-end-line="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_gps/test_user_register.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1886">
+          <caret line="86" column="18" selection-start-line="86" selection-start-column="18" selection-end-line="86" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_gps/44530214.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="61" lean-forward="true" selection-start-line="61" selection-end-line="61" />
+          <folding>
+            <element signature="e#0#22#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GPS_signal.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="326">
+          <caret line="210" column="24" lean-forward="true" selection-start-line="210" selection-start-column="24" selection-end-line="210" selection-end-column="24" />
           <folding>
             <element signature="e#0#22#0" expanded="true" />
           </folding>
@@ -407,10 +503,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/msg_main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        <state relative-caret-position="380">
+          <caret line="29" column="16" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
           <folding>
             <element signature="e#0#22#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rcu_heartbeat.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-529">
+          <caret line="64" lean-forward="true" selection-start-line="64" selection-end-line="64" />
+          <folding>
+            <element signature="e#0#22#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user_writeoff.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-57">
+          <caret line="108" column="20" selection-start-line="108" selection-start-column="20" selection-end-line="108" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -420,8 +536,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/user_register.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2691">
-          <caret line="117" lean-forward="true" selection-start-line="117" selection-end-line="117" />
+        <state relative-caret-position="591">
+          <caret line="121" column="31" selection-start-line="121" selection-start-column="31" selection-end-line="121" selection-end-column="31" />
           <folding>
             <element signature="e#0#22#0" expanded="true" />
           </folding>

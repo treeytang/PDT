@@ -13,10 +13,9 @@ class Ticket_Query(myunit.MyTest):
 
     def test_come_ticket_query_verify(self):
         '''是否进入话单查询页面'''
-        self.user_login(username="admin", password="admin")
+        self.user_login(username="t", password="admin")
         msg = Ticket_Manage_Query(self.driver).come_query_verify()
         self.assertEqual(msg.strip(), "话单查询")
-        picture.insert_img(self.driver, "user_pwd_true.png")
 
 
     # def test_ticket_query(self):
@@ -32,7 +31,6 @@ class Ticket_Query(myunit.MyTest):
         self.user_login(username='thy', password='admin')
         msg = Ticket_Manage_Query(self.driver).page_define_num()
         self.assertEqual(msg,'ok')
-        picture.insert_img(self.driver, 'user_num_query.png')
 
 
 
@@ -40,112 +38,99 @@ class Ticket_Query(myunit.MyTest):
         '''自定义时间查询 正确的起止时间'''
         self.user_login(username='thy', password='admin')
         msg = Ticket_Manage_Query(self.driver).custom_time_query1()
-        self.assertEqual(msg,"ok")
+        self.assertEqual(msg,"pass")
         picture.insert_img(self.driver, 'custom_query.png')
 
     def test_custom_query2(self):
-        '''自定义时间查询 正确的起始时间，超期的结束时间'''
+        '''自定义时间查询 正确的起始时间，超期的结束时间(在自动化操作中使用的是js控制，在实际中是无法选择超期时间的)'''
         self.user_login(username='thy', password='admin')
         msg = Ticket_Manage_Query(self.driver).custom_time_query2()
-        self.assertEqual(msg,"出现弹窗")
-        picture.insert_img(self.driver, 'custom_query.png')
+        self.assertEqual(msg,"pass")
 
     def test_custom_query3(self):
         '''自定义时间查询 正确的起始时间，超期的结束时间'''
         self.user_login(username='thy', password='admin')
         msg = Ticket_Manage_Query(self.driver).custom_time_query3()
-        self.assertEqual(msg,"出现弹窗")
-        picture.insert_img(self.driver, 'custom_query.png')
+        self.assertEqual(msg,"pass")
 
     def test_custom_query4(self):
         '''自定义时间查询 超期的起始时间，正确的结束时间'''
         self.user_login(username='thy', password='admin')
         msg = Ticket_Manage_Query(self.driver).custom_time_query4()
-        self.assertEqual(msg,"出现弹窗")
-        picture.insert_img(self.driver, 'custom_query.png')
+        self.assertEqual(msg,"pass")
+
 
     def test_query_calling_voc_num(self):
-        '''查询用户2018/11/1到2018/11/30主叫 语音 数量'''
+        '''查询用户2019/03/01到201/04/01主叫 语音 数量'''
         self.user_login(username='thy', password='admin')
         msg = Ticket_Manage_Query(self.driver).query_calling_voc_num()
-        self.assertEqual(msg, "15790")
-        picture.insert_img(self.driver, 'custom_query.png')
+        self.assertEqual(msg, "58")
 
     def test_query_calling_reg_num(self):
-        '''查询用户2018/11/1到2018/11/30主叫 注销 数量'''
+        '''查询用户2019/03/01到201/04/01主叫 注册/注销 数量'''
         self.user_login(username='thy', password='admin')
         msg = Ticket_Manage_Query(self.driver).query_calling_reg_num()
-        self.assertEqual(msg, "161")
-        picture.insert_img(self.driver, 'custom_query.png')
-
-
+        self.assertEqual(msg, "70")
 
     def test_query_calling_sms_num(self):
-        '''查询用户2018/11/1到2018/11/30主叫 短信 数量'''
+        '''查询用户2019/03/01到201/04/01主叫 短信 数量'''
         self.user_login(username='thy', password='admin')
         msg = Ticket_Manage_Query(self.driver).query_calling_sms_num()
-        self.assertEqual(msg, "2419")
-        picture.insert_img(self.driver, 'custom_query.png')
+        self.assertEqual(msg, "8")
 
 
     def test_query_calling_gps_num(self):
-        '''查询用户2018/11/1到2018/11/30主叫 gps 数量'''
+        '''查询用户2019/03/01到2019/04/01主叫 gps 数量'''
         self.user_login(username='thy', password='admin')
         msg = Ticket_Manage_Query(self.driver).query_calling_gps_num()
-        self.assertEqual(msg, "14")
-        picture.insert_img(self.driver, 'custom_query.png')
+        self.assertEqual(msg, "44")
 
     def test_query_calling_stun_num(self):
-        '''查询用户2018/11/1到2018/11/30主叫 复活 数量'''
+        '''查询用户2019/03/01到2019/04/01主叫 复活 数量'''
         self.user_login(username='thy', password='admin')
         msg = Ticket_Manage_Query(self.driver).query_calling_stun_num()
-        self.assertEqual(msg, "2")
-        picture.insert_img(self.driver, 'custom_query.png')
+        self.assertEqual(msg, "85")
 
 
     def test_query_calling_grp_num(self):
-        '''查询用户2018/11/1到2018/11/30主叫 重组/去重组 数量'''
+        '''查询用户2019/03/01到2019/04/01主叫 重组/去重组 数量'''
         self.user_login(username='thy', password='admin')
         msg = Ticket_Manage_Query(self.driver).query_calling_grp_num()
-        self.assertEqual(msg, "3")
-        picture.insert_img(self.driver, 'custom_query.png')
+        self.assertEqual(msg, "6")
 
 
     def test_query_called_voc_num(self):
-        '''查询用户2018/11/1到2018/11/30被叫 语音 数量'''
+        '''查询用户2019/03/01到2019/04/01被叫 语音 数量'''
         self.user_login(username='thy', password='admin')
         msg = Ticket_Manage_Query(self.driver).query_called_voc_num()
-        self.assertEqual(msg, "3")
-        picture.insert_img(self.driver, 'custom_query.png')
+        self.assertEqual(msg, "99")
+
 
     def test_query_called_reg_num(self):
-        '''查询用户2018/11/1到2018/11/30被叫 语音 数量'''
+        '''查询用户2019/03/01到2019/04/01被叫 注册/注销 数量'''
         self.user_login(username='thy', password='admin')
         msg = Ticket_Manage_Query(self.driver).query_called_reg_num()
-        self.assertEqual(msg, "509")
-        picture.insert_img(self.driver, 'custom_query.png')
+        self.assertEqual(msg, "70")
 
     def test_query_called_sms_num(self):
-        '''查询用户2018/11/1到2018/11/30被叫 短信 数量'''
+        '''查询用户2019/03/01到2019/04/01被叫 短信 数量'''
         self.user_login(username='thy', password='admin')
         msg = Ticket_Manage_Query(self.driver).query_called_sms_num()
-        self.assertEqual(msg, "2423")
-        picture.insert_img(self.driver, 'custom_query.png')
+        self.assertEqual(msg, "278")
 
 
     def test_query_called_gps_num(self):
-        '''查询用户2018/11/1到2018/11/30被叫 gps 数量'''
+        '''查询用户2019/03/01到2019/04/01被叫 gps 数量'''
         self.user_login(username='thy', password='admin')
         msg = Ticket_Manage_Query(self.driver).query_called_gps_num()
-        self.assertEqual(msg, "1346")
-        picture.insert_img(self.driver, 'custom_query.png')
+        self.assertEqual(msg, "6")
 
 
     def test_query_called_stun_num(self):
-        '''查询用户2018/11/1到2018/11/30被叫 gps 数量'''
+        '''查询用户2019/03/01到2019/04/01被叫 复活 数量'''
         self.user_login(username='thy', password='admin')
         msg = Ticket_Manage_Query(self.driver).query_called_stun_num()
-        self.assertEqual(msg, "2")
+        self.assertEqual(msg, "23")
         picture.insert_img(self.driver, 'custom_query.png')
 
     # def test_query_called_

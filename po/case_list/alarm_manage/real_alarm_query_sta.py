@@ -16,7 +16,6 @@ class Ticket_Query(myunit.MyTest):
         self.user_login(username="admin", password="admin")
         msg = Real_Alarm_Query(self.driver).come_page_verify()
         self.assertEqual(msg.strip(), "实时告警")
-        picture.insert_img(self.driver, "user_pwd_true.png")
 
 
     def test_real_alarm_num_verify(self):
@@ -25,4 +24,3 @@ class Ticket_Query(myunit.MyTest):
         msg = Real_Alarm_Query(self.driver).real_alarm_verify()
         real,expect = msg[0],msg[1]
         self.assertEqual(real.strip(), expect.strip())
-        picture.insert_img(self.driver, "user_pwd_true.png")

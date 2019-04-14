@@ -1,0 +1,4035 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>selenium自动化测试报告</title>
+    <meta name="generator" content="HTMLTestRunner 0.8.2"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    
+<style type="text/css" media="screen">
+body        { font-family: verdana, arial, helvetica, sans-serif; font-size: 80%; }
+table       { font-size: 100%; }
+pre         { }
+
+/* -- heading ---------------------------------------------------------------------- */
+h1 {
+	font-size: 16pt;
+	color: gray;
+}
+.heading {
+    margin-top: 0ex;
+    margin-bottom: 1ex;
+}
+
+.heading .attribute {
+    margin-top: 1ex;
+    margin-bottom: 0;
+}
+
+.heading .description {
+    margin-top: 4ex;
+    margin-bottom: 6ex;
+}
+
+/* -- css div popup ------------------------------------------------------------------------ */
+a.popup_link {
+}
+
+a.popup_link:hover {
+    color: red;
+}
+
+.popup_window {
+    display: none;
+    position: relative;
+    left: 0px;
+    top: 0px;
+    /*border: solid #627173 1px; */
+    padding: 10px;
+    background-color: #E6E6D6;
+    font-family: "Lucida Console", "Courier New", Courier, monospace;
+    text-align: left;
+    font-size: 8pt;
+    width: 500px;
+}
+
+}
+/* -- report ------------------------------------------------------------------------ */
+#show_detail_line {
+    margin-top: 3ex;
+    margin-bottom: 1ex;
+}
+#result_table {
+    width: 80%;
+    border-collapse: collapse;
+    border: 1px solid #777;
+}
+#header_row {
+    font-weight: bold;
+    color: white;
+    background-color: #777;
+}
+#result_table td {
+    border: 1px solid #777;
+    padding: 2px;
+}
+#total_row  { font-weight: bold; }
+.passClass  { background-color: #6c6; }
+.failClass  { background-color: #c60; }
+.errorClass { background-color: #c00; }
+.passCase   { color: #6c6; }
+.failCase   { color: #c60; font-weight: bold; }
+.errorCase  { color: #c00; font-weight: bold; }
+.hiddenRow  { display: none; }
+.testcase   { margin-left: 2em; }
+
+
+/* -- ending ---------------------------------------------------------------------- */
+#ending {
+}
+
+</style>
+
+</head>
+<body>
+<script language="javascript" type="text/javascript"><!--
+output_list = Array();
+
+/* level - 0:Summary; 1:Failed; 2:All */
+function showCase(level) {
+    trs = document.getElementsByTagName("tr");
+    for (var i = 0; i < trs.length; i++) {
+        tr = trs[i];
+        id = tr.id;
+        if (id.substr(0,2) == 'ft') {
+            if (level < 1) {
+                tr.className = 'hiddenRow';
+            }
+            else {
+                tr.className = '';
+            }
+        }
+        if (id.substr(0,2) == 'pt') {
+            if (level > 1) {
+                tr.className = '';
+            }
+            else {
+                tr.className = 'hiddenRow';
+            }
+        }
+    }
+}
+
+
+function showClassDetail(cid, count) {
+    var id_list = Array(count);
+    var toHide = 1;
+    for (var i = 0; i < count; i++) {
+        tid0 = 't' + cid.substr(1) + '.' + (i+1);
+        tid = 'f' + tid0;
+        tr = document.getElementById(tid);
+        if (!tr) {
+            tid = 'p' + tid0;
+            tr = document.getElementById(tid);
+        }
+        id_list[i] = tid;
+        if (tr.className) {
+            toHide = 0;
+        }
+    }
+    for (var i = 0; i < count; i++) {
+        tid = id_list[i];
+        if (toHide) {
+            document.getElementById('div_'+tid).style.display = 'none'
+            document.getElementById(tid).className = 'hiddenRow';
+        }
+        else {
+            document.getElementById(tid).className = '';
+        }
+    }
+}
+
+
+function showTestDetail(div_id){
+    var details_div = document.getElementById(div_id)
+    var displayState = details_div.style.display
+    // alert(displayState)
+    if (displayState != 'block' ) {
+        displayState = 'block'
+        details_div.style.display = 'block'
+    }
+    else {
+        details_div.style.display = 'none'
+    }
+}
+
+
+function html_escape(s) {
+    s = s.replace(/&/g,'&amp;');
+    s = s.replace(/</g,'&lt;');
+    s = s.replace(/>/g,'&gt;');
+    return s;
+}
+
+/* obsoleted by detail in <div>
+function showOutput(id, name) {
+    var w = window.open("", //url
+                    name,
+                    "resizable,scrollbars,status,width=800,height=450");
+    d = w.document;
+    d.write("<pre>");
+    d.write(html_escape(output_list[id]));
+    d.write("\n");
+    d.write("<a href='javascript:window.close()'>close</a>\n");
+    d.write("</pre>\n");
+    d.close();
+}
+*/
+--></script>
+
+<div class='heading'>
+<h1>selenium自动化测试报告</h1>
+<p class='attribute'><strong>Start Time:</strong> 2019-04-11 15:43:39</p>
+<p class='attribute'><strong>Duration:</strong> 0:37:21.031770</p>
+<p class='attribute'><strong>Status:</strong> Pass 127 Failure 11 Error 3</p>
+
+<p class='description'>测试环境：windows 7  浏览器：Chrome</p>
+</div>
+
+
+
+<p id='show_detail_line'>Show
+<a href='javascript:showCase(0)'>Summary</a>
+<a href='javascript:showCase(1)'>Failed</a>
+<a href='javascript:showCase(2)'>All</a>
+</p>
+<table id='result_table'>
+<colgroup>
+<col align='left' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+</colgroup>
+<tr id='header_row'>
+    <td>Test Group/Test case</td>
+    <td>Count</td>
+    <td>Pass</td>
+    <td>Fail</td>
+    <td>Error</td>
+    <td>View</td>
+</tr>
+
+<tr class='passClass'>
+    <td>case_list.alarm_manage.alarm_query_sta.Ticket_Query</td>
+    <td>6</td>
+    <td>6</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c1',6)">Detail</a></td>
+</tr>
+
+<tr id='pt1.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_come_ticket_query_verify: 进入告警查询页面验证</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.1')" >
+        pass</a>
+
+    <div id='div_pt1.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.1: http://192.168.1.192:8080/nmp/login
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_custom_time_quert: 自定义时间查询 2019-03-01 00:00:00-----2019-03-31 23:59:59</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.2')" >
+        pass</a>
+
+    <div id='div_pt1.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.2: http://192.168.1.192:8080/nmp/login
+查询条数共计：17条
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.3' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_custom_time_quert_1: 自定义时间查询 2019-03-01 00:00:00-----2019-03-31 23:59:59 告警等级为严重得数量</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.3')" >
+        pass</a>
+
+    <div id='div_pt1.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.3: http://192.168.1.192:8080/nmp/login
+查询条数共计：11条
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.4' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_custom_time_query_3: 自定义时间查询 2018-01-01 00:00:00-----2018-12-29 23:59:59 告警等级为轻微得数量</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.4')" >
+        pass</a>
+
+    <div id='div_pt1.4' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.4').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.4: http://192.168.1.192:8080/nmp/login
+查询条数共计：6条
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.5' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_network_event_log: 进入网络事件日志</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.5')" >
+        pass</a>
+
+    <div id='div_pt1.5' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.5').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.5: http://192.168.1.192:8080/nmp/login
+告警描述
+2019-04-11/15_44_43
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.6' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_paging_verify: 自定义分页显示数量（每页显示1条）</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.6')" >
+        pass</a>
+
+    <div id='div_pt1.6' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.6').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.6: http://192.168.1.192:8080/nmp/login
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>case_list.alarm_manage.real_alarm_query_sta.Ticket_Query</td>
+    <td>2</td>
+    <td>2</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c2',2)">Detail</a></td>
+</tr>
+
+<tr id='pt2.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_come_real_alarm_verify: 是否进入实时告警页面验证</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt2.1')" >
+        pass</a>
+
+    <div id='div_pt2.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt2.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt2.1: http://192.168.1.192:8080/nmp/login
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt2.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_real_alarm_num_verify: 进入告警查询页面 验证显示数量</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt2.2')" >
+        pass</a>
+
+    <div id='div_pt2.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt2.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt2.2: http://192.168.1.192:8080/nmp/login
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='errorClass'>
+    <td>case_list.login.login_sta.LoginTest</td>
+    <td>5</td>
+    <td>0</td>
+    <td>4</td>
+    <td>1</td>
+    <td><a href="javascript:showClassDetail('c3',5)">Detail</a></td>
+</tr>
+
+<tr id='ft3.1' class='none'>
+    <td class='failCase'><div class='testcase'>test_login1: 用户名、密码为空登录</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft3.1')" >
+        fail</a>
+
+    <div id='div_ft3.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft3.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft3.1: http://192.168.1.192:8080/nmp/login
+Traceback (most recent call last):
+  File "D:\WorkSpace\po\case_list\login\login_sta.py", line 20, in test_login1
+    self.assertEqual(po.login_error_hint(), '验证码错误, 请重试.')
+AssertionError: '用户名或密码错误, 请重试!' != '验证码错误, 请重试.'
+- 用户名或密码错误, 请重试!
++ 验证码错误, 请重试.
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft3.2' class='none'>
+    <td class='failCase'><div class='testcase'>test_login2: 用户名正确，密码为空登录验证</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft3.2')" >
+        fail</a>
+
+    <div id='div_ft3.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft3.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft3.2: http://192.168.1.192:8080/nmp/login
+Traceback (most recent call last):
+  File "D:\WorkSpace\po\case_list\login\login_sta.py", line 27, in test_login2
+    self.assertEqual(po.login_error_hint(), "用户名或密码不能为空")
+AssertionError: '用户名或密码错误, 请重试!' != '用户名或密码不能为空'
+- 用户名或密码错误, 请重试!
++ 用户名或密码不能为空
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft3.3' class='none'>
+    <td class='failCase'><div class='testcase'>test_login3: 用户名为空，密码正确</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft3.3')" >
+        fail</a>
+
+    <div id='div_ft3.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft3.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft3.3: http://192.168.1.192:8080/nmp/login
+Traceback (most recent call last):
+  File "D:\WorkSpace\po\case_list\login\login_sta.py", line 34, in test_login3
+    self.assertEqual(po.login_error_hint(),"验证码错误, 请重试.")
+AssertionError: '用户名或密码错误, 请重试!' != '验证码错误, 请重试.'
+- 用户名或密码错误, 请重试!
++ 验证码错误, 请重试.
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft3.4' class='none'>
+    <td class='failCase'><div class='testcase'>test_login4: 用户名和密码不匹配</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft3.4')" >
+        fail</a>
+
+    <div id='div_ft3.4' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft3.4').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft3.4: http://192.168.1.192:8080/nmp/login
+Traceback (most recent call last):
+  File "D:\WorkSpace\po\case_list\login\login_sta.py", line 43, in test_login4
+    self.assertEqual(po.login_error_hint(), "验证码错误, 请重试.")
+AssertionError: '用户名或密码错误, 请重试!' != '验证码错误, 请重试.'
+- 用户名或密码错误, 请重试!
++ 验证码错误, 请重试.
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft3.5' class='none'>
+    <td class='errorCase'><div class='testcase'>test_login5: 用户名、密码正确 admin admin</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft3.5')" >
+        error</a>
+
+    <div id='div_ft3.5' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft3.5').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft3.5: http://192.168.1.192:8080/nmp/login
+&lt;test_cases.login_page.login object at 0x00000000037CD6D8&gt; 页面中未能找到 ('xpath', '//*[@id="zhongduanshu"]/div[1]') 元素
+Traceback (most recent call last):
+  File "D:\WorkSpace\po\case_list\login\login_sta.py", line 52, in test_login5
+    self.assertEqual(po.login_user_success(), '本地在线用户')
+  File "D:\WorkSpace\po\test_cases\login_page.py", line 54, in login_user_success
+    username = self.find_element(*self.login_user_success_loc).text
+AttributeError: 'NoneType' object has no attribute 'text'
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>case_list.system_manage.log_query_sta.Ticket_Query</td>
+    <td>4</td>
+    <td>4</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c4',4)">Detail</a></td>
+</tr>
+
+<tr id='pt4.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_come_user_manage: 检查进入用户日志查询页面验证</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt4.1')" >
+        pass</a>
+
+    <div id='div_pt4.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt4.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt4.1: http://192.168.1.192:8080/nmp/login
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt4.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_log_num_verify: 检查进入日志查询页面 验证2019/03/01--2019/04/01日志数量t</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt4.2')" >
+        pass</a>
+
+    <div id='div_pt4.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt4.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt4.2: http://192.168.1.192:8080/nmp/login
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt4.3' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_log_num_verify_1: 检查进入日志查询页面 验证2019/03/01--2019/04/01 操作目标为System Login 日志数量</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt4.3')" >
+        pass</a>
+
+    <div id='div_pt4.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt4.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt4.3: http://192.168.1.192:8080/nmp/login
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt4.4' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_log_num_verify_2: 检查进入日志查询页面 验证2019/03/01--2019/04/01 URL为/nmp/sys/user/list 日志数量</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt4.4')" >
+        pass</a>
+
+    <div id='div_pt4.4' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt4.4').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt4.4: http://192.168.1.192:8080/nmp/login
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>case_list.system_manage.user_manage_sta.Ticket_Query</td>
+    <td>5</td>
+    <td>5</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c5',5)">Detail</a></td>
+</tr>
+
+<tr id='pt5.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_1_come_user_manage: 检查进入用户管理页面验证</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt5.1')" >
+        pass</a>
+
+    <div id='div_pt5.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt5.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt5.1: http://192.168.1.192:8080/nmp/login
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt5.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_add_user_verify: 检查用户管理页面 用户添加，和删除用户 验证</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt5.2')" >
+        pass</a>
+
+    <div id='div_pt5.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt5.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt5.2: http://192.168.1.192:8080/nmp/login
+测试007
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt5.3' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_verify_input_query_user_1: 检查用户管理页面 通过登录名模糊查询 查询登录名中含有w的用户数量</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt5.3')" >
+        pass</a>
+
+    <div id='div_pt5.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt5.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt5.3: http://192.168.1.192:8080/nmp/login
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt5.4' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_verify_input_query_user_2: 检查用户管理页面 通过登录名模糊查询 查询姓名名中含有“管理员”的用户数量</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt5.4')" >
+        pass</a>
+
+    <div id='div_pt5.4' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt5.4').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt5.4: http://192.168.1.192:8080/nmp/login
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt5.5' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_verify_user_num_verify: 检查用户管理页面 验证用户显示数量</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt5.5')" >
+        pass</a>
+
+    <div id='div_pt5.5' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt5.5').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt5.5: http://192.168.1.192:8080/nmp/login
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>case_list.system_manage.user_permission_sta.Ticket_Query</td>
+    <td>4</td>
+    <td>4</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c6',4)">Detail</a></td>
+</tr>
+
+<tr id='pt6.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_1_come_user_manage: 检查进入用户权限页面验证</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt6.1')" >
+        pass</a>
+
+    <div id='div_pt6.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt6.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt6.1: http://192.168.1.192:8080/nmp/login
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt6.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_add_permission: 检查进入用户权限页面并进行 权限添加 验证</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt6.2')" >
+        pass</a>
+
+    <div id='div_pt6.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt6.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt6.2: http://192.168.1.192:8080/nmp/login
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt6.3' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_modify_permission: 检查进入用户权限页面 权限修改 验证</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt6.3')" >
+        pass</a>
+
+    <div id='div_pt6.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt6.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt6.3: http://192.168.1.192:8080/nmp/login
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt6.4' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_verify_user_num: 检查进入用户权限页面 验证显示数量</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt6.4')" >
+        pass</a>
+
+    <div id='div_pt6.4' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt6.4').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt6.4: http://192.168.1.192:8080/nmp/login
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='errorClass'>
+    <td>case_list.ticket_manage.ticket_query_sta.Ticket_Query</td>
+    <td>17</td>
+    <td>14</td>
+    <td>2</td>
+    <td>1</td>
+    <td><a href="javascript:showClassDetail('c7',17)">Detail</a></td>
+</tr>
+
+<tr id='pt7.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_come_ticket_query_verify: 是否进入话单查询页面</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt7.1')" >
+        pass</a>
+
+    <div id='div_pt7.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt7.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt7.1: http://192.168.1.192:8080/nmp/login
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt7.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_custom_query1: 自定义时间查询 正确的起止时间</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt7.2')" >
+        pass</a>
+
+    <div id='div_pt7.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt7.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt7.2: http://192.168.1.192:8080/nmp/login
+2019-04-11/15_49_28
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft7.3' class='none'>
+    <td class='failCase'><div class='testcase'>test_custom_query2: 自定义时间查询 正确的起始时间，超期的结束时间(在自动化操作中使用的是js控制，在实际中是无法选择超期时间的)</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft7.3')" >
+        fail</a>
+
+    <div id='div_ft7.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft7.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft7.3: http://192.168.1.192:8080/nmp/login
+没有找到alert
+Traceback (most recent call last):
+  File "D:\WorkSpace\po\case_list\ticket_manage\ticket_query_sta.py", line 48, in test_custom_query2
+    self.assertEqual(msg,"pass")
+AssertionError: 'fail' != 'pass'
+- fail
++ pass
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft7.4' class='none'>
+    <td class='failCase'><div class='testcase'>test_custom_query3: 自定义时间查询 正确的起始时间，超期的结束时间</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft7.4')" >
+        fail</a>
+
+    <div id='div_ft7.4' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft7.4').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft7.4: http://192.168.1.192:8080/nmp/login
+没有找到alert
+Traceback (most recent call last):
+  File "D:\WorkSpace\po\case_list\ticket_manage\ticket_query_sta.py", line 54, in test_custom_query3
+    self.assertEqual(msg,"pass")
+AssertionError: 'fail' != 'pass'
+- fail
++ pass
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt7.5' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_custom_query4: 自定义时间查询 超期的起始时间，正确的结束时间</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt7.5')" >
+        pass</a>
+
+    <div id='div_pt7.5' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt7.5').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt7.5: http://192.168.1.192:8080/nmp/login
+最小日期不能大于最大日期!
+找到了alert
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt7.6' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_input_num_query: 指定每页显示数量与实际显示数量比较</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt7.6')" >
+        pass</a>
+
+    <div id='div_pt7.6' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt7.6').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt7.6: http://192.168.1.192:8080/nmp/login
+6
+6
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt7.7' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_query_called_gps_num: 查询用户2019/03/01到2019/04/01被叫 gps 数量</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt7.7')" >
+        pass</a>
+
+    <div id='div_pt7.7' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt7.7').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt7.7: http://192.168.1.192:8080/nmp/login
+查询条数共计：6条
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt7.8' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_query_called_reg_num: 查询用户2019/03/01到2019/04/01被叫 注册/注销 数量</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt7.8')" >
+        pass</a>
+
+    <div id='div_pt7.8' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt7.8').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt7.8: http://192.168.1.192:8080/nmp/login
+查询条数共计：70条
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt7.9' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_query_called_sms_num: 查询用户2019/03/01到2019/04/01被叫 短信 数量</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt7.9')" >
+        pass</a>
+
+    <div id='div_pt7.9' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt7.9').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt7.9: http://192.168.1.192:8080/nmp/login
+查询条数共计：278条
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt7.10' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_query_called_stun_num: 查询用户2019/03/01到2019/04/01被叫 复活 数量</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt7.10')" >
+        pass</a>
+
+    <div id='div_pt7.10' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt7.10').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt7.10: http://192.168.1.192:8080/nmp/login
+查询条数共计：23条
+2019-04-11/15_51_39
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt7.11' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_query_called_voc_num: 查询用户2019/03/01到2019/04/01被叫 语音 数量</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt7.11')" >
+        pass</a>
+
+    <div id='div_pt7.11' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt7.11').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt7.11: http://192.168.1.192:8080/nmp/login
+查询条数共计：99条
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt7.12' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_query_calling_gps_num: 查询用户2019/03/01到2019/04/01主叫 gps 数量</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt7.12')" >
+        pass</a>
+
+    <div id='div_pt7.12' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt7.12').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt7.12: http://192.168.1.192:8080/nmp/login
+查询条数共计：44条
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt7.13' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_query_calling_grp_num: 查询用户2019/03/01到2019/04/01主叫 重组/去重组 数量</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt7.13')" >
+        pass</a>
+
+    <div id='div_pt7.13' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt7.13').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt7.13: http://192.168.1.192:8080/nmp/login
+查询条数共计：6条
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft7.14' class='none'>
+    <td class='errorCase'><div class='testcase'>test_query_calling_reg_num: 查询用户2019/03/01到201/04/01主叫 注册/注销 数量</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft7.14')" >
+        error</a>
+
+    <div id='div_ft7.14' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft7.14').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft7.14: http://192.168.1.192:8080/nmp/login
+&lt;test_cases.ticket_manage.ticket_manage_page.Ticket_Manage_Query object at 0x0000000003900588&gt; 页面中未能找到 ('id', 'callingNo') 元素
+Traceback (most recent call last):
+  File "D:\WorkSpace\po\case_list\ticket_manage\ticket_query_sta.py", line 72, in test_query_calling_reg_num
+    msg = Ticket_Manage_Query(self.driver).query_calling_reg_num()
+  File "D:\WorkSpace\po\test_cases\ticket_manage\ticket_manage_page.py", line 420, in query_calling_reg_num
+    self.designate_time(calling_user)
+  File "D:\WorkSpace\po\test_cases\ticket_manage\ticket_manage_page.py", line 208, in designate_time
+    self.find_element(*self.calling_user_box_loc).send_keys(calling_user)
+AttributeError: 'NoneType' object has no attribute 'send_keys'
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt7.15' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_query_calling_sms_num: 查询用户2019/03/01到201/04/01主叫 短信 数量</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt7.15')" >
+        pass</a>
+
+    <div id='div_pt7.15' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt7.15').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt7.15: http://192.168.1.192:8080/nmp/login
+查询条数共计：8条
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt7.16' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_query_calling_stun_num: 查询用户2019/03/01到2019/04/01主叫 复活 数量</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt7.16')" >
+        pass</a>
+
+    <div id='div_pt7.16' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt7.16').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt7.16: http://192.168.1.192:8080/nmp/login
+查询条数共计：85条
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt7.17' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_query_calling_voc_num: 查询用户2019/03/01到201/04/01主叫 语音 数量</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt7.17')" >
+        pass</a>
+
+    <div id='div_pt7.17' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt7.17').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt7.17: http://192.168.1.192:8080/nmp/login
+查询条数共计：58条
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>case_list.ticket_manage.ticket_stat_sta.Ticket_Query</td>
+    <td>5</td>
+    <td>5</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c8',5)">Detail</a></td>
+</tr>
+
+<tr id='pt8.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_come_page_verify: 是否进入话单统计页面</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt8.1')" >
+        pass</a>
+
+    <div id='div_pt8.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt8.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt8.1: http://192.168.1.192:8080/nmp/login
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt8.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_rcu_occupied_query_verify: 进入基站占忙比页面 输入正确的基站时间进行查询</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt8.2')" >
+        pass</a>
+
+    <div id='div_pt8.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt8.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt8.2: http://192.168.1.192:8080/nmp/login
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt8.3' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_rcu_occupied_query_verify_1: 进入基站占忙比页面 输入正确的基站，错误的时间进行查询</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt8.3')" >
+        pass</a>
+
+    <div id='div_pt8.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt8.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt8.3: http://192.168.1.192:8080/nmp/login
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt8.4' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_teamNum_verify: 进入队号统计页面 验证队号唯一性</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt8.4')" >
+        pass</a>
+
+    <div id='div_pt8.4' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt8.4').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt8.4: http://192.168.1.192:8080/nmp/login
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt8.5' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_userNum_verify: 进入队号统计页面 验证用户号唯一性</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt8.5')" >
+        pass</a>
+
+    <div id='div_pt8.5' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt8.5').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt8.5: http://192.168.1.192:8080/nmp/login
+2019-04-11/15_54_56
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='failClass'>
+    <td>case_list.ticket_manage.user_followup_sta.Ticket_Query</td>
+    <td>8</td>
+    <td>5</td>
+    <td>3</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c9',8)">Detail</a></td>
+</tr>
+
+<tr id='pt9.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_come_follow_page_verify: 是否进入用户追踪页面</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt9.1')" >
+        pass</a>
+
+    <div id='div_pt9.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt9.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt9.1: http://192.168.1.192:8080/nmp/login
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt9.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_query_user</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt9.2')" >
+        pass</a>
+
+    <div id='div_pt9.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt9.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt9.2: http://192.168.1.192:8080/nmp/login
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt9.3' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_query_user_1</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt9.3')" >
+        pass</a>
+
+    <div id='div_pt9.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt9.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt9.3: http://192.168.1.192:8080/nmp/login
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft9.4' class='none'>
+    <td class='failCase'><div class='testcase'>test_query_user_2</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft9.4')" >
+        fail</a>
+
+    <div id='div_ft9.4' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft9.4').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft9.4: http://192.168.1.192:8080/nmp/login
+34 71
+Traceback (most recent call last):
+  File "D:\WorkSpace\po\case_list\ticket_manage\user_followup_sta.py", line 39, in test_query_user_2
+    self.assertEqual(msg.strip(), "135")#数据来源为话单查询数据
+AssertionError: '105' != '135'
+- 105
+?  ^
++ 135
+?  ^
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft9.5' class='none'>
+    <td class='failCase'><div class='testcase'>test_query_user_3</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft9.5')" >
+        fail</a>
+
+    <div id='div_ft9.5' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft9.5').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft9.5: http://192.168.1.192:8080/nmp/login
+Traceback (most recent call last):
+  File "D:\WorkSpace\po\case_list\ticket_manage\user_followup_sta.py", line 45, in test_query_user_3
+    self.assertEqual(msg.strip(), "32")#数据来源为话单查询数据
+AssertionError: '31' != '32'
+- 31
++ 32
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft9.6' class='none'>
+    <td class='failCase'><div class='testcase'>test_query_user_4</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft9.6')" >
+        fail</a>
+
+    <div id='div_ft9.6' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft9.6').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft9.6: http://192.168.1.192:8080/nmp/login
+Traceback (most recent call last):
+  File "D:\WorkSpace\po\case_list\ticket_manage\user_followup_sta.py", line 52, in test_query_user_4
+    self.assertEqual(msg.strip(), "230")
+AssertionError: '136' != '230'
+- 136
++ 230
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt9.7' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_query_user_5</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt9.7')" >
+        pass</a>
+
+    <div id='div_pt9.7' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt9.7').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt9.7: http://192.168.1.192:8080/nmp/login
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt9.8' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_query_user_6</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt9.8')" >
+        pass</a>
+
+    <div id='div_pt9.8' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt9.8').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt9.8: http://192.168.1.192:8080/nmp/login
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>case_list.user_manage.DRM_user_sta.Ticket_Query</td>
+    <td>4</td>
+    <td>4</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c10',4)">Detail</a></td>
+</tr>
+
+<tr id='pt10.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_DMR_group: 检查进入DMR用户界面(默认进入DMR用户) 验证页面显示数量</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt10.1')" >
+        pass</a>
+
+    <div id='div_pt10.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt10.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt10.1: http://192.168.1.192:8080/nmp/login
+28
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt10.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_DMR_group_1: 检查进入DMR用户界面(默认进入DMR用户) 验证页面显示数量</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt10.2')" >
+        pass</a>
+
+    <div id='div_pt10.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt10.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt10.2: http://192.168.1.192:8080/nmp/login
+1
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt10.3' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_DMR_user: 检查进入DMR用户界面(默认进入DMR用户) 验证页面显示数量</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt10.3')" >
+        pass</a>
+
+    <div id='div_pt10.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt10.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt10.3: http://192.168.1.192:8080/nmp/login
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt10.4' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_DMR_user_1: 检查进入DMR用户界面(默认进入DMR用户) 验证页面分页显示数量</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt10.4')" >
+        pass</a>
+
+    <div id='div_pt10.4' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt10.4').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt10.4: http://192.168.1.192:8080/nmp/login
+1
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>case_list.user_manage.MS_manage_sta.Ticket_Query</td>
+    <td>43</td>
+    <td>43</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c11',43)">Detail</a></td>
+</tr>
+
+<tr id='pt11.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_add_icon_verify_1: 进入移动台管理页面 点击开户 进入开户界面添加一个未注册的正确用户</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt11.1')" >
+        pass</a>
+
+    <div id='div_pt11.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt11.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt11.1: http://192.168.1.192:8080/nmp/login
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt11.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_add_icon_verify_1_1: 进入移动台管理页面 点击开户 进入开户界面添加一个用户，填写错误的区号（区号最小值减一：327）</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt11.2')" >
+        pass</a>
+
+    <div id='div_pt11.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt11.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt11.2: http://192.168.1.192:8080/nmp/login
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt11.3' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_add_icon_verify_1_10: 进入移动台管理页面 点击开户 进入开户界面添加一个未注册的用户  错误的队号 输入中文:警察</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt11.3')" >
+        pass</a>
+
+    <div id='div_pt11.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt11.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt11.3: http://192.168.1.192:8080/nmp/login
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt11.4' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_add_icon_verify_1_11: 进入移动台管理页面 点击开户 进入开户界面添加一个未注册的用户  错误的个号 最大值加一：900</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt11.4')" >
+        pass</a>
+
+    <div id='div_pt11.4' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt11.4').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt11.4: http://192.168.1.192:8080/nmp/login
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt11.5' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_add_icon_verify_1_12: 进入移动台管理页面 点击开户 进入开户界面添加一个未注册的用户  错误的个号 最小值减一：199</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt11.5')" >
+        pass</a>
+
+    <div id='div_pt11.5' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt11.5').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt11.5: http://192.168.1.192:8080/nmp/login
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt11.6' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_add_icon_verify_1_13: 进入移动台管理页面 点击开户 进入开户界面添加一个未注册的用户  错误的个号 输入英文:aaa</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt11.6')" >
+        pass</a>
+
+    <div id='div_pt11.6' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt11.6').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt11.6: http://192.168.1.192:8080/nmp/login
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt11.7' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_add_icon_verify_1_14: 进入移动台管理页面 点击开户 进入开户界面添加一个未注册的用户  错误的个号  输入中文:一二三</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt11.7')" >
+        pass</a>
+
+    <div id='div_pt11.7' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt11.7').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt11.7: http://192.168.1.192:8080/nmp/login
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt11.8' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_add_icon_verify_1_2: 进入移动台管理页面 点击开户 进入开户界面添加一个未注册的用户  错误的区号 区号最大值加一：807</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt11.8')" >
+        pass</a>
+
+    <div id='div_pt11.8' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt11.8').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt11.8: http://192.168.1.192:8080/nmp/login
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt11.9' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_add_icon_verify_1_3: 进入移动台管理页面 点击开户 进入开户界面添加一个未注册的用户  错误的区号 输入英文：aa</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt11.9')" >
+        pass</a>
+
+    <div id='div_pt11.9' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt11.9').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt11.9: http://192.168.1.192:8080/nmp/login
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt11.10' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_add_icon_verify_1_4: 进入移动台管理页面 点击开户 进入开户界面添加一个未注册的用户  错误的区号 输入中文：警察</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt11.10')" >
+        pass</a>
+
+    <div id='div_pt11.10' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt11.10').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt11.10: http://192.168.1.192:8080/nmp/login
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt11.11' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_add_icon_verify_1_5: 进入移动台管理页面 点击开户 进入开户界面添加一个未注册的用户  错误的队号 最大值加一：90</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt11.11')" >
+        pass</a>
+
+    <div id='div_pt11.11' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt11.11').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt11.11: http://192.168.1.192:8080/nmp/login
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt11.12' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_add_icon_verify_1_6: 进入移动台管理页面 点击开户 进入开户界面添加一个未注册的用户  错误的队号 最小值减一：19</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt11.12')" >
+        pass</a>
+
+    <div id='div_pt11.12' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt11.12').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt11.12: http://192.168.1.192:8080/nmp/login
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt11.13' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_add_icon_verify_1_7: 进入移动台管理页面 点击开户 进入开户界面添加一个未注册的用户  错误的区号 4位区号</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt11.13')" >
+        pass</a>
+
+    <div id='div_pt11.13' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt11.13').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt11.13: http://192.168.1.192:8080/nmp/login
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt11.14' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_add_icon_verify_1_8: 进入移动台管理页面 点击开户 进入开户界面添加一个未注册的用户  错误的区号 2位区号</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt11.14')" >
+        pass</a>
+
+    <div id='div_pt11.14' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt11.14').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt11.14: http://192.168.1.192:8080/nmp/login
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt11.15' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_add_icon_verify_1_9: 进入移动台管理页面 点击开户 进入开户界面添加一个未注册的用户  错误的队号 输入英文:aa</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt11.15')" >
+        pass</a>
+
+    <div id='div_pt11.15' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt11.15').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt11.15: http://192.168.1.192:8080/nmp/login
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt11.16' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_add_icon_verify_2: 进入移动台管理页面 点击开户 进入开户界面添加一个已注册的正确用户</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt11.16')" >
+        pass</a>
+
+    <div id='div_pt11.16' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt11.16').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt11.16: http://192.168.1.192:8080/nmp/login
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt11.17' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_add_icon_verify_3: 进入移动台管理页面 点击开户 进入开户界面添加一个未注册的正确用户 实名制信息相关选择(边界值 全选第一个)</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt11.17')" >
+        pass</a>
+
+    <div id='div_pt11.17' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt11.17').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt11.17: http://192.168.1.192:8080/nmp/login
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt11.18' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_add_icon_verify_4: 进入移动台管理页面 点击开户 进入开户界面添加一个已注册的正确用户 实名制信息相关选择(边界值 全选最后一个个)</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt11.18')" >
+        pass</a>
+
+    <div id='div_pt11.18' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt11.18').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt11.18: http://192.168.1.192:8080/nmp/login
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt11.19' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_come_add_icon_verify: 进入移动台管理页面 点击开户 进入开户界面验证</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt11.19')" >
+        pass</a>
+
+    <div id='div_pt11.19' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt11.19').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt11.19: http://192.168.1.192:8080/nmp/login
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt11.20' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_come_matrix_verify: 进入移动台管理页面 点击切换至矩阵显示模式 进入矩阵显示页面</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt11.20')" >
+        pass</a>
+
+    <div id='div_pt11.20' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt11.20').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt11.20: http://192.168.1.192:8080/nmp/login
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt11.21' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_come_page: 检查进入移动台管理页面 验证</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt11.21')" >
+        pass</a>
+
+    <div id='div_pt11.21' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt11.21').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt11.21: http://192.168.1.192:8080/nmp/login
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt11.22' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_local_online_user: 进入移动台管理页面 点击本地在线用户 进入本地在线用户验证</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt11.22')" >
+        pass</a>
+
+    <div id='div_pt11.22' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt11.22').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt11.22: http://192.168.1.192:8080/nmp/login
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt11.23' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_local_online_user_1: 进入移动台管理页面 点击本地在线用户 进入本地在线用户验证分页</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt11.23')" >
+        pass</a>
+
+    <div id='div_pt11.23' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt11.23').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt11.23: http://192.168.1.192:8080/nmp/login
+1
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt11.24' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_show_num_verify: 检查进入移动台管理页面对显示数量的验证</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt11.24')" >
+        pass</a>
+
+    <div id='div_pt11.24' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt11.24').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt11.24: http://192.168.1.192:8080/nmp/login
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt11.25' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_user_map_show_num: 进入移动台管理页面 点击用户映射 进入用户映射页面 验证显示数量</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt11.25')" >
+        pass</a>
+
+    <div id='div_pt11.25' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt11.25').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt11.25: http://192.168.1.192:8080/nmp/login
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt11.26' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_user_map_show_num_1: 进入移动台管理页面 点击用户映射 进入用户映射页面 验证分页显示显示数量</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt11.26')" >
+        pass</a>
+
+    <div id='div_pt11.26' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt11.26').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt11.26: http://192.168.1.192:8080/nmp/login
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt11.27' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_user_map_show_num_2: 进入移动台管理页面 点击用户映射 进入用户映射页面  配置一条新的用户号码映射范围 800 41 200/210  800 41 300/310</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt11.27')" >
+        pass</a>
+
+    <div id='div_pt11.27' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt11.27').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt11.27: http://192.168.1.192:8080/nmp/login
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt11.28' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_user_map_show_num_2_1: 进入移动台管理页面 点击用户映射 进入用户映射页面  配置一条新的用户号码映射范围 错误的区号 区号最小值减一：327 327 41 200/210  327 41 300/310</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt11.28')" >
+        pass</a>
+
+    <div id='div_pt11.28' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt11.28').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt11.28: http://192.168.1.192:8080/nmp/login
+&lt;test_cases.user_manage.MS_manage_page.Mobile_Station object at 0x00000000039A6940&gt; 页面中未能找到 ('id', 'add') 元素
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt11.29' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_user_map_show_num_2_10: 进入移动台管理页面 点击用户映射 进入用户映射页面  配置一条新的用户号码映射范围 错误的队号 队号为符号：%^  328 %^ 200/210  328 %^ 300/310</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt11.29')" >
+        pass</a>
+
+    <div id='div_pt11.29' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt11.29').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt11.29: http://192.168.1.192:8080/nmp/login
+&lt;test_cases.user_manage.MS_manage_page.Mobile_Station object at 0x00000000039C0FD0&gt; 页面中未能找到 ('id', 'add') 元素
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt11.30' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_user_map_show_num_2_11: 进入移动台管理页面 点击用户映射 进入用户映射页面  配置一条新的用户号码映射范围 错误的个号 个号为最大值加一：900  328 40 900/355  328 40 355/900</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt11.30')" >
+        pass</a>
+
+    <div id='div_pt11.30' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt11.30').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt11.30: http://192.168.1.192:8080/nmp/login
+&lt;test_cases.user_manage.MS_manage_page.Mobile_Station object at 0x00000000039C0CC0&gt; 页面中未能找到 ('id', 'add') 元素
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt11.31' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_user_map_show_num_2_12: 进入移动台管理页面 点击用户映射 进入用户映射页面  配置一条新的用户号码映射范围 错误的个号 个号为最小值减一：199  328 40 199/355  328 40 355/199</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt11.31')" >
+        pass</a>
+
+    <div id='div_pt11.31' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt11.31').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt11.31: http://192.168.1.192:8080/nmp/login
+&lt;test_cases.user_manage.MS_manage_page.Mobile_Station object at 0x00000000039C2A58&gt; 页面中未能找到 ('id', 'add') 元素
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt11.32' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_user_map_show_num_2_13: 进入移动台管理页面 点击用户映射 进入用户映射页面  配置一条新的用户号码映射范围 错误的个号 个号为英文字母：aaa  328 40 aaa/355  328 40 355/aaa</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt11.32')" >
+        pass</a>
+
+    <div id='div_pt11.32' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt11.32').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt11.32: http://192.168.1.192:8080/nmp/login
+&lt;test_cases.user_manage.MS_manage_page.Mobile_Station object at 0x00000000039C08D0&gt; 页面中未能找到 ('id', 'add') 元素
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt11.33' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_user_map_show_num_2_14: 进入移动台管理页面 点击用户映射 进入用户映射页面  配置一条新的用户号码映射范围 错误的个号 个号为中文：成都市  328 40 成都市/355  328 40 355/成都市</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt11.33')" >
+        pass</a>
+
+    <div id='div_pt11.33' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt11.33').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt11.33: http://192.168.1.192:8080/nmp/login
+&lt;test_cases.user_manage.MS_manage_page.Mobile_Station object at 0x00000000039C2CC0&gt; 页面中未能找到 ('id', 'add') 元素
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt11.34' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_user_map_show_num_2_15: 进入移动台管理页面 点击用户映射 进入用户映射页面  配置一条新的用户号码映射范围 错误的个号 个号为符号：%^&  328 40 %^&/355  328 40 355/%^&</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt11.34')" >
+        pass</a>
+
+    <div id='div_pt11.34' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt11.34').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt11.34: http://192.168.1.192:8080/nmp/login
+&lt;test_cases.user_manage.MS_manage_page.Mobile_Station object at 0x00000000039C0C50&gt; 页面中未能找到 ('id', 'add') 元素
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt11.35' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_user_map_show_num_2_2: 进入移动台管理页面 点击用户映射 进入用户映射页面  配置一条新的用户号码映射范围 错误的区号 区号最大值加一：807  807 41 200/210  807 41 300/310</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt11.35')" >
+        pass</a>
+
+    <div id='div_pt11.35' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt11.35').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt11.35: http://192.168.1.192:8080/nmp/login
+&lt;test_cases.user_manage.MS_manage_page.Mobile_Station object at 0x00000000039B2D68&gt; 页面中未能找到 ('id', 'add') 元素
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt11.36' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_user_map_show_num_2_3: 进入移动台管理页面 点击用户映射 进入用户映射页面  配置一条新的用户号码映射范围 错误的区号 区号为英文字母：aaa  aaa 41 200/210  aaa 41 300/310</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt11.36')" >
+        pass</a>
+
+    <div id='div_pt11.36' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt11.36').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt11.36: http://192.168.1.192:8080/nmp/login
+&lt;test_cases.user_manage.MS_manage_page.Mobile_Station object at 0x00000000039B2F28&gt; 页面中未能找到 ('id', 'add') 元素
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt11.37' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_user_map_show_num_2_4: 进入移动台管理页面 点击用户映射 进入用户映射页面  配置一条新的用户号码映射范围 错误的区号 区号为中文：警察  警察 41 200/210  警察 41 300/310</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt11.37')" >
+        pass</a>
+
+    <div id='div_pt11.37' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt11.37').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt11.37: http://192.168.1.192:8080/nmp/login
+&lt;test_cases.user_manage.MS_manage_page.Mobile_Station object at 0x00000000039CBCC0&gt; 页面中未能找到 ('id', 'add') 元素
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt11.38' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_user_map_show_num_2_5: 进入移动台管理页面 点击用户映射 进入用户映射页面  配置一条新的用户号码映射范围 错误的区号 区号为两位数字：33  33 41 200/210  33 41 300/310</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt11.38')" >
+        pass</a>
+
+    <div id='div_pt11.38' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt11.38').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt11.38: http://192.168.1.192:8080/nmp/login
+&lt;test_cases.user_manage.MS_manage_page.Mobile_Station object at 0x00000000039B27B8&gt; 页面中未能找到 ('id', 'add') 元素
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt11.39' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_user_map_show_num_2_6: 进入移动台管理页面 点击用户映射 进入用户映射页面  配置一条新的用户号码映射范围 错误的队号 队号为最小值减一：19  328 19 200/210  328 19 300/310</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt11.39')" >
+        pass</a>
+
+    <div id='div_pt11.39' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt11.39').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt11.39: http://192.168.1.192:8080/nmp/login
+&lt;test_cases.user_manage.MS_manage_page.Mobile_Station object at 0x00000000039B2C88&gt; 页面中未能找到 ('id', 'add') 元素
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt11.40' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_user_map_show_num_2_7: 进入移动台管理页面 点击用户映射 进入用户映射页面  配置一条新的用户号码映射范围 错误的队号 队号为最大值加一：90 328 90 200/210  328 90 300/310</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt11.40')" >
+        pass</a>
+
+    <div id='div_pt11.40' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt11.40').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt11.40: http://192.168.1.192:8080/nmp/login
+&lt;test_cases.user_manage.MS_manage_page.Mobile_Station object at 0x00000000039B5C88&gt; 页面中未能找到 ('id', 'add') 元素
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt11.41' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_user_map_show_num_2_8: 进入移动台管理页面 点击用户映射 进入用户映射页面  配置一条新的用户号码映射范围 错误的队号 队号为英文字母：aa  328 aa 200/210  328 aa 300/310</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt11.41')" >
+        pass</a>
+
+    <div id='div_pt11.41' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt11.41').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt11.41: http://192.168.1.192:8080/nmp/login
+&lt;test_cases.user_manage.MS_manage_page.Mobile_Station object at 0x00000000039B5DD8&gt; 页面中未能找到 ('id', 'add') 元素
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt11.42' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_user_map_show_num_2_9: 进入移动台管理页面 点击用户映射 进入用户映射页面  配置一条新的用户号码映射范围 错误的队号 队号为中文：警察  328 警察 200/210  328 警察 300/310</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt11.42')" >
+        pass</a>
+
+    <div id='div_pt11.42' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt11.42').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt11.42: http://192.168.1.192:8080/nmp/login
+&lt;test_cases.user_manage.MS_manage_page.Mobile_Station object at 0x00000000039B51D0&gt; 页面中未能找到 ('id', 'add') 元素
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt11.43' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_user_map_show_num_3: 进入移动台管理页面 点击用户映射 进入用户映射页面 配置一条已存在的用户号码映射范围 445 30 200/210 445 30 300/310</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt11.43')" >
+        pass</a>
+
+    <div id='div_pt11.43' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt11.43').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt11.43: http://192.168.1.192:8080/nmp/login
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='errorClass'>
+    <td>case_list.user_manage.call_group_manage_sta.Ticket_Query</td>
+    <td>29</td>
+    <td>28</td>
+    <td>0</td>
+    <td>1</td>
+    <td><a href="javascript:showClassDetail('c12',29)">Detail</a></td>
+</tr>
+
+<tr id='pt12.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_add_group_1: 检查进入通话组管理界面(默认进入通话组列表) 点击添加 添加一个正确的组 只填写号码范围 800-40-900/40-910 而后通过操作栏删除</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt12.1')" >
+        pass</a>
+
+    <div id='div_pt12.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt12.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt12.1: http://192.168.1.192:8080/nmp/login
+&lt;test_cases.user_manage.call_group_manage_page.Call_Group object at 0x00000000039D0D68&gt; 页面中未能找到 ('xpath', '//*[@id="muserList"]/tr/td[10]/button') 元素
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt12.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_add_group_1_1: 检查进入通话组管理界面(默认进入通话组列表) 点击添加 添加一个正确的组 只填写号码范围 800-40-900/40-910 而后通过复选框全选删除</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt12.2')" >
+        pass</a>
+
+    <div id='div_pt12.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt12.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt12.2: http://192.168.1.192:8080/nmp/login
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt12.3' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_add_group_1_2: 检查进入通话组管理界面(默认进入通话组列表) 点击添加 添加一个正确号码 只填写号码范围 800-40-900 命名用户名称为：成都测试 而后通过复选框选择删除</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt12.3')" >
+        pass</a>
+
+    <div id='div_pt12.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt12.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt12.3: http://192.168.1.192:8080/nmp/login
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt12.4' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_add_group_1_3: 检查进入通话组管理界面(默认进入通话组列表) 点击添加 添加一个正确号码 只填写号码范围 800-40-900 不填写用户名称 点击确定 验证:是否留在该页面</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt12.4')" >
+        pass</a>
+
+    <div id='div_pt12.4' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt12.4').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt12.4: http://192.168.1.192:8080/nmp/login
+&lt;test_cases.user_manage.call_group_manage_page.Call_Group object at 0x00000000039D09E8&gt; 页面中未能找到 ('xpath', '//*[@id="jbox-state-state0"]/div[2]/button[1]') 元素
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt12.5' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_add_group_1_4: 检查进入通话组管理界面(默认进入通话组列表) 点击添加 添加一个正确号码 只填写号码范围 800-40-900 用户名称大于7个字符 验证：系统是否自动删除了第七位后的字符</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt12.5')" >
+        pass</a>
+
+    <div id='div_pt12.5' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt12.5').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt12.5: http://192.168.1.192:8080/nmp/login
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt12.6' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_add_group_2: 检查进入通话组管理界面(默认进入通话组列表) 点击添加 添加一个以存在的组 号码范围 328 20 990/999 验证:是否出现替换提示弹窗</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt12.6')" >
+        pass</a>
+
+    <div id='div_pt12.6' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt12.6').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt12.6: http://192.168.1.192:8080/nmp/login
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt12.7' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_add_group_3: 检查进入通话组管理界面(默认进入通话组列表) 点击添加 添加一个已存在的组 号码范围 328 20 990/999 验证:点击取消是否关闭弹窗留在添加页面</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt12.7')" >
+        pass</a>
+
+    <div id='div_pt12.7' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt12.7').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt12.7: http://192.168.1.192:8080/nmp/login
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt12.8' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_add_group_4: 检查进入通话组管理界面(默认进入通话组列表) 点击添加 添加一个已存在的组 号码范围 328 20 990/999 验证:点击多选择框和“是” 是否返回通话组列表页面</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt12.8')" >
+        pass</a>
+
+    <div id='div_pt12.8' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt12.8').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt12.8: http://192.168.1.192:8080/nmp/login
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt12.9' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_add_group_5: 检查进入通话组管理界面(默认进入通话组列表) 点击添加 添加一个已存在的组 号码范围 328 20 990/999 验证:点击多选择框和“否” 是否返回通话组列表页面</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt12.9')" >
+        pass</a>
+
+    <div id='div_pt12.9' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt12.9').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt12.9: http://192.168.1.192:8080/nmp/login
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt12.10' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_add_group_6: 检查进入通话组管理界面(默认进入通话组列表) 点击添加 添加一个已存在的组 号码范围 328 20 990 验证:点击多选择框和“是” 是否返回通话组列表页面</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt12.10')" >
+        pass</a>
+
+    <div id='div_pt12.10' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt12.10').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt12.10: http://192.168.1.192:8080/nmp/login
+1
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt12.11' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_grade_group: 检查进入分级组管理页面 验证显示数量是否正确</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt12.11')" >
+        pass</a>
+
+    <div id='div_pt12.11' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt12.11').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt12.11: http://192.168.1.192:8080/nmp/login
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt12.12' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_grade_group_1: 检查进入分级组管理页面 点击添加 添加一个正确的组号 验证是否添加成功 而后删除该号码 使用操作栏图标删除</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt12.12')" >
+        pass</a>
+
+    <div id='div_pt12.12' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt12.12').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt12.12: http://192.168.1.192:8080/nmp/login
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt12.13' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_grade_group_1_1: 检查进入分级组管理页面 点击添加 添加一个正确的组号 验证是否添加成功 而后删除该号码 使用页面下方图标删除</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt12.13')" >
+        pass</a>
+
+    <div id='div_pt12.13' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt12.13').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt12.13: http://192.168.1.192:8080/nmp/login
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt12.14' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_grade_group_2: 检查进入分级组管理页面 点击添加 添加一个不启用的组号 添加成功后通过点击修改启用 验证是否修改后返回分级组管理列表页面</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt12.14')" >
+        pass</a>
+
+    <div id='div_pt12.14' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt12.14').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt12.14: http://192.168.1.192:8080/nmp/login
+启用
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt12.15' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_grade_group_3: 检查进入分级组管理页面  验证上一步操作是否修改成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt12.15')" >
+        pass</a>
+
+    <div id='div_pt12.15' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt12.15').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt12.15: http://192.168.1.192:8080/nmp/login
+启用
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft12.16' class='none'>
+    <td class='errorCase'><div class='testcase'>test_grade_group_4: 检查进入分级组管理页面  点击添加 添加一个已存在的组号 出现替换提示弹窗 点击确定跳转到分级组管理列表页面</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft12.16')" >
+        error</a>
+
+    <div id='div_ft12.16' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft12.16').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft12.16: http://192.168.1.192:8080/nmp/login
+&lt;test_cases.user_manage.call_group_manage_page.Call_Group object at 0x00000000039FDEB8&gt; 页面中未能找到 ('xpath', '//*[@id="jbox-state-state0"]/div[2]/button[1]') 元素
+Traceback (most recent call last):
+  File "D:\WorkSpace\po\case_list\user_manage\call_group_manage_sta.py", line 185, in test_grade_group_4
+    msg = Call_Group(self.driver).grade_group_4()
+  File "D:\WorkSpace\po\test_cases\user_manage\call_group_manage_page.py", line 793, in grade_group_4
+    self.system_hint(*self.alert_sure_loc)
+  File "D:\WorkSpace\po\test_cases\user_manage\call_group_manage_page.py", line 196, in system_hint
+    self.find_element(*loc).click()
+AttributeError: 'NoneType' object has no attribute 'click'
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt12.17' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_roma_group_list: 检查进入漫游 验证页面显示数量与应显示数量</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt12.17')" >
+        pass</a>
+
+    <div id='div_pt12.17' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt12.17').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt12.17: http://192.168.1.192:8080/nmp/login
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt12.18' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_roma_group_list_1: 检查进入漫游 验证页面显示数量与应显示数量</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt12.18')" >
+        pass</a>
+
+    <div id='div_pt12.18' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt12.18').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt12.18: http://192.168.1.192:8080/nmp/login
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt12.19' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_roma_group_list_2: 检查进入漫游 添加一个漫游组：800-40-990/40-999 添加成功后查看并删除</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt12.19')" >
+        pass</a>
+
+    <div id='div_pt12.19' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt12.19').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt12.19: http://192.168.1.192:8080/nmp/login
+10
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt12.20' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_roma_group_list_3: 检查进入漫游 添加一个已经存在的漫游组：328-20-931/20-935 验证是否出现替换提示窗</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt12.20')" >
+        pass</a>
+
+    <div id='div_pt12.20' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt12.20').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt12.20: http://192.168.1.192:8080/nmp/login
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt12.21' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_roma_group_list_4: 检查进入漫游 添加一个已经存在的漫游用户：328-20-931 用户名称为：bbb 验证是否出现替换提示窗</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt12.21')" >
+        pass</a>
+
+    <div id='div_pt12.21' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt12.21').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt12.21: http://192.168.1.192:8080/nmp/login
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt12.22' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_roma_group_list_5: 检查进入漫游 添加一个已经存在的漫游用户：328-20-931 用户名称为空 验证是否留在该页面(无法添加)</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt12.22')" >
+        pass</a>
+
+    <div id='div_pt12.22' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt12.22').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt12.22: http://192.168.1.192:8080/nmp/login
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt12.23' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_roma_group_list_6: 检查进入漫游 添加一个漫游组：800-40-900/910  优先等级为：优先 通话限时为：300  通话配置：全选第二项（默认不选的情况全为第一项） 验证是否添加成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt12.23')" >
+        pass</a>
+
+    <div id='div_pt12.23' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt12.23').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt12.23: http://192.168.1.192:8080/nmp/login
+11
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt12.24' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_roma_group_list_7: 检查进入漫游 添加一个漫游组：800-40-900/910  其余基本信息默认  通话配置：全选第二项（默认不选的情况全为第一项） 验证是否添加成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt12.24')" >
+        pass</a>
+
+    <div id='div_pt12.24' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt12.24').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt12.24: http://192.168.1.192:8080/nmp/login
+11
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt12.25' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_roma_group_list_8: 检查进入漫游 添加一个漫游组：800-40-900/910  其余基本信息默认  通话配置：默认全为第一项  验证是否添加成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt12.25')" >
+        pass</a>
+
+    <div id='div_pt12.25' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt12.25').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt12.25: http://192.168.1.192:8080/nmp/login
+11
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt12.26' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_show_page_num: 检查进入通话组管理界面(默认进入通话组列表) 验证页面显示数量</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt12.26')" >
+        pass</a>
+
+    <div id='div_pt12.26' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt12.26').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt12.26: http://192.168.1.192:8080/nmp/login
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt12.27' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_show_page_num_1: 检查进入通话组管理界面(默认进入通话组列表) 验证每页显示输入框与定量显示</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt12.27')" >
+        pass</a>
+
+    <div id='div_pt12.27' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt12.27').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt12.27: http://192.168.1.192:8080/nmp/login
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt12.28' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_temp_group: 进入临时应急组页面 验证组用户数量</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt12.28')" >
+        pass</a>
+
+    <div id='div_pt12.28' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt12.28').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt12.28: http://192.168.1.192:8080/nmp/login
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt12.29' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_temp_group_1: 进入临时应急组页面 验证分页按钮数量是否正确</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt12.29')" >
+        pass</a>
+
+    <div id='div_pt12.29' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt12.29').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt12.29: http://192.168.1.192:8080/nmp/login
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='failClass'>
+    <td>case_list.user_manage.third_party_sta.Ticket_Query</td>
+    <td>9</td>
+    <td>7</td>
+    <td>2</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c13',9)">Detail</a></td>
+</tr>
+
+<tr id='pt13.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_add_user: 检查进入第三方用户界面 点击用户添加并保存（正确的号码、别名...）  验证是否添加成功</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt13.1')" >
+        pass</a>
+
+    <div id='div_pt13.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt13.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt13.1: http://192.168.1.192:8080/nmp/login
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt13.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_add_user_1: 检查进入第三方用户界面 点击用户添加并保存 号码为英文</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt13.2')" >
+        pass</a>
+
+    <div id='div_pt13.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt13.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt13.2: http://192.168.1.192:8080/nmp/login
+&lt;test_cases.user_manage.third_party_page.ThirdParty object at 0x0000000003A3CE80&gt; 页面中未能找到 ('link text', 'aaaaaa') 元素
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt13.3' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_add_user_2: 检查进入第三方用户界面 点击用户添加并保存 号码为数字+英文</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt13.3')" >
+        pass</a>
+
+    <div id='div_pt13.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt13.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt13.3: http://192.168.1.192:8080/nmp/login
+&lt;test_cases.user_manage.third_party_page.ThirdParty object at 0x0000000003A369E8&gt; 页面中未能找到 ('link text', 'aaaaaa') 元素
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt13.4' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_add_user_3: 检查进入第三方用户界面 点击用户添加并保存 号码为中文</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt13.4')" >
+        pass</a>
+
+    <div id='div_pt13.4' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt13.4').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt13.4: http://192.168.1.192:8080/nmp/login
+&lt;test_cases.user_manage.third_party_page.ThirdParty object at 0x0000000003A3C0B8&gt; 页面中未能找到 ('link text', 'aaaaaa') 元素
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt13.5' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_add_user_4: 检查进入第三方用户界面 点击用户添加并保存 号码为符号</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt13.5')" >
+        pass</a>
+
+    <div id='div_pt13.5' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt13.5').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt13.5: http://192.168.1.192:8080/nmp/login
+&lt;test_cases.user_manage.third_party_page.ThirdParty object at 0x0000000003A3D588&gt; 页面中未能找到 ('link text', 'aaaaaa') 元素
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft13.6' class='none'>
+    <td class='failCase'><div class='testcase'>test_add_user_5: 检查进入第三方用户界面 点击用户添加,添加一个已存在的用户并保存 是否出现弹窗</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft13.6')" >
+        fail</a>
+
+    <div id='div_ft13.6' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft13.6').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft13.6: http://192.168.1.192:8080/nmp/login
+Traceback (most recent call last):
+  File "D:\WorkSpace\po\case_list\user_manage\third_party_sta.py", line 59, in test_add_user_5
+    self.assertEqual(msg, True)#在测试中，如果添加后直接到了列表页面，并找到了用户，那么说明没有提示窗口
+AssertionError: False != True
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft13.7' class='none'>
+    <td class='failCase'><div class='testcase'>test_del_user: 检查进入第三方用户界面 点击删除一个用户号码 验证：是否成功删除用户</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft13.7')" >
+        fail</a>
+
+    <div id='div_ft13.7' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft13.7').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft13.7: http://192.168.1.192:8080/nmp/login
+Traceback (most recent call last):
+  File "D:\WorkSpace\po\case_list\user_manage\third_party_sta.py", line 65, in test_del_user
+    self.assertEqual(msg, True)
+AssertionError: False != True
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt13.8' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_third_user: 检查进入第三方用户界面 验证页面显示数量</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt13.8')" >
+        pass</a>
+
+    <div id='div_pt13.8' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt13.8').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt13.8: http://192.168.1.192:8080/nmp/login
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt13.9' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_third_user_1: 检查进入第三方用户界面 验证分页面显示</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt13.9')" >
+        pass</a>
+
+    <div id='div_pt13.9' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt13.9').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt13.9: http://192.168.1.192:8080/nmp/login
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='total_row'>
+    <td>Total</td>
+    <td>141</td>
+    <td>127</td>
+    <td>11</td>
+    <td>3</td>
+    <td>&nbsp;</td>
+</tr>
+</table>
+
+<div id='ending'>&nbsp;</div>
+
+</body>
+</html>

@@ -152,17 +152,17 @@ class Ticket_Stat(Page):
         self.find_element(*self.rcu_choice).click()
         self.find_element(*self.rcu_input).send_keys('武侯测试')
         self.send_enter(*self.rcu_input)
-        self.find_element(*self.time_input).send_keys('2018-12-12 16')
+        self.find_element(*self.time_input).send_keys('2019-04-08 16')
         self.find_element(*self.query_button).click()
         sleep(3)
         element = WebDriverWait(self.driver, 3, 0.5).until(EC.presence_of_element_located((By.XPATH, '//*[@id="mask"]/div')))
-
-        if element:
-            return True
-        return False
+        # element.
+        if element.is_displayed():
+            return False
+        return True
 
     def come_rcu_occupied_2(self):
-        #进入基站占忙比页面 输入正确基站时间查询
+        #进入基站占忙比页面 输入正确基站，错误的时间查询
         self.come_page()
         self.find_element(*self.rcu_occupied_loc).click()
         self.find_element(*self.rcu_choice).click()

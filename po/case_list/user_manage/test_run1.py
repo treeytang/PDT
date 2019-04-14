@@ -10,8 +10,8 @@ from HTMLTestRunner import HTMLTestRunner
 mailto_list = ["870686645@qq.com"]
 # #============= 设置服务器，用户名、口令以及邮箱的后缀===============
 mail_host = "smtp.163.com"
-mail_user = "treeytang@163.com"
-mail_pass = "thy940311"
+mail_user = "XXXX@163.com"
+mail_password = ""
 # #===========================发送邮件============================
 def send_mail(to_list, file_new):
         """
@@ -31,7 +31,7 @@ def send_mail(to_list, file_new):
         try:
             s = smtplib.SMTP()
             s.connect(mail_host, 25)
-            s.login(mail_user, mail_pass)
+            s.login(mail_user, mail_password)
             s.sendmail(me, to_list, msg.as_string())
             s.close()
             return True

@@ -75,12 +75,13 @@ class ThirdParty(Page):
     def paging_verify(self):
         #分页验证
         self.come_iframe_page()
+        sleep(0.5)
         js = "var q=document.documentElement.scrollTop=10000"
         self.script(js)
-        sleep(3)
+        sleep(0.5)
         self.send_keys('1', *self.page_show_num_loc)
         self.send_enter(*self.page_show_num_loc)
-        sleep(3)
+        sleep(0.5)
         elements = self.find_elements(*self.show_num_loc)
         return str(len(elements))
 
@@ -178,7 +179,11 @@ class ThirdParty(Page):
     def del_user(self):
         #删除用户
         self.come_iframe_page()
-        self.find_element(*(By.XPATH, '//*[@id="thirdPartyUserList"]/tr[17]/td[9]/button'))
+        sleep(0.5)
+        js = "var q=document.documentElement.scrollTop=10000"
+        self.script(js)
+        sleep(0.5)
+        self.find_element(*(By.XPATH, '//*[@id="thirdPartyUserList"]/tr[17]/td[9]/button')).click()
         element = self.find_element(*(By.LINK_TEXT, '888-88-888'))
         if element:
             return False

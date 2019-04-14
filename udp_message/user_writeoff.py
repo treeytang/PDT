@@ -85,7 +85,10 @@ def udp_socket_send_client(udp_socket_client, send_address):
         if userid == '':
             end_time = time.time()
             print(end_time-start_time)
-            sleep(10000)
+            pid = os.getpid()
+            cmd = 'taskkill /pid '+str(pid)+' /f'
+            os.system(cmd)
+            # sleep(10000)
             udp_socket_client.close()
             print('退出成功')
             os.kill(os.getpid(), signal.SIGKILL)

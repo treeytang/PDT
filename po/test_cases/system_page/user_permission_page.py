@@ -98,7 +98,7 @@ class User_permission(Page):
         self.find_element(*self.check_box_loc).click()
         self.find_element(*self.save_btn_loc).click()
         element = self.find_element(*(By.LINK_TEXT, '自动化测试1')).text
-        self.find_element(*(By.XPATH, '//*[@id="contentTable"]/tbody/tr[5]/td[3]/a[2]')).click()
+        self.find_element(*(By.XPATH, '//*[@id="contentTable"]/tbody/tr[4]/td[3]/a[2]')).click()
         self.switch_to_default()
         self.find_element(*(By.XPATH, '//*[@id="jbox-state-state0"]/div[2]/button[1]')).click()
         return element
@@ -115,11 +115,13 @@ class User_permission(Page):
         self.find_element(*self.save_btn_loc).click()
         self.find_element(*(By.LINK_TEXT, '自动化测试2')).click()
         element = self.find_element(*(By.ID, 'menuTree_4_check')).get_attribute('class')
-        # js = "var q=document.documentElement.scrollTop=1000000"
-        # self.script(js)
-        self.find_element(*(By.ID, 'btnSubmit')).click()
+        sleep(1)
+        js = "var q=document.documentElement.scrollTop=1000000"
+        self.script(js)
+        sleep(1)
+        self.find_element(*(By.ID, 'btnCancel')).click()
         # sleep(1)
-        self.find_element(*(By.XPATH, '//*[@id="contentTable"]/tbody/tr[5]/td[3]/a[2]')).click()
+        self.find_element(*(By.XPATH, '//*[@id="contentTable"]/tbody/tr[4]/td[3]/a[2]')).click()
         self.switch_to_default()
         self.find_element(*(By.XPATH, '//*[@id="jbox-state-state0"]/div[2]/button[1]')).click()
         if element == 'button chk checkbox_false_full':
