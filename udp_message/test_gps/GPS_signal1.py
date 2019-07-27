@@ -51,7 +51,7 @@ class GPS_Signal():
         recv_ip = recv_ip
         recv_port = 16889
         send_ip = "192.168.1.11"
-        send_port = 8006#6004
+        send_port = 8006 #6004
         self.Bs_dn = rcu
         self.lai = lai
         self.udp_socket_client.bind((recv_ip, recv_port))
@@ -150,29 +150,15 @@ class GPS_Signal():
         upstream_fs = self.upstream_field_strength(north, east)
         norths = self.transition(north)
         easts = self.transition(east)
-        group = ""
-        if str(user) == '44530205':
-            group = '32820947'
-        if str(user) == '60020201':
-            group = "60020901"
-        if str(user) == '44530202':
-            group = '60020909'
-        if str(user) == '44530203':
-            group = '60020900'
-        if str(user) == '44530204':
-            group = "60020910"
-
-        send_data = "GPGLL,{},{},N,{},E,A,500,,{},<5%,{},I,15,,{},,,{},{},,,,,,,".format(user,norths,easts,
+        send_data = "GPGLL,{},{},N,{},E,A,500,,{},<5%,{},I,15,,32820954,,,{},{},,,,,,,".format(user,norths,easts,
                                                                                                self.utc_time(),
                                                                                                upstream_fs,
-                                                                                               group,
                                                                                                self.Bs_dn,
                                                                                                self.lai)
         if int(count)%2==0:
-            send_data = "GPGLL,{},{},N,{},E,A,500,,{},{},{},I,15,,{},,,{},{},,,,,,,".format(user,norths,easts,
+            send_data = "GPGLL,{},{},N,{},E,A,500,,{},{},{},I,15,,32820954,,,{},{},,,,,,,".format(user,norths,easts,
                                                                                                   self.utc_time(),
                                                                                                   down_fs, upstream_fs,
-                                                                                                  group,
                                                                                                   self.Bs_dn, self.lai)
         a = 0
         for i in send_data:
@@ -182,7 +168,7 @@ class GPS_Signal():
         print(send_datas)
         self.udp_socket_client.sendto(send_datas.encode('utf-8'), self.send_address)
         if int(flag) == 1:
-            north = (float(north) - float(0.00008))
+            north = (float(north) - float(0.000008))
             # north = (float(north) - float(0.005))
             # east = (float(east) - float(0.))
         counts = int(count) + 1
@@ -214,22 +200,22 @@ class GPS_Signal():
                 # flag = 1
                 if flag == 1:
                     counts += 1
-                if counts > (len(l) // 4):
+                if counts > (len(l) // 3):
                     flag = 0
                 n_e = self.coordinate(north_list, east_list)
                 north = n_e[0]
                 east = n_e[1]
                 count = 1
                 dic[user] = "{},{},{},{}".format(flag, north, east, count)
-            for i in range(10):
+            for i in range(160):
                 for user in dic:
                     self.send_signal(user, dic)
 
-                sleep(1)
+                sleep(10)
             sleep(2)
             initialize += 1
 
-calling_party = 4889434
+calling_party = 4889433
 callend_party = 4889439
 
 recv_ip = "192.168.1.49"

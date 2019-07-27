@@ -49,7 +49,7 @@ pattern_list = [
 class Gps_Signal():
     def __init__(self):
         self.udp_socket_client = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-        recv_ip = "192.168.1.67"
+        recv_ip = "192.168.1.77"
         recv_port = 16888
         send_ip = "192.168.1.249"
         send_port = 6004

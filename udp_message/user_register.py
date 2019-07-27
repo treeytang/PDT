@@ -9,11 +9,14 @@ import os
 
 
 class User_Register():
-    def __init__(self):
-        self.recv_ip = "192.168.1.54"
+    def __init__(self, recv_ip, rcu, calling_party, callend_party):
+        self.recv_ip = recv_ip
         self.recv_port = 18820
-        self.send_ip = "192.168.1.249"
-        self.send_port = 5060
+        self.send_ip = "192.168.1.249"#"192.168.1.249"
+        self.send_port =5060 #8006#
+        self.rcu = rcu
+        self.calling_party = calling_party
+        self.callend_party = callend_party
 
 
     def comm(self, num):
@@ -64,7 +67,8 @@ class User_Register():
         print('连接成功,开始发送信息了:')
         sleep(5)
         a = 1
-        for userid in range(4882433, 4882450):
+        for userid in range(self.calling_party,self.callend_party):
+        # for userid in range(3437186, 3437189):
 
             print("用户注册 信息发送第%d遍" % a)
             filename = open("userid.txt", "a")
@@ -75,15 +79,16 @@ class User_Register():
                         "f:<p:{}>;g={}\r\n" \
                         "t:-\r\n" \
                         "Q:{} R\r\n" \
-                        "v:r108.pdt.cn;b={}~\r\n" \
-                        "m:<s:r108.pdt.cn;m=192.168.1.54:18820>\r\n" \
+                        "v:{};b={}~\r\n" \
+                        "m:<s:{};m={}:18820>\r\n" \
                         "H:70\r\n" \
                         "ua:46 ACTEC-PDT-RCU-1.5.0.0\r\n" \
                         "c:a/m\r\n" \
                         "l:43\r\n" \
                         "\r\n" \
-                        "<attachgroup><AG>16515073</AG></attachgroup>\r\n".format(userid, self.call_ID(), userid,
-                                                                                 self.tags(), self.Qseq(), self.via_by())
+                        "<attachgroup><AG>1146886</AG></attachgroup>\r\n".format(userid, self.call_ID(), userid,
+                                                                                 self.tags(), self.Qseq(), self.rcu,
+                                                                                 self.via_by(), self.rcu, self.recv_ip)
             a += 1
             # # 退出程序
             # if userid == 3439023:
@@ -119,4 +124,8 @@ class User_Register():
         socket_send_thread.start()
         print(1)
 
-User_Register().user_register()
+
+
+calling_party=4889433
+callend_party=4889439
+User_Register("192.168.1.49", "r108.pdt.cn", calling_party, callend_party).user_register()

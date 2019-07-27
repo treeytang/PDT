@@ -81,7 +81,7 @@ class Heart_Beat():
                                     *net_heath, *self.net_dly,
                                     *self.net_ll, *self.fn())
                     udp_socket_client.sendto(s, send_address)
-                    sleep(15)
+                    sleep(5)
 
 
 
@@ -101,7 +101,7 @@ class Heart_Beat():
 
 
 
-recv_ip = "192.168.1.49"
-rcu = "r108.pdt.cn"
-lai = 108
+recv_ip = "192.168.1.48"
+rcu = "r111.pdt.cn"
+lai = 111
 Heart_Beat(recv_ip, lai).heartbeat()

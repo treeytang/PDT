@@ -48,7 +48,7 @@ class GPS_Signal():
 
     def __init__(self):
         self.udp_socket_client = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-        recv_ip = "192.168.1.54"
+        recv_ip = "192.168.1.49"
         recv_port = 16889
         send_ip = "192.168.1.249"
         send_port = 6004

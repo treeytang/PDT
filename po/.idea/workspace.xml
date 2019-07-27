@@ -21,89 +21,14 @@
       <change afterPath="$PROJECT_DIR$/test_cases/user_manage/__init__.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/test_cases/user_manage/call_group_manage_page.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/test_cases/user_manage/third_party_page.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../udp_message/test_gps/gps68_124.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../udp_message/test_gps/test_rcu_heartbeat.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../udp_message/test_gps/test_user_register.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../udp_message/rcu/47.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../udp_message/rcu/48.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../udp_message/rcu/49.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../udp_message/rcu/50.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../udp_message/rcu/52.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../udp_message/rcu/53.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../udp_message/rcu/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case_list/alarm_manage/alarm_query_sta.py" beforeDir="false" afterPath="$PROJECT_DIR$/case_list/alarm_manage/alarm_query_sta.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case_list/alarm_manage/real_alarm_query_sta.py" beforeDir="false" afterPath="$PROJECT_DIR$/case_list/alarm_manage/real_alarm_query_sta.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case_list/login/login_sta.py" beforeDir="false" afterPath="$PROJECT_DIR$/case_list/login/login_sta.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case_list/system_manage/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../udp_message/test_gps/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case_list/system_manage/log_query_sta.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/case_list/system_manage/system_run.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/case_list/system_manage/user_manage_sta.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/case_list/system_manage/user_office_sta.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/case_list/system_manage/user_permission_sta.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/case_list/ticket_manage/ticket_query_sta.py" beforeDir="false" afterPath="$PROJECT_DIR$/case_list/ticket_manage/ticket_query_sta.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case_list/ticket_manage/ticket_run.py" beforeDir="false" afterPath="$PROJECT_DIR$/case_list/ticket_manage/ticket_run.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case_list/ticket_manage/ticket_stat_sta.py" beforeDir="false" afterPath="$PROJECT_DIR$/case_list/ticket_manage/ticket_stat_sta.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case_list/ticket_manage/user_followup_sta.py" beforeDir="false" afterPath="$PROJECT_DIR$/case_list/ticket_manage/user_followup_sta.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case_list/user_manage/MS_manage_sta.py" beforeDir="false" afterPath="$PROJECT_DIR$/case_list/user_manage/MS_manage_sta.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case_list/user_manage/call_group_manage_sta.py" beforeDir="false" afterPath="$PROJECT_DIR$/case_list/user_manage/call_group_manage_sta.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case_list/user_manage/test_run1.py" beforeDir="false" afterPath="$PROJECT_DIR$/case_list/user_manage/test_run1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/case_list/user_manage/third_party_sta.py" beforeDir="false" afterPath="$PROJECT_DIR$/case_list/user_manage/third_party_sta.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/page_obj/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/page_obj/base.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/test_report/2019-01-04 16_45_24result.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/test_report/2019-01-04 16_54_27result.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/test_report/2019-01-04 17_09_36result.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/test_report/2019-01-08 11_14_37result.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/test_report/2019-01-10 15_22_44result.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/test_report/2019-01-10 16_50_50result.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/test_report/2019-01-11 09_04_28result.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/test_report/2019-01-17 17_20_17result.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/test_report/2019-01-17 18_23_02result.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/test_report/2019-01-18 10_00_58result.html" beforeDir="false" afterPath="$PROJECT_DIR$/../udp_message/test_gps/gps66_122.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/test_report/2019-01-25 15_41_29result.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/test_report/2019-01-25 15_43_54result.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/test_report/2019-01-25 15_46_11result.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/test_report/2019-01-25 15_47_54result.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/test_report/2019-01-25 15_52_04result.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/test_report/2019-01-25 15_58_07result.html" beforeDir="false" afterPath="$PROJECT_DIR$/../udp_message/test_gps/gps67_123.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/test_report/2019-01-25 16_00_43result.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/test_report/2019-01-25 16_21_40result.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/test_report/2019-01-25 17_31_06result.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/test_report/2019-01-25 18_12_35result.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/test_report/2019-01-25 18_27_00result.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/test_report/2019-01-25 18_27_28result.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/test_report/Y-01-25 15_22_47result.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/test_report/Y-01-25 15_26_27result.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/test_report/Y-01-25 15_30_05result.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/test_report/Y-12-06 14_17_38result.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/test_report/Y-12-06 14_20_44result.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/test_report/Y-12-06 14_21_21result.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/test_report/Y-12-13 15_23_02result.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/test_report/Y-12-13 15_26_58result.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/test_report/Y-12-14 11_30_49result.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/test_report/Y-12-14 17_09_37result.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/test_report/Y-12-14 17_16_23result.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/test_report/Y-12-17 11_56_14result.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/test_report/Y-12-20 18_32_16result.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/test_report/Y-12-24 09_24_50result.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/test_report/Y-12-24 09_30_49result.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/test_report/Y-12-24 10_20_20result.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/test_report/Y-12-24 10_25_11result.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/test_report/Y-12-25 16_06_00result.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/test_report/Y-12-25 16_17_03result.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/test_report/Y-12-26 15_04_45result.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/test_report/Y-12-26 17_14_08result.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/test_report/Y-12-27 17_31_15result.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/test_report/Y-12-27 17_58_47result.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/test_report/Y-12-27 18_06_15result.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/test_report/Y-12-28 09_42_00result.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report/test_report/Y-12-28 10_07_44result.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/runner_unittest/run.py" beforeDir="false" afterPath="$PROJECT_DIR$/runner_unittest/run.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_cases/alarm_manage/alarm_query_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_cases/alarm_manage/alarm_query_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_cases/alarm_manage/real_time_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_cases/alarm_manage/real_time_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_cases/system_page/log_query_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_cases/system_page/log_query_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_cases/system_page/office_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_cases/system_page/office_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_cases/system_page/user_manage_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_cases/system_page/user_manage_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_cases/system_page/user_permission_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_cases/system_page/user_permission_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_cases/ticket_manage/ticket_manage_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_cases/ticket_manage/ticket_manage_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_cases/ticket_manage/ticket_stat_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_cases/ticket_manage/ticket_stat_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_cases/ticket_manage/user_followup_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_cases/ticket_manage/user_followup_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_cases/user_manage/MS_manage_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_cases/user_manage/MS_manage_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_cases/user_manage/call_group_manage_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_cases/user_manage/call_group_manage_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_cases/user_manage/third_party_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_cases/user_manage/third_party_page.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../udp_message/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../udp_message/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../udp_message/GPS_signal.py" beforeDir="false" afterPath="$PROJECT_DIR$/../udp_message/GPS_signal.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../udp_message/msg_main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../udp_message/msg_main.py" afterDir="false" />
@@ -269,7 +194,7 @@
     <SUITE FILE_PATH="coverage/po$Unittests_for_call_group_manage_sta_Ticket_Query_test_add_group_1.coverage" NAME="Unittests for call_group_manage_sta.Ticket_Query.test_add_group_1 Coverage Results" MODIFIED="1554946959879" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/user_manage" />
     <SUITE FILE_PATH="coverage/po$Unittests_for_DRM_user_sta_Ticket_Query_test_DMR_user_1.coverage" NAME="Unittests for DRM_user_sta.Ticket_Query.test_DMR_user_1 Coverage Results" MODIFIED="1554954089655" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/user_manage" />
     <SUITE FILE_PATH="coverage/po$Unittests_for_MS_manage_sta_Ticket_Query_test_add_icon_verify_1_14.coverage" NAME="Unittests for MS_manage_sta.Ticket_Query.test_add_icon_verify_1_14 Coverage Results" MODIFIED="1554964717651" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/user_manage" />
-    <SUITE FILE_PATH="coverage/po$system_run.coverage" NAME="system_run Coverage Results" MODIFIED="1554781842109" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/system_manage" />
+    <SUITE FILE_PATH="coverage/po$system_run.coverage" NAME="system_run Coverage Results" MODIFIED="1555396963876" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/system_manage" />
     <SUITE FILE_PATH="coverage/po$Unittests_for_ticket_query_sta_Ticket_Query.coverage" NAME="Unittests for ticket_query_sta.Ticket_Query Coverage Results" MODIFIED="1544752266461" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/ticket_manage" />
     <SUITE FILE_PATH="coverage/po$Unittests_for_call_group_manage_sta_Ticket_Query_test_roma_group_list_4.coverage" NAME="Unittests for call_group_manage_sta.Ticket_Query.test_roma_group_list_4 Coverage Results" MODIFIED="1554953106982" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/user_manage" />
     <SUITE FILE_PATH="coverage/po$Unittests_for_MS_manage_sta_Ticket_Query_test_user_map_show_num_2_7.coverage" NAME="Unittests for MS_manage_sta.Ticket_Query.test_user_map_show_num_2_7 Coverage Results" MODIFIED="1554966054544" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/case_list/user_manage" />
@@ -316,100 +241,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test_cases/ticket_manage/ticket_manage_page.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="7820">
-              <caret line="350" column="15" selection-start-line="350" selection-start-column="15" selection-end-line="350" selection-end-column="15" />
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/case_list/login/login_sta.py">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$USER_HOME$/Desktop/insert_msg.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="207">
-              <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/case_list/user_manage/call_group_manage_sta.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4209">
-              <caret line="187" selection-start-line="187" selection-end-line="187" />
+              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
               <folding>
-                <element signature="e#0#22#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/case_list/user_manage/third_party_sta.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1380">
-              <caret line="64" column="35" selection-start-line="64" selection-start-column="35" selection-end-line="64" selection-end-column="35" />
-              <folding>
-                <element signature="e#0#22#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/runner_unittest/run.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="9" selection-start-column="7" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/page_obj/base.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="26" column="28" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
-              <folding>
-                <element signature="e#0#57#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/comm/driver.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="6" selection-start-line="6" selection-end-line="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/case_list/ticket_manage/ticket_query_sta.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="966">
-              <caret line="46" column="50" selection-start-line="46" selection-start-column="50" selection-end-line="46" selection-end-column="50" />
-              <folding>
-                <element signature="e#0#22#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/case_list/system_manage/system_run.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1403">
-              <caret line="67" column="41" selection-end-line="77" />
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
+                <element signature="e#0#14#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -521,10 +359,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="218" />
-    <option name="y" value="31" />
-    <option name="width" value="1418" />
-    <option name="height" value="1026" />
+    <option name="x" value="352" />
+    <option name="y" value="3" />
+    <option name="width" value="1243" />
+    <option name="height" value="912" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -532,6 +370,17 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="po" type="b2602c69:ProjectViewProjectNode" />
+              <item name="po" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="Scope">
         <subPane subId="Scope 'Default Changelist'; set:Default Changelist; class com.intellij.packageDependencies.ChangeListScope">
           <expand>
@@ -572,7 +421,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -608,7 +456,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.run">
+  <component name="RunManager" selected="Python.system_run">
     <configuration name="run" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="po" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -631,6 +479,28 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="system_run" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="po" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/case_list/system_manage" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/case_list/system_manage/system_run.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="Unittests for call_group_manage_sta.Ticket_Query.test_grade_group_4" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="po" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -643,21 +513,6 @@
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
       <option name="_new_target" value="&quot;call_group_manage_sta.Ticket_Query.test_grade_group_4&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Unittests for third_party_sta.Ticket_Query.test_add_user_5" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <module name="po" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/case_list/user_manage" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;third_party_sta.Ticket_Query.test_add_user_5&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -693,18 +548,18 @@
     </configuration>
     <list>
       <item itemvalue="Python.run" />
-      <item itemvalue="Python tests.Unittests for third_party_sta.Ticket_Query.test_add_user_5" />
+      <item itemvalue="Python.system_run" />
       <item itemvalue="Python tests.Unittests for third_party_sta.Ticket_Query.test_del_user" />
       <item itemvalue="Python tests.Unittests for ticket_query_sta.Ticket_Query.test_custom_query2" />
       <item itemvalue="Python tests.Unittests for call_group_manage_sta.Ticket_Query.test_grade_group_4" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.system_run" />
         <item itemvalue="Python.run" />
         <item itemvalue="Python tests.Unittests for call_group_manage_sta.Ticket_Query.test_grade_group_4" />
         <item itemvalue="Python tests.Unittests for ticket_query_sta.Ticket_Query.test_custom_query2" />
         <item itemvalue="Python tests.Unittests for third_party_sta.Ticket_Query.test_del_user" />
-        <item itemvalue="Python tests.Unittests for third_party_sta.Ticket_Query.test_add_user_5" />
       </list>
     </recent_temporary>
   </component>
@@ -761,6 +616,9 @@
       <workItem from="1554859010973" duration="20897000" />
       <workItem from="1554944666536" duration="16462000" />
       <workItem from="1555033770283" duration="639000" />
+      <workItem from="1555396933195" duration="252000" />
+      <workItem from="1555400244746" duration="726000" />
+      <workItem from="1557107803903" duration="13000" />
     </task>
     <servers />
   </component>
@@ -797,13 +655,14 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="472122000" />
+    <option name="totallyTimeSpent" value="473113000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.20110025" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.20843521" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Database Changes" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="1" weight="0.32922733" />
@@ -813,7 +672,7 @@
       <window_info anchor="bottom" id="Docker" order="5" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="6" />
       <window_info anchor="bottom" id="Find" order="7" weight="0.32997763" />
-      <window_info anchor="bottom" id="Run" order="8" weight="0.34826428" />
+      <window_info anchor="bottom" id="Run" order="8" weight="0.24972005" />
       <window_info anchor="bottom" id="Debug" order="9" weight="0.2967525" />
       <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
@@ -852,20 +711,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://C:/python36/Lib/site-packages/urllib3/poolmanager.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="311" selection-start-line="311" selection-end-line="311" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/python36/Lib/site-packages/urllib3/request.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="71" selection-start-line="71" selection-end-line="71" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://C:/python36/Lib/site-packages/selenium/webdriver/remote/remote_connection.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -1205,20 +1050,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/case_list/user_manage/third_party_sta.py">
+    <entry file="file://$PROJECT_DIR$/page_obj/base.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1380">
-          <caret line="64" column="35" selection-start-line="64" selection-start-column="35" selection-end-line="64" selection-end-column="35" />
+        <state relative-caret-position="644">
+          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
           <folding>
-            <element signature="e#0#22#0" expanded="true" />
+            <element signature="e#0#57#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/runner_unittest/run.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="9" selection-start-column="7" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -1241,20 +1079,42 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/case_list/system_manage/system_run.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1403">
-          <caret line="67" column="41" selection-end-line="77" />
+        <state relative-caret-position="498">
+          <caret line="54" lean-forward="true" selection-start-line="54" selection-end-line="54" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/page_obj/base.py">
+    <entry file="file://$USER_HOME$/Desktop/connect.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="26" column="28" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
+        <state relative-caret-position="-146" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/runner_unittest/run.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="9" selection-start-column="7" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/case_list/user_manage/third_party_sta.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="797">
+          <caret line="64" column="35" selection-start-line="64" selection-start-column="35" selection-end-line="64" selection-end-column="35" />
           <folding>
-            <element signature="e#0#57#0" expanded="true" />
+            <element signature="e#0#22#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/insert_msg.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
           </folding>
         </state>
       </provider>
