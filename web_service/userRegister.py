@@ -7,6 +7,8 @@ import os
 import sys
 
 
+calling = int(sys.argv[1])
+callend = int(sys.argv[2])
 
 class User_Register():
     def __init__(self, recv_ip, rcu, calling_party, callend_party):
@@ -126,8 +128,8 @@ class User_Register():
 
 
 def main():
-    calling_party=1048577
-    callend_party=1048778
+    calling_party=int(sys.argv[1])
+    callend_party=int(sys.argv[2])
     User_Register("192.168.1.45", "r105.pdt.cn", calling_party, callend_party).user_register()
 
 if __name__ == '__main__':

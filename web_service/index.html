@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数据模拟</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+</head>
+<body>
+    <h3>输入号码时请注意：<i style="color: crimson">号码为空口号</i></h3>
+    <div>
+        <p>输入开始号码:&nbsp<input type="text" id="callingParty" oninput="value=value.replace(/[^\d]/g,'')"></p>
+        <p>输入结束号码:&nbsp<input type="text" id="callendParty" oninput="value=value.replace(/[^\d]/g,'')"></p>
+        <button onclick="userRegister()">用户注册</button>
+        <button onclick="userLogout()">用户注销</button>
+        <button onclick="userGps()">用户GPS发送</button>
+        <button onclick="stopGps()">停止GPS发送</button>
+        <p id="result"></p>
+    </div>
+
+    <script type="text/javascript">
+        function userRegister() {
+            var callingParty = $("#callingParty").val();
+            var callendParty = $("#callendParty").val();
+            $.post("/register",{callingParty:callingParty, callendParty:callendParty}, function(data,status){
+                if(status === "success")
+                {
+                    $("#result").html(data);
+                }
+                else
+                {
+                    alert("发送失败");
+                }
+            });
+        }
+
+        function userLogout() {
+            var callingParty = $("#callingParty").val();
+            var callendParty = $("#callendParty").val();
+            $.post("/logout",{callingParty:callingParty, callendParty:callendParty}, function(data,status){
+                if(status === "success")
+                {
+                    $("#result").html(data);
+                }
+                else
+                {
+                    alert("发送失败");
+                }
+            });
+        }
+
+        function userGps() {
+            var callingParty = $("#callingParty").val();
+            var callendParty = $("#callendParty").val();
+            $.post("/gps",{callingParty:callingParty, callendParty:callendParty}, function(data,status){
+                if(status === "success")
+                {
+                    $("#result").html(data);
+                }
+                else
+                {
+                    alert("发送失败");
+                }
+            });
+        }
+
+        function stopGps() {
+            var callingParty = $("#callingParty").val();
+            var callendParty = $("#callendParty").val();
+            $.post("/stopGps", function(data,status){
+                if(status === "success")
+                {
+                    $("#result").html(data);
+                }
+                else
+                {
+                    alert("发送失败");
+                }
+            });
+        }
+    </script>
+</body>
+</html>

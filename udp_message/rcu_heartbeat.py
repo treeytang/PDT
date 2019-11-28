@@ -101,7 +101,7 @@ class Heart_Beat():
 
 
 
-recv_ip = "192.168.1.49"
-rcu = "r108.pdt.cn"
-lai = 108
+recv_ip = "192.168.1.31"
+rcu = "r106.pdt.cn"
+lai = 106
 Heart_Beat(recv_ip, lai).heartbeat()
